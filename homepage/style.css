@@ -98,8 +98,8 @@ nav img {
   flex-basis: 31%;
   background: #c1d8f0;
   border-radius: 10px;
-  margin-bottom: 15%;
-  padding-top: 20px 12px;
+  margin-bottom: 50px;
+
   box-sizing: border-box;
   color: white;
   transition: 0.5s;
@@ -288,7 +288,7 @@ nav p {
   background: transparent;
   position: relative;
   cursor: pointer;
-  margin-top: 250px;
+
   margin-left: 85px;
 }
 
@@ -309,6 +309,7 @@ nav p {
 }
 
 .inp2 {
+  margin-left: 20%;
   height: 300px;
 }
 
@@ -412,4 +413,7 @@ h4 {
 
 .m-a:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.inp2-con{
+  
 }
