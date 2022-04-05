@@ -5,12 +5,6 @@ const canvas = document.querySelector(".webgl");
 // Scene
 
 const scene = new THREE.Scene();
-let loader = new THREE.TextureLoader();
-loader.load('./cloud.jpeg' , function(texture)
-            {
-             scene.background = texture;  
-            });
-
 //axesHelper
 
 const axesHelper = new THREE.AxesHelper(0);
@@ -20,37 +14,36 @@ scene.add(axesHelper);
 
 let gridHelper = new THREE.GridHelper(0, 0);
 scene.add(gridHelper);
+const all = new THREE.Group();
 //land
 loader = new THREE.TextureLoader();
-loader.load('./sand.jpeg' , function(texture)
-            {
-             const land = new THREE.Mesh(
-              new THREE.SphereGeometry(30, 128),
-              new THREE.MeshStandardMaterial({
-                map: texture,
-                roughness: 0.1,
-                  }))
-                  scene.add(land)
-                  land.position.y = -80;
-            const land2 = new THREE.Mesh(
-              new THREE.PlaneGeometry(1000,1000),
-              new THREE.MeshBasicMaterial({
-                side: THREE.DoubleSide,
-                map: texture,
-              }) 
-            )
-            scene.add(land2)
-            land2.rotation.x= Math.PI * 0.5
-            land2.position.y = -90
-
-            });
+loader.load("./sand.jpeg", function (texture) {
+  const land = new THREE.Mesh(
+    new THREE.SphereGeometry(30, 128),
+    new THREE.MeshStandardMaterial({
+      map: texture,
+      roughness: 0.1,
+    })
+  );
+  all.add(land);
+  land.position.y = -80;
+  const land2 = new THREE.Mesh(
+    new THREE.PlaneGeometry(1000, 1000),
+    new THREE.MeshBasicMaterial({
+      side: THREE.DoubleSide,
+      map: texture,
+    })
+  );
+  scene.add(land2);
+  land2.rotation.x = Math.PI * 0.5;
+  land2.position.y = -90;
+});
 const params = {
   color: "#00b4d8",
   scale: 10,
   flowX: 1,
   flowY: 1,
-}
-
+};
 
 const waterGeometry = new THREE.PlaneGeometry(1000, 1000);
 
@@ -62,16 +55,25 @@ water = new Water(waterGeometry, {
   textureHeight: 1024,
 });
 water.rotation.x = Math.PI * 1.5;
-water.position.y = -80
+water.position.y = -80;
 
 scene.add(water);
 
 
-scene.add(water);
+
+
+let geometry = new THREE.SphereGeometry( 500, 60, 40 );
+geometry.scale( - 1, 1, 1 );
+let material = new THREE.MeshBasicMaterial( {
+  map: new THREE.TextureLoader().load( './cloud3.jpg' )
+} );
+mesh = new THREE.Mesh( geometry, material );
+scene.add( mesh );
+
 //fan
 
 const windTurbine = new THREE.Group();
-const material = new THREE.MeshStandardMaterial({
+material = new THREE.MeshStandardMaterial({
   color: "white",
   roughness: 0.5,
 });
@@ -125,8 +127,8 @@ blades.add(blade3);
 windTurbine.add(box);
 windTurbine.add(blades);
 windTurbine.add(stand);
-
-scene.add(windTurbine);
+all.add(windTurbine);
+scene.add(all);
 
 //camera
 const camera = new THREE.PerspectiveCamera(75, 800 / 600);
@@ -136,13 +138,17 @@ camera.position.set(20, 0, 20);
 const pointLight = new THREE.PointLight("#fff", 1.5);
 pointLight.position.set(50, 50, 50);
 scene.add(pointLight);
+camera.position.z = 150;
+all.position.set(40,0,0)
 
 //render
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
+  alpha: true,
 });
-renderer.setSize(800, 600);
+renderer.setClearColor(0x000000, 0);
+renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 
 // controls
