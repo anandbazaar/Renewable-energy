@@ -11,14 +11,17 @@
   background-image: linear-gradient(rgba(4, 9, 30, 0.7)), url();
   background-position: center;
   background-size: cover;
-  position: relative;
 }
 
 nav {
   display: flex;
-  padding: 2% 6%;
+  padding: 2% ;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 10;
 }
 
 nav img {
@@ -43,6 +46,9 @@ nav img {
   font-size: 23px;
   padding: 5px;
 }
+.nav-links ul{
+  margin-right: 100px;
+}
 
 .nav-links ul li::after {
   content: '';
@@ -60,7 +66,7 @@ nav img {
 
 .hp-img {
   width: 100%;
-  height: 130vh;
+  height: 100vh;
 }
 
 @media(max-width:700px) {
@@ -413,7 +419,4 @@ h4 {
 
 .m-a:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-.inp2-con{
-  
 }
