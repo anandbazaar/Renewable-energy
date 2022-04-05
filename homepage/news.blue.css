@@ -114,25 +114,21 @@ h4 {
 
 .information div {
     margin-left: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     width: 80%;
 }
 
 .information {
     width: 100%;
-
-
 }
 
 .img-h {
-
     left: 30%;
     top: 32%;
     position: absolute;
 }
 
 .statistics {
-    margin-left: 0px;
     width: 100%;
     height: 400px;
     display: flex;
@@ -140,12 +136,12 @@ h4 {
 }
 
 .statistics div {
-    width: 250px;
-    height: 300px;
+    width: 320px;
+    height: 350px;
     border: 6px solid #FEE8A9;
     background-color: white;
     color: black;
-    margin-left: 60px;
+    margin-left: 110px;
 
 }
 
@@ -170,4 +166,98 @@ h4 {
 }
 .imgg40{
     width: 100%;
+}
+.container{
+    width: 100%;
+height: 450px;
+    display: flex;
+    flex-direction: row;
+
+}
+.container div{
+    flex-grow: 1;
+}
+.about-us{
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    margin-top: 5%;
+    color: black;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.rnw-png{
+    margin-top: 10px;
+}
+.about-us1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    display: block;
+}
+.nest-png{
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.social{
+    margin-right: 20px;
+}
+.rnwlogo{
+    margin-top: 50px;
+}
+.about-us h3{
+    margin-top: 30px;
+    width: 220px;
+    font-size: 30px;
+}
+.handalt h3{
+    width: 300px;
+    font-size: 30px;
+
+}
+.about-us2{
+    display: inline;
+}
+.about-us2 div {
+  margin-top: 20px;
+}
+.about-us h3::after {
+    content: '';
+    width: 0%;
+    height: 4px;
+    background: #4EB073;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.about-us h3:hover::after {
+    width: 100%;
+}
+.about-us p{
+    font-size: 17px;
+}
+.about-us1 p{
+    margin-bottom: 35px;
+    margin-top: 20px;
+}
+.hl-icon{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 25px;
+}
+.hl-icon .icon{
+    width: 26px;
+    height: 26px;
+}
+.icon{
+    margin-right: 14px;
 }
