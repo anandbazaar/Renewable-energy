@@ -31,8 +31,8 @@ class Water extends THREE.Mesh {
 		const textureLoader = new THREE.TextureLoader();
 
 		const flowMap = options.flowMap || undefined;
-		const normalMap0 = options.normalMap0 || textureLoader.load( './Water_1_M_Normal.jpeg' );
-		const normalMap1 = options.normalMap1 || textureLoader.load( './Water_2_M_Normal.jpeg' );
+		const normalMap0 = options.normalMap0 || textureLoader.load( '../textures/Water_1_M_Normal.jpeg' );
+		const normalMap1 = options.normalMap1 || textureLoader.load( '../textures/Water_2_M_Normal.jpeg' );
 
 		const cycle = 0.15; // a cycle of a flow map phase
 		const halfCycle = cycle * 0.5;
