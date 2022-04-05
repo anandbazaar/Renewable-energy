@@ -2,19 +2,19 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-
+    
 
 }
 
 body {
-    background-color: #0D273C;
+    background-color: #E9C85C;
+
 }
 
 .header {
-
+    color: white;
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7)), url(image\ 40.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -67,14 +67,21 @@ nav img {
 nav p {
     visibility: hidden;
 }
-
+.list li{
+  font-size: 42px;
+}
+.list ul{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+}
 section {
-    background-color: #0D273C;
+    background-color: #E9C85C;
     color: white;
 }
 
 h4 {
-    color: #B5E9F8;
+    color: #422372;
     font-size: 42px;
 }
 
@@ -93,13 +100,15 @@ h4 {
 }
 
 .img-txt h3 {
-    font-size: 45px;
+    margin-right: 30px;
+    font-size: 54px;
 }
 
 .img-txt h4 {
     width: 800px;
     margin: 10px 0 40px;
-    font-size: 42px;
+    margin-left: 100px;
+    font-size: 36px;
     color: white;
 }
 
@@ -123,68 +132,37 @@ h4 {
 }
 
 .img-h {
-    left: 30%;
+    left: 25%;
     top: 32%;
     position: absolute;
 }
 
-.statistics {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    gap: 15px;
-}
 
-.statistics div {
-    width: 320px;
-    height: 350px;
-    border: 6px solid #FEE8A9;
-    background-color: white;
-    color: black;
-    margin-left: 110px;
-
-}
-
-.statistics h4 {
-    margin-left: 10px;
-    color: black;
-    font-size: 49px
-}
-
-.statistics p {
-    margin-left: 10px;
-    font-size: 27px;
-}
-
-.st4 p {
-    height: 250px;
-    font-size: 23px;
-}
-
-.st3 p {
-    font-size: 24px;
-}
-.imgg40{
+.imgg40 {
     width: 100%;
 }
-.container{
+
+.container {
     width: 100%;
-height: 450px;
+    height: 450px;
     display: flex;
     flex-direction: row;
 
 }
-.container div{
+
+.container div {
     flex-grow: 1;
 }
-.about-us{
+
+.about-us {
     width: 100%;
     height: 450px;
     background-color: white;
     margin-top: 5%;
     color: black;
 }
-.logo{
+
+.logo {
     width: 200px;
     height: 200px;
     display: flex;
@@ -193,43 +171,53 @@ height: 450px;
     flex-wrap: wrap;
     margin-left: 50px;
 }
-.rnw-png{
+
+.rnw-png {
     margin-top: 10px;
 }
-.about-us1{
+
+.about-us1 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
     display: block;
 }
-.nest-png{
+
+.nest-png {
     margin-top: 40px;
     margin-left: 50px;
     margin-bottom: 30px;
 }
-.social{
+
+.social {
     margin-right: 20px;
 }
-.rnwlogo{
+
+.rnwlogo {
     margin-top: 50px;
 }
-.about-us h3{
+
+.about-us h3 {
     margin-top: 30px;
     width: 220px;
     font-size: 30px;
 }
-.handalt h3{
+
+.handalt h3 {
     width: 300px;
     font-size: 30px;
 
 }
-.about-us2{
+
+.about-us2 {
     display: inline;
 }
+
 .about-us2 div {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 .about-us h3::after {
     content: '';
     width: 0%;
@@ -239,25 +227,31 @@ height: 450px;
     margin: auto;
     transition: 0.5s;
 }
+
 .about-us h3:hover::after {
     width: 100%;
 }
-.about-us p{
+
+.about-us p {
     font-size: 17px;
 }
-.about-us1 p{
+
+.about-us1 p {
     margin-bottom: 35px;
     margin-top: 20px;
 }
-.hl-icon{
+
+.hl-icon {
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 25px;
 }
-.hl-icon .icon{
+
+.hl-icon .icon {
     width: 26px;
     height: 26px;
 }
-.icon{
+
+.icon {
     margin-right: 14px;
 }
