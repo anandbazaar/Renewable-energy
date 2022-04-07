@@ -9,21 +9,23 @@
 </head>
 <body>
     <section class="header">
-        <nav>
-            <a href="index.html"><img src="Assets/Group 168.png" alt=""></a>
-            <div class="nav-links" id="navLinks">
-                <p style="color: white;" onclick="hideMenu()">x</p>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">INFORMATION</a></li>
-                    <li><a href="">EDUCATION</a></li>
-                    <li><a href="">ABOUT US</a></li>
+        <nav class="navbar">
+            <a href="index.html"><img src="Group 168.png" alt=""></a>
+            <div class="nav-links navbar_container" id="navLinks">
+                <div class="navbar__toggle" id="mobile-menu">=
+                    <span class="bar"></span> <span class="bar"></span>
+                    <span class="bar"></span>
+                  </div>
+                <ul class="navbar__menu" >
+                    <li class="navbar__item"><a href="#home" class="navbar__links" id="home-page" href="">HOME</a></li>
+                    <li class="navbar__item"><a href="#about" class="navbar__links" id="about-page" href="">INFORMATION</a></li>
+                    <li class="navbar__item"><a href="#services" class="navbar__links" id="services-page" href="">EDUCATION</a></li>
+                    <li class="navbar__item"><a href="#services" class="navbar__links" id="services-page"href="">ABOUT US</a></li>
                 </ul>
             </div>
-            <p onclick="showMenu()">=</p>
         </nav>
         <div>
-            <img class="hp-img" src="Assets/Group 43.svg" alt="">
+            <img class="hp-img" src="Group 43.svg" alt="">
         </div>
        
     </section>
@@ -131,15 +133,6 @@
            </div>
        </div>
    </section>
-    <script>
-        var navLinks = document.getElementById("navLinks")
-        function showMenu(){
-            navLinks.style.right= "0"
-        }
-        function hideMenu(){
-            navLinks.style.right= "-200px"
-        }
-    </script>
-
+   <script src="main.js"></script>
 </body>
 </html>
