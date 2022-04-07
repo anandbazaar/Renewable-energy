@@ -54,11 +54,6 @@ nav {
 }
 
 .renew {
-    /* position: absolute;
-    width: 945px;
-    height: 70px;
-    left: 237.68px;
-    top: 213.42px; */
     font-family: 'Brygada 1918';
     font-style: normal;
     font-weight: 400;
@@ -73,21 +68,32 @@ nav {
 }
 
 .Rectangle {
-    /* position: absolute;
-    width: 220.68px;
-    height: 9.42px;
-    left: 0px;
-    top: 243.71px; */
     background: #6FA5CE;
     border-radius: 5px;
 }
 
 .Rectangle2 {
-    /* position: absolute;
-    width: 245.32px;
-    height: 9.42px;
-    left: 1194.68px;
-    top: 248.42px; */
     background: #6FA5CE;
     border-radius: 5px;
+}
+
+.ser {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif normal;
+    font-weight: 400;
+    font-size: 41px;
+    line-height: 50px;
+    color: #134A77;
+}
+
+.text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+}
+
+.energies {
+    display: flex;
 }
