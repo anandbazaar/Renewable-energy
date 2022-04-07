@@ -138,7 +138,7 @@ camera.position.set(20, 0, 20);
 const pointLight = new THREE.PointLight("#fff", 1.5);
 pointLight.position.set(50, 50, 50);
 scene.add(pointLight);
-camera.position.z = 150;
+camera.position.z = 200;
 all.position.set(40,0,0)
 
 //render
@@ -155,6 +155,7 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
+
   requestAnimationFrame(animate);
   controls.enableZoom = false;
   controls.enablePan = false;
@@ -173,7 +174,15 @@ function spin() {
   renderer.render(scene, camera);
   const elapsedTime = clock.getElapsedTime();
   // windTurbine.rotation.y = elapsedTime * 1.5;
+  console.log(camera.position)
+  if(camera.position.x < 0 && camera.position.z < 0 || camera.position.x > 0 && camera.position.z < 0){
+    infoCont.style.left = "70%"
+    
 }
-
+else{
+  infoCont.style.left = "10%"
+ 
+}
+}
 spin();
 animate();

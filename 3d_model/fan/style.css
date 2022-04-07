@@ -1,6 +1,19 @@
 *{
     margin: 0px;
+    overflow: hidden;
 }
-body{
-    background-image: url("./cloud.jpeg");
+
+.infoCont{
+    opacity: 70%;
+    padding: 20px;
+    top:30%;
+    transition-timing-function: ease-in-out;
+    transition: 500ms;
+    width: 20%;
+    height:40%; 
+    position: absolute;
+    background-color: white;
+    border-radius: 10%;
+    z-index: 10;
+
 }
