@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 body {
   width: 100vw;
@@ -34,6 +35,10 @@ header {
   align-items: center;
   justify-content: center;
   opacity: 0.8;
+}
+img {
+  width: 100%;
+  height: auto;
 }
 #page {
   display: flex;
@@ -84,7 +89,8 @@ header {
   font-size: 24px;
   width: 320px;
   height: 60px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
+  border: none;
 }
 .btn.correct {
   color: #22a052;
