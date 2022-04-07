@@ -79,6 +79,9 @@ nav {
   .nav-links ul li a{
     color: white;
   }
+  .navbar{
+    background-color: #4EB073;
+  }
   .navbar__menu {
     display: grid;
     justify-content: center;
@@ -232,6 +235,9 @@ nav img {
 
   .nav-links ul {
     padding: 30px;
+  }
+  .navbar__toggle{
+    color: black;
   }
 }
 

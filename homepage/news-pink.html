@@ -10,18 +10,20 @@
   </head>
   <body>
     <section class="header">
-      <nav>
+      <nav class="navbar">
         <a href="index.html"><img src="Assets/Group 133.png" alt="" /></a>
-        <div class="nav-links" id="navLinks">
-          <p style="color: white" onclick="hideMenu()">x</p>
-          <ul>
-            <li><a href="">HOME</a></li>
-            <li><a href="">INFORMATION</a></li>
-            <li><a href="">EDUCATION</a></li>
-            <li><a href="">ABOUT US</a></li>
+        <div class="nav-links navbar_container" id="navLinks">
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item"><a class="navbar__links" href="">HOME</a></li>
+            <li class="navbar__item"><a class="navbar__links" href="">INFORMATION</a></li>
+            <li class="navbar__item"><a class="navbar__links" href="">EDUCATION</a></li>
+            <li class="navbar__item"><a class="navbar__links" href="">ABOUT US</a></li>
           </ul>
         </div>
-        <p onclick="showMenu()">=</p>
       </nav>
     </section>
     <section>
@@ -153,5 +155,6 @@
         </div>
       </div>
     </section>
+    <script src="main.js"></script>
   </body>
 </html>
