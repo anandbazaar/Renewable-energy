@@ -222,11 +222,6 @@ section {
     color: white;
 }
 
-h4 {
-    color: #422372;
-    font-size: 42px;
-}
-
 .information p {
     font-size: 42px;
 }
@@ -246,7 +241,7 @@ h4 {
     font-size: 54px;
 }
 
-.img-txt h4 {
+.img-txt h5 {
     width: 800px;
     margin: 10px 0 40px;
     margin-left: 100px;
@@ -274,7 +269,7 @@ h4 {
 }
 
 .img-h {
-    left: 25%;
+    left: 18%;
     top: 32%;
     position: absolute;
 }
@@ -397,4 +392,58 @@ h4 {
 
 .icon {
     margin-right: 14px;
+}
+
+h4:nth-child(1) {
+	animation-delay: 1s;
+}
+h4:nth-child(2) {
+	animation-delay: 2s;
+}
+h4:nth-child(3) {
+	animation-delay: 3s;
+}
+h4 {
+    display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+    color: #E9C85C;
+    font-size: 52px;
+}
+.information h4 span {
+    position: absolute;
+        height: 100%;
+        width: 0;
+        left: 0;
+        background-color: #D78827;
+        animation: text_reveal_box 1s ease;
+        animation-delay: 0.5s;
+}
+.information h4:nth-child(1) span {
+        animation-delay: 0.5s;
+}
+.information h4:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+.information h4:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: #D78827;
+	}
 }

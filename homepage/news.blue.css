@@ -38,7 +38,6 @@ nav {
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
-    top: 0;
     z-index: 999;
   }
   .navbar__container {
@@ -47,7 +46,7 @@ nav {
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
+    max-width: 950px;
     margin: 0 auto;
     padding: 0 50px;
   }
@@ -215,7 +214,7 @@ section {
 }
 
 h4 {
-    color: #B5E9F8;
+    color: #354B7B;
     font-size: 42px;
 }
 
