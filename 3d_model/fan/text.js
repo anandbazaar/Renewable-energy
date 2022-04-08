@@ -1,4 +1,6 @@
-const infoBox = document.createElement("p");
+const infoText = document.createElement("p");
+const infoBox = document.createElement("div");
+
 const infoCont = document.querySelector(".infoCont");
 const dropBox = document.createElement("div");
 dropBox.classList.add("dropBox");
@@ -9,12 +11,27 @@ const info = [
   "iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum \n iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum ",
   "dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom \n dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom",
 ];
-infoBox.innerText = info[0];
+let i=0
+infoText.innerText = info[i];
+infoBox.appendChild(infoText)
+
 infoCont.appendChild(infoBox);
-// infoCont.appendChild(dropBox)
 
 let direction = "left";
+//listener
 
+
+
+document.addEventListener("keydown",(e) =>{
+  console.log(e)
+  i++
+  infoBox.classList.remove("aft")
+  infoBox.classList.add("gtb")
+  
+
+  
+  
+})
 //move
 infoCont.addEventListener("animationend", () => {
   if (direction === "right") {
@@ -22,12 +39,20 @@ infoCont.addEventListener("animationend", () => {
     infoCont.classList.remove("afl");
     infoCont.classList.remove("h2l");
     infoCont.classList.add("afr");
+    infoBox.classList.remove("gtb")
+    infoBox.classList.add("aft")
+    infoBox.innerText = info[i];
+
     infoCont.style.left = "calc(100% - 740px)";
   } else if (direction === "left") {
     infoCont.classList.remove("h2r");
     infoCont.classList.remove("afr");
     infoCont.classList.remove("h2l");
     infoCont.classList.add("afl");
+    infoBox.classList.remove("gtb")
+    infoBox.classList.add("aft")
+    infoBox.innerText = info[i];
+
     infoCont.style.left = "0px";
   }
 });
