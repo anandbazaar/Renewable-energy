@@ -59,16 +59,14 @@ water.position.y = -80;
 
 scene.add(water);
 
-
-
-
-let geometry = new THREE.SphereGeometry( 500, 60, 40 );
-geometry.scale( - 1, 1, 1 );
-let material = new THREE.MeshBasicMaterial( {
-  map: new THREE.TextureLoader().load( '../textures/cloud3.jpg' )
-} );
-mesh = new THREE.Mesh( geometry, material );
-scene.add( mesh );
+let geometry = new THREE.SphereGeometry(500, 60, 40);
+geometry.scale(-1, 1, 1);
+let material = new THREE.MeshBasicMaterial({
+  map: new THREE.TextureLoader().load("../textures/cloud3.jpg"),
+});
+mesh = new THREE.Mesh(geometry, material);
+mesh.position.y = 50
+scene.add(mesh);
 
 //fan
 
@@ -139,7 +137,7 @@ const pointLight = new THREE.PointLight("#fff", 1.5);
 pointLight.position.set(50, 50, 50);
 scene.add(pointLight);
 camera.position.z = 200;
-all.position.set(40,0,0)
+all.position.set(40, 0, 0);
 
 //render
 const renderer = new THREE.WebGLRenderer({
@@ -155,7 +153,6 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function animate() {
-
   requestAnimationFrame(animate);
   controls.enableZoom = false;
   controls.enablePan = false;
@@ -174,15 +171,24 @@ function spin() {
   renderer.render(scene, camera);
   const elapsedTime = clock.getElapsedTime();
   // windTurbine.rotation.y = elapsedTime * 1.5;
-  console.log(camera.position)
-  if(camera.position.x < 0 && camera.position.z < 0 || camera.position.x > 0 && camera.position.z < 0){
-    infoCont.style.left = "70%"
-    
-}
-else{
-  infoCont.style.left = "10%"
- 
-}
+  if (
+    (camera.position.x < 0 && camera.position.z < 0) ||
+    (camera.position.x > 0 && camera.position.z < 0)
+  ) {
+    if (direction === "left") {
+      direction = "right";
+      move();
+    }
+    // infoCont.style.justifyContent = "flex-end";
+    // infoCont.style.left = (window.innerWidth - 740).toString() + "px";
+  } else {
+    if (direction === "right") {
+      direction = "left";
+      move();
+    }
+    // infoCont.style.justifyContent = "flex-start";
+    // infoCont.style.left = "0px";
+  }
 }
 spin();
 animate();
