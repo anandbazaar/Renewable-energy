@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quiz.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="home-box custom-box">
-        <h3>Instruction:</h3>
-        <p>Total number of questions: <span class="total-question"></span></p>
-        <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
-    </div>
-    <div class="quiz-box custom-box hide">
-        <div class="question-number">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="quiz.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav class="navbar">
+        <a href="index.html"
+          ><img class="logo" src="Assets/Group 133.png" id="" alt=""
+        /></a>
+        <div class="nav-links navbar_container" id="navLinks">
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="" class="navbar__links" id="home-page">HOME</a>
+            </li>
+            <li class="navbar__item">
+              <a href="" class="navbar__links" id="about-page">INFORMATION</a>
+            </li>
+            <li class="navbar__item">
+              <a href="quiz.html" class="navbar__links" id="services-page"
+                >EDUCATION</a
+              >
+            </li>
+            <li class="navbar__item">
+              <a href="" class="navbar__links" id="services-page">ABOUT US</a>
+            </li>
+          </ul>
         </div>
-        <div class="question-text">
+      </nav>
+    </section>
+    <section class="img-section">
+      <div class="img-con">
+        <img class="hp-img" src="Assets/Rectangle 483.png" alt="" />
+        <div class="garchig">
+          <h3>Cэргээгдэх боловсролын тест</h3>
         </div>
-        <div class="option-container">
+      </div>
+    </section>
+    <section class="quiz-section">
+      <div class="home-box custom-box">
+        <h3>Сэргээгдэх эрчим хүч: Асуулт</h3>
+        <p>Нийт aсуулт: <span class="total-question"></span></p>
+        <button type="button" class="btn" onclick="startQuiz()">
+          Эхлүүлэх
+        </button>
+      </div>
+      <div class="quiz-box custom-box hide">
+        <div class="question-number"></div>
+        <div class="question-text"></div>
+        <div class="option-container"></div>
+        <div class="next-question-btn">
+          <button type="button" class="btn" onclick="next()">Next</button>
         </div>
-        <div class="next-question-btn" >
-            <button type="button" class="btn" onclick="next()">Next</button>
-        </div>
-        <div class="answer-indicator">
-        </div>
-    </div>
-    <div class="result-box custom-box hide">
+        <div class="answer-indicator"></div>
+      </div>
+      <div class="result-box custom-box hide">
         <h1>Quiz Result</h1>
         <table>
-            <tr>
-                <td>Total Question</td>
-                <td><span class="total-question"></span></td>
-            </tr>
-            <tr>
-                <td>Attempt</td>
-                <td><span class="total-attempt"></span></td>
-            </tr>
-            <tr>
-                <td>Correct</td>
-                <td><span class="total-correct"></span></td>
-            </tr>
-            <tr>
-                <td>Wrong</td>
-                <td><span class="total-wrong"></span></td>
-            </tr>
-            <tr>
-                <td>Percentage</td>
-                <td><span class="percentage"></span></td>
-            </tr>
-            <tr>
-                <td>Your Total Score</td>
-                <td><span class="total-score"></span></td>
-            </tr>
+          <tr>
+            <td>Нийт aсуулт</td>
+            <td><span class="total-question"></span></td>
+          </tr>
+          <tr>
+            <td>Оролдлого</td>
+            <td><span class="total-attempt"></span></td>
+          </tr>
+          <tr>
+            <td>Зөв</td>
+            <td><span class="total-correct"></span></td>
+          </tr>
+          <tr>
+            <td>Буруу</td>
+            <td><span class="total-wrong"></span></td>
+          </tr>
+          <tr>
+            <td>Хувиар</td>
+            <td><span class="percentage"></span></td>
+          </tr>
+          <tr>
+            <td>Нийт оноо</td>
+            <td><span class="total-score"></span></td>
+          </tr>
         </table>
-        <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
-        <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
-    </div>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">
+          Дахин оролдох
+        </button>
+        <button type="button" class="btn" onclick="goToHome()">
+          Home луу буцах
+        </button>
+        <div>
+          <div class="bird-w">
+            <img class="bird-w-img" src="assets/Union.png" alt="" />
+            <div class="bird-w-p">
+              <p>Зүгээрдээ дахиад уншаад бөглөөд үз 😘</p>
+            </div>
+          </div>
+
+          <img class="bird-img" src="assets/Group 196.png" alt="" />
+        </div>
+      </div>
+    </section>
+
     <script src="quiz.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
