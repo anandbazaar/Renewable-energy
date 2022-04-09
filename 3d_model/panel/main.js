@@ -3,6 +3,7 @@ const scene = new THREE.Scene();
 // Panel
 
 const panel = new THREE.Group();
+const wires =  new THREE.Group();
 
 // Cube
 
@@ -12,6 +13,30 @@ let material = new THREE.MeshBasicMaterial({ map: texture });
 const cube = new THREE.Mesh(geometry, material);
 
 panel.add(cube);
+// Wire
+
+ geometry = new THREE.BoxGeometry(1, 1, 30);
+ material = new THREE.MeshBasicMaterial({ color: "white" });
+ const wire = new THREE.Mesh(geometry, material);
+ const wire2 = new THREE.Mesh(geometry, material);
+
+ wire.position.set(-4,30,20);
+ wire2.position.set(11,30,35);
+
+wire2.rotation.y = Math.PI / 2;
+
+wires.add(wire);
+wires.add(wire2);
+
+geometry = new THREE.BoxGeometry(2, 2, 2);
+material = new THREE.MeshBasicMaterial({ color: "grey" });
+const turn = new THREE.Mesh(geometry, material);
+
+turn.position.set(-4,30,35);
+
+wires.add(turn);
+
+scene.add(wires);
 
 // Outlines
 
@@ -45,7 +70,7 @@ outline3.position.set(10.5, 0, 0);
 outline4.position.set(-10.5, 0, 0);
 outline5.position.set(1, 0.5, -0.01);
 outline6.position.set(0.3, 0.6, -0.1);
-panel.position.set(-2.5, 26.4, 0.3);
+panel.position.set(-2.5, 66.4, 0.3);
 
 outline.add(outline1);
 outline.add(outline2);
@@ -84,9 +109,11 @@ const params = {
   flowX: 1,
   flowY: 1,
 };
-const waterGeometry = new THREE.PlaneGeometry(1000, 1000);
+const waterGeometry = new THREE.PlaneGeometry(10000, 10000);
+
 
 water = new Water(waterGeometry, {
+  
   color: params.color,
   scale: params.scale,
   flowDirection: new THREE.Vector2(params.flowX, params.flowY),
@@ -94,23 +121,44 @@ water = new Water(waterGeometry, {
   textureHeight: 1024,
 });
 water.rotation.x = Math.PI * 1.5;
-water.position.y = -80;
+water.position.y = -15;
+//background
+geometry = new THREE.SphereGeometry( 1000, 60, 40 );
+geometry.scale( - 1, 1, 1 );
+material = new THREE.MeshBasicMaterial( {
+  map: new THREE.TextureLoader().load( '../textures/cloud3.jpg' )
+} );
+mesh = new THREE.Mesh( geometry, material );
+mesh.position.y = 300
+scene.add( mesh );
 
 scene.add(water);
 // Planes
 
 texture = new THREE.TextureLoader().load("../textures/sand.jpeg");
-geometry = new THREE.PlaneGeometry(100, 100, 100);
+geometry = new THREE.SphereGeometry(100, 128);
 material = new THREE.MeshBasicMaterial({
   map: texture,
   side: THREE.DoubleSide,
 });
 const planes = new THREE.Mesh(geometry, material);
 
-planes.position.set(0, -10, 0);
+geometry = new THREE.PlaneGeometry(1000, 1000, 000);
+material = new THREE.MeshBasicMaterial({
+  map: texture,
+  side: THREE.DoubleSide,
+});
+
+const planes2 = new THREE.Mesh(geometry, material);
+
+planes.position.set(0, -70, 0);
 planes.rotation.x = Math.PI / 2;
 
+planes2.position.set(0, -30, 0);
+planes2.rotation.x = Math.PI / 2;
+
 scene.add(planes);
+// scene.add(planes2);
 
 // Support
 texture = new THREE.TextureLoader().load("../textures/metal-texture.jpeg");
@@ -118,19 +166,20 @@ geometry = new THREE.BoxGeometry(10, 1, 10);
 material = new THREE.MeshBasicMaterial({ color: "white" });
 const support = new THREE.Mesh(geometry, material);
 
-support.position.set(-4.2, -9, 0.2);
+support.position.set(-4.2, 30, 0.2);
 
 scene.add(support);
+
 
 // Stand
 
 const stands = new THREE.Group();
 
 geometry = new THREE.CylinderGeometry(0.8, 0.8, 35.5, 64);
-material = new THREE.MeshBasicMaterial({map: texture})
+material = new THREE.MeshBasicMaterial({ map: texture });
 const stand1 = new THREE.Mesh(geometry, material);
 
-stand1.position.set(-4.2, 9, 0.2);
+stand1.position.set(-4.2, 48, 0.2);
 
 stands.add(stand1);
 scene.add(stands);
@@ -138,7 +187,7 @@ scene.add(stands);
 // Axes Helper
 
 const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
+// scene.add(axesHelper);
 
 const sizes = {
   width: window.innerWidth,
@@ -148,9 +197,17 @@ const sizes = {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.set(20, 100, 150);
 camera.lookAt(cube.position);
-const pointLight = new THREE.PointLight("#fff", 1.5);
-pointLight.position.set(50, 50, 50);
-scene.add(pointLight);
+const pointLight = new THREE.PointLight("#fff", 2);
+
+
+// const pointLightHelper = new THREE.PointLightHelper(pointLight,32)
+// scene.add(pointLightHelper)
+// pointLight.position.set(0, 400, 0);
+// scene.add(pointLight);
+
+
+
+
 //controller
 
 const canvas = document.querySelector(".webgl");
@@ -162,8 +219,8 @@ const renderer = new THREE.WebGLRenderer({
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-controls.enableZoom = false;
-  controls.enablePan = false;
+controls.enableZoom = true;
+  controls.enablePan = true;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 scene.background = new THREE.Color(0x272928);
@@ -181,3 +238,5 @@ function controlAnimation() {
 }
 
 controlAnimation();
+
+
