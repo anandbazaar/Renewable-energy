@@ -14,7 +14,7 @@ const all = new THREE.Group()
 //grid
 
 var materials = [
-  new THREE.MeshLambertMaterial({
+  new THREE.MeshBasicMaterial({
       color:"white"
   }),
   new THREE.MeshLambertMaterial({
@@ -26,8 +26,9 @@ new THREE.MeshLambertMaterial({
 new THREE.MeshLambertMaterial({
   color:"white"
 }),
-new THREE.MeshLambertMaterial({
-  color:"white"
+new THREE.MeshStandardMaterial({
+  color:"white",
+  roughness: 0.1
 }),
 new THREE.MeshLambertMaterial({
   color:0x4d9872
@@ -228,10 +229,25 @@ const camera = new THREE.PerspectiveCamera(80,1280 / 720);
 
 scene.add(camera);
 camera.position.set(0, 0, 0);
-const pointLight = new THREE.PointLight("#fff", 1.5);
-pointLight.position.set(50, 50, 50);
+const pointLight = new THREE.PointLight("#fff", 0.5);
+pointLight.position.set(100, 50, 100);
 scene.add(pointLight);
-camera.position.z = 150;
+const pointLight1 = new THREE.PointLight("#fff", 0.5);
+pointLight1.position.set(-100, 50, -100);
+scene.add(pointLight1);
+const pointLight3 = new THREE.PointLight("#fff", 0.5);
+pointLight3.position.set(-100, 50, 70);
+scene.add(pointLight3);
+const pointLight4 = new THREE.PointLight("#fff", 0.5);
+pointLight4.position.set(100, 50, -100);
+scene.add(pointLight4);
+const pointLight2 = new THREE.PointLight("#fff", 1);
+pointLight2.position.set(50,-100,20)
+scene.add(pointLight2);
+
+
+
+camera.position.z = 200;
 camera.position.y = 100;
 
 //render
@@ -256,9 +272,6 @@ function animate() {
 }
 const clock = new THREE.Clock();
 function spin() {
-  pointLight.position.x = camera.position.x;
-  pointLight.position.y = camera.position.y;
-  pointLight.position.z = camera.position.z;
   requestAnimationFrame(spin);
   blades[0].rotation.z += 0.1;
   blades[0].updateMatrix();
@@ -266,7 +279,8 @@ function spin() {
   blades[1].updateMatrix();
   blades[2].rotation.z += 0.1;
   blades[2].updateMatrix();
-  all.rotation.y += 0.005
+  all.rotation.y += 0.01
+
 
   renderer.render(scene, camera);
   const elapsedTime = clock.getElapsedTime();
