@@ -1,14 +1,11 @@
 const infoText = document.createElement("p");
 const infoBox = document.createElement("div");
-
+infoText.style.fontFamily = "'Lato', sans-serif"
 const infoCont = document.querySelector(".infoCont");
-const dropBox = document.createElement("div");
-dropBox.classList.add("dropBox");
-dropBox.innerText = "<";
+infoBox.style.marginTop = "50%"
 
 const info = [
-  "Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum \n ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum\n ipsum Lorum ipsum Lorum ipsum Lorum ipsum",
-  "iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum \n iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum ",
+  "Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum \n ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum\n ipsum Lorum ipsum Lorum ipsum Lorum ipsumLorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum \n ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum\n ipsum Lorum ipsum Lorum ipsum Lorum ipsumLorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum \n ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum\n ipsum Lorum ipsum Lorum ipsum Lorum ipsumLorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum \n ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum\n ipsum Lorum ipsum Lorum ipsum Lorum ipsum",
   "dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom \n dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom dom",
   "Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum \n ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum ipsum Lorum\n ipsum Lorum ipsum Lorum ipsum Lorum ipsum",
   "iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum \n iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum iosum ",
@@ -46,7 +43,7 @@ document.addEventListener("wheel", (e) => {
     belowHundred = true;
     i--
     infoBox.classList.remove("aft");
-    infoBox.classList.add("gtb");
+    infoBox.classList.add("gtt");
     console.log(i, e.deltaY, overHundred);
   }
 });
@@ -60,7 +57,7 @@ infoCont.addEventListener("animationend", () => {
     overHundred = false;
   }
   if(belowHundred){
-    infoBox.classList.remove("gtb");
+    infoBox.classList.remove("gtt");
     infoBox.classList.add("aft");
     infoBox.innerText = info[i];
     belowHundred = false;
@@ -72,7 +69,7 @@ infoCont.addEventListener("animationend", () => {
     infoCont.classList.remove("afl");
     infoCont.classList.remove("h2l");
     infoCont.classList.add("afr");
-    infoCont.style.left = "calc(100% - 740px)";
+    infoCont.style.left = "calc(100% - 30%)";
   } else if (direction === "left") {
     infoCont.classList.remove("h2r");
     infoCont.classList.remove("afr");
@@ -97,6 +94,3 @@ function move() {
   }
 }
 
-const textChange = (i) => {
-  infoBox.innerText = info[i];
-};

@@ -61,9 +61,18 @@ const land3 = new THREE.Mesh(
 )
 land3.rotation.x = Math.PI * 0.5
 land3.position.set(0,-43.7,52 )
+
+const land4 = new THREE.Mesh(
+  new THREE.BoxGeometry(20,20,2),
+  materials
+  
+)
+land4.rotation.x = Math.PI * 0.5
+land4.position.set(-80,-50,-10 )
 all.add(land3)
 all.add(land2)
 all.add(land1)
+all.add(land4)
 //land
 // loader = new THREE.TextureLoader();
 // loader.load("../textures/sand.jpeg", function (texture) {
@@ -116,6 +125,29 @@ all.add(land1)
 // mesh = new THREE.Mesh(geometry, material);
 // mesh.position.y = 50
 // scene.add(mesh);
+//tree
+//trunk
+const tree = new THREE.Group()
+const trunk = new THREE.Mesh(
+  new THREE.CylinderGeometry(3, 5, 15, 128),
+  new THREE.MeshLambertMaterial({ color: 0xFDC6B4})
+);
+trunk.position.set(-30,-43,-25)
+scene.add(trunk)
+const branch1 = new THREE.Mesh(
+  new THREE.ConeGeometry(13, 20, 128),
+  new THREE.MeshLambertMaterial({ color: 0x78C77F})
+);
+branch1.position.set(-30,-28,-25)
+scene.add(branch1)
+const branch2 = new THREE.Mesh(
+  new THREE.ConeGeometry(10, 20, 128),
+  new THREE.MeshLambertMaterial({ color: 0x78C77F})
+);
+branch2.position.set(-30,-17,-25)
+tree.add(trunk,branch1,branch2)
+tree.position.set(-50,0,15)
+all.add(tree)
 
 //fan
 var windTurbines = [];
@@ -180,16 +212,19 @@ for (let i = 0; i < 3; i++) {
   windTurbines[i].add(stand);
   all.add(windTurbines[i]);
 }
-windTurbines[0].position.set(10,0,10)
-windTurbines[1].position.set(-10,0,-10)
-windTurbines[2].position.set(20,0,-20)
+windTurbines[0].position.set(35,6,55)
+windTurbines[0].rotation.y = -Math.PI * 0.25
+windTurbines[1].position.set(-40,0,-20)
+windTurbines[1].rotation.y = -Math.PI * 0.5
+windTurbines[2].position.set(-40,0,15)
+windTurbines[2].rotation.y = -Math.PI * 0.5
 scene.add(all)
-all.position.set(50,0,0)
+all.position.set(50,0,-15)
 // all.rotation.y = Math.PI * 0.250
 
 
 //camera
-const camera = new THREE.PerspectiveCamera(75, 800 / 600);
+const camera = new THREE.PerspectiveCamera(80,1280 / 720);
 
 scene.add(camera);
 camera.position.set(0, 0, 0);
