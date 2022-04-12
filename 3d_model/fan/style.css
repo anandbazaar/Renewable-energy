@@ -1,21 +1,23 @@
 * {
   margin: 0px;
   overflow: hidden;
-
 }
+.infoText{
+  font-family: 'Lato', sans-serif;
+}
+
 body{
   width: fit-content;
   height: fit-content;
 }
 
 .infoCont {
+  color: white;
   display: flex;
-  align-items: flex-start;
   padding: 20px;
-  width: 700px;
+  width: 30%;
   height: 100%;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
   z-index: 10;
   gap: 100px
 
@@ -44,7 +46,7 @@ body{
     left: 0;
   }
   to {
-    left: -740px;
+    left: -30%;
   }
 }
 @keyframes appearFromRight {
@@ -52,7 +54,7 @@ body{
     left: 100%;
   }
   to {
-    left: calc(100% - 740px);
+    left: calc(100% - 30%);
   }
 }
 
@@ -69,7 +71,7 @@ body{
 
 @keyframes hideToRight {
   from {
-    left: calc(100% - 740px);
+    left: calc(100% - 30%);
   }
   to {
     left: 100%;
@@ -77,7 +79,7 @@ body{
 }
 @keyframes appearFromLeft {
   from {
-    left: -740px;
+    left: -30%;
   }
   to {
     left: 0px;
@@ -91,7 +93,7 @@ body{
 }
 @keyframes GoToBottom {
   from {
-    margin-top: 0px;
+    margin-top: 50%;
     opacity: 100%;
   }
   to{
@@ -111,5 +113,20 @@ body{
   }
   to{
     opacity: 100%;
+  }
+}
+.gtt{
+  animation-name: GoToTop;
+  animation-duration: 500ms;
+  animation-play-state: running;
+}
+@keyframes GoToTop {
+  from {
+    margin-top: 50%;
+    opacity: 100%;
+  }
+  to{
+    margin-top: 0%;
+    opacity: 0%;
   }
 }
