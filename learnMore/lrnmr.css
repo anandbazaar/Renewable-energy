@@ -27,6 +27,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .header a {
     float: left;
@@ -81,8 +82,10 @@ h2 {
 .row {
     display: flex;
     flex-direction: row;
-    margin: 50px;
-    margin-left:  0px;
+    margin-bottom: 35px;
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
 }
 .tsuvaa {
     display: flex;
@@ -101,6 +104,8 @@ h2 {
     flex-direction: column;
     margin: 20px;
     justify-content: center;
+    align-items: center;
+    width: 33%;
 }
 .row .column {
     display: flex;
@@ -127,16 +132,15 @@ h2 {
     height: 207px;
     background-color: white;
     margin-bottom: 20px;
-    display: flex;
-    
+    display: flex;   
 }
 .container a {
     display: flex;
     flex-direction: row;
     align-items: center;
     cursor: pointer; 
-    /* text-align: justify; */
     padding-right: 10px;
+    transition: all 0.3s ease;
 }
 a {
     text-decoration: none;
@@ -144,6 +148,7 @@ a {
 }
 .container a:hover {
     text-decoration:underline #4EB073 ;
+    
 }
 .otherimg:hover {
     opacity: 50%;
@@ -188,9 +193,11 @@ a {
     align-items: center;
     justify-content: center;
 }
+.map {
+    margin-right: 50px;
+}
 .zai30px {
-    margin-left: 30px;
-    
+    margin-left: 30px; 
 }
 .zai {
     margin-left: 60px;
@@ -211,6 +218,13 @@ h3 {
     margin-left: 0px;
     font-weight: 300;
 }
+.text2 {
+    font-size: 30px;
+    letter-spacing: normal;
+    font-weight:lighter;
+    margin:80px; 
+    margin-left:0px
+}
 .tugsgul {
     background-color: white;
     height: 407px;
@@ -219,27 +233,29 @@ h3 {
     display: flex;
     flex-direction: row;
 }
+.social {
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+}
+.text3 {
+    margin: 40px;
+}
 @media screen and (max-width: 416px) {
     .header {
-        position: fixed;
-        overflow: hidden;
-        background-color: #E5E5E5;
-        top: 0;
         width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        min-width: 357px;
     }
     .header a {
-        float: left;
-        display: block;
-        color: black;
-        text-align: center;
-        padding: 6px 10px;
-        text-decoration: none;
+        padding: 15px 10px;
         font-size: 12px;
         margin: 0 5px;
-        font-weight: 400;
+        font-weight: 600;
+    }
+    .main-container {
+        width: 100%;
+        background-color: #E5E5E5;
+        min-width: 378px;
     }
     .logo {
         height: 30px;
@@ -247,31 +263,162 @@ h3 {
         margin: 5px;
     }
     .main {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;  
+        margin-top: 50px; 
     }
     .line {
-        border: 4px solid #409ADA;
-        border-radius: 4px;
-        width: 20%;
+        border: 2px solid #409ADA;
+        width: 18%;
     }
     .asuult {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
         width: 100vw;
+        min-width: 357px;
     }
     h1 {
         color: #409ADA;
-        font-size: 14px;
+        font-size: small;
         font-weight: lighter;
+    }
+    h2 {
+        color: #134A77;
+        font-size: 15px;
+        font-weight: lighter;
+    }
+    h3 {
+        margin: 10px;
+        font-size: 20px;
+    }
+    .TEXT {
+        font-size: 15px;
+        margin: 10px;
+        margin-left: 20px;
+    }
+    .row h2 {
+        margin: 0px;
     }
     .rnbl {
         width: 100vw;
-        height: 30vh;
-        margin-top: 20px;
+        height: 20vh;
+        margin-top: 10px;
+    }
+    .row {
+        margin-bottom: 10px;
+        margin: 5px;
+        width: 100%;
+    }
+    .tsuvaa {
+        margin-bottom: 10px;
+
+    }
+    .column {
+        margin-bottom: 10px;
+    }
+    .dooshoo {
+        margin-bottom: 10px;
+        margin: 0px;
+        width: 33%;
+    }
+    .row .column {
+        margin-bottom: 10px;
+        margin: 0px;
+    }
+    .Information {
+        width: 60%;
+        margin: 0px;
+    }
+    .other {
+        width: 40%;
+    }
+    .text1 {
+        font-size: 15px;
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+    .zai {
+        font-size: 15px;
+        margin-left: 15px;
+    }
+    .text {
+        font-size: 13px;
+        margin-bottom: 10px;
+    } 
+    .container {
+        height: 80px;
+        margin-bottom: 20px;  
+        width: 100%;
+    }
+    .otherimg {
+        width: 50%;
+        height: 80%;
+        margin: 0px;
+        margin-right: 5px;
+    }
+    .container a {
+        font-size: 7px;
+        padding-right: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    .weather {
+        width: 100%;
+        height: 100%;
+    }
+    .circle {
+        height: 50px;
+        width: 50px;
+        margin-right: 5px;
+    }
+    .huvi {
+        font-size: 10px;
+        margin: 8px;
+    }
+    .tomzrg {
+        width: 100vw;
+        height: 150px;
+        margin: 5px;
+    }
+    .zai30px {
+        margin-left: 0px;
+        font-size: 10px;
+    }
+    .map {
+        width: 35%;
+        height: 130px;
+        margin-right: 5px;
+        
+    }
+    .text2 {
+        font-size: 13px;
+        margin: 20px;
+    }
+    .tugsgul {
+        width: 100vw;
+        height: 200px;
+        padding: 0px;
+    }
+    .suulzurag {
+        width: 30px;
+        height: 30px;
+    }
+    .social {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+    }
+    .ikons {
+        width: 20px;
+        height: 20px;
+    }
+    .text3 {
+        margin: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .tsuvaa p {
+        font-size: 10px;
+        margin: 3px;
+        text-align: center;
+    }
+    .tsuvaa {
+        margin: 0px; 
     }
 }
