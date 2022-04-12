@@ -150,7 +150,87 @@ tree.add(trunk,branch1,branch2)
 tree.position.set(-50,0,15)
 all.add(tree)
 
+
+//controlbox
+const controlBox= new THREE.Mesh(
+  new THREE.BoxGeometry(7,20,10),
+  new THREE.MeshBasicMaterial({ color: 0xe6e6e6})
+)
+const cubeMesh = new THREE.Mesh(
+  new THREE.BoxGeometry(10, 10, 10),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+controlBox.position.set(10,-33,53)
+controlBox.updateMatrixWorld()
+cubeMesh.position.set(4.4,-24,53)
+cubeMesh.rotation.z = Math.PI * 0.35
+cubeMesh.updateMatrixWorld()
+const cubeCSG = CSG.fromMesh(cubeMesh)
+const controlCSG = CSG.fromMesh(controlBox)
+const cubeSphereIntersectCSG = controlCSG.subtract(cubeCSG)
+const cubeSphereIntersectMesh = CSG.toMesh(
+  cubeSphereIntersectCSG,
+  new THREE.Matrix4(),
+  materials
+)
+cubeSphereIntersectMesh.material = new THREE.MeshLambertMaterial({
+   color: "white"
+})
+
+
+    all.add(cubeSphereIntersectMesh)
+    
+
 //fan
+//cloud
+const clouds= []
+const cloud1 = new THREE.Mesh(
+  new THREE.CylinderGeometry(10,10,10,128),
+  new THREE.MeshLambertMaterial({color:"white"})
+)
+const squareMesh = new THREE.Mesh(
+  new THREE.BoxGeometry(10, 10, 10),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+
+squareMesh.rotation.z = 0
+squareMesh.scale.set(2,1,1.1)
+squareMesh.position.set(20,-6,-45)
+squareMesh.updateMatrixWorld()
+cloud1.position.set(20,0,-45)
+cloud1.rotation.x = Math.PI*0.5
+cloud1.updateMatrixWorld()
+const squareCSG = CSG.fromMesh(squareMesh)
+const cloud = CSG.fromMesh(cloud1)
+const cloudCSG = cloud.subtract(squareCSG)
+const cloudMesh1 = CSG.toMesh(
+  cloudCSG,
+  new THREE.Matrix4(),
+)
+const cloudMesh2 = CSG.toMesh(
+  cloudCSG,
+  new THREE.Matrix4(),
+)
+const cloudMesh3 = CSG.toMesh(
+  cloudCSG,
+  new THREE.Matrix4(),
+)
+const cloudMesh4 = CSG.toMesh(
+  cloudCSG,
+  new THREE.Matrix4(),
+)
+cloudMesh1.material = new THREE.MeshBasicMaterial({
+   color: "white"
+})
+
+all.add(cloudMesh1)
+cloudMesh1.position.set(15,-0.2,0)
+cloudMesh1.scale.set(0.8,0.8,1)
+all.add(cloudMesh2)
+// all.add(cloudMesh3)
+// all.add(cloudMesh4)
+
+
 var windTurbines = [];
 var blades = [];
 
@@ -220,53 +300,57 @@ windTurbines[1].rotation.y = -Math.PI * 0.5
 windTurbines[2].position.set(-40,0,15)
 windTurbines[2].rotation.y = -Math.PI * 0.5
 scene.add(all)
-all.position.set(50,0,-15)
+all.position.set(50,0,0)
 // all.rotation.y = Math.PI * 0.250
 
 
 //camera
-const camera = new THREE.PerspectiveCamera(80,1280 / 720);
+const camera = new THREE.PerspectiveCamera(90,1600 / 900);
 
 scene.add(camera);
 camera.position.set(0, 0, 0);
 const pointLight = new THREE.PointLight("#fff", 0.5);
 pointLight.position.set(100, 50, 100);
 scene.add(pointLight);
-const pointLight1 = new THREE.PointLight("#fff", 0.5);
+const pointLight1 = new THREE.PointLight("#fff", 0.4);
 pointLight1.position.set(-100, 50, -100);
 scene.add(pointLight1);
 const pointLight3 = new THREE.PointLight("#fff", 0.5);
 pointLight3.position.set(-100, 50, 70);
 scene.add(pointLight3);
-const pointLight4 = new THREE.PointLight("#fff", 0.5);
+const pointLight4 = new THREE.PointLight("#fff", 0.4);
 pointLight4.position.set(100, 50, -100);
 scene.add(pointLight4);
 const pointLight2 = new THREE.PointLight("#fff", 1);
 pointLight2.position.set(50,-100,20)
 scene.add(pointLight2);
 //test
-const x = 0, y = 0;
+// const cubeMesh = new THREE.Mesh(
+//   new THREE.BoxGeometry(20, 20, 20),
+//   new THREE.MeshBasicMaterial({ color: 0xff0000 })
+// )
+// const sphereMesh = new THREE.Mesh(
+//   new THREE.SphereGeometry(14.5, 80, 80),
+//   new THREE.MeshBasicMaterial({ color: 0x0000ff })
+// )
+// const cubeCSG = CSG.fromMesh(cubeMesh)
+// const sphereCSG = CSG.fromMesh(sphereMesh)
+// const cubeSphereIntersectCSG = cubeCSG.subtract(sphereCSG)
+// const cubeSphereIntersectMesh = CSG.toMesh(
+//   cubeSphereIntersectCSG,
+//   new THREE.Matrix4()
+// )
+// cubeSphereIntersectMesh.material = new THREE.MeshBasicMaterial({
+//   color: 0xff00ff
+// })
+// cubeSphereIntersectMesh.position.set(-2.5, 0, -3)
+//     scene.add(cubeSphereIntersectMesh)
 
-const heartShape = new THREE.Shape();
-
-heartShape.moveTo( x + 5, y + 5 );
-heartShape.bezierCurveTo( x + 5, y + 5, x + 4, y, x, y );
-heartShape.bezierCurveTo( x - 6, y, x - 6, y + 7,x - 6, y + 7 );
-heartShape.bezierCurveTo( x - 6, y + 11, x - 3, y + 15.4, x + 5, y + 19 );
-heartShape.bezierCurveTo( x + 12, y + 15.4, x + 16, y + 11, x + 16, y + 7 );
-heartShape.bezierCurveTo( x + 16, y + 7, x + 16, y, x + 10, y );
-heartShape.bezierCurveTo( x + 7, y, x + 5, y + 5, x + 5, y + 5 );
-
-const geometry = new THREE.ShapeGeometry( heartShape );
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const mesh = new THREE.Mesh( geometry, material ) ;
-scene.add( mesh );
 
 
 
 
-
-camera.position.z = 200;
+camera.position.z = 150;
 camera.position.y = 100;
 
 //render
@@ -292,13 +376,23 @@ function animate() {
 const clock = new THREE.Clock();
 function spin() {
   requestAnimationFrame(spin);
-  blades[0].rotation.z += 0.1;
+  blades[0].rotation.z += 0.05;
   blades[0].updateMatrix();
-  blades[1].rotation.z += 0.1;
+  blades[1].rotation.z += 0.05;
   blades[1].updateMatrix();
-  blades[2].rotation.z += 0.1;
+  blades[2].rotation.z += 0.05;
   blades[2].updateMatrix();
-  all.rotation.y += 0.01
+  console.log(cloudMesh1.position)
+  let wind = "left"
+  if(wind == "left"){
+  cloudMesh1.position.x -= 0.5
+  cloudMesh2.position.x -= 0.5
+  if(cloudMesh1.position.x < -50) wind = "right"
+  }
+
+
+  console.log(cloudMesh1.position.x)
+  all.rotation.y += 0.005
 
 
   renderer.render(scene, camera);
