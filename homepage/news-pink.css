@@ -13,10 +13,7 @@ body {
 .header {
 
     min-height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+    width: 100%;    
 }
 
 nav {
@@ -113,7 +110,19 @@ nav p {
     visibility: hidden;
 }
 
-  @media screen and (max-width: 960px) {
+  @media (max-width: 960px) {
+    body {
+        max-width: 1030px;
+    }
+    
+    .header {
+        max-width: 1030px;
+        width: 100%;
+    }
+    
+    .navbar {
+        max-width: 1030px;
+    }
     .navbar__container {
       display: flex;
       justify-content: space-between;
