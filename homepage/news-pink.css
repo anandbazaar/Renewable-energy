@@ -69,8 +69,8 @@ nav {
     height: 100%;
     transition: all 0.3s ease;
 }
-nav img {
-    width: 100px;
+nav .logo {
+    width: 100%;
 }
 
 .nav-links {
@@ -113,6 +113,9 @@ nav p {
 }
 
   @media screen and (max-width: 960px) {
+        nav .logo {
+            width: 60%;
+        }
       .img-txt{
           position: relative;
       }
@@ -366,8 +369,6 @@ h4 {
     display: block;
 }
 .logo {
-    width: 200px;
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
