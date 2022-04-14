@@ -159,6 +159,25 @@ peak4.position.set(-4,-24,-2)
 mountain.add(peak3)
 mountain.add(peak4)
 
+const peak5 = new THREE.Mesh(
+  new THREE.BoxGeometry(12,3,10),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+const peak6 = new THREE.Mesh(
+  new THREE.BoxGeometry(47,10,26),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+peak5.rotation.order ='YXZ'
+peak5.rotation.z = Math.PI * 0.5
+
+peak5.rotation.y = Math.PI * 0.25
+
+
+peak5.position.set(6,-11,8)
+peak6.position.set(-4,-24,-2)
+mountain.add(peak5)
+// mountain.add(peak6)
+
 //tree
 //trunk
 const tree = new THREE.Group()

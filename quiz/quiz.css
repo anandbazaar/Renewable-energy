@@ -176,13 +176,13 @@ height: 628px;
     height: 40px;
 
 }
-.bird-w p{
-    position: relative;
+.bird-w-p{
+    position: absolute;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
     color: white;
-    left: 14%;
+    left: 28%;
     
 }
 
