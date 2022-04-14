@@ -71,7 +71,7 @@ margin: auto;
   transition: all 0.3s ease;
 }
 nav img {
-  width: 100px;
+  width: 100%;
 }
 
 .nav-links {
@@ -118,7 +118,23 @@ nav img {
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 416px) {
+  nav img {
+    width: 60%;
+  }
+  .img-con{
+    height: 50%;
+  }
+  .image2 {
+    height: 80%;
+  }
+  .img3 {
+    height: 50%;
+  }
+  .img1{
+    height: 50%;
+    margin-left: 0;
+  }
   .navbar__container {
     display: flex;
     justify-content: space-between;
@@ -392,15 +408,14 @@ p {
 }
 
 .img2 {
-width: 497.54px;
-height: 355.58px;
   top: 20%;
   margin-left: 40%;
   position: absolute;
 }
 .img2 img{
-  width: 497.54px;
-  height: 355.58px;
+  width: 60vh;
+  height: 40vh
+  ;
 }
 .img1 {
   display: block;
@@ -494,7 +509,8 @@ h4 {
 }
 
 .garchig p {
-  font-size: 1.9vw;
+  font-size: 1.7vw;
+  margin-left: 2%;
   width: 100%;
   font-weight: 400;
   line-height: 90%;
