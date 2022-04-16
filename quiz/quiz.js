@@ -17,7 +17,7 @@ const quiz = [
   {
     q: "Сэргээгдэхгүй эрчим хүчний жишээ аль нь вэ?",
     options: ["салхи", "ус", "нар", "нүүрс"],
-    answer: 2,
+    answer: 3,
   },
   {
     q: "Дараахь зүйлсийн аль нь сэргээгдэх эрчим хүчийг ашиглах давуу тал вэ?",
@@ -45,3 +45,21 @@ const quiz = [
     answer: 0,
   },
 ];
+const menu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".navbar__menu");
+const navLogo = document.querySelector("#navbar__logo");
+const mobileMenu = () => {
+  menu.classList.toggle("is-active");
+  menuLinks.classList.toggle("active");
+};
+
+menu.addEventListener("click", mobileMenu);
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector(".is-active");
+  if (window.innerWidth <= 768 && menuBars) {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.remove("active");
+  }
+};
+
+menuLinks.addEventListener("click", hideMobileMenu);
