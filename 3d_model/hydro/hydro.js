@@ -168,7 +168,7 @@ Between.position.set(50,-275,0)
 
 //-------------------
 
-texture = new THREE.TextureLoader().load("../textures/stone-texture.webp");
+texture = new THREE.TextureLoader().load("../textures/mossy-stone-texture.jpeg");
 geometry = new THREE.BoxGeometry(20, 600, 510);
 material = new THREE.MeshBasicMaterial({ map: texture });
 
@@ -176,7 +176,7 @@ const Between2 = new THREE.Mesh(geometry, material);
 
 Between2.rotation.y = Math.PI / 2;
 
-Between2.position.set(50,-200,-240)
+Between2.position.set(50,-200,-250)
 
 scene.add(Between2);
 scene.add(Between);
@@ -289,31 +289,58 @@ tree2.position.set(-600,-180,500);
 
 scene.add(tree);
 scene.add(tree2);
+
 //Bush
+const bushes = []
 texture = new THREE.TextureLoader().load("../textures/bush-texture.jpeg");
 geometry = new THREE.DodecahedronGeometry(100, 1);
 material = new THREE.MeshBasicMaterial({ map: texture });
-const bush = new THREE.Mesh(geometry,material);
-const bush2 = new THREE.Mesh(geometry,material);
-const bush3 = new THREE.Mesh(geometry,material);
-const bush4 = new THREE.Mesh(geometry,material);
-const bush5 = new THREE.Mesh(geometry,material);
-const bush6 = new THREE.Mesh(geometry,material);
-const bush7 = new THREE.Mesh(geometry,material);
-const bush8 = new THREE.Mesh(geometry,material);
-const bush9 = new THREE.Mesh(geometry,material);
+for(let i=0;i<15;i++){
+  bushes[i] = new THREE.Mesh(
+    geometry = new THREE.DodecahedronGeometry(100, 1),
+    material = new THREE.MeshBasicMaterial({ map: texture }),
+  )
+  scene.add(bushes[i])
+}
 
-bush.position.set(300,-180,-200)
-bush2.position.set(300,-160,-100)
-bush3.position.set(300,-100,-150)
-bush4.position.set(250,-180,-250)
-bush5.position.set(200,-180,-250)
+geometry = new THREE.CylinderGeometry(250, 250, 100, 64);
+material = new THREE.MeshBasicMaterial({ map: texture });
+const boshes = new THREE.Mesh(geometry,material);
+const boshes2 = new THREE.Mesh(geometry,material);
 
-scene.add(bush);
-scene.add(bush2);
-scene.add(bush3);
-scene.add(bush4);
-scene.add(bush5);
+bushes[0].position.set(300,-180,-200)
+bushes[1].position.set(300,-160,-100)
+bushes[2].position.set(300,-100,-150)
+bushes[3].position.set(250,-180,-250)
+bushes[3].scale.set(1.5,1,1)
+bushes[4].position.set(200,-180,-250)
+bushes[5].position.set(300,-50,-150);
+bushes[6].position.set(300,0,-200);
+bushes[6].scale.set(0.5,3,0.5)
+bushes[7].position.set(200,0,-250);
+bushes[7].scale.set(2,1,0.7);
+bushes[8].position.set(160,30,-250);
+bushes[8].scale.set(0.5,3,0.5);
+bushes[9].position.set(-150,40,-250);
+bushes[9].scale.set(0.2,2,0.5);
+bushes[10].position.set(-30,60,-250);
+bushes[10].scale.set(0.5,2,0.5);
+bushes[11].position.set(50,60,-250);
+bushes[11].scale.set(0.2,2,0.5);
+bushes[12].position.set(-250,50,-250);
+bushes[13].position.set(-10,-100,-250);
+bushes[13].scale.set(2,2,2);
+bushes[14].position.set(-300,50,50);
+bushes[14].scale.set(0.2,2,0.5);
+boshes.position.set(-250,-150,-150);
+boshes2.position.set(-250,-300,50);
+
+scene.add(boshes);
+scene.add(boshes2);
+
+boshes.rotation.z = Math.PI / 2;
+boshes2.rotation.z = Math.PI / 2;
+//Cloud
 
 //Planes
 
@@ -356,10 +383,18 @@ var materials = [
       materials
   
   )
+  const land2 = new THREE.Mesh(
+    new THREE.BoxGeometry(1000,1600,40),
+    materials
+
+)
   land1.rotation.x = Math.PI * 0.5;
+  land2.rotation.x = Math.PI * 0.5;
 
   land1.position.set(20,-250,0);
-  scene.add(land1)
+  land2.position.set(-480,-250,100);
+  scene.add(land1);
+  scene.add(land2);
 
 
 //frame size

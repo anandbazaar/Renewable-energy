@@ -126,6 +126,90 @@ all.add(land4)
 // mesh = new THREE.Mesh(geometry, material);
 // mesh.position.y = 50
 // scene.add(mesh);
+
+//mountain
+const mountain = new THREE.Group()
+const MinusCubeMesh = new THREE.Mesh(
+  new THREE.BoxGeometry(15, 10, 20),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+MinusCubeMesh.rotation.x = Math.PI * 0.20
+MinusCubeMesh.position.set(0,4.5,2.1)
+MinusCubeMesh.updateMatrixWorld()
+const peak1 = new THREE.Mesh(
+  new THREE.ConeGeometry(16,40,4.5),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+const peak2 = new THREE.Mesh(
+  new THREE.ConeGeometry(13,30,4),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+peak1.rotation.y = Math.PI * 0.25 
+peak1.position.set(3,-8.5,0)
+peak2.rotation.y = Math.PI * 0.25 
+peak2.position.set(10,-14,13)
+mountain.add(peak1)
+mountain.add(peak2)
+mountain.position.set(30,-20,-20)
+all.add(mountain)
+
+const peak3 = new THREE.Mesh(
+  new THREE.BoxGeometry(10,10,15),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+const peak4 = new THREE.Mesh(
+  new THREE.BoxGeometry(47,10,26),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+const MinusCubeCSG = CSG.fromMesh(MinusCubeMesh)
+let peakCSG = CSG.fromMesh(peak3)
+let peakSubtractCSG = peakCSG.subtract(MinusCubeCSG)
+let peakSubtractMesh = CSG.toMesh(peakSubtractCSG, new THREE.Matrix4())
+peakSubtractMesh.material = new THREE.MeshLambertMaterial({
+  color: 0xffffff
+})
+peakSubtractMesh.scale.set(1.5,1,0.77)
+peakSubtractMesh.position.set (0,-24,17)
+peakSubtractMesh.updateMatrixWorld()
+mountain.add(peakSubtractMesh)
+
+
+const MinusCubeMesh2 = new THREE.Mesh(
+  new THREE.BoxGeometry(15, 10, 20),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+MinusCubeMesh2.scale.set(2,2.4,2)
+MinusCubeMesh2.rotation.x = 0
+MinusCubeMesh2.rotation.y = Math.PI * 0.10
+MinusCubeMesh2.rotation.z = Math.PI * 0.25
+MinusCubeMesh2.position.set(-15,3,0)
+MinusCubeMesh2.updateMatrixWorld()
+
+let peakCSG2 = CSG.fromMesh(peak4)
+let MinusCubeCSG2 = CSG.fromMesh(MinusCubeMesh2)
+let peakSubtractCSG2 = peakCSG2.subtract(MinusCubeCSG2)
+let peakSubtractMesh2 = CSG.toMesh(peakSubtractCSG2,new THREE.Matrix4())
+peakSubtractMesh2.material = new THREE.MeshLambertMaterial({
+  color: 0xffffff
+})
+peakSubtractMesh2.scale.set (1.7,1.5,0.8)
+peakSubtractMesh2.position.set(-20,-24,1)
+mountain.add(peakSubtractMesh2)
+
+
+const peak5 = new THREE.Mesh(
+  new THREE.BoxGeometry(12,3,10),
+  new THREE.MeshLambertMaterial({ color: "white"})
+)
+peak5.rotation.order ='YXZ'
+peak5.rotation.z = Math.PI * 0.5
+
+peak5.rotation.y = Math.PI * 0.25
+
+
+peak5.position.set(6,-11,8)
+mountain.add(peak5)
+
 //tree
 //trunk
 const tree = new THREE.Group()
@@ -171,7 +255,7 @@ const cubeSphereIntersectCSG = controlCSG.subtract(cubeCSG)
 const cubeSphereIntersectMesh = CSG.toMesh(
   cubeSphereIntersectCSG,
   new THREE.Matrix4(),
-  materials
+  
 )
 cubeSphereIntersectMesh.material = new THREE.MeshLambertMaterial({
    color: "white"
@@ -183,7 +267,6 @@ cubeSphereIntersectMesh.material = new THREE.MeshLambertMaterial({
 
 //fan
 //cloud
-const clouds= []
 const cloud1 = new THREE.Mesh(
   new THREE.CylinderGeometry(10,10,10,128),
   new THREE.MeshLambertMaterial({color:"white"})
@@ -192,7 +275,7 @@ const squareMesh = new THREE.Mesh(
   new THREE.BoxGeometry(10, 10, 10),
   new THREE.MeshBasicMaterial({ color: 0xff0000 })
 )
-
+const clouds = []
 squareMesh.rotation.z = 0
 squareMesh.scale.set(2,1,1.1)
 squareMesh.position.set(20,-6,-45)
@@ -203,32 +286,21 @@ cloud1.updateMatrixWorld()
 const squareCSG = CSG.fromMesh(squareMesh)
 const cloud = CSG.fromMesh(cloud1)
 const cloudCSG = cloud.subtract(squareCSG)
-const cloudMesh1 = CSG.toMesh(
-  cloudCSG,
-  new THREE.Matrix4(),
-)
-const cloudMesh2 = CSG.toMesh(
-  cloudCSG,
-  new THREE.Matrix4(),
-)
-const cloudMesh3 = CSG.toMesh(
-  cloudCSG,
-  new THREE.Matrix4(),
-)
-const cloudMesh4 = CSG.toMesh(
-  cloudCSG,
-  new THREE.Matrix4(),
-)
-cloudMesh1.material = new THREE.MeshBasicMaterial({
-   color: "white"
-})
-
-all.add(cloudMesh1)
-cloudMesh1.position.set(15,-0.2,0)
-cloudMesh1.scale.set(0.8,0.8,1)
-all.add(cloudMesh2)
-// all.add(cloudMesh3)
-// all.add(cloudMesh4)
+for(let i=0;i<4;i++){
+  clouds[i]= CSG.toMesh(cloudCSG, new THREE.Matrix4())
+  clouds[i].material = new THREE.MeshBasicMaterial({color: "white"})
+}
+all.add(clouds[0])
+  clouds[0].position.set(15,-0.2,0)
+  clouds[0].scale.set(0.8,0.8,1)
+all.add(clouds[1])
+all.add(clouds[2])
+  clouds[2].scale.set(0.8,0.8,1)
+  clouds[2].position.set(100,-0.2,70)
+  clouds[2].rotation.y = Math.PI * 0.5
+all.add(clouds[3])
+  clouds[3].rotation.y = Math.PI * 0.5
+  clouds[3].position.set(100,-0.2,80)
 
 
 var windTurbines = [];
@@ -309,48 +381,32 @@ const camera = new THREE.PerspectiveCamera(90,1600 / 900);
 
 scene.add(camera);
 camera.position.set(0, 0, 0);
-const pointLight = new THREE.PointLight("#fff", 0.5);
+const pointLight = new THREE.PointLight("#fff", 0.6);
 pointLight.position.set(100, 50, 100);
 scene.add(pointLight);
-const pointLight1 = new THREE.PointLight("#fff", 0.4);
+const pointLight1 = new THREE.PointLight("#fff", 0.5);
 pointLight1.position.set(-100, 50, -100);
 scene.add(pointLight1);
 const pointLight3 = new THREE.PointLight("#fff", 0.5);
 pointLight3.position.set(-100, 50, 70);
 scene.add(pointLight3);
-const pointLight4 = new THREE.PointLight("#fff", 0.4);
-pointLight4.position.set(100, 50, -100);
+const pointLight4 = new THREE.PointLight("#fff", 0.6);
+pointLight4.position.set(100, 0, -60);
 scene.add(pointLight4);
 const pointLight2 = new THREE.PointLight("#fff", 1);
-pointLight2.position.set(50,-100,20)
+pointLight2.position.set(50,-120,20)
 scene.add(pointLight2);
+const pointLight5 = new THREE.PointLight("#fff", 0.4);
+pointLight5.position.set(200, -50, 0);
+scene.add(pointLight5);
+
 //test
-// const cubeMesh = new THREE.Mesh(
-//   new THREE.BoxGeometry(20, 20, 20),
-//   new THREE.MeshBasicMaterial({ color: 0xff0000 })
-// )
-// const sphereMesh = new THREE.Mesh(
-//   new THREE.SphereGeometry(14.5, 80, 80),
-//   new THREE.MeshBasicMaterial({ color: 0x0000ff })
-// )
-// const cubeCSG = CSG.fromMesh(cubeMesh)
-// const sphereCSG = CSG.fromMesh(sphereMesh)
-// const cubeSphereIntersectCSG = cubeCSG.subtract(sphereCSG)
-// const cubeSphereIntersectMesh = CSG.toMesh(
-//   cubeSphereIntersectCSG,
-//   new THREE.Matrix4()
-// )
-// cubeSphereIntersectMesh.material = new THREE.MeshBasicMaterial({
-//   color: 0xff00ff
-// })
-// cubeSphereIntersectMesh.position.set(-2.5, 0, -3)
-//     scene.add(cubeSphereIntersectMesh)
 
 
 
 
 
-camera.position.z = 150;
+camera.position.z = 200;
 camera.position.y = 100;
 
 //render
@@ -364,7 +420,7 @@ renderer.render(scene, camera);
 
 // controls
 const controls = new OrbitControls(camera, renderer.domElement);
-
+let wind = "left"
 function animate() {
   requestAnimationFrame(animate);
   controls.enableZoom = false;
@@ -382,21 +438,28 @@ function spin() {
   blades[1].updateMatrix();
   blades[2].rotation.z += 0.05;
   blades[2].updateMatrix();
-  console.log(cloudMesh1.position)
-  let wind = "left"
-  if(wind == "left"){
-  cloudMesh1.position.x -= 0.5
-  cloudMesh2.position.x -= 0.5
-  if(cloudMesh1.position.x < -50) wind = "right"
-  }
 
+  
+  if(wind === "left"){
+  clouds[0].position.x -= 0.3
+  clouds[1].position.x -= 0.3
+  clouds[2].position.z -= 0.3
+  clouds[3].position.z -= 0.3
+  if(clouds[0].position.x < -50) wind = "right"}
 
-  console.log(cloudMesh1.position.x)
-  all.rotation.y += 0.005
+  if(wind == "right"){
+    clouds[0].position.x += 0.3
+    clouds[1].position.x += 0.3
+    clouds[2].position.z += 0.3
+    clouds[3].position.z += 0.3
+    if(clouds[0].position.x > 15) wind = "left"}
+  
+
+    
 
 
   renderer.render(scene, camera);
-  const elapsedTime = clock.getElapsedTime();
+  
   // windTurbine.rotation.y = elapsedTime * 1.5;
   if (
     (camera.position.x < 0 && camera.position.z < 0) ||
