@@ -4,12 +4,14 @@
 }
 .infoText{
   font-family: 'Lato', sans-serif;
+  
 }
 
 body{
   width: fit-content;
   height: fit-content;
   font-family: 'Lato', sans-serif;
+  font-size: 20px;
 }
 
 .infoCont {
@@ -55,7 +57,7 @@ body{
     left: 100%;
   }
   to {
-    left: calc(100% - 30%);
+    left: calc(100% - 33%);
   }
 }
 
@@ -72,7 +74,7 @@ body{
 
 @keyframes hideToRight {
   from {
-    left: calc(100% - 30%);
+    left: calc(100% - 33%);
   }
   to {
     left: 100%;

@@ -69,7 +69,7 @@ infoCont.addEventListener("animationend", () => {
     infoCont.classList.remove("afl");
     infoCont.classList.remove("h2l");
     infoCont.classList.add("afr");
-    infoCont.style.left = "calc(100% - 30%)";
+    infoCont.style.left = "calc(100% - 33%)";
   } else if (direction === "left") {
     infoCont.classList.remove("h2r");
     infoCont.classList.remove("afr");
