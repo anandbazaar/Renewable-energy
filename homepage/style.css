@@ -50,6 +50,11 @@ section {
   top: 30%;
   left: 20%;
 }
+.aboutus h3 {
+  font-size: 48px;
+  color: #409ada;
+  margin-bottom: 5%;
+}
 .in-p {
   padding-left: 15px;
   display: flex;
@@ -69,7 +74,9 @@ section {
   font-size: 38px;
   line-height: 2vw;
 }
-
+.inp2 {
+  margin-top: 25%;
+}
 .in-p:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
@@ -106,12 +113,10 @@ section {
     margin-left: 0;
   }
   .navbar__container {
-    display: flex;
-    justify-content: space-between;
     height: 40px;
     z-index: 1;
     width: 100%;
-    max-width: 400px;
+    /* max-width: 375px; */
     padding: 0;
   }
   .nav-links ul li a {
@@ -120,9 +125,8 @@ section {
   .navbar {
     background-color: #4eb073;
   }
-  .navbar__menu {
+  .navbar-menu {
     display: grid;
-    justify-content: center;
     grid-template-columns: auto;
     margin: 0;
     width: 100%;
@@ -134,18 +138,14 @@ section {
     z-index: -1;
   }
 
-  .navbar__menu.active {
+  .navbar-menu.active {
     background: white;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 40vh;
+    height: 30vh;
     font-size: 1.6rem;
-  }
-
-  #navbar__logo {
-    padding-left: 25px;
   }
 
   .navbar__toggle .bar {
@@ -156,11 +156,12 @@ section {
     background: #fff;
   }
 
-  .navbar__item {
-    width: 80%;
+  ul li {
+    width: 100%;
+    display: inline-block;
   }
 
-  .navbar__links {
+  ul li a {
     text-align: center;
     padding: 2rem;
     width: 100%;
@@ -183,7 +184,7 @@ section {
   #mobile-menu {
     position: absolute;
     top: 20%;
-    right: 5%;
+    right: 10%;
     transform: translate(5%, 20%);
   }
 
@@ -202,9 +203,6 @@ section {
 
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-  .logo {
-    left: 0;
   }
 }
 
@@ -297,8 +295,8 @@ h1 {
 }
 
 .news-col {
-  width: 146px;
-  height: 18vw;
+  width: 100%;
+  height: 100%;
   flex-basis: 32%;
   border-radius: 10px;
   margin-bottom: 30px;
