@@ -8,7 +8,14 @@
 
 .header {
     width: 100%;
+}
+.con-sec {
+    margin-bottom: 10%;
+    width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav {
@@ -20,7 +27,7 @@ nav {
     position: fixed;
     background-color: white;
     width: 100%;
-    z-index: 10;
+    z-index: 1;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
 }
 
@@ -117,25 +124,10 @@ nav img {
     width: 100%;
 }
 
-.con-sec {
-    margin-bottom: 10%;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .con-sec2 {
     width: 100%;
     height: 100vh;
-}
-
-.container {
-    padding: 10%;
-    bottom: 20%;
-    width: 80%;
-    height: 800px;
 }
 
 .pro-pic {
@@ -143,29 +135,29 @@ nav img {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 288px;
-    height: 288px;
+    width: 15vw;
+    height: 15vw;
     left: 14%;
     top: 20%;
     border-radius: 50%;
     background-color: white;
-    border: 8px solid #E29898;
+    border: 0.3vw solid #E29898;
     z-index: 2;
 }
 
 .pro-pic .img-con {
-    width: 238px;
-    height: 238px;
+    width: 13vw;
+    height: 13vw;
     border-radius: 50%;
 }
 
 .ner {
     position: absolute;
-    width: 703px;
-    height: 650px;
-    left: 81px;
-    top: 356px;
-    border: 5px solid #E29898;
+    width: 34vw;
+    height: 32.5vw;
+    left: 4vw;
+    top: 17vw;
+    border: 0.3vw solid #E29898;
 }
 
 .ner .inf {
@@ -174,7 +166,7 @@ nav img {
     position: relative;
     justify-content: center;
     width: 100%;
-    height: 91px;
+    height: 5vw;
     top: 60%;
     background: #FE4F70;
 }
@@ -184,21 +176,21 @@ nav img {
     right: 50%;
     font-style: normal;
     font-weight: 500;
-    font-size: 34px;
+    font-size: 2vw;
     line-height: 41px;
     color: #FFFFFF;
 }
 
 .ner p {
-    width: 136px;
-    height: 28px;
-    left: 40%;
+    width: 10vw;
+    height: 1vw;
+    left: 42%;
     top: 40%;
     position: absolute;
     font-style: normal;
     font-weight: 400;
-    font-size: 23px;
-    line-height: 28px;
+    font-size: 1vw;
+    line-height: 3vw;
     color: #000000;
 }
 
@@ -207,13 +199,13 @@ nav img {
     width: 20%;
     height: 50%;
     left: 46%;
-    top: 244px;
+    top: 13vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid #91C95A;
+    border: 0.3vw solid #91C95A;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 .info {
@@ -233,8 +225,8 @@ nav img {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 27px;
+    font-size: 1.3vw;
+    line-height: 1.3vw;
 }
 
 .scl-m {
@@ -245,8 +237,8 @@ nav img {
     width: 20%;
     height: 50%;
     left: 70%;
-    top: 244px;
-    border: 5px solid #E8B80C;
+    top: 13vw;
+    border: 0.3vw solid #E8B80C;
     box-sizing: border-box;
 }
 
@@ -308,8 +300,8 @@ nav img {
     width: 44%;
     height: 20%;
     left: 46%;
-    top: 808px;
-    border: 2px solid #B774FF;
+    top: 40vw;
+    border: 0.1vw solid #B774FF;
     box-sizing: border-box;
 }
 
@@ -320,13 +312,13 @@ nav img {
     height: 40%;
     background-color: #B774FF;
     color: white;
-    font-size: 25px;
+    font-size: 1.5vw;
 }
 
 .statistics .header p {
     margin-left: 5%;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 2vw;
 }
 
 .statis {
@@ -359,15 +351,15 @@ nav img {
     flex-grow: 1;
     margin-top: 5%;
     margin-left: 5%;
-    width: 100px;
-    height: 100px;
+    width: 5.4vw;
+    height: 5.4vw;
     border-radius: 50%;
     background: #EBEBEB;
 }
 
 .cir2-con {
-    width: 100px;
-    height: 100px;
+    width: 5.4vw;
+    height: 5.4vw;
     padding-top: 10px;
 }
 

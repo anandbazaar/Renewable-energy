@@ -378,6 +378,20 @@ h4 {
     margin: 20px;
     margin-left: 0px;
 }
+.TEXT {
+    font-size: 44px;
+    margin: 60px;
+    margin-left: 0px;
+    font-weight: 300;
+}
+
+.text2 {
+    font-size: 30px;
+    letter-spacing: normal;
+    font-weight: lighter;
+    margin: 80px;
+    margin-left: 0px
+}
 .tugsgul {
     background-color: white;
     height: 407px;
