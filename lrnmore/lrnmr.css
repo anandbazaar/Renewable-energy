@@ -4,13 +4,11 @@
     padding: 0px;
     font-family: Sans-serif;
 }
-body {
-    background-color: #E5E5E5;
-}
+
 .main-container {
     margin-left: auto;
     margin-right: auto;
-    width: 1440px;
+    width: 100%;
     background-color: #E5E5E5;
     margin-top: 190px;
 }
@@ -157,8 +155,8 @@ body {
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 99;
-      height: 60vh;
-      font-size: 1.6rem;
+      height: 40vh;
+      font-size: 1.4rem;
     }
   
     #navbar__logo {
@@ -402,7 +400,7 @@ h3 {
 .tugsgul {
     background-color: white;
     height: 407px;
-    width: 1440px;
+    width: 100%;
     padding: 70px;
     display: flex;
     flex-direction: row;

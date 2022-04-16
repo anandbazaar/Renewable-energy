@@ -123,9 +123,6 @@ nav img {
 .nav-links ul li:hover::after {
     width: 100%;
 }
-.logo{
-    margin-left: 40%;
-}
 .hp-img{
     position:absolute;
 width:100% ;
@@ -383,6 +380,11 @@ height: 628px;
     margin-right: 20px;
 }
 @media screen and (max-width: 416px) {
+    .logo {
+        height: 30px;
+        width: 40px;
+        margin: 10px;
+    }
     .garchig h3{
         font-size: 14px;
     }
@@ -434,8 +436,8 @@ height: 628px;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
-        height: 60vh;
-        font-size: 1.6rem;
+        height: 40vh;
+        font-size: 1.2rem;
     }
 
     #navbar__logo {
