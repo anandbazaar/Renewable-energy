@@ -129,8 +129,15 @@ all.add(land4)
 
 //mountain
 const mountain = new THREE.Group()
+const MinusCubeMesh = new THREE.Mesh(
+  new THREE.BoxGeometry(15, 10, 20),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+MinusCubeMesh.rotation.x = Math.PI * 0.20
+MinusCubeMesh.position.set(0,4.5,2.1)
+MinusCubeMesh.updateMatrixWorld()
 const peak1 = new THREE.Mesh(
-  new THREE.ConeGeometry(16,40,4),
+  new THREE.ConeGeometry(16,40,4.5),
   new THREE.MeshLambertMaterial({ color: "white"})
 )
 const peak2 = new THREE.Mesh(
@@ -140,31 +147,58 @@ const peak2 = new THREE.Mesh(
 peak1.rotation.y = Math.PI * 0.25 
 peak1.position.set(3,-8.5,0)
 peak2.rotation.y = Math.PI * 0.25 
-peak2.position.set(10,-13.5,13)
+peak2.position.set(10,-14,13)
 mountain.add(peak1)
 mountain.add(peak2)
 mountain.position.set(30,-20,-20)
 all.add(mountain)
 
 const peak3 = new THREE.Mesh(
-  new THREE.BoxGeometry(10,10,20),
+  new THREE.BoxGeometry(10,10,15),
   new THREE.MeshLambertMaterial({ color: "white"})
 )
 const peak4 = new THREE.Mesh(
   new THREE.BoxGeometry(47,10,26),
   new THREE.MeshLambertMaterial({ color: "white"})
 )
-peak3.position.set(-2,-24,15)
-peak4.position.set(-4,-24,-2)
-mountain.add(peak3)
-mountain.add(peak4)
+const MinusCubeCSG = CSG.fromMesh(MinusCubeMesh)
+let peakCSG = CSG.fromMesh(peak3)
+let peakSubtractCSG = peakCSG.subtract(MinusCubeCSG)
+let peakSubtractMesh = CSG.toMesh(peakSubtractCSG, new THREE.Matrix4())
+peakSubtractMesh.material = new THREE.MeshLambertMaterial({
+  color: 0xffffff
+})
+peakSubtractMesh.scale.set(1.5,1,0.77)
+peakSubtractMesh.position.set (0,-24,17)
+peakSubtractMesh.updateMatrixWorld()
+mountain.add(peakSubtractMesh)
+
+
+const MinusCubeMesh2 = new THREE.Mesh(
+  new THREE.BoxGeometry(15, 10, 20),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+)
+MinusCubeMesh2.scale.set(2,2.4,2)
+MinusCubeMesh2.rotation.x = 0
+MinusCubeMesh2.rotation.y = Math.PI * 0.10
+MinusCubeMesh2.rotation.z = Math.PI * 0.25
+MinusCubeMesh2.position.set(-15,3,0)
+MinusCubeMesh2.updateMatrixWorld()
+
+let peakCSG2 = CSG.fromMesh(peak4)
+let MinusCubeCSG2 = CSG.fromMesh(MinusCubeMesh2)
+let peakSubtractCSG2 = peakCSG2.subtract(MinusCubeCSG2)
+let peakSubtractMesh2 = CSG.toMesh(peakSubtractCSG2,new THREE.Matrix4())
+peakSubtractMesh2.material = new THREE.MeshLambertMaterial({
+  color: 0xffffff
+})
+peakSubtractMesh2.scale.set (1.7,1.5,0.8)
+peakSubtractMesh2.position.set(-20,-24,1)
+mountain.add(peakSubtractMesh2)
+
 
 const peak5 = new THREE.Mesh(
   new THREE.BoxGeometry(12,3,10),
-  new THREE.MeshLambertMaterial({ color: "white"})
-)
-const peak6 = new THREE.Mesh(
-  new THREE.BoxGeometry(47,10,26),
   new THREE.MeshLambertMaterial({ color: "white"})
 )
 peak5.rotation.order ='YXZ'
@@ -174,9 +208,7 @@ peak5.rotation.y = Math.PI * 0.25
 
 
 peak5.position.set(6,-11,8)
-peak6.position.set(-4,-24,-2)
 mountain.add(peak5)
-// mountain.add(peak6)
 
 //tree
 //trunk
@@ -367,36 +399,14 @@ scene.add(pointLight2);
 const pointLight5 = new THREE.PointLight("#fff", 0.4);
 pointLight5.position.set(200, -50, 0);
 scene.add(pointLight5);
-const sphereSize = 1;
-const pointLightHelper = new THREE.PointLightHelper( pointLight4, sphereSize );
-scene.add( pointLightHelper );
+
 //test
-// const cubeMesh = new THREE.Mesh(
-//   new THREE.BoxGeometry(20, 20, 20),
-//   new THREE.MeshBasicMaterial({ color: 0xff0000 })
-// )
-// const sphereMesh = new THREE.Mesh(
-//   new THREE.SphereGeometry(14.5, 80, 80),
-//   new THREE.MeshBasicMaterial({ color: 0x0000ff })
-// )
-// const cubeCSG = CSG.fromMesh(cubeMesh)
-// const sphereCSG = CSG.fromMesh(sphereMesh)
-// const cubeSphereIntersectCSG = cubeCSG.subtract(sphereCSG)
-// const cubeSphereIntersectMesh = CSG.toMesh(
-//   cubeSphereIntersectCSG,
-//   new THREE.Matrix4()
-// )
-// cubeSphereIntersectMesh.material = new THREE.MeshBasicMaterial({
-//   color: 0xff00ff
-// })
-// cubeSphereIntersectMesh.position.set(-2.5, 0, -3)
-//     scene.add(cubeSphereIntersectMesh)
 
 
 
 
 
-camera.position.z = 150;
+camera.position.z = 200;
 camera.position.y = 100;
 
 //render
@@ -445,7 +455,7 @@ function spin() {
     if(clouds[0].position.x > 15) wind = "left"}
   
 
-  // all.rotation.y += 0.005
+    
 
 
   renderer.render(scene, camera);
