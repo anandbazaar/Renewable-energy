@@ -21,11 +21,6 @@ section {
   height: 100%;
   transition: all 0.3s ease;
 }
-
-nav img {
-  width: 100px;
-}
-
 .nav-links {
   flex: 1;
   text-align: right;
@@ -63,10 +58,6 @@ nav img {
     align-items: center;
 }
 
-.navbar .logo {
-    height: 64px;
-}
-
 .navbar .nav-links {
     flex: 1;
     display: flex;
@@ -75,26 +66,15 @@ nav img {
 }
 
 .navbar ul {
-<<<<<<< HEAD
   display: inline-block;
   align-items: center;
   list-style: none;
-=======
-    display: flex;
-    align-items: center;
-    list-style: none;
->>>>>>> b033978f2d2b3791459aa73ac412ef3783a5c45b
 }
 
 .navbar ul li {
-<<<<<<< HEAD
-  list-style: none;
-  position: relative;
-=======
     list-style: none;
     padding-left: 32px;
     position: relative;
->>>>>>> b033978f2d2b3791459aa73ac412ef3783a5c45b
 }
 
 .navbar ul li a {
