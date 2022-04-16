@@ -8,6 +8,7 @@
 
 body {
     background-color: #0D273C;
+    margin: auto;
 }
 
 
@@ -241,7 +242,7 @@ nav p {
 
     }
     .statistics div{
-        height: 50%;
+        height: 20%;
     }
   }
 
@@ -292,7 +293,8 @@ h4 {
 }
 
 .imgg40{
-    width: 100%;
+    width: 70%;
+    opacity: 20%;
 }
 
 /* information section */
@@ -305,7 +307,7 @@ h4 {
     width: 80%;
 }
 .information p {
-    font-size: 2.6vw;
+    font-size: 1.2vw;
 }
 
 
