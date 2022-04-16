@@ -1,589 +1,761 @@
 * {
-    box-sizing: content-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: Sans-serif;
+  box-sizing: content-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Sans-serif;
 }
 body {
-    background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 .main-container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1440px;
-    background-color: #E5E5E5;
-    margin-top: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1440px;
+  background-color: #e5e5e5;
+  margin-top: 190px;
 }
 .header {
-    width: 100%;
-  }
-  
-  nav {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    z-index: 10;
-    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
-  }
-  .navbar{
-    width:100%;
-    height: 80px;
+  width: 100%;
+}
+
+nav {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+.navbar {
+  width: 100%;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   margin: auto;
-    top: 0;
-    z-index:999;
-  }
-  #navbar__logo{
-    margin-left: 100px;
-  }
+  top: 0;
+  z-index: 999;
+}
+#navbar__logo {
+  margin-left: 100px;
+}
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: 50%;
+}
+.navbar__item {
+  height: 40px;
+  margin-right: 4%;
+}
+
+.navbar__links {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  text-decoration: none;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+nav img {
+  width: 100px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 5px;
+  font-weight: 400;
+  line-height: 37px;
+}
+.nav-links ul {
+  margin-right: 100px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #4eb073;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.hp-img {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 900px) {
   .navbar__container {
     display: flex;
     justify-content: space-between;
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+    max-width: 400px;
+    padding: 0;
   }
-  .navbar__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-left: 50%;
-  }
-  .navbar__item {
-    height: 40px;
-    margin-right: 4%;
-  }
-  
-  .navbar__links {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 155px;
-    text-decoration: none;
-    height: 100%;
-    transition: all 0.3s ease;
-  }
-  nav img {
-    width: 100px;
-  }
-  
-  .nav-links {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-  }
-  
   .nav-links ul li a {
     color: black;
-    text-decoration: none;
-    font-size: 25px;
-    padding: 5px;
-    font-weight: 400;
-    line-height: 37px;
   }
-  .nav-links ul{
-    margin-right: 100px;
+  .navbar {
+    background-color: #4eb073;
   }
-  
-  .nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #4EB073;
+  .navbar__menu {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  .navbar__menu.active {
+    background: white;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 60vh;
+    font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+    padding-left: 25px;
+  }
+
+  .navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+  }
+
+  .navbar__item {
+    width: 80%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .navbar__btn {
+    padding-bottom: 2rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: 0;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar__toggle .bar {
     display: block;
-    margin: auto;
-    transition: 0.5s;
+    cursor: pointer;
   }
-  
-  .nav-links ul li:hover::after {
-    width: 100%;
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
   }
-  
-  .hp-img {
-    width: 100%;
-    height: 100vh;
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
-  
-  
-  @media screen and (max-width: 900px) {
-    .navbar__container {
-      display: flex;
-      justify-content: space-between;
-      height: 80px;
-      z-index:1;
-      width: 100%;
-      max-width: 400px;
-      padding: 0;
-    }
-    .nav-links ul li a{
-      color: black;
-    }
-    .navbar{
-      background-color: #4EB073;
-    }
-    .navbar__menu {
-      display: grid;
-      justify-content: center;
-      grid-template-columns: auto;
-      margin: 0;
-      width: 100%;
-      position: absolute;
-      top: -1000px;
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: -1;
-    }
-  
-    .navbar__menu.active {
-      background: white;
-      top: 100%;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 99;
-      height: 60vh;
-      font-size: 1.6rem;
-    }
-  
-    #navbar__logo {
-      padding-left: 25px;
-    }
-  
-    .navbar__toggle .bar {
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      transition: all 0.3s ease-in-out;
-      background: #fff;
-    }
-  
-    .navbar__item {
-      width: 80%;
-    }
-  
-    .navbar__links {
-      text-align: center;
-      padding: 2rem;
-      width: 100%;
-      display: table;
-    }
-  
-    .navbar__btn {
-      padding-bottom: 2rem;
-    }
-  
-    .button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      height: 80px;
-      margin: 0;
-    }
-  
-    #mobile-menu {
-      position: absolute;
-      top: 20%;
-      right: 5%;
-      transform: translate(5%, 20%);
-    }
-  
-    .navbar__toggle .bar {
-      display: block;
-      cursor: pointer;
-    }
-  
-    #mobile-menu.is-active .bar:nth-child(2) {
-      opacity: 0;
-    }
-  
-    #mobile-menu.is-active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-  
-    #mobile-menu.is-active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-    .logo{
-       left: 0;
-    }
+
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .logo {
+    left: 0;
+  }
 }
 .asuult {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 h1 {
-    color: #409ADA;
-    font-size: 40px;
-    font-weight: lighter;
+  color: #409ada;
+  font-size: 40px;
+  font-weight: lighter;
 }
 h2 {
-    color: #134A77;
-    font-size: 40px;
-    font-weight: lighter;
+  color: #134a77;
+  font-size: 40px;
+  font-weight: lighter;
 }
 .row h2 {
-    margin: 30px;
-    margin-left: 0px;
+  margin: 30px;
+  margin-left: 0px;
 }
 .line {
-    border: 4px solid #409ADA;
-    border-radius: 4px;
-    width: 28%;
+  border: 4px solid #409ada;
+  border-radius: 4px;
+  width: 28%;
 }
 .rnbl {
-    width: 1440px;
-    height: 485px;
-    margin-top: 40px;
+  width: 1440px;
+  height: 485px;
+  margin-top: 40px;
 }
 .row {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 35px;
-    margin-top: 35px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
 }
 .tsuvaa {
-    display: flex;
-    flex-direction: row;
-    margin: 30px;
-    margin-left:  0px;
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  margin-left: 0px;
 }
 .column {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 0px;
 }
 .dooshoo {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 33%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
 }
 .row .column {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    margin-left: 0px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 0px;
+  align-items: center;
 }
 .Information {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin-top: 80px;
-    margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 80px;
+  margin-left: 40px;
 }
 .other {
-    display: flex; 
-    flex-direction: column;
-    width: 30%;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 20px;
 }
 .container2 {
-    width: 392px;
-    height: 207px;
-    background-color: white;
-    margin-bottom: 20px;
-    display: flex;
-      
+  width: 392px;
+  height: 207px;
+  background-color: white;
+  margin-bottom: 20px;
+  display: flex;
 }
 .container2 a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer; 
-    padding-right: 10px;
-    transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 10px;
+  transition: all 0.3s ease;
 }
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 .otherimg:hover {
-    opacity: 50%;
+  opacity: 50%;
 }
 .text {
-    font-size: 30px;
-    letter-spacing: normal;
-    font-weight:lighter;
+  font-size: 30px;
+  letter-spacing: normal;
+  font-weight: lighter;
 }
 .text1 {
-    font-size: 30px;
-    letter-spacing: normal;
-    font-weight:lighter;
-    margin-right: 90px;
+  font-size: 30px;
+  letter-spacing: normal;
+  font-weight: lighter;
+  margin-right: 90px;
 }
 .otherimg {
-    height: 90%;
-    width: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin: 5px;
+  height: 90%;
+  width: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin: 5px;
 }
 .huvi {
-    margin: 20px;
-    font-size: 30px;
-    letter-spacing: normal;
-    font-weight:lighter;
+  margin: 20px;
+  font-size: 30px;
+  letter-spacing: normal;
+  font-weight: lighter;
 }
-.tomzrg {  
-    width: 1360px;
-    margin: 30px;
-    margin-left: -13px;
+.tomzrg {
+  width: 1360px;
+  margin: 30px;
+  margin-left: -13px;
 }
 .cntnr {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .row .cntnr {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .map {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 .zai30px {
-    margin-left: 30px; 
+  margin-left: 30px;
 }
 .zai {
-    margin-left: 60px;
-    font-size: 30px;
-    letter-spacing: normal;
-    font-weight:lighter;
+  margin-left: 60px;
+  font-size: 30px;
+  letter-spacing: normal;
+  font-weight: lighter;
 }
 h3 {
-    font-size: 30px;
-    font-weight:bolder;
-    color: #0E7755;
-    margin: 50px;
-    margin-left: 0px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #0e7755;
+  margin: 50px;
+  margin-left: 0px;
 }
 .TEXT {
-    font-size: 44px;
-    margin: 60px;
-    margin-left: 0px;
-    font-weight: 300;
+  font-size: 44px;
+  margin: 60px;
+  margin-left: 0px;
+  font-weight: 300;
 }
 .text2 {
-    font-size: 30px;
-    letter-spacing: normal;
-    font-weight:lighter;
-    margin:80px; 
-    margin-left:0px
+  font-size: 30px;
+  letter-spacing: normal;
+  font-weight: lighter;
+  margin: 80px;
+  margin-left: 0px;
 }
 .tugsgul {
-    background-color: white;
-    height: 407px;
-    width: 1440px;
-    padding: 70px;
-    display: flex;
-    flex-direction: row;
+  background-color: white;
+  height: 407px;
+  width: 1440px;
+  padding: 70px;
+  display: flex;
+  flex-direction: row;
 }
 .social {
-    height: 50px;
-    width: 50px;
-    margin: 15px;
+  height: 50px;
+  width: 50px;
+  margin: 15px;
 }
 .text3 {
-    margin: 40px;
+  margin: 40px;
 }
-@media screen and (max-width: 416px) {
-    .main-container {
-        width: 100%;
-        background-color: #E5E5E5;
-        min-width: 378px;
-        margin-top: 100px;
-    }
-    .logo {
-        height: 30px;
-        width: 40px;
-        margin: 5px;
-    }
-    .main {
-        margin-top: 50px; 
-    }
-    .line {
-        border: 2px solid #409ADA;
-        width: 18%;
-    }
-    .asuult {
-        width: 100vw;
-        min-width: 357px;
+.solar {
+    width: 95%;
+}
+@media only screen and (max-width: 1400px) {
+  .main-container {
+    width: 100vw;
+    margin-top: 160px;
+  }
+  .logo {
+    height: 70px;
+    width: 100px;
+    margin: 20px;
+  }
+  .line {
+    border: 2px solid #409ada;
+    width: 25%;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 10px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .row h2 {
+    margin: 20px;
+    margin-left: 0px;
+  }
+  h3 {
+    margin: 30px;
+    font-size: 30px;
+  }
+  .asuult {
+    width: 100%;
+  }
+  .rnbl {
+    width: 100%;
+    height: 400px;
+    margin: 25px;
+  }
+  .row {
+    align-items: flex-start;
+    margin-bottom: 0px;
+  }
+  .row .column {
+    margin: 15px;
+  }
+  .text1 {
+    font-size: 25px;
+    margin-right: 60px;
+  }
+  .zai {
+    margin-left: 40px;
+    font-size: 24px;
+  }
+  .Information .row {
+    margin-top: 0px;
+  }
+  .circle {
+    height: 150px;
+    width: 150px;
+    margin-right: 5px;
+  }
+  .Information {
+    margin-top: 0px;
+    margin-left: 25px;
+  }
+  .other {
+    margin-top: 0px;
+  }
+  .container2 {
+    width: 95%;
+    height: 160px;
+    margin-bottom: 15px;
+  }
+  .container2 a {
+    text-align: justify;
+    font-size: small;
+  }
+  .weather {
+    width: 100%;
+    height: inherit;
+  }
+  .text {
+    font-size: 25px;
+    text-align: justify;
+    margin: 20px;
+    margin-left: 0px;
+  }
+  .tomzrg {
+    width: 100vw;
+    height: 80%;
+    margin: 20px;
+    margin-left: 0px;
+  }
+  .zai30px {
+    margin-left: 20px;
+  }
+  .TEXT {
+      margin: 40px;
+  }
+  .map {
+    height: 450px;
+
+  }
+  .text2 {
+      font-size: 25px;
+      margin: 50px;
+      text-align: justify;
+  }
+  .tugsgul {
+    width: 100vw;
+    height: 400px;
+    padding: 0px;
+  }
+  .suulzurag {
+    width: 100px;
+    height: 50px;
+  }
+  .social {
+    height: 40px;
+    width: 40px;
+    margin: 15px;
+  }
+  .ikons {
+    width: 35px;
+    height: 35px;
+  }
+  .row {
+      align-items: center;
+  }
+  .text3 {
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .tsuvaa p {
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  .tsuvaa {
+    margin: 0px;
+  }
+
+}
+@media only screen and (max-width: 1010px) {
+    .circle {
+        height: 120px;
+        width: 120px;
+        margin-right: 5px;
     }
     h1 {
-        color: #409ADA;
-        font-size: small;
-        font-weight: lighter;
-    }
-    h2 {
-        color: #134A77;
-        font-size: 15px;
-        font-weight: lighter;
-    }
-    h3 {
-        margin: 10px;
-        font-size: 20px;
-    }
-    .TEXT {
-        font-size: 15px;
-        margin: 10px;
-        margin-left: 20px;
-    }
-    .row h2 {
-        margin: 0px;
-    }
-    .rnbl {
-        width: 100vw;
-        height: 20vh;
-        margin-top: 10px;
-    }
-    .row {
-        margin-bottom: 10px;
-        margin: 5px;
-        width: 100%;
-    }
-    .tsuvaa {
-        margin-bottom: 10px;
-
-    }
-    .column {
-        margin-bottom: 10px;
-    }
-    .dooshoo {
-        margin-bottom: 10px;
-        margin: 0px;
-        width: 33%;
-    }
-    .row .column {
-        margin-bottom: 10px;
-        margin: 0px;
-    }
-    .Information {
-        width: 60%;
-        margin: 0px;
-    }
-    .other {
-        width: 40%;
-    }
-    .text1 {
-        font-size: 15px;
-        margin-right: 0px;
-        margin-bottom: 5px;
-    }
-    .zai {
-        font-size: 15px;
-        margin-left: 15px;
-    }
-    .text {
-        font-size: 13px;
-        margin-bottom: 10px;
-    } 
-    .container2 {
-        height: 80px;
-        margin-bottom: 20px;  
-        width: 100%;
-    }
-    .otherimg {
-        width: 50%;
-        height: 80%;
-        margin: 0px;
-        margin-right: 5px;
-    }
-    .container2 a {
-        font-size: 7px;
-        padding-right: 10px;
-        margin-top: 2px;
-        margin-bottom: 2px;
-    }
-    .weather {
-        width: 100%;
-        height: 100%;
-    }
-    .circle {
-        height: 50px;
-        width: 50px;
-        margin-right: 5px;
-    }
-    .huvi {
-        font-size: 10px;
-        margin: 8px;
-    }
-    .tomzrg {
-        width: 100vw;
-        height: 150px;
-        margin: 5px;
-    }
-    .zai30px {
-        margin-left: 0px;
-        font-size: 10px;
+        font-size: 25px;
+        margin: 7px;
     }
     .map {
-        width: 35%;
-        height: 130px;
-        margin-right: 5px;
-        
+        height: 300px;
     }
-    .text2 {
-        font-size: 13px;
-        margin: 20px;
+    .text1 {
+        font-size: 20px;
     }
-    .tugsgul {
-        width: 100vw;
-        height: 200px;
-        padding: 0px;
+    .text {
+        font-size: 20px;
     }
-    .suulzurag {
-        width: 30px;
-        height: 30px;
+    .zai {
+        font-size: 20px;
     }
-    .social {
-        height: 20px;
-        width: 20px;
+    .row {
+        align-items: flex-start;
+    }
+    .huvi {
+        font-size: 20px;
+        margin: 10px;
+    }
+    .row .column {
         margin: 5px;
     }
-    .ikons {
-        width: 20px;
-        height: 20px;
+    .otherimg {
+        width: 45%;
     }
-    .text3 {
-        margin: 10px;
-        font-size: 13px;
-        text-align: center;
-    }
-    .tsuvaa p {
-        font-size: 10px;
-        margin: 3px;
-        text-align: center;
-    }
-    .tsuvaa {
-        margin: 0px; 
-    }
+}
+@media screen and (max-width: 416px) {
+  .main-container {
+    width: 100%;
+    background-color: #e5e5e5;
+    min-width: 378px;
+    margin-top: 100px;
+  }
+  .logo {
+    height: 30px;
+    width: 40px;
+    margin: 5px;
+  }
+  .line {
+    border: 2px solid #409ada;
+    width: 18%;
+  }
+  .asuult {
+    width: 100vw;
+    min-width: 357px;
+  }
+  h1 {
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  h3 {
+    margin: 15px;
+    font-size: 18px;
+  }
+  .TEXT {
+    font-size: 15px;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  .row h2 {
+    margin: 0px;
+  }
+  .rnbl {
+    width: 100vw;
+    height: 20vh;
+    margin-top: 10px;
+  }
+  .row {
+    margin-bottom: 10px;
+    margin: 5px;
+    width: 100%;
+  }
+  .tsuvaa {
+    margin-bottom: 10px;
+  }
+  .column {
+    margin-bottom: 10px;
+  }
+  .dooshoo {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin: 0px;
+    width: 33%;
+  }
+  .row .column {
+    margin-bottom: 10px;
+    margin: 0px;
+  }
+  .Information {
+    width: 60%;
+    margin: 0px;
+  }
+  .other {
+    width: 40%;
+  }
+  .text1 {
+    font-size: 15px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+  .zai {
+    font-size: 15px;
+    margin-left: 15px;
+  }
+  .text {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .container2 {
+    height: 80px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .otherimg {
+    width: 50%;
+    height: 80%;
+    margin: 0px;
+    margin-right: 5px;
+  }
+  .container2 a {
+    font-size: 7px;
+    padding-right: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .weather {
+    width: 100%;
+    height: 100%;
+  }
+  .circle {
+    height: 50px;
+    width: 50px;
+    margin-right: 5px;
+  }
+  .huvi {
+    font-size: 10px;
+    margin: 8px;
+  }
+  .tomzrg {
+    width: 100vw;
+    height: 150px;
+    margin: 5px;
+  }
+  .zai30px {
+    margin-left: 0px;
+    font-size: 10px;
+  }
+  .map {
+    width: 35%;
+    height: 130px;
+    margin-right: 5px;
+  }
+  .text2 {
+    font-size: 13px;
+    margin: 20px;
+  }
+  .tugsgul {
+    width: 100vw;
+    height: 200px;
+    padding: 0px;
+  }
+  .suulzurag {
+    width: 30px;
+    height: 20px;
+  }
+  .social {
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+  }
+  .ikons {
+    width: 20px;
+    height: 20px;
+  }
+  .text3 {
+    margin: 10px;
+    font-size: 13px;
+    text-align: center;
+  }
+  .tsuvaa p {
+    font-size: 10px;
+    margin: 3px;
+    text-align: center;
+  }
+  .tsuvaa {
+    margin: 0px;
+  }
 }
