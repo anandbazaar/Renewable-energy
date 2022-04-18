@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 section {
@@ -149,7 +151,9 @@ section {
       height: 3px;
       margin: 5px auto;
       transition: all 0.3s ease-in-out;
-      background: #fff;
+      background: black;
+      display: block;
+      cursor: pointer;
     }
   
     ul li {
@@ -173,12 +177,6 @@ section {
       right: 10%;
       transform: translate(5%, 20%);
     }
-  
-    .navbar__toggle .bar {
-      display: block;
-      cursor: pointer;
-    }
-  
     #mobile-menu.is-active .bar:nth-child(2) {
       opacity: 0;
     }
