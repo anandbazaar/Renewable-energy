@@ -169,9 +169,6 @@ h4 {
   margin: 40px;
 }
 @media screen and (max-width: 416px) {
-  .navbar{
-    width: 100%;
-  }
   .row {
     margin-bottom: 10px;
     margin: 5px;

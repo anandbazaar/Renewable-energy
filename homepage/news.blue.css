@@ -1,11 +1,6 @@
 
 body {
   background-color: #0d273c;
-  margin: auto;
-}
-.landing img {
-  width: 100%;
-  object-fit: contain;
 }
 .navbar{
   background-color: #0d273c;
@@ -184,6 +179,12 @@ h4 {
   margin: 40px;
 }
 @media screen and (max-width: 416px) {
+  .navbar-menu.active{
+    background-color: #354b7b;
+  }
+  .navbar__toggle .bar{
+    background: white;
+   }
   .row {
     margin-bottom: 10px;
     margin: 5px;
