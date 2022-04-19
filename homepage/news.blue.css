@@ -1,12 +1,10 @@
-
 body {
   background-color: #0d273c;
-
 }
-.navbar{
+.navbar {
   background-color: #0d273c;
 }
-.nav-links ul li a{
+.nav-links ul li a {
   color: white;
 }
 /* header section */
@@ -22,28 +20,9 @@ section {
 }
 
 h4 {
-  color: #A5DDF2;
+  color: #a5ddf2;
   font-size: 2.8vw;
 }
-/* nuur zurag */
-.img-txt {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.img-txt h3 {
-  font-size: 70px;
-  margin-bottom: 2%;
-  margin-top: 2%;
-}
-.img-h {
-  top: 40%;
-  position: absolute;
-}
-
 /* information section */
 .information div {
   margin-left: 5%;
@@ -88,97 +67,13 @@ h4 {
 .st3 p {
   font-size: 1.3vw;
 }
-
-/* tugsgul medeelel */
-.cntnr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.row .cntnr {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.map {
-  margin-right: 50px;
-}
-.dooshoo {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
-}
-.text {
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-}
-.zai30px {
-  margin-left: 30px;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 35px;
-  margin-top: 35px;
-  justify-content: center;
-  align-items: center;
-}
-.tsuvaa {
-  display: flex;
-  flex-direction: row;
-  margin: 30px;
-  margin-left: 0px;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  margin-left: 0px;
-}
-.tugsgul {
-  background-color: white;
-  height: 407px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.TEXT {
-  font-size: 44px;
-  margin: 60px;
-  margin-left: 0px;
-  font-weight: 300;
-}
-
-.text2 {
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-  margin: 80px;
-  margin-left: 0px;
-}
-.social {
-  height: 50px;
-  width: 50px;
-  margin: 15px;
-}
-.text3 {
-  margin: 40px;
-}
 @media screen and (max-width: 416px) {
-  .navbar-menu.active{
+  .navbar-menu.active {
     background-color: #354b7b;
   }
-  .navbar__toggle .bar{
+  .navbar__toggle .bar {
     background: white;
-   }
+  }
   .row {
     margin-bottom: 10px;
     margin: 5px;
