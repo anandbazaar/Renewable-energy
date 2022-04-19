@@ -29,21 +29,11 @@ section {
   text-align: center;
 }
 .img-txt h3 {
-  margin-right: 26%;
   margin-top: 10%;
   font-size: 70px;
 }
-
-.img-txt h4 {
-  width: 60%;
-  margin: 20px 0 50px;
-  margin-left: 8%;
-  font-size: 40px;
-  color: white;
-}
 .img-h {
-  left:10%;
-  top: 0%;
+  top: 20%;
   position: absolute;
 }
 
@@ -101,6 +91,7 @@ h4 {
 .imgg40 {
   margin-top: 10%;
   width: 100%;
+  object-fit: contain;
 }
 /* tugsgul medeelel */
 .dooshoo {
@@ -233,16 +224,10 @@ h4 {
   }
   .img-h {
     top: 0px;
-    margin-right: 60px;
   }
   .img-txt h3 {
-    width: 70%;
+    width: 100%;
     font-size: 20px;
-    margin: 0;
-  }
-  .img-txt h4 {
-    padding-left: 5%;
-    font-size: 12px;
     margin: 0;
   }
   .navbar-menu.active{
