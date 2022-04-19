@@ -195,11 +195,11 @@ section {
     position: relative;
   }
   .img-h {
-    top: 0px;
+    top: 80px;
     margin-right: 60px;
   }
   .img-txt h3 {
-    width: 70%;
+    width: 100%;
     font-size: 20px;
     margin: 0;
   }
