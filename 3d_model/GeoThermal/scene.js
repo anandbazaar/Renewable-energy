@@ -13,27 +13,30 @@ const pointLight = []
 const sphereSize = 1
 const pointLightHelper = []
 for(let i =0;i<6;i++){
-    pointLight.push(new THREE.PointLight("#fff", 0))
+    pointLight.push(new THREE.PointLight("#ffffff", 0))
     all.add(pointLight[i])
     pointLightHelper[i] = new THREE.PointLightHelper( pointLight[i], sphereSize );
     scene.add( pointLightHelper[i] );
 }
-pointLight[0].position.set(185, 30, 0);
-pointLight[0].intensity = 1.7
-pointLight[1].position.set(-185, 30, 0);
-pointLight[1].intensity = 1.7
+pointLight[0].position.set(185, 130, 0);
+pointLight[0].intensity = 1
+pointLight[1].position.set(-185, 130, 0);
+pointLight[1].intensity = 1
 pointLight[2].position.set(0, 30, -185);
-pointLight[2].intensity = 1.7   
+pointLight[2].intensity = 1   
 pointLight[3].position.set(0, 35, 185);
-pointLight[3].intensity = 1.7
+pointLight[3].intensity = 1
 pointLight[4].position.set(0, -120, 0);
 pointLight[4].intensity = 1
-pointLight[5].position.set(0, 120, 0);
-pointLight[5].intensity = 0.1
+// pointLight[5].position.set(10, 150, 0);
+// pointLight[5].intensity = 0.1
 //objects
+
 all.position.set(50,0,0)
 scene.add(all)
+all.add(hoos)
 all.add(land)
+scene.add(hole)
 //render
 renderer = new THREE.WebGLRenderer({
     canvas : canvas,

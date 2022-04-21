@@ -1,11 +1,10 @@
-
 body {
   background-color: #d7766e;
 }
-.navbar{
+.navbar {
   background-color: #d7766e;
 }
-.nav-links ul li a{
+.nav-links ul li a {
   color: white;
 }
 /* header section */
@@ -17,32 +16,12 @@ section {
   background-color: #d7766e;
   color: white;
 }
-
-/* nuur zurag */
-
-.img-txt {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.img-txt h3 {
-  margin-top: 10%;
-  font-size: 70px;
-}
-.img-h {
-  top: 20%;
-  position: absolute;
-}
-
 /* information section */
 h4 {
   color: #ed959e;
   font-size: 2.8vw;
 }
-.information{
+.information {
   margin-bottom: 10%;
 }
 .information p {
@@ -92,72 +71,6 @@ h4 {
   margin-top: 10%;
   width: 100%;
   object-fit: contain;
-}
-/* tugsgul medeelel */
-.dooshoo {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
-}
-.text {
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-}
-.zai30px {
-  margin-left: 30px;
-}
-.row {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 35px;
-  margin-top: 35px;
-  justify-content: center;
-  align-items: center;
-}
-.tsuvaa {
-  display: flex;
-  flex-direction: row;
-  margin: 30px;
-  margin-left: 0px;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  margin-left: 0px;
-}
-.TEXT {
-  font-size: 44px;
-  margin: 60px;
-  margin-left: 0px;
-  font-weight: 300;
-}
-
-.text2 {
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-  margin: 80px;
-  margin-left: 0px;
-}
-.tugsgul {
-  background-color: white;
-  height: 407px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.social {
-  height: 50px;
-  width: 50px;
-  margin: 15px;
-}
-.text3 {
-  margin: 40px;
 }
 @media screen and (max-width: 416px) {
   .row {
@@ -230,7 +143,7 @@ h4 {
     font-size: 20px;
     margin: 0;
   }
-  .navbar-menu.active{
-     background-color:#ed959e ;
+  .navbar-menu.active {
+    background-color: #ed959e;
   }
 }
