@@ -100,28 +100,6 @@
   top: 40%;
   position: absolute;
 }
-/* tugsgul */
-.dooshoo .cntnr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.row .cntnr {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.dooshoo {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
-}
 .about-page .dooshoo {
   display: flex;
   flex-grow: 1;
@@ -129,11 +107,6 @@
   margin: 20px;
   justify-content: center;
   align-items: center;
-}
-.dooshoo .text {
-  font-size: 1.8vw;
-  letter-spacing: normal;
-  font-weight: lighter;
 }
 .zai30px {
   margin-left: 30px;
