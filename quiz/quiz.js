@@ -10,6 +10,16 @@ const quiz = [
     answer: 2,
   },
   {
+    q: "Хамгийн хямд цахилгаан үүсгэвэр аль нь вэ?",
+    options: ["салхи", "ус", "биомасс", "нар"],
+    answer: 0,
+  },
+  {
+    q: "Салхи хамгийн ихдээ хэдэн хувийн энерги боловсруулах вэ?",
+    options: ["50%", "41.3%", "59.3%", "84.3%"],
+    answer: 2,
+  },
+  {
     q: "Сэргээгдэх эрчим хүчний аль эх үүсвэр нь гол мөрөн эсвэл далайг ашигладаг цахилгаан үйлдвэрлэх үү?",
     options: ["салхи", "ус", "биомасс", "нар"],
     answer: 1,
@@ -46,7 +56,7 @@ const quiz = [
   },
 ];
 const menu = document.querySelector("#mobile-menu");
-const menuLinks = document.querySelector(".navbar__menu");
+const menuLinks = document.querySelector(".navbar-menu");
 const navLogo = document.querySelector("#navbar__logo");
 const mobileMenu = () => {
   menu.classList.toggle("is-active");

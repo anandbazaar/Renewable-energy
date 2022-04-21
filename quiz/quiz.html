@@ -5,59 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="../common/global.css" />
     <title>Quiz</title>
   </head>
   <body>
-    <section class="header">
-      <nav class="navbar">
-        <a href="index.html"
-          ><img class="logo" src="Assets/Group 133.png" id="" alt=""
+    <!-- Navigation bar -->
+
+    <nav class="navbar">
+      <div class="container">
+        <!-- Logo -->
+
+        <a href="../homepage/index.html"
+          ><img class="logo" src="../Assets/Group 133.png" id="" alt=""
         /></a>
-        <div class="nav-links navbar_container" id="navLinks">
+
+        <!-- Links -->
+
+        <div class="nav-links navbar__container" id="navLinks">
+          <!-- Phone -->
           <div class="navbar__toggle" id="mobile-menu">
-            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
             <span class="bar"></span>
           </div>
-          <ul class="navbar__menu">
-            <li class="navbar__item">
-              <a
-                href="../homepage/index.html"
-                class="navbar__links"
-                id="home-page"
-                >HOME</a
-              >
+
+          <!-- Desktop -->
+
+          <ul class="navbar-menu">
+            <li>
+              <a href="../homepage/index.html" id="home-page">HOME</a>
             </li>
-            <li class="navbar__item">
-              <a
-                href="../lrnmore/lrnmr.html"
-                class="navbar__links"
-                id="about-page"
-                >INFORMATION</a
-              >
+            <li>
+              <a href="../lrnmore/lrnmr.html" id="about-page">INFORMATION</a>
             </li>
-            <li class="navbar__item">
-              <a
-                href="../quiz/quiz.html"
-                class="navbar__links"
-                id="services-page"
-                >EDUCATION</a
-              >
+            <li>
+              <a href="../quiz/quiz.html" id="services-page">EDUCATION</a>
             </li>
-            <li class="navbar__item">
-              <a
-                href="../Team/team.html"
-                class="navbar__links"
-                id="services-page"
-                >TEAM</a
-              >
+            <li>
+              <a href="../Team/team.html" id="services-page">TEAM</a>
             </li>
           </ul>
         </div>
-      </nav>
-    </section>
-    <section class="img-section">
+      </div>
+    </nav>
+    <section class="img-section container">
       <div class="img-con">
-        <img class="hp-img" src="Assets/Rectangle 483.png" alt="" />
+        <img
+          class="hp-img container"
+          src="../Assets/Rectangle 483.png"
+          alt=""
+        />
         <div class="garchig">
           <h3>Cэргээгдэх боловсролын тест</h3>
         </div>
@@ -116,18 +113,90 @@
         </button>
         <div>
           <div class="bird-w">
-            <img class="bird-w-img" src="assets/Union.png" alt="" />
+            <img class="bird-w-img" src="../Assets/Union.png" alt="" />
             <div class="bird-w-p">
               <p>Зүгээрдээ дахиад уншаад бөглөөд үз 😘</p>
             </div>
           </div>
 
-          <img class="bird-img" src="assets/Group 196.png" alt="" />
+          <img class="bird-img" src="../Assets/Group 196.png" alt="" />
         </div>
       </div>
     </section>
-
+    <section>
+      <div class="tugsgul">
+        <div class="container about-page">
+          <div class="dooshoo">
+            <div class="cntnr">
+              <img src="../lrnmore/zuragnuud/logo2.png" class="suulzurag" />
+              <p class="">RENEWABLE<br />ENERGY</p>
+            </div>
+            <p class="text3">2022 - NEST ACADEMY</p>
+            <div class="row">
+              <a> <img src="../lrnmore/zuragnuud/fb.png" class="social" /></a>
+              <a> <img src="../lrnmore/zuragnuud/ig.png" class="social" /></a>
+              <a> <img src="../lrnmore/zuragnuud/ytb.png" class="social" /></a>
+              <a>
+                <img src="../lrnmore/zuragnuud/google.png" class="social"
+              /></a>
+            </div>
+          </div>
+          <div class="dooshoo">
+            <p class="text">
+              <span style="border-bottom: solid 4px #268a5d; border-radius: 3px"
+                >Холбоо</span
+              >
+              барих
+            </p>
+            <div class="row" style="display: flex; align-items: center">
+              <img src="../lrnmore/zuragnuud/mp.png" class="ikons" />
+              <p class="zai30px">
+                СБД, 1-р хороо, Чингисийн өргөн чөлөө,<br />
+                Гурван гол оффис центр 3 давхар, Ulaanbaatar
+              </p>
+            </div>
+            <div class="row">
+              <img src="../lrnmore/zuragnuud/call.png" class="ikons dugaar" />
+              <p class="zai30px">75077500</p>
+            </div>
+            <div class="row">
+              <img src="../lrnmore/zuragnuud/mail.png" class="ikons" />
+              <p class="zai30px">info@nest.edu.mn</p>
+            </div>
+          </div>
+          <div class="dooshoo">
+            <p class="text">
+              <span style="border-bottom: solid 4px #268a5d; border-radius: 3px"
+                >Вэб</span
+              >
+              хандалтын тоо
+            </p>
+            <div
+              style="
+                display: flex;
+                justify-content: start;
+                flex-direction: column;
+              "
+            >
+              <div class="tsuvaa">
+                <p>Өнөөдөр :</p>
+              </div>
+              <div class="tsuvaa">
+                <p>Энэ долоо хоног :</p>
+              </div>
+              <div class="tsuvaa">
+                <p>Энэ сар:</p>
+              </div>
+              <div class="tsuvaa">
+                <p>Нийт:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="quiz.js"></script>
     <script src="app.js"></script>
+    <script src="../homepage/main.js"></script>
   </body>
 </html>
