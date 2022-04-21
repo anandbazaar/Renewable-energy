@@ -1,8 +1,5 @@
-* {
-  box-sizing: content-box;
-  margin: 0px;
-  padding: 0px;
-  font-family: Sans-serif;
+section {
+  padding-top: 80px;
 }
 body {
   background-color: #e5e5e5;
@@ -16,212 +13,6 @@ body {
 }
 .header {
   width: 100%;
-}
-
-nav {
-  padding-top: 2%;
-  padding-bottom: 2%;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  width: 100%;
-  z-index: 10;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-}
-.navbar {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  z-index: 999;
-}
-#navbar__logo {
-  margin-left: 100px;
-}
-.navbar__container {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 50px;
-}
-.navbar__menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin-left: 50%;
-}
-.navbar__item {
-  height: 40px;
-  margin-right: 4%;
-}
-
-.navbar__links {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 155px;
-  text-decoration: none;
-  height: 100%;
-  transition: all 0.3s ease;
-}
-nav img {
-  width: 100px;
-}
-
-.nav-links {
-  flex: 1;
-  text-align: right;
-}
-
-.nav-links ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-}
-
-.nav-links ul li a {
-  color: black;
-  text-decoration: none;
-  font-size: 25px;
-  padding: 5px;
-  font-weight: 400;
-  line-height: 37px;
-}
-.nav-links ul {
-  margin-right: 100px;
-}
-
-.nav-links ul li::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #4eb073;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-  width: 100%;
-}
-
-.hp-img {
-  width: 100%;
-  height: 100vh;
-}
-
-@media screen and (max-width: 900px) {
-  .navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 400px;
-    padding: 0;
-  }
-  .nav-links ul li a {
-    color: black;
-  }
-  .navbar {
-    background-color: #4eb073;
-  }
-  .navbar__menu {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    top: -1000px;
-    left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: -1;
-  }
-
-  .navbar__menu.active {
-    background: white;
-    top: 100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 99;
-    height: 60vh;
-    font-size: 1.6rem;
-  }
-
-  #navbar__logo {
-    padding-left: 25px;
-  }
-
-  .navbar__toggle .bar {
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background: #fff;
-  }
-
-  .navbar__item {
-    width: 80%;
-  }
-
-  .navbar__links {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-  }
-
-  .navbar__btn {
-    padding-bottom: 2rem;
-  }
-
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 80px;
-    margin: 0;
-  }
-
-  #mobile-menu {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    transform: translate(5%, 20%);
-  }
-
-  .navbar__toggle .bar {
-    display: block;
-    cursor: pointer;
-  }
-
-  #mobile-menu.is-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  #mobile-menu.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  #mobile-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  .logo {
-    left: 0;
-  }
 }
 .asuult {
   display: flex;
@@ -257,8 +48,6 @@ h2 {
 .row {
   display: flex;
   flex-direction: row;
-  margin-bottom: 35px;
-  margin-top: 35px;
   justify-content: center;
   align-items: center;
 }
@@ -292,9 +81,7 @@ h2 {
 .Information {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-top: 80px;
-  margin-left: 40px;
+  width: 100%;
 }
 .other {
   display: flex;
@@ -318,8 +105,8 @@ h2 {
   padding-right: 10px;
   transition: all 0.3s ease;
 }
-.container2 a:hover{
-  border-bottom: 3px solid #409ada ;
+.container2 a:hover {
+  border-bottom: 3px solid #409ada;
 }
 a {
   text-decoration: none;
@@ -333,7 +120,7 @@ a {
   letter-spacing: normal;
   font-weight: lighter;
   text-align: justify;
-  margin-right: 15  px;
+  margin-right: 15 px;
 }
 .text1 {
   font-size: 30px;
@@ -359,78 +146,13 @@ a {
   margin: 30px;
   margin-left: -13px;
 }
-.cntnr {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.row .cntnr {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.map {
-  margin-right: 50px;
-}
-.zai30px {
-  margin-left: 30px;
-}
-.zai {
-  margin-left: 60px;
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-}
-h3 {
-  font-size: 40px;
-  font-weight: bolder;
-  color: #0e7755;
-  margin: 50px;
-  margin-left: 0px;
-}
-.TEXT {
-  font-size: 44px;
-  margin: 60px;
-  margin-left: 0px;
-  font-weight: 300;
-}
-.text2 {
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-  margin: 80px;
-  margin-left: 0px;
-}
-.tugsgul {
-  background-color: white;
-  height: 407px;
-  width: 1440px;
-  padding: 70px;
-  display: flex;
-  flex-direction: row;
-}
-.social {
-  height: 50px;
-  width: 50px;
-  margin: 15px;
-}
-.text3 {
-  margin: 40px;
-}
 .solar {
-    width: 95%;
+  width: 95%;
 }
 @media only screen and (max-width: 1400px) {
   .main-container {
     width: 100vw;
     margin-top: 160px;
-  }
-  .logo {
-    height: 70px;
-    width: 100px;
-    margin: 20px;
   }
   .line {
     border: 2px solid #409ada;
@@ -518,16 +240,15 @@ h3 {
     margin-left: 20px;
   }
   .TEXT {
-      margin: 40px;
+    margin: 40px;
   }
   .map {
     height: 450px;
-
   }
   .text2 {
-      font-size: 25px;
-      margin: 50px;
-      text-align: justify;
+    font-size: 25px;
+    margin: 50px;
+    text-align: justify;
   }
   .tugsgul {
     width: 100vw;
@@ -548,7 +269,7 @@ h3 {
     height: 35px;
   }
   .row {
-      align-items: center;
+    align-items: center;
   }
   .text3 {
     margin: 10px;
@@ -563,106 +284,73 @@ h3 {
   .tsuvaa {
     margin: 0px;
   }
-  .container2 {
-    width: 100%;
-  }
-
 }
 @media only screen and (max-width: 1010px) {
-    .line {
-      width: 22%;
-    }
-    .circle {
-        height: 120px;
-        width: 120px;
-        margin-right: 5px;
-    }
-    h1 {
-        font-size: 25px;
-        margin: 7px;
-    }
-    .map {
-        height: 300px;
-        margin-right: 30px;
-    }
-    .text1 {
-        font-size: 20px;
-    }
-    .text {
-        font-size: 19px;
-        margin: 15px;
-        margin-left: 0px;
-    }
-    .zai {
-        font-size: 20px;
-    }
-    .row {
-        align-items: flex-start;
-    }
-    .huvi {
-        font-size: 20px;
-        margin: 10px;
-    }
-    .row .column {
-        margin: 5px;
-    }
-    .otherimg {
-        width: 45%;
-    }
-    .tsuvaa p {
-      font-size: 15px;
-    }
+  .line {
+    width: 22%;
   }
-    @media screen and (max-width: 768px) {
-      .main-container {
-        width: 93%;
-      }
-      h1 {
-        font-size: 21px;
-      }
-      h2 {
-        font-size: 20px;
-      }
-      h3 {
-        margin: 10px;
-      }
-      .row h2 {
-        margin: 10px;
-      }
-      .circle {
-        height: 80px;
-        width: 80px;
-        margin-right: 5px;
-      }
-      .text {
-        margin: 10px;
-        font-size: 20px;
-      }
-      .cntnr .text {
-        font-size: 18px;
-      }
-      .Information {
-        width: 60%;
-        margin: 0px;
-      }
-      .other {
-        width: 40%;
-      }
-      .row {
-        margin-top: 10px;
-      }
-      .row .column {
-        margin: 0px;
-      }
-      .zai {
-        margin-left: 10px;
-      }
-      .map {
-        height: 210px;
-        width: 250px;
-        margin-right: 15px;
-      }
-    }
+  .circle {
+    height: 120px;
+    width: 120px;
+    margin-right: 5px;
+  }
+  h1 {
+    font-size: 25px;
+    margin: 7px;
+  }
+  .map {
+    height: 300px;
+    margin-right: 30px;
+  }
+  .text1 {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 19px;
+    margin: 15px;
+    margin-left: 0px;
+  }
+  .zai {
+    font-size: 20px;
+  }
+  .row {
+    align-items: flex-start;
+  }
+  .huvi {
+    font-size: 20px;
+    margin: 10px;
+  }
+  .row .column {
+    margin: 5px;
+  }
+  .otherimg {
+    width: 45%;
+  }
+  .tsuvaa p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 21px;
+  }
+  .circle {
+    height: 100px;
+    width: 100px;
+    margin-right: 5px;
+  }
+  .text {
+    margin: 10px;
+    font-size: 20px;
+  }
+  .Information {
+    width: 60%;
+    margin: 0px;
+  }
+  .other {
+    width: 40%;
+  }
+}
 
 @media screen and (max-width: 416px) {
   .main-container {

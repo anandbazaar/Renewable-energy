@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../common/global.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Renewable Energy</title>
@@ -21,9 +23,8 @@
 
         <!-- Links -->
 
-        <div class="nav-links" id="navLinks">
+        <div class="nav-links navbar__container" id="navLinks">
           <!-- Phone -->
-
           <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -32,9 +33,9 @@
 
           <!-- Desktop -->
 
-          <ul>
+          <ul class="navbar-menu">
             <li>
-              <a href="" id="home-page">HOME</a>
+              <a href="../homepage/index.html" id="home-page">HOME</a>
             </li>
             <li>
               <a href="../lrnmore/lrnmr.html" id="about-page"> INFORMATION </a>
@@ -53,7 +54,7 @@
     <!-- Section Header -->
 
     <section class="header container">
-      <img class="hp-img" src="../Assets/Group 43.svg" alt="" />
+      <img class="hp-img container" src="../Assets/Group 43.svg" alt="" />
     </section>
 
     <!-- ABOUT US SECTION -->
@@ -97,100 +98,199 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="container">
         <a class="lrn-m" href="../lrnmore/lrnmr.html">LEARN MORE</a>
       </div>
     </section>
-    <section class="swiper news2 container">
-      <div class="swiper row">
+    <section class="swiper news2">
+      <div class="swiper row container slider">
         <a href="../3d_model/fan/index.html" class="swiper news-col">
           <img src="../Assets/Desktop - 105.png" alt="" />
           <div class="layer">
             <h3>WIND POWER</h3>
           </div>
         </a>
-        <a class="swiper news-col">
+        <a href="../3d_model/panel/index.html" class="swiper news-col">
           <img src="../Assets/Group 169.png" alt="" />
           <div class="layer">
             <h3>SOLAR ENERGY</h3>
           </div>
         </a>
-        <a class="swiper news-col">
+        <a href="../3d_model/hydro/hydro.html" class="swiper news-col">
           <img src="../Assets/Desktop - 33.png" alt="" />
           <div class="layer">
             <h3>HYDROPOWER</h3>
+          </div>
+        </a>
+        <a href="../3d_model/hydro/hydro.html" class="swiper news-col">
+          <img src="../Assets/Group 171.png" alt="" />
+          <div class="layer">
+            <h3>GEOTHERMAL</h3>
           </div>
         </a>
       </div>
     </section>
 
     <section class="latest-news container">
-      <div class="container2">
-        <h4>Latest News</h4>
+      <div class="container">
         <div class="medee1 news">
           <div class="garchig tsenher">
-            <p>
-              GE Digital-ийн ADMS програм хангамж нь илүү уян хатан цахилгаан
-              түгээх сүлжээг идэвхжүүлдэг
-            </p>
+            <p>ЭРЧИМ ХҮЧНИЙ СОНИРХОЛТОЙ ЭХ ҮҮСВЭРҮҮД</p>
             <a class="m-a" href="news-blue.html">></a>
           </div>
 
           <div class="medeelel">
             <p>
-              Өргөтгөсөн мэдлэг, зохион байгуулалт нь цахилгаан эрчим хүчний
-              сүлжээний уян хатан байдал, хяналтыг сайжруулахын зэрэгцээ илүү их
-              тархсан эрчим хүчний нөөцийг холбох боломжийг олгодог ...
-            </p>
-            <p>
-              Бодит цагийн хөдөлгөөнт нөхцөл байдлын талаарх мэдлэг нь хээрийн
-              багийнхан болон хяналтын өрөөнүүдийн хооронд саадгүй ...
+              Сүүлийн үед цөмийн болон ус, салхи, нарны эрчим хүчээр орлуулах
+              болсон ч дэлхийн хүн ам өсөж, байгаль орчин туйлдахын хэрээр олон
+              улс эрчим хүчний шинэ эх үүсвэрүүд эрэлхийлж байна. Тэднээс
+              хамгийн сонирхолтой, басхүү амжилт олж, цаашид өргөн хэрэглэх
+              боломжтой гэж мэргэжилтнүүдийн таамаглаж буй арван эх үүсвэрийг
+              танилцуулъя.
             </p>
           </div>
         </div>
         <div class="medee2 news container">
           <div class="garchig ygaan">
-            <p>
-              Frost & Sullivan дэлхийн дамжуулалт, түгээлтийн сүлжээний аналитик
-              салбарын тайлан:
-            </p>
+            <p>Сэргээгдэх эрчим хүчний давуу талууд</p>
             <a class="m-a" href="news-pink.html">></a>
           </div>
           <div class="medeelel">
             <p>
-              эрчим хүч үйлдвэрлэх хөрөнгийг илүү үр ашигтай, цахилгаан сүлжээг
-              илүү найдвартай, уян хатан болгох замаар эрчим хүчний шилжилтийг
-              хурдасгадаг.
-            </p>
-            <p>
-              Салбарын тасалдлыг урьдчилан таамаглахын тулд нэн яаралтай шинийг
-              санаачилж, салбарын хамгийн тулгамдсан хэрэгцээг хангахын тулд
-              үйлчлүүлэгчид болон түншүүдтэйгээ хамтран ажиллах нь ...
+              зөвхөн байгаль орчны хүрээнд төдийгүй нийгэм, эдийн засгийн
+              хүрээнд бидний ашигт малтмалын түлшнээс хамаарлыг бууруулах замаар
+              мэдрэгддэг. Бид яагаад тэдэн дээр бооцоо тавих ёстой бүх
+              шалтгааныг мэдэхийг хүсч байна уу?
             </p>
           </div>
         </div>
         <div class="medee3 news">
           <div class="garchig shar">
-            <p>
-              Rinke Engineering-ийн хувьд бид биомассын салбар болон сэргээгдэх
-              эрчим хүчний шийдлүүдийн талаар ...
-            </p>
+            <p>Сэргээгдэх эрчим хүчний сул талууд</p>
             <a class="m-a" href="news-yellow.html">></a>
           </div>
           <div class="medeelel">
             <p>
-              Rinke Engineering-ийн хувьд бид биомассын салбар болон сэргээгдэх
-              эрчим хүчний шийдлүүдийн талаар чин сэтгэлээсээ санаа тавьдаг.
-              Төслийг эхлүүлж, үндэс суурийг нь бүрдүүлэхээс эхлээд төслийн
-              хяналт, бичиг баримтыг бүрдүүлэх хүртэл бид биомасс халаалтын
-              станцуудыг амьдралд нэвтрүүлсэн 20 гаруй жилийн туршлагатай бөгөөд
-              төслийн явцад гарч
+              Сэргээгдэх эрчим хүчийг ашиглах сөрөг тал байхгүй юу? Сул талуудын
+              талаар бид тийм ч их ярихгүй байх байсан тохиромжгүй байдлаар.
+              Биомасс, усан цахилгаан станцыг ногоон энергийн бүлэгт оруулах
+              талаар зарим талаар маргаан гарч байсан бөгөөд та яагаад гэдгийг
+              мэдмээр байна уу?
             </p>
           </div>
         </div>
       </div>
     </section>
-
+    <section>
+      <div class="tugsgul">
+        <div class="container about-page">
+          <div class="dooshoo">
+            <div class="cntnr">
+              <img src="../lrnmore/zuragnuud/logo2.png" class="suulzurag" />
+              <p class="">RENEWABLE<br />ENERGY</p>
+            </div>
+            <p class="text3">2022 - NEST ACADEMY</p>
+            <div class="row">
+              <a> <img src="../lrnmore/zuragnuud/fb.png" class="social" /></a>
+              <a> <img src="../lrnmore/zuragnuud/ig.png" class="social" /></a>
+              <a> <img src="../lrnmore/zuragnuud/ytb.png" class="social" /></a>
+              <a>
+                <img src="../lrnmore/zuragnuud/google.png" class="social"
+              /></a>
+            </div>
+          </div>
+          <div class="dooshoo">
+            <p class="text">
+              <span style="border-bottom: solid 4px #268a5d; border-radius: 3px"
+                >Холбоо</span
+              >
+              барих
+            </p>
+            <div class="row" style="display: flex; align-items: center">
+              <img src="../lrnmore/zuragnuud/mp.png" class="ikons" />
+              <p class="zai30px">
+                СБД, 1-р хороо, Чингисийн өргөн чөлөө,<br />
+                Гурван гол оффис центр 3 давхар, Ulaanbaatar
+              </p>
+            </div>
+            <div class="row">
+              <img src="../lrnmore/zuragnuud/call.png" class="ikons dugaar" />
+              <p class="zai30px">75077500</p>
+            </div>
+            <div class="row">
+              <img src="../lrnmore/zuragnuud/mail.png" class="ikons" />
+              <p class="zai30px">info@nest.edu.mn</p>
+            </div>
+          </div>
+          <div class="dooshoo">
+            <p class="text">
+              <span style="border-bottom: solid 4px #268a5d; border-radius: 3px"
+                >Вэб</span
+              >
+              хандалтын тоо
+            </p>
+            <div
+              style="
+                display: flex;
+                justify-content: start;
+                flex-direction: column;
+              "
+            >
+              <div class="tsuvaa">
+                <p>Өнөөдөр :</p>
+              </div>
+              <div class="tsuvaa">
+                <p>Энэ долоо хоног :</p>
+              </div>
+              <div class="tsuvaa">
+                <p>Энэ сар:</p>
+              </div>
+              <div class="tsuvaa">
+                <p>Нийт:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+   $('.slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows:false
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:false
+      }
+    }
+  ]
+});
+</script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -93,4 +93,3 @@ function move() {
     infoCont.classList.add("h2r");
   }
 }
-
