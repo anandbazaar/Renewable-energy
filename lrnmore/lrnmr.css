@@ -149,6 +149,83 @@ a {
 .solar {
   width: 95%;
 }
+.TEXT {
+  font-size: 44px;
+  margin: 60px;
+  margin-left: 0px;
+  font-weight: 300;
+}
+
+.text2 {
+  font-size: 30px;
+  letter-spacing: normal;
+  font-weight: lighter;
+  margin: 80px;
+  margin-left: 0px;
+}
+.social {
+  height: 50px;
+  width: 50px;
+  margin: 15px;
+}
+.dooshoo .text3 {
+  margin: 40px;
+}
+.zai30px {
+  margin-left: 30px;
+}
+.dooshoo .row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 35px;
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
+}
+.dooshoo .tsuvaa {
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  margin-left: 0px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 0px;
+}
+.tugsgul {
+  background-color: white;
+  display: flex;
+  margin-top: 10%;
+  flex-direction: row;
+}
+.dooshoo .cntnr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row .cntnr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dooshoo {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+}
+.dooshoo .text {
+  font-size: 18px;
+  letter-spacing: normal;
+  font-weight: lighter;
+}
 @media only screen and (max-width: 1400px) {
   .main-container {
     width: 100vw;
