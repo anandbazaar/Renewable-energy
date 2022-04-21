@@ -46,7 +46,26 @@
 }
 .slick-prev,
 .slick-next{
-  background-color: black;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+}
+.slick-prev:before,
+.slick-next:before
+{
+  color: green;
+  font-size: 40px;
+}
+.slick-prev
+{
+  left: -55px;
+}
+.slick-next
+{
+  right: -15px;
+}
+.slick-arrow{
+  color: black;
 }
 .in-p {
   padding-left: 15px;
@@ -139,6 +158,7 @@ h1 {
   font-weight: 600;
 }
 .row {
+  width: 55%;
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
@@ -208,7 +228,7 @@ h1 {
   opacity: 1;
 }
 .news2 {
-  width: 80%;
+  width: 100%;
   margin: auto;
   text-align: center;
   padding-top: 50px;
@@ -223,7 +243,9 @@ h1 {
   position: relative;
   overflow: hidden;
 }
-
+.slick-slide div{
+  margin-right: 5%;
+}
 .news-col img {
   width: 100%;
   display: block;
