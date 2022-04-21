@@ -6,13 +6,14 @@
 
 .hp-img {
   width: 100%;
-  height: 87vh;
+  height: 100vh;
 }
 
 /* About us section */
 
 .aboutus {
   display: flex;
+  margin-top: 10%;
 }
 .aboutus .left {
   flex: 1;
@@ -80,7 +81,7 @@
   width: 30vw;
   font-style: normal;
   font-weight: 400;
-  font-size: 2vw;
+  font-size: 1.8vw;
   line-height: 2vw;
 }
 .inp2 {

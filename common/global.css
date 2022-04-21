@@ -99,19 +99,24 @@
   top: 40%;
   position: absolute;
 }
+/* tugsgul */
 .about-page .dooshoo {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  margin: 20px;
+  margin: 2vw;
   justify-content: center;
   align-items: center;
+}
+.cntnr {
+  width: 6vw;
+  height: 6vw;
 }
 .dooshoo .row {
   display: flex;
   flex-direction: row;
-  margin-bottom: 35px;
-  margin-top: 10px;
+  margin-bottom: 1vw;
+  margin-top: 0.1vw;
   justify-content: center;
   align-items: center;
 }
@@ -140,13 +145,6 @@
   flex-direction: row;
   margin-top: 10%;
 }
-.TEXT {
-  font-size: 44px;
-  margin: 60px;
-  margin-left: 0px;
-  font-weight: 300;
-}
-
 .text2 {
   font-size: 30px;
   letter-spacing: normal;
