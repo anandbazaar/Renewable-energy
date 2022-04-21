@@ -563,6 +563,9 @@ h3 {
   .tsuvaa {
     margin: 0px;
   }
+  .container2 {
+    width: 100%;
+  }
 
 }
 @media only screen and (max-width: 1010px) {
@@ -610,18 +613,33 @@ h3 {
       font-size: 15px;
     }
   }
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 768px) {
+      .main-container {
+        width: 93%;
+      }
       h1 {
         font-size: 21px;
       }
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        margin: 10px;
+      }
+      .row h2 {
+        margin: 10px;
+      }
       .circle {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         margin-right: 5px;
       }
       .text {
         margin: 10px;
         font-size: 20px;
+      }
+      .cntnr .text {
+        font-size: 18px;
       }
       .Information {
         width: 60%;
@@ -629,6 +647,20 @@ h3 {
       }
       .other {
         width: 40%;
+      }
+      .row {
+        margin-top: 10px;
+      }
+      .row .column {
+        margin: 0px;
+      }
+      .zai {
+        margin-left: 10px;
+      }
+      .map {
+        height: 210px;
+        width: 250px;
+        margin-right: 15px;
       }
     }
 

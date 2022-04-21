@@ -3,52 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
-.cntnr {
-    width: 100%;
-    margin: auto; 
-}
-
-@media (min-width: 576px) {
-    .cntnr {
-        width: 540px;
-    }
-    
-}
-@media (min-width: 768px) {
-    .cntnr {
-        width: 720px;
-    }
-}
-@media (min-width: 992px) {
-    .cntnr {
-        width: 960px;
-    }
-}
-@media (min-width: 1200px) {
-    .cntnr {
-        margin-left: auto;
-        margin-right: auto;
-        width: 1440px;
-        background-color: #e5e5e5;
-        margin-top: 190px;
-    }
-}
-@media (min-width: 416px) {
-    .cntnr {
-        width: 100%;
-    }
-    h1 {
-        font-size: 15px;
-    }
-    h2 {
-        font-size: 14px;
-    }
-    h3 {
-        font-size: 18px;
-    }
-}
-=======
 
 /* Navbar */
 
@@ -143,4 +97,3 @@
     width: 1320px;
   }
 }
->>>>>>> c58ad7968ba0578cb30a530bd189b5647a0b3189
