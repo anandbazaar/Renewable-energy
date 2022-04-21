@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 .start {
     position: relative;
@@ -13,29 +12,17 @@
 .landing img {
     width: 100%;
     object-fit: contain;
-    width: 100%;
-    object-fit: contain;
-=======
-/* Landing */
-
-.landing img {
-  width: 100%;
-  object-fit: contain;
->>>>>>> 35b0741af35acd276bad0823f75488848abf65c0
 }
+
+.start {
+    margin-top: 80px;
+}
+
 
 /* Images */
 
 .team {
-<<<<<<< HEAD
     position: relative;
-    display: flex;
-    align-items: center;
-    padding-bottom: 80px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-bottom: 80px;
 }
 
 .yellow-box {
@@ -43,10 +30,6 @@
     background-color: #E8B80C;
     height: 150px;
     width: 100%;
-    position: absolute;
-    background-color: #e8b80c;
-    height: 150px;
-    width: 100%;
 }
 
 .images {
@@ -54,34 +37,9 @@
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-=======
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-bottom: 80px;
-}
-
-.yellow-box {
-  position: absolute;
-  background-color: #e8b80c;
-  height: 150px;
-  width: 100%;
-}
-
-.images {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
->>>>>>> 35b0741af35acd276bad0823f75488848abf65c0
 }
 
 @media screen and (max-width: 416px) {
-<<<<<<< HEAD
     .logo {
         height: 30px;
         width: 40px;
@@ -114,22 +72,14 @@
 }
 
 .team {
-=======
-  .navbar__toggle .bar {
-    background: black;
-  }
-  .team {
->>>>>>> 35b0741af35acd276bad0823f75488848abf65c0
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
-<<<<<<< HEAD
 }
 
 .yellow-box {
     width: 100%;
-    height: 20%;
 }
 
 .images {
@@ -137,21 +87,15 @@
     gap: 10%;
 }
 
-.images img {
-    width: 45%;
+.team-con {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
 }
-=======
-  }
-  .yellow-box {
-    width: 100%;
-    height: 20%;
-  }
-  .images {
-    width: 45%;
-    gap: 10%;
-  }
-  .images img {
-    width: 45%;
-  }
+
+.end {
+    background-color: white;
+    display: flex;
+    margin-top: 8%;
+    flex-direction: row;
 }
->>>>>>> 35b0741af35acd276bad0823f75488848abf65c0
