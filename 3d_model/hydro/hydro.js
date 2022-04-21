@@ -342,6 +342,41 @@ boshes.rotation.z = Math.PI / 2;
 boshes2.rotation.z = Math.PI / 2;
 //Cloud
 
+// const cloud1 = new THREE.Mesh(
+//   new THREE.CylinderGeometry(10,10,10,128),
+//   new THREE.MeshLambertMaterial({color:"white"})
+// )
+// const squareMesh = new THREE.Mesh(
+//   new THREE.BoxGeometry(10, 10, 10),
+//   new THREE.MeshBasicMaterial({ color: 0xff0000 })
+// )
+// const clouds = []
+// squareMesh.rotation.z = 0
+// squareMesh.scale.set(2,1,1.1)
+// squareMesh.position.set(20,-6,-45)
+// squareMesh.updateMatrixWorld()
+// cloud1.position.set(20,0,-45)
+// cloud1.rotation.x = Math.PI*0.5
+// cloud1.updateMatrixWorld()
+// const squareCSG = CSG.fromMesh(squareMesh)
+// const cloud = CSG.fromMesh(cloud1)
+// const cloudCSG = cloud.subtract(squareCSG)
+// for(let i=0;i<4;i++){
+//   clouds[i]= CSG.toMesh(cloudCSG, new THREE.Matrix4())
+//   clouds[i].material = new THREE.MeshBasicMaterial({color: "white"})
+// }
+// all.add(clouds[0])
+//   clouds[0].position.set(15,-0.2,0)
+//   clouds[0].scale.set(0.8,0.8,1)
+// all.add(clouds[1])
+// all.add(clouds[2])
+//   clouds[2].scale.set(0.8,0.8,1)
+//   clouds[2].position.set(100,-0.2,70)
+//   clouds[2].rotation.y = Math.PI * 0.5
+// all.add(clouds[3])
+//   clouds[3].rotation.y = Math.PI * 0.5
+//   clouds[3].position.set(100,-0.2,80)
+
 //Planes
 
 texture = new THREE.TextureLoader().load("../textures/soil-texture.jpeg");
@@ -409,7 +444,7 @@ const sizes = {
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight,1,10000);
 camera.position.set(200, 200, 200);
 camera.lookAt(wall.position);
-const pointLight = new THREE.PointLight("#fff", 1.5);
+const pointLight = new THREE.PointLight("#fff", 1);
 scene.add(pointLight)
 pointLight.position.set(0,500,0)
 
