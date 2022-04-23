@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="ppl.css" />
     <title>TEAM</title>
     <link rel="stylesheet" href="../../common/global.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
   </head>
 
   <body>
@@ -55,15 +57,16 @@
     <!-- Profile -->
 
     <section class="container profile-container">
+      <div class="outer-container">
       <div class="inner-container">
-        <div class="box">
+        <div class="boxq">
           <div class="inner-box">
             <h5 class="name">Б . Билигт-Очир</h5>
             <div class="blue-box">PROGRAMMER</div>
           </div>
-          <dic class="frame">
+          <div class="frame">
             <img src="../Assets/bg.png" />
-          </dic>
+          </div>
         </div>
       </div>
       <div class="inner-container">
@@ -145,6 +148,21 @@
           </div>
         </div>
       </div>
+    </div>
+
+      <script type="text/javascript">
+        $(function() {
+        $('.chart').easyPieChart({
+          size: 70,
+          barColor: "#36e617",
+          scaleLength: 0,
+          lineWidth: 8,
+          trackColor: "#525151",
+          lineCap: "circle",
+          animate: 2000,
+        });
+      });
+      </script>
     </section>
   </body>
 </html>
