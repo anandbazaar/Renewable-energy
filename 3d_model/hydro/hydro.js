@@ -15,9 +15,14 @@ const wall = new THREE.Mesh(geometry, material);
 const wall2 = new THREE.Mesh(geometry, material);
 const wall3 = new THREE.Mesh(geometry, material);
 const wall4 = new THREE.Mesh(geometry, material);
+const wall7 = new THREE.Mesh(geometry,material);
+wall7.scale.set(100,2.3,0.5);
+wall7.position.set(15,-110,-200)
+hydro.add(wall7);
+
 
 // Side Walls
-geometry = new THREE.BoxGeometry(20, 300, 300);
+geometry = new THREE.BoxGeometry(20, 350, 300);
 material = new THREE.MeshBasicMaterial({ map: texture });
 
 const wall5 = new THREE.Mesh(geometry, material);
@@ -51,7 +56,7 @@ const params = {
 water.position.set(50,-250,40)
 
 waals.add(water);
-waterGeometry = new THREE.PlaneGeometry(1000,1000)
+waterGeometry = new THREE.CircleGeometry(500,500)
 water = new Water(waterGeometry, {
     color: params.color,
     scale: params.scale,
@@ -61,10 +66,21 @@ water = new Water(waterGeometry, {
   });
   scene.add(water)
 
+
+
+
   water.rotation.x = Math.PI * 1.5
 
   water.position.set(50,-228,0);
-  
+  waterGeometry = new THREE.BoxGeometry(500,500,500)
+water = new Water(waterGeometry, {
+    color: params.color,
+    scale: 1,
+    flowDirection: new THREE.Vector2(10, 10),
+    textureWidth: 1024,
+    textureHeight: 1024,
+  });
+  scene.add(water)
 
 
 
@@ -106,8 +122,8 @@ wall.position.set(0,45,0);
 wall2.position.set(100,45,0);
 wall3.position.set(200,45,0);
 wall4.position.set(-100,45,0);
-wall5.position.set(-200,-50,-100);
-wall6.position.set(300,-50,-100);
+wall5.position.set(-200,-55,-100);
+wall6.position.set(300,-55,-100);
 waal.position.set(-200,-240,50);
 waal2.position.set(300,-240,50)
 waal3.position.set(100,-240,50);
@@ -150,14 +166,14 @@ Between.position.set(50,-130,0)
 //-------------------
 
 texture = new THREE.TextureLoader().load("../textures/stone-texture.webp");
-geometry = new THREE.BoxGeometry(20, 300, 510);
+geometry = new THREE.BoxGeometry(20, 350, 510);
 material = new THREE.MeshBasicMaterial({ map: texture });
 
 const Between2 = new THREE.Mesh(geometry, material);
 
 Between2.rotation.y = Math.PI / 2;
 
-Between2.position.set(50,-50,-250)
+Between2.position.set(50,-55,-250)
 
 hydro.add(Between2);
 hydro.add(Between);
@@ -368,7 +384,7 @@ bushes[1].position.set(-700,-180,300)
 //Planes
 
 texture = new THREE.TextureLoader().load("../textures/soil-texture.jpeg");
-geometry = new THREE.PlaneGeometry(1000, 1000, 1000);
+geometry = new THREE.CircleGeometry(500, 500,);
 material = new THREE.MeshBasicMaterial({ map: texture });
 const planes = new THREE.Mesh(geometry,material);
 
@@ -455,6 +471,8 @@ renderer.render(scene, camera);
 // animate();
 let wind = "left"
 function controlAnimation() {
+
+
   // if (wind === "left") {
   //   clouds[0].position.x -= 0.3;
   //   clouds[1].position.x -= 0.3;
