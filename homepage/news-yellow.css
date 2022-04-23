@@ -25,7 +25,9 @@ body {
   margin-top: 10%;
   font-size: 70px;
 }
-
+.img-txt .img-h {
+  background-color: #d78827;
+}
 .img40 {
   width: 100%;
   position: relative;

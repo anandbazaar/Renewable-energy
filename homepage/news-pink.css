@@ -11,6 +11,9 @@ body {
 .header {
   height: 100vh;
 }
+.header .img-txt .img-h {
+  background-color: #ed959e;
+}
 /* header end */
 section {
   background-color: #d7766e;
@@ -145,5 +148,8 @@ h4 {
   }
   .navbar-menu.active {
     background-color: #ed959e;
+  }
+  .information {
+    padding: 10%;
   }
 }
