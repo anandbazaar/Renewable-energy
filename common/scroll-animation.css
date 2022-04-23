@@ -1,0 +1,9 @@
+.scroll-animated {
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(200px);
+}
+.scroll-animation {
+  opacity: 1;
+  transform: translateX(0px);
+}
