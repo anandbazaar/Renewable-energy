@@ -1,229 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="ppl.css" />
     <title>TEAM</title>
-    <link rel="stylesheet" href="../../common/global.css">
-</head>
+    <link rel="stylesheet" href="../../common/global.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation bar -->
 
     <nav class="navbar">
-        <div class="container">
-            <!-- Logo -->
+      <div class="container">
+        <!-- Logo -->
 
-            <a href="../homepage/index.html">
-                <img class="logo" src="../../Assets/Group 168.png" id="" alt="" />
-            </a>
+        <a href="../homepage/index.html">
+          <img class="logo" src="../../Assets/Group 168.png" id="" alt="" />
+        </a>
 
-            <!-- Links -->
+        <!-- Links -->
 
-            <div class="nav-links" id="navLinks">
-                <!-- Phone -->
+        <div class="nav-links navbar__container" id="navLinks">
+          <!-- Phone -->
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
 
-                <div class="navbar__toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
+          <!-- Desktop -->
 
-                <!-- Desktop -->
-
-                <ul>
-                    <li>
-                        <a href="../../homepage/index.html" id="home-page">HOME</a>
-                    </li>
-                    <li>
-                        <a href="../../lrnmore/lrnmr.html" id="about-page"> INFORMATION </a>
-                    </li>
-                    <li>
-                        <a href="../../quiz/quiz.html" id="services-page"> EDUCATION </a>
-                    </li>
-                    <li>
-                        <a href="../../Team/team.html" id="services-page"> TEAM </a>
-                    </li>
-                </ul>
-            </div>
+          <ul class="navbar-menu">
+            <li>
+              <a href="../../homepage/index.html" id="home-page">HOME</a>
+            </li>
+            <li>
+              <a href="../../lrnmore/lrnmr.html" id="about-page"> INFORMATION </a>
+            </li>
+            <li>
+              <a href="../../quiz/quiz.html" id="services-page"> EDUCATION </a>
+            </li>
+            <li>
+              <a href="../../Team/team.html" id="services-page"> TEAM </a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <section class="con-sec">
-        <div class="container">
-            <div>
-                <div class="pro-pic">
-                    <img class="img-con" src="../Assets/Ellipse 127 (3).png" alt="" />
-                </div>
-                <div class="ner">
-                    <p>У.Маралмаа</p>
-                    <div class="inf">
-                        <h2>PROGRAMMER</h2>
-                    </div>
-                </div>
+
+    <!-- Profile -->
+
+    <section class="container profile-container">
+      <div class="outer-container">
+      <div class="inner-container">
+        <div class="boxq">
+          <div class="inner-box">
+            <h5 class="name">У.Маралмаа</h5>
+            <div class="blue-box">PROGRAMMER</div>
+          </div>
+          <div class="frame">
+            <img src="../Assets/Ellipse 127 (3).png" />
+          </div>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div class="haju">
+        <div class="box-2">
+          <div class="rec">
+            <p>    төрсөн <img src="../Assets/image 64.png" /></p>
+            <div class="line"></div>
+            <div class="textz">
+              <div>он</div>
+              <div>сар</div>
+              <div>өдөр</div>
+              <div>нас</div>
             </div>
-
-            <div class="information-con">
-                <div class="info">
-                    <div class="birth-con mdl">
-                        <h3>төрсөн</h3>
-                        <div class="birth">
-                            <h3>он</h3>
-                            <h3>сар</h3>
-                            <h3>өдөр</h3>
-                            <h3>нас</h3>
-                        </div>
-                        <div class="birth-n">
-                            <p>2005</p>
-                            <p>04</p>
-                            <p>27</p>
-                            <p>16</p>
-                        </div>
-                    </div>
-                    <div class="mdl">
-                        <h3>Яагаад программыг сонгох болсон бэ ?</h3>
-                        <p>
-                            зүгээр цаанаасаа байглын зөнгөөрөө л сурмаар санагдаад
-                        </p>
-                    </div>
-                    <div class="mdl">
-                        <h3>Нэстийн юу гоё вэ ?</h3>
-                        <p>Багш нарын заах ур чадвар болон харлцаа нь үнэхээр гоё.</p>
-                    </div>
-                </div>
+            <div class="textz2">
+              <div>2004</div>
+              <div>08</div>
+              <div>28</div>
+              <div>17</div>
             </div>
-            <div class="scl-m">
-                <div class="info">
-                    <div class="social">
-                        <div class="scl-con">
-                            <div>
-                                <img src="../Assets/image 65.png" alt="" />
-                            </div>
-
-                            <div>
-                                <h2>Maralmaa Ulambayar</h2>
-                                <p>
-                                    https://www.facebook.com/ <br /> maralmaa.ulambayar.1
-                                </p>
-                            </div>
-                        </div>
-                        <div class="scl-con">
-                            <div>
-                                <img src="../Assets/image 66.png" alt="" />
-                            </div>
-
-                            <div>
-                                <h2>_maralmaa__</h2>
-                                <p>
-                                    https://www.instagram.com <br /> /_maralmaa__/
-                                </p>
-                            </div>
-                        </div>
-                        <div class="scl-con">
-                            <div>
-                                <img src="../Assets/image 67.png" alt="" />
-                            </div>
-
-                            <div>
-                                <h2>86780427</h2>
-                            </div>
-                        </div>
-                        <div class="scl-con">
-                            <div>
-                                <img src="../Assets/image 68.png" alt="" />
-                            </div>
-
-                            <div>
-                                <h2>maralmaa#1903</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="statistics">
-                <div class="header">
-                    <p>ур чадварын өгөгдлийн статистик</p>
-                </div>
-                <div class="statis">
-                    <div class="crc-con">
-                        <div>
-                            <div class="circle1">
-                                <div class="cir2-con">
-                                    <div class="circle2">
-                                        <p>90%</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="crc-p">
-                            <p>
-                                Багаар ажиллах <br /> чадвар
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="crc-con">
-                        <div>
-                            <div class="circle1">
-                                <div class="cir2-con">
-                                    <div class="circle2">
-                                        <p>83%</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="crc-p">
-                            <p>Зурах <br> чадвар</p>
-                        </div>
-
-
-                    </div>
-                    <div class="crc-con">
-                        <div>
-                            <div class="circle1">
-                                <div class="cir2-con">
-                                    <div class="circle2">
-                                        <p>85%</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="crc-p">
-                            <p>
-                                Хүнтэй харилцах <br /> чадвар
-                            </p>
-                        </div>
-
-                    </div>
-                    <di class="crc-con">
-                        <div>
-                            <div class="circle1">
-                                <div class="cir2-con">
-                                    <div class="circle2">
-                                        <p>94%</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="crc-p">
-                            <p>
-                                Сэтгэн <br> бодох <br /> чадвар
-                            </p>
-                        </div>
-                </div>
+            <br>
+            <p>Яагаад программыг сонгох болсон 
+              бэ ?</p>
+              <div class="line"></div>
+              <p class="grey">Би багаасаа л өнгө дүрсийг эвлүүлж 
+                загвар талдаа их сонирхолтой байсан.
+                Ер нь багаасаа л дизайн-аар явнаа гээд 
+                шийдчихсэн . </p>
+                <div class="line"></div>
+                <p>Нэстийн юу гоё вэ ? </p>
+                <div class="line"></div>
+                <p class="grey">Багш нарын заах ур чадвар болон харлцаа нь үнэхээр гоё.</p>
+          </div>
+        </div>
+        <div class="box-3">
+          <div class="rec">
+            <div class="bo3te">
+            <img src="../Assets/image 65.png">
+            Biligt-ochir Burnee
+            <p class="smolte">https://www.facebook.com/biligtochir.burnee.7</p>
+          </div>
+          <div class="bo3te">
+            <img src="../Assets/image 66.png">
+            iliut_bg
+            <p class="smolte">https://www.instagram.com/iliut_bg/</p>
+          </div>
+          <div class="bo3te">
+            <img src="../Assets/image 67.png">
+            91911648
+          </div>
+          <div class="bo3te">
+            <img src="../Assets/image 68.png">
+            biligt#2438
+          </div>
+          </div>
+        </div>
+        </div>
+        <div class="box-4">
+          <div class="pur-box">
+            ур чадварын өгөгдлийн статистик
+          </div>
+          <!-- <div class="row">
+              <div class="cir" data-percent="88">
+                <div class="cir2">88%</div>
+              </div>
+          </div> -->
+          <div class="containert">
+          <div class="box">
+            <div class="chart" data-percent="90" >
+              <div class="perc">81%</div></div>
+            <p>Багаар ажиллах чадвар</p>
+          </div>
+          <div class="box">
+            <div class="chart" data-percent="72" >
+              <div class="perc">81%</div></div>
+            <p>Зурах чадвар</p>
+          </div>
+          <div class="box">
+            <div class="chart" data-percent="85" >
+              <div class="perc">81%</div></div>
+            <p>Хүнтэй харилцах 
+              чадвар</p>
+          </div>
+          <div class="box">
+            <div class="chart" data-percent="85" >
+              <div class="perc">81%</div></div>
+            <p>Сэтгэн бодох 
+              чадвар</p>
+          </div>
             </div>
         </div>
-    </section>
-</body>
+        </div>
+      </div>
+    </div>
 
+      <script type="text/javascript">
+        $(function() {
+        $('.chart').easyPieChart({
+          size: 70,
+          barColor: "#36e617",
+          scaleLength: 0,
+          lineWidth: 8,
+          trackColor: "#525151",
+          lineCap: "circle",
+          animate: 2000,
+        });
+      });
+      </script>
+    </section>
+  </body>
 </html>
