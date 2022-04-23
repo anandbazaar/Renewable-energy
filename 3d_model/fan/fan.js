@@ -449,7 +449,7 @@ all.position.set(50, 0, 0);
 //camera
 const camera = new THREE.PerspectiveCamera(90, 1600 / 900);
 scene.add(camera);
-camera.position.set(0, 100, 200);
+camera.position.set(0, 100, 150);
 pointLight = []
 for(let i =0;i<6;i++){
   pointLight.push(new THREE.PointLight("#fff", 0))
