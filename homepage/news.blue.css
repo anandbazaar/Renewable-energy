@@ -14,6 +14,9 @@ body {
   width: 100%;
   height: 100vh;
 }
+.img-txt .img-h {
+  background-color: #354b7b;
+}
 section {
   background-color: #0d273c;
   color: white;
@@ -35,13 +38,16 @@ h4 {
 
 /* statistics section */
 .statistics {
+  display: flex;
+  justify-content: center;
   height: 25vw;
   display: flex;
+  padding-right: 3%;
 }
 
 .statistics div {
-  width: 20%;
-  height: 90%;
+  width: 15%;
+  height: 65%;
   border: 6px solid #fee8a9;
   background-color: white;
   color: black;
@@ -56,7 +62,7 @@ h4 {
 
 .statistics p {
   margin-left: 3%;
-  font-size: 1.4vw;
+  font-size: 1.2vw;
 }
 
 .st4 p {
@@ -154,6 +160,13 @@ h4 {
     flex-wrap: wrap;
   }
   .statistics div {
-    height: 50%;
+    border: 3px solid #fee8a9;
+    height: 55%;
+  }
+  .statistics h4 {
+    margin-left: 0;
+  }
+  .statistics .st1 {
+    margin-left: 0;
   }
 }

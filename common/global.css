@@ -96,75 +96,101 @@
   margin-top: 2%;
 }
 .header .img-h {
-  top: 40%;
+  top: 50%;
   position: absolute;
-}
-/* tugsgul */
-.about-page .dooshoo {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  margin: 2vw;
-  justify-content: center;
-  align-items: center;
-}
-.cntnr {
-  width: 6vw;
-  height: 6vw;
-}
-.dooshoo .row {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 1vw;
-  margin-top: 0.1vw;
-  justify-content: center;
-  align-items: center;
-}
-.dooshoo .tsuvaa {
-  display: flex;
-  flex-direction: row;
-  margin: 30px;
-  margin-left: 0px;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  margin-left: 0px;
-}
-.tugsgul {
-  background-color: white;
-  display: flex;
-  margin-top: 30%;
-  flex-direction: row;
-}
-.about-page {
-  background-color: white;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  margin-top: 10%;
-}
-.text2 {
-  font-size: 30px;
-  letter-spacing: normal;
-  font-weight: lighter;
-  margin: 80px;
-  margin-left: 0px;
-}
-.social {
-  height: 50px;
-  width: 50px;
-  margin: 15px;
-}
-.dooshoo .text3 {
-  margin: 40px;
 }
 /* Container */
 
 .container {
   width: 100%;
   margin: auto;
+}
+/* contact us */
+.contact-us-con {
+  width: 100%;
+  background-color: white;
+  padding-top: 5%;
+}
+.contact-us {
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+}
+.contact-us div {
+  flex: 1;
+  flex-direction: column;
+}
+.contact-us div h2 {
+  width: fit-content;
+  border-bottom: 0.15vw solid #4eb073;
+  font-size: 1.8vw;
+  font-weight: 450;
+  margin-bottom: 5%;
+}
+.contact-us div .aboutus-logo div {
+  height: fit-content;
+  flex: 1;
+  margin-bottom: 15%;
+}
+.rnw-logo {
+  margin-left: 40%;
+  margin-right: 5%;
+}
+.aboutus-logo div {
+  margin-bottom: 5%;
+}
+.rnw-logo img {
+  width: 5vw;
+}
+.rnw-p {
+  text-align: center;
+  font-weight: 350;
+  font-size: 1vw;
+}
+.nest-p {
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: 350;
+}
+.social2 {
+  margin-left: 25%;
+}
+.social2 img {
+  width: 2vw;
+  margin-right: 4%;
+}
+.holboo-barih .contact-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5%;
+}
+
+.holboo-barih .contact-info p {
+  width: 20vw;
+  font-size: 0.9vw;
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+}
+.holboo-barih .contact-info img {
+  width: 1.5vw;
+}
+.handltn-too {
+  margin-bottom: 7%;
+}
+.handltn-too p {
+  font-size: 0.9vw;
+}
+@media screen and (max-width: 416px) {
+  .contact-us {
+    height: 35vw;
+  }
+  .contact-info div {
+    flex: 0;
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (min-width: 576px) {
@@ -204,6 +230,9 @@
     width: 100%;
     padding: 0;
   }
+  .navbar .container {
+    height: 40px;
+  }
   .nav-links ul li a {
     color: black;
   }
@@ -227,11 +256,11 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 25vh;
+    height: 10vh;
   }
 
   .navbar__toggle .bar {
-    width: 25px;
+    width: 15px;
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
@@ -257,7 +286,7 @@
   }
   #mobile-menu {
     position: absolute;
-    top: 20%;
+    top: 1%;
     right: 10%;
     transform: translate(5%, 20%);
   }
