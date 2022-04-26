@@ -44,7 +44,9 @@
   font-weight: 400;
   line-height: 2vw;
 }
-
+.navbar ul li .active{
+  border-bottom: 4px solid #4eb073;
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -70,7 +72,7 @@
 .navbar ul li::after {
   content: "";
   width: 0%;
-  height: 2px;
+  height: 3px;
   background: #4eb073;
   display: block;
   margin: auto;
@@ -235,6 +237,8 @@
   }
   .nav-links ul li a {
     color: black;
+    font-size: 15px;
+    line-height: 20px;
   }
   .navbar-menu {
     grid-template-columns: auto;
@@ -249,6 +253,7 @@
   }
   .nav-links ul li {
     padding-left: 0;
+    margin-bottom: 5%;
   }
   .navbar-menu.active {
     background: white;
@@ -256,7 +261,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 10vh;
+    height: 20vh;
   }
 
   .navbar__toggle .bar {
