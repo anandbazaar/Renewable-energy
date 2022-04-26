@@ -54,6 +54,17 @@ const quiz = [
     options: ["8", "4", "5", "6"],
     answer: 0,
   },
+  {
+    q: "Одоогоор дэлхийн энэргийн хэдэн хувийг сэргээгдэх эрчим хүч эзэлдэг вэ?",
+    options: [
+      "13%",
+      "15%",
+      "9%",
+      "22%",
+    ],
+    answer: 0,
+  },
+  
 ];
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar-menu");
