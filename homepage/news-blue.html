@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../common/global.css" />
+    <link rel="stylesheet" href="../common/scroll-animation.css" />
     <link rel="stylesheet" href="news.blue.css" />
+
     <title>Latest-news</title>
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav class="navbar">
+    <nav id="navbar" class="navbar">
       <div class="container">
         <!-- Logo -->
-        <a href="../homepage/index.html">
+        <a href="../index.html">
           <img class="logo" src="../Assets/Group 168.png" id="" alt="" />
         </a>
         <!-- Links -->
@@ -27,7 +29,7 @@
           <!-- Desktop -->
           <ul class="navbar-menu">
             <li>
-              <a href="../homepage/index.html" id="home-page">HOME</a>
+              <a href="../index.html" id="home-page">HOME</a>
             </li>
             <li>
               <a href="../lrnmore/lrnmr.html" id="about-page"> INFORMATION </a>
@@ -47,16 +49,16 @@
     <section class="container header">
       <div class="img-txt container">
         <div class="img40 container">
-          <img class="imgg40 container" src="" alt="" />
+          <img class="imgg40 container" src="../Assets/1893114.jpg" alt="" />
         </div>
 
         <div class="img-h container">
-          <h3>ЭРЧИМ ХҮЧНИЙ СОНИРХОЛТОЙ ЭХ ҮҮСВЭРҮҮД</h3>
+          <h3>ЭРЧИМ ХҮЧНИЙ СОНИРХОЛТОЙ ЭХ ҮҮСВЭРҮҮД..</h3>
         </div>
       </div>
     </section>
     <section class="information container">
-      <div class="2021">
+      <div class="2021 scroll-animated">
         <h4>Хүний хүч</h4>
         <p>
           Түм түжигнэж, бум бужигнасан газар дэлхийд хэд билээ. Тэр бүх газарт
@@ -68,7 +70,7 @@
           байна.
         </p>
       </div>
-      <div>
+      <div class="scroll-animated">
         <h4>Далайн ус</h4>
         <p>
           Америкийн эрдэмтэн Жон Канзиус радио долгионоор хорт хавдрыг эмчлэх
@@ -81,7 +83,7 @@
           бий болсон бөгөөд энэ аргыг далайн ус цэвэршүүлэхэд мөн хэрэглэдэг.
         </p>
       </div>
-      <div>
+      <div class="scroll-animated">
         <h4>Амьтны сэг зэм</h4>
         <p>
           Мал, амьтны дайвар бүтээгдэхүүн хамгийн их хаягддаг зүйлийн нэг.
@@ -95,7 +97,7 @@
           нөлөөгөөр олон сая жилийн өмнө газрын гүнд орон “боловсорсон” юм.
         </p>
       </div>
-      <div>
+      <div class="scroll-animated">
         <h4>Хог хаягдлын хий</h4>
         <p>
           Хог шатаахад их хэмжээний метаны хий ялгардаг. Америкийн “EcoLine”
@@ -106,7 +108,7 @@
           агаар бохирдуулдаггүйгээрээ мөн давуу талтай.
         </p>
       </div>
-      <div>
+      <div class="scroll-animated">
         <h4>Кофены шаар</h4>
         <p>
           Дэлхий нийтийн хамгийн өргөн хэрэглэдэг бүтээгдэхүүний жагсаалтад
@@ -121,7 +123,7 @@
           тонн хатуу түлш болно.
         </p>
       </div>
-      <div>
+      <div class="scroll-animated">
         <h4>Живх</h4>
         <p>
           Дэлхий нийт жилд ойролцоогоор 120 тэрбум живх хэрэглэдэг гэдэг. Гэтэл
@@ -140,100 +142,107 @@
     </section>
     <!-- statistics -->
     <section class="statistics container">
-      <div>
-        <h4>21,000</h4>
-        <p>Дэлхийн аж үйлдвэрийн үйлчлүүлэгчид</p>
+      <div class="st1">
+        <h4>18%</h4>
+        <p>
+          Дэлхий дээр үйлдвэрлэсэн нийт эрчим хүчний 18%-ийг сэргээгдэх эрчим
+          хүчнээс гарган авсан байна.
+        </p>
       </div>
       <div>
-        <h4>40%</h4>
-        <p>
-          Дамжуулалтаас Дэлхий дээрх хэрэгслүүд GE Digital програм хангамжийг
-          ашигладаг
-        </p>
+        <h4>13%</h4>
+        <p>Үүний 13%-ийг уламжлалт түлш болох модноос</p>
       </div>
       <div class="st3">
-        <h4>1.5B</h4>
-        <p>
-          Манай үйлдвэрийн удирддаг үйлчилгээний хяналтанд байдаг 8000 гаруй
-          хөрөнгийн тооцоолсон зайлсхийсэн өртөг
-        </p>
+        <h4>3%</h4>
+        <p>3%-ийг уснаас</p>
       </div>
       <div class="st4">
-        <h4>450+</h4>
+        <h4>1.3%</h4>
+        <p>1.3%-ийг нарны эрчим хүчнээс</p>
+      </div>
+      <div class="st4">
+        <h4>0.8%</h4>
         <p>
-          Нисэхийн операторууд болон 6000 нисгэгчид манай программ хангамжийн
-          тусламжтайгаар илүү аюулгүй, илүү сайн ажиллахад тусалсан
+          үлдэх 0.8% орчмыг нь газрын гүний дулаан, салхи, нар, далайн эрчим
+          хүчийг ашиглан гарган авч байна
         </p>
       </div>
     </section>
-    <div class="tugsgul">
-      <div class="container about-page">
-        <div class="dooshoo">
-          <div class="cntnr">
-            <img src="../lrnmore/zuragnuud/logo2.png" class="suulzurag" />
-            <p class="">RENEWABLE<br />ENERGY</p>
-          </div>
-          <p class="text3">2022 - NEST ACADEMY</p>
-          <div class="row">
-            <a> <img src="../lrnmore/zuragnuud/fb.png" class="social" /></a>
-            <a> <img src="../lrnmore/zuragnuud/ig.png" class="social" /></a>
-            <a> <img src="../lrnmore/zuragnuud/ytb.png" class="social" /></a>
-            <a> <img src="../lrnmore/zuragnuud/google.png" class="social" /></a>
-          </div>
-        </div>
-        <div class="dooshoo">
-          <p class="text">
-            <span style="border-bottom: solid 4px #268a5d; border-radius: 3px"
-              >Холбоо</span
-            >
-            барих
-          </p>
-          <div class="row" style="display: flex; align-items: center">
-            <img src="../lrnmore/zuragnuud/mp.png" class="ikons" />
-            <p class="zai30px">
-              СБД, 1-р хороо, Чингисийн өргөн чөлөө,<br />
-              Гурван гол оффис центр 3 давхар, Ulaanbaatar
+    <div class="contact-us-con">
+      <div class="contact-us container">
+        <div class="aboutus-logo">
+          <div>
+            <div class="rnw-logo">
+              <img src="../Assets/Group 66.png" alt="" />
+            </div>
+
+            <p class="rnw-p">
+              RENEWABLE <br />
+              ENERGY
             </p>
           </div>
-          <div class="row">
-            <img src="../lrnmore/zuragnuud/call.png" class="ikons dugaar" />
-            <p class="zai30px">75077500</p>
+          <div>
+            <p class="nest-p">2022-NEST ACADEMY</p>
           </div>
-          <div class="row">
-            <img src="../lrnmore/zuragnuud/mail.png" class="ikons" />
-            <p class="zai30px">info@nest.edu.mn</p>
+          <div class="social2">
+            <img src="../Assets/image 45.png" alt="" />
+            <img src="../Assets/image 46.png" alt="" />
+            <img src="../Assets/image 47.png" alt="" />
+            <img src="../Assets/image 48.png" alt="" />
           </div>
         </div>
-        <div class="dooshoo">
-          <p class="text">
-            <span style="border-bottom: solid 4px #268a5d; border-radius: 3px"
-              >Вэб</span
-            >
-            хандалтын тоо
-          </p>
-          <div
-            style="
-              display: flex;
-              justify-content: start;
-              flex-direction: column;
-            "
-          >
-            <div class="tsuvaa">
-              <p>Өнөөдөр :</p>
+        <div class="holboo-barih">
+          <div>
+            <h2>Холбоо барих</h2>
+          </div>
+          <div class="contact-info">
+            <div>
+              <img src="../Assets/image 49.png" alt="" />
             </div>
-            <div class="tsuvaa">
-              <p>Энэ долоо хоног :</p>
+
+            <p>
+              СБД, 1-р хороо, Чингисийн өргөн чөлөө, <br />
+              Гурван гол оффис центр 3 давхар, <br />
+              Ulaanbaatar
+            </p>
+          </div>
+          <div class="contact-info">
+            <div>
+              <img src="../Assets/image 50.png" alt="" />
             </div>
-            <div class="tsuvaa">
-              <p>Энэ сар:</p>
+
+            <p class="contact-info">75077500</p>
+          </div>
+          <div class="contact-info">
+            <div>
+              <img src="../Assets/image 51.png" alt="" />
             </div>
-            <div class="tsuvaa">
-              <p>Нийт:</p>
-            </div>
+
+            <p class="contact-info">info@nest.edu.mn</p>
+          </div>
+        </div>
+        <div class="handalt">
+          <div>
+            <h2>Вэб хандалтын тоо</h2>
+          </div>
+          <div class="handltn-too">
+            <p>Өнөөдөр : 35</p>
+          </div>
+          <div class="handltn-too">
+            <p>Энэ долоо хоног : 100</p>
+          </div>
+          <div class="handltn-too">
+            <p>Энэ сар: 1000</p>
+          </div>
+          <div class="handltn-too">
+            <p>Нийт: 100000</p>
           </div>
         </div>
       </div>
     </div>
+    <script src="../common/navbar.js"></script>
     <script src="../homepage/main.js"></script>
+    <script src="../common/scroll-animation.js"></script>
   </body>
 </html>

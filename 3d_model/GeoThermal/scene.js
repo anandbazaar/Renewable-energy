@@ -34,9 +34,8 @@ pointLight[4].intensity = 1
 
 all.position.set(50,0,0)
 scene.add(all)
-all.add(hoos)
 all.add(land)
-scene.add(hole)
+
 //render
 renderer = new THREE.WebGLRenderer({
     canvas : canvas,
