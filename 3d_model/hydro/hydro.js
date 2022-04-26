@@ -16,7 +16,7 @@ const wall2 = new THREE.Mesh(geometry, material);
 const wall3 = new THREE.Mesh(geometry, material);
 const wall4 = new THREE.Mesh(geometry, material);
 const wall7 = new THREE.Mesh(geometry,material);
-wall7.scale.set(100,2.3,0.5);
+wall7.scale.set(75,2.3,0.5);
 wall7.position.set(15,-110,-200)
 hydro.add(wall7);
 
@@ -60,7 +60,7 @@ waterGeometry = new THREE.CircleGeometry(500,500)
 water = new Water(waterGeometry, {
     color: params.color,
     scale: params.scale,
-    flowDirection: new THREE.Vector2(0, 100),
+    flowDirection: new THREE.Vector2(0, ),
     textureWidth: 1024,
     textureHeight: 1024,
   });
@@ -71,16 +71,16 @@ water = new Water(waterGeometry, {
 
   water.rotation.x = Math.PI * 1.5
 
-  water.position.set(50,-228,0);
-  waterGeometry = new THREE.BoxGeometry(500,500,500)
-water = new Water(waterGeometry, {
-    color: params.color,
-    scale: 1,
-    flowDirection: new THREE.Vector2(10, 10),
-    textureWidth: 1024,
-    textureHeight: 1024,
-  });
-  scene.add(water)
+  water.position.set(50,-228,250);
+//   waterGeometry = new THREE.PlaneGeometry(500,500,500)
+// water = new Water(waterGeometry, {
+//     color: params.color,
+//     scale: 1,
+//     flowDirection: new THREE.Vector2(0, 0),
+//     textureWidth: 1024,
+//     textureHeight: 1024,
+//   });
+//   scene.add(water)
 
 
 
@@ -268,19 +268,19 @@ for (let i = 0; i < 4; i++) {
   clouds[i].material = new THREE.MeshBasicMaterial({ color: "white" });
 }
 scene.add(clouds[0]);
-clouds[0].position.set(600, 298, -300);
+clouds[0].position.set(600, 298, 0);
 clouds[0].scale.set(8, 8, 10);
 scene.add(clouds[1]);
-clouds[1].position.set(600,300,-300)
+clouds[1].position.set(600,300,0)
 clouds[1].scale.set(10, 10, 10);
 scene.add(clouds[2]);
 clouds[2].scale.set(8, 8, 10);
-clouds[2].position.set(-500, 298, -250);
+clouds[2].position.set(-500, 298, 0);
 clouds[2].rotation.y = Math.PI * 0.5;
 
 scene.add(clouds[3]);
 clouds[3].rotation.y = Math.PI * 0.5;
-clouds[3].position.set(-500, 300, -300);
+clouds[3].position.set(-500, 300, 0);
 clouds[3].scale.set(10,10,10)
 // Tree
 
@@ -321,26 +321,13 @@ branch2.position.set(-30,210,-25)
 tree.add(trunk,branch1,branch2)
 tree2.add(trunk2,branch3,branch4)
 
-tree.position.set(800,-130,100);
+tree.position.set(700,-130,100);
 tree2.position.set(-600,-180,500);
 
 scene.add(tree);
 scene.add(tree2);
 
-//Bush
-const bushes = []
-texture = new THREE.TextureLoader().load("../textures/bush-texture.jpeg");
-geometry = new THREE.DodecahedronGeometry(100, 1);
-material = new THREE.MeshBasicMaterial({ map: texture });
-for(let i=0;i<2;i++){
-  bushes[i] = new THREE.Mesh(
-    geometry = new THREE.DodecahedronGeometry(100, 1),
-    material = new THREE.MeshBasicMaterial({ map: texture }),
-  )
-  scene.add(bushes[i])
-}
-bushes[0].position.set(800,-180,400)
-bushes[1].position.set(-700,-180,300)
+
 
 
 
@@ -390,7 +377,7 @@ const planes = new THREE.Mesh(geometry,material);
 
 planes.rotation.x = Math.PI * 1.5
 
-planes.position.set(50,-229,0);
+planes.position.set(50,-229,250);
 
 scene.add(planes);
 
@@ -418,13 +405,13 @@ var materials = [
   
   
   const land1 = new THREE.Mesh(
-      new THREE.BoxGeometry(2000,1400,43),
+      new THREE.BoxGeometry(1500,1050,43),
       materials
   
   )
   land1.rotation.x = Math.PI * 0.5;
 
-  land1.position.set(20,-258,0);
+  land1.position.set(20,-258,300);
   scene.add(land1);
 
 
@@ -467,27 +454,47 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
 renderer.render(scene, camera);
 
+const bubbles = []
+for(let i =0;i<1;i++){
+bubbles[i] = new THREE.Mesh(
+  new THREE.SphereGeometry(30,30,64),
+  new THREE.MeshBasicMaterial({color:"white"})
+)
+bubbles[i].position.set(290,-230,290)
 
-// animate();
+scene.add(bubbles[i])
+}
+
 let wind = "left"
 function controlAnimation() {
+  let num=Math.random() * 1
+  if(bubbles[0].scale.x < num){
+  bubbles[0].scale.x += 0.01
+  bubbles[0].scale.y += 0.01
+  bubbles[0].scale.z += 0.01}
+  if(bubbles[0].scale.x > num){
+    num = Math.random() * 2
+    bubbles[0].scale.x = 0
+    bubbles[0].scale.y = 0
+    bubbles[0].scale.z = 0
+  }
 
 
-  // if (wind === "left") {
-  //   clouds[0].position.x -= 0.3;
-  //   clouds[1].position.x -= 0.3;
-  //   clouds[2].position.z -= 0.3;
-  //   clouds[3].position.z -= 0.3;
-  //   if (clouds[0].position.x < -50) wind = "right";
-  // }
+  if (wind === "left") {
+    clouds[0].position.x -= 10;
+    clouds[1].position.x -= 10;
+    clouds[2].position.z += 5;
+    clouds[3].position.z += 5;
+    if (clouds[0].position.x < -1000) wind = "right";
+  }
 
-  // if (wind == "right") {
-  //   clouds[0].position.x += 0.3;
-  //   clouds[1].position.x += 0.3;
-  //   clouds[2].position.z += 0.3;
-  //   clouds[3].position.z += 0.3;
-  //   if (clouds[0].position.x > 15) wind = "left";
-  // }
+  if (wind == "right") {
+    clouds[0].position.x += 10;
+    clouds[1].position.x += 10;
+    clouds[2].position.z -= 5;
+    clouds[3].position.z -= 5;
+    if (clouds[0].position.x > 500) wind = "left";
+  }
   requestAnimationFrame(controlAnimation);
   pointLight.position.x = camera.position.x
   pointLight.position.y = camera.position.y
