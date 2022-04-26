@@ -1,8 +1,12 @@
 const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x152744);
 // Panel
 const all = new THREE.Group()
 const panel = new THREE.Group();
+const panel2 = new THREE.Group();
 const wires =  new THREE.Group();
+const paths =  new THREE.Group();
+const flower = new THREE.Group();
 
 // Cube
 
@@ -10,8 +14,12 @@ let texture = new THREE.TextureLoader().load("../textures/solar-texture.jpeg");
 let geometry = new THREE.BoxGeometry(20, 1, 40);
 let material = new THREE.MeshBasicMaterial({ map: texture });
 const cube = new THREE.Mesh(geometry, material);
+const cube2 = new THREE.Mesh(geometry, material);
 
 panel.add(cube);
+panel.add(cube2);
+
+
 // Wire
 
 //  geometry = new THREE.BoxGeometry(1, 1, 30);
@@ -39,8 +47,13 @@ panel.add(cube);
 
 // Outlines
 
-const outline = new THREE.Group();
 
+
+
+const outline = new THREE.Group();
+const outlines = new THREE.Group();
+
+//For the 1st panel
 geometry = new THREE.BoxGeometry(20, 1, 0.5);
 material = new THREE.MeshBasicMaterial({ color: "white" });
 
@@ -80,26 +93,50 @@ outline.add(outline6);
 
 panel.add(outline);
 
-let rotationIndex = 1100;
-let rotationDirection = true;
+//For the 2nd panel
 
-const panelRotation = () => {
-  requestAnimationFrame(panelRotation);
-  panel.rotation.z = Math.PI / (rotationIndex / 1000);
-  if (rotationIndex === 1400) {
-    rotationDirection = false;
-  }
-  if (rotationIndex === 1100) {
-    rotationDirection = true;
-  }
-  if (rotationDirection) {
-    rotationIndex += 2.5;
-  } else {
-    rotationIndex -= 2.5;
-  }
-};
+geometry = new THREE.BoxGeometry(20, 1, 0.5);
+material = new THREE.MeshBasicMaterial({ color: "white" });
 
-panelRotation();
+const outline7 = new THREE.Mesh(geometry, material);
+const outline8 = new THREE.Mesh(geometry, material);
+
+geometry = new THREE.BoxGeometry(1, 1, 40.9);
+material = new THREE.MeshBasicMaterial({ color: "white" });
+
+const outline9 = new THREE.Mesh(geometry, material);
+const outline10 = new THREE.Mesh(geometry, material);
+
+geometry = new THREE.BoxGeometry(1, 0.5, 40.9);
+material = new THREE.MeshBasicMaterial({ color: "white" });
+
+const outline11 = new THREE.Mesh(geometry, material);
+
+geometry = new THREE.BoxGeometry(19, 2, 0.7);
+material = new THREE.MeshBasicMaterial({ color: "white" });
+
+const outline12 = new THREE.Mesh(geometry, material);
+
+outline7.position.set(0, 0, 20.2);
+outline8.position.set(0, 0, -20.2);
+outline9.position.set(10.5, 0, 0);
+outline10.position.set(-10.5, 0, 0);
+outline11.position.set(1, 0.5, -0.01);
+outline12.position.set(0.3, 0.6, -0.1);
+panel2.position.set(-40, 56.4, 70.3);
+
+panel2.rotation.y = Math.PI * 1
+
+outlines.add(outline7);
+outlines.add(outline8);
+outlines.add(outline9);
+outlines.add(outline10);
+outlines.add(outline11);
+outlines.add(outline12);
+
+panel2.add(outlines,cube2);
+
+scene.add(panel2);
 scene.add(panel);
 
 //water
@@ -130,11 +167,14 @@ water.position.y = -15;
 texture = new THREE.TextureLoader().load("../textures/metal-texture.jpeg");
 geometry = new THREE.BoxGeometry(10, 1, 10);
 material = new THREE.MeshBasicMaterial({ color: "white" });
-const support = new THREE.Mesh(geometry, material);
+const support = new THREE.Mesh(geometry, material); // Panel 1
+const support2 = new THREE.Mesh(geometry, material); // Panel 2
 
 support.position.set(80, 20, -80.2);
+support2.position.set(-40, 20, 70.3);
 
 scene.add(support);
+scene.add(support2);
 
 // Land
 var materials = [
@@ -229,11 +269,50 @@ const stands = new THREE.Group();
 geometry = new THREE.CylinderGeometry(0.8, 0.8, 35.5, 64);
 material = new THREE.MeshBasicMaterial({ map: texture });
 const stand1 = new THREE.Mesh(geometry, material);
+const stand2 = new THREE.Mesh(geometry, material);
 
 stand1.position.set(80, 38, -80.2);
+stand2.position.set(-40, 38, 70.3);
 
 stands.add(stand1);
+stands.add(stand2);
 scene.add(stands);
+
+//Flower
+
+texture = new THREE.TextureLoader().load("../textures/Flower-Petal-Texture.jpeg");
+geometry = new THREE.PlaneGeometry(8, 5);
+material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
+const petal = new THREE.Mesh(geometry, material);
+const petal2 = new THREE.Mesh(geometry, material);
+
+flower.add(petal);
+flower.add(petal2);
+
+petal2.rotation.y = Math.PI / 2
+
+petal.position.set(0,27,70);
+petal2.position.set(0,27,70);
+
+texture = new THREE.TextureLoader().load("../textures/Stem-Texture.jpeg");
+geometry = new THREE.CylinderGeometry(0.8, 0.8, 10.5, 64);
+material = new THREE.MeshBasicMaterial({ map: texture });
+const stem = new THREE.Mesh(geometry, material);
+
+flower.add(stem);
+
+stem.position.set(0,20,70);
+
+//Grass
+
+texture = new THREE.TextureLoader().load("../textures/Grass-Blades.png");
+geometry = new THREE.PlaneGeometry(10, 5);
+material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide,});
+const grass = new THREE.Mesh(geometry, material);
+
+all.add(grass);
+
+grass.position.set(-30,20,-70)
 
 // Axes Helper
 
@@ -266,8 +345,6 @@ path2.rotation.z = Math.PI * -1.1
 path.position.set(125,16,-1);
 path2.position.set(50,16,-13);
 
-scene.add(path);
-scene.add(path2);
 
 geometry = new THREE.PlaneGeometry( 90, 50 );
 material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
@@ -277,13 +354,13 @@ path3.rotation.x = Math.PI * 1.5
 
 path3.position.set(-35,16,-25);
 
-scene.add(path3);
+paths.add(path);
+paths.add(path2);
+paths.add(path3);
 
-const a = new THREE.Vector2(0,0,0);
-const b = new THREE.Vector2();
+scene.add(paths);
 
-scene.add(a);
-scene.add(b);
+
 //controller
 
 const canvas = document.querySelector(".webgl");
@@ -299,20 +376,88 @@ controls.enableZoom = true;
   controls.enablePan = true;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-scene.background = new THREE.Color(0x272928);
 renderer.setSize(sizes.width, sizes.height);
 renderer.render(scene, camera);
 // animate();
+let rotationIndex = 1100;
+let rotationDirection = true;
+const panelRotation = () => {
+  // all.rotation.y += 0.005
+  requestAnimationFrame(panelRotation);
+  panel2.rotation.z = Math.PI / (rotationIndex2 / 1000);
+  if (rotationIndex2 === 1400) {
+    rotationDirection2 = false;
+  }
+  if (rotationIndex2 === 1100) {
+    rotationDirection2 = true;
+  }
+  if (rotationDirection2) {
+    rotationIndex2 += 2.5;
+  } else {
+    rotationIndex2 -= 2.5;
+  } 
+  panel.rotation.z = Math.PI / (rotationIndex / 1000);
+  if (rotationIndex === 1400) {
+    rotationDirection = false;
+  }
+  if (rotationIndex === 1100) {
+    rotationDirection = true;
+  }
+  if (rotationDirection) {
+    rotationIndex += 2.5;
+  } else {
+    rotationIndex -= 2.5;
+  }
+  if (
+    (camera.position.x < 0 && camera.position.z < 0) ||
+    (camera.position.x > 0 && camera.position.z < 0)
+  ) {
+    if (direction === "left") {
+      direction = "right";
+      move();
+    }
+  } else {
+    if (direction === "right") {
+      direction = "left";
+      move();
+    }
+  }
+};
+
+let rotationIndex2 = 1100;
+let rotationDirection2 = true;
+
+panelRotation();
 
 function controlAnimation() {
   requestAnimationFrame(controlAnimation);
 
   // required if controls.enableDamping or controls.autoRotate are set to true
   controls.update();
+  
 
   renderer.render(scene, camera);
 }
 
 controlAnimation();
+
+
+all.add(panel,panel2)
+all.add(paths)
+all.add(pointLight);
+all.add(tree,tree2);
+all.add(land1,land2);
+all.add(stands,support,support2);
+all.add(flower);
+
+scene.add(all);
+
+all.position.set(100,1,1)
+// const updateWindow = () => {
+//   renderer.setSize(window.innerWidth, window.innerHeight);
+//   renderer.render(scene, camera);
+// }
+// window.onresize = updateWindow
+
 
 
