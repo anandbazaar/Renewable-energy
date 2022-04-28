@@ -28,6 +28,9 @@ a {
     text-decoration: none;
 }
 
+
+/* Text */
+
 .role {
     color: #000000;
     display: flex;
@@ -60,7 +63,8 @@ h4 {
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 416px) {
+@media screen and (max-width: 1200px) {
+    /* 416px */
     .logo {
         height: 30px;
         width: 40px;
@@ -71,20 +75,27 @@ h4 {
     }
     .team {
         display: flex;
-        justify-content: center;
-        align-items: center;
         padding-bottom: 0;
     }
     .yellow-box {
         width: 100%;
-        height: 20%;
+        height: 30%;
     }
     .images {
         width: 45%;
         gap: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        object-fit: contain;
+    }
+    .yellow-box {
+        background-color: white;
     }
     .images img {
-        width: 45%;
+        width: 30vw;
+    }
+    .role {
+        font-size: 20px;
     }
 }
 
@@ -103,6 +114,12 @@ h4 {
     width: 45%;
     gap: 10%;
 }
+
+
+/* 
+.images img {
+    width: 14vw;
+} */
 
 .team-con {
     display: flex;
