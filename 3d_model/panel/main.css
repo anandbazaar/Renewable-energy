@@ -7,3 +7,10 @@ body{
     height: 100vh;
     width:100vw
 }
+#c {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background: url("../textures/sunny-day.jpeg") no-repeat center center;
+    background-size: cover;
+}

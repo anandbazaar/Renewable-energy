@@ -1,13 +1,19 @@
-// const land  = new THREE.Mesh(
-//     new THREE.CylinderGeometry(100,100,20,64),
-//     new THREE.MeshLambertMaterial({color:"white"})
-// )
+let land = new THREE.Group();
+//grass
 
-const materials = [
-    new THREE.MeshLambertMaterial({color:0xffffff}),
-    new THREE.MeshLambertMaterial({color:0x4d9872}),
-    new THREE.MeshLambertMaterial({color:0xffffff}),
-  ]
-  const geometry = new THREE.CylinderGeometry(100,100,10,64)
-  const land= new THREE.Mesh(geometry, materials)
-  land.position.y =5
+  let material = new THREE.MeshStandardMaterial({color: 0xB4CD48} ) ;
+  let geometry = new THREE.BoxGeometry(250,10,250)
+  let grass = new THREE.Mesh(geometry, material)
+
+  land.add(grass);
+
+//dirt
+  let texture = new THREE.TextureLoader().load("../textures/soil-texture.jpeg");
+  material = new THREE.MeshStandardMaterial({ map: texture } ) ;
+  geometry = new THREE.BoxGeometry(250,10,250)
+  let dirt = new THREE.Mesh(geometry, material)
+
+  dirt.position.set(0,-10,0);
+
+  land.add(dirt);
+
