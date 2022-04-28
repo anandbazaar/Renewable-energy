@@ -403,8 +403,8 @@ const renderer = new THREE.WebGLRenderer({
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-controls.enableZoom = true;
-  controls.enablePan = true;
+controls.enableZoom = false;
+  controls.enablePan = false;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
