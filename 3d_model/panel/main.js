@@ -47,6 +47,7 @@ panel.add(cube2);
 
 // Outlines
 
+// Test
 
 
 
@@ -223,19 +224,25 @@ scene.add(land2);
 
 const tree = new THREE.Group()
 const tree2 = new THREE.Group()
+const tree3 = new THREE.Group()
 const trunk = new THREE.Mesh(
-  new THREE.CylinderGeometry(3, 5, 15, 128),
+  new THREE.CylinderGeometry(4, 5, 15, 128),
   new THREE.MeshBasicMaterial({ color: 0xFDC6B4})
 );
 const trunk2 = new THREE.Mesh(
-  new THREE.CylinderGeometry(4, 6, 15, 128),
+  new THREE.CylinderGeometry(4, 6, 35, 128),
+  new THREE.MeshBasicMaterial({ color: 0xFDC6B4})
+);
+const trunk3 = new THREE.Mesh(
+  new THREE.CylinderGeometry(4, 6, 35, 128),
   new THREE.MeshBasicMaterial({ color: 0xFDC6B4})
 );
 trunk.position.set(-30,-43,-25)
-trunk2.position.set(-30,-43,-25)
+trunk2.position.set(-30,-33,-25)
+trunk3.position.set(-30,-33,-25)
 scene.add(trunk)
 const branch3 = new THREE.Mesh(
-  new THREE.ConeGeometry(14, 21, 128),
+  new THREE.ConeGeometry(16, 23, 128),
   new THREE.MeshBasicMaterial({ color: 0x78C77F})
 );
 branch3.position.set(-30,-28,-25)
@@ -245,8 +252,18 @@ const branch1 = new THREE.Mesh(
 );
 branch1.position.set(-30,-28,-25)
 scene.add(branch1)
+const branch5 = new THREE.Mesh(
+  new THREE.ConeGeometry(16, 23, 128),
+  new THREE.MeshBasicMaterial({ color: 0x78C77F})
+);
+branch5.position.set(-30,-28,-25)
+const branch6 = new THREE.Mesh(
+  new THREE.ConeGeometry(10, 20, 128),
+  new THREE.MeshBasicMaterial({ color: 0x78C77F})
+);
+branch6.position.set(-30,-17,-25)
 const branch4 = new THREE.Mesh(
-  new THREE.ConeGeometry(11, 21, 128),
+  new THREE.ConeGeometry(13, 23, 128),
   new THREE.MeshBasicMaterial({ color: 0x78C77F})
 );
 branch4.position.set(-30,-17,-25)
@@ -255,12 +272,16 @@ const branch2 = new THREE.Mesh(
   new THREE.MeshBasicMaterial({ color: 0x78C77F})
 );
 branch2.position.set(-30,-17,-25)
+
 tree.add(trunk,branch1,branch2);
 tree2.add(trunk2,branch3,branch4);
+tree3.add(trunk3,branch5,branch6);
 tree.position.set(110,60,70)
 tree2.position.set(130,65,90)
+tree3.position.set(80,70,-55)
 scene.add(tree);
 scene.add(tree2);
+scene.add(tree3);
 
 // Stand
 
@@ -285,23 +306,33 @@ geometry = new THREE.PlaneGeometry(8, 5);
 material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
 const petal = new THREE.Mesh(geometry, material);
 const petal2 = new THREE.Mesh(geometry, material);
+const petal3 = new THREE.Mesh(geometry, material);
+const petal4 = new THREE.Mesh(geometry, material);
 
 flower.add(petal);
 flower.add(petal2);
+flower.add(petal3);
+flower.add(petal4);
 
 petal2.rotation.y = Math.PI / 2
+petal4.rotation.y = Math.PI / 2
 
-petal.position.set(0,27,70);
-petal2.position.set(0,27,70);
+petal.position.set(0,27,50);
+petal2.position.set(0,27,50);
+petal3.position.set(30,27,-70);
+petal4.position.set(30,27,-70);
 
 texture = new THREE.TextureLoader().load("../textures/Stem-Texture.jpeg");
 geometry = new THREE.CylinderGeometry(0.8, 0.8, 10.5, 64);
 material = new THREE.MeshBasicMaterial({ map: texture });
 const stem = new THREE.Mesh(geometry, material);
+const stem2 = new THREE.Mesh(geometry, material);
 
 flower.add(stem);
+flower.add(stem2);
 
-stem.position.set(0,20,70);
+stem.position.set(0,20,50);
+stem2.position.set(30,20,-70);
 
 //Grass
 
@@ -333,7 +364,7 @@ const pointLight = new THREE.PointLight("#fff", 2);
 //Pathway
 
 texture = new THREE.TextureLoader().load("../textures/stone-path-texture.webp");
-geometry = new THREE.PlaneGeometry( 70, 50 );
+geometry = new THREE.PlaneGeometry( 85, 50 );
 material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
 const path = new THREE.Mesh(geometry, material);
 const path2 = new THREE.Mesh(geometry, material);
@@ -342,17 +373,17 @@ path.rotation.x = Math.PI * 1.5
 path2.rotation.x = Math.PI * 1.5
 path2.rotation.z = Math.PI * -1.1
 
-path.position.set(125,16,-1);
-path2.position.set(50,16,-13);
+path.position.set(128,16.5,-1);
+path2.position.set(54,16,-13);
 
 
-geometry = new THREE.PlaneGeometry( 90, 50 );
+geometry = new THREE.PlaneGeometry( 100, 50 );
 material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
 const path3 = new THREE.Mesh(geometry, material);
 
 path3.rotation.x = Math.PI * 1.5
 
-path3.position.set(-35,16,-25);
+path3.position.set(-30,16.5,-25);
 
 paths.add(path);
 paths.add(path2);
@@ -372,8 +403,8 @@ const renderer = new THREE.WebGLRenderer({
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-controls.enableZoom = true;
-  controls.enablePan = true;
+controls.enableZoom = false;
+  controls.enablePan = false;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
@@ -426,6 +457,16 @@ const panelRotation = () => {
 
 let rotationIndex2 = 1100;
 let rotationDirection2 = true;
+
+// Test
+
+function main() {
+  canvas = document.querySelector('#c');
+  renderer = new THREE.WebGLRenderer({
+    canvas,
+    alpha: true,
+  });
+}
 
 panelRotation();
 

@@ -136,11 +136,60 @@ section {
 .text3 {
   margin: 40px;
 }
+@media screen and (max-width: 1400px) {
+  .information p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .information p {
+    font-size: 18px;
+  }
+  .header {
+    height:80vh;
+  }
+  .header .img-txt {
+    top: 40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .information p {
+    font-size: 16px;
+  }
+  .header {
+    height:60vh;
+  }
+  .header .img-txt {
+    top: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .information p {
+    font-size: 15px;
+  }
+  .header {
+    height:50vh;
+  }
+  .header .img-txt {
+    top: 27%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header {
+    height:40vh;
+  }
+  .header .img-txt {
+    top: 20%;
+  }
+}
 @media screen and (max-width: 416px) {
   .row {
     margin-bottom: 10px;
     margin: 5px;
     width: 100%;
+  }
+  .header {
+    height:35vh;
   }
   .tsuvaa {
     margin-bottom: 10px;

@@ -7,6 +7,10 @@ body {
 .nav-links ul li a {
   color: white;
 }
+.container1 {
+  width: 100%;
+  margin: auto;
+}
 /* header section */
 .header {
   margin-left: auto;
@@ -35,7 +39,6 @@ h4 {
 .information p {
   font-size: 1.2vw;
 }
-
 /* statistics section */
 .statistics {
   display: flex;
@@ -73,17 +76,66 @@ h4 {
 .st3 p {
   font-size: 1.3vw;
 }
+@media screen and (max-width: 1400px) {
+  .information p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .information p {
+    font-size: 18px;
+  }
+  .header {
+    height:80vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .information p {
+    font-size: 16px;
+  }
+  .header {
+    height:60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .information p {
+    font-size: 15px;
+  }
+  .header {
+    height:50vh;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header {
+    height:45vh;
+  }
+  .header .img-txt {
+    top: 25%;
+  }
+  .information p {
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 416px) {
   .navbar-menu.active {
     background-color: #354b7b;
   }
+  .header {
+    height:35vh;
+  }
   .navbar__toggle .bar {
     background: white;
+  }
+  .information p {
+    font-size: 13px;
   }
   .row {
     margin-bottom: 10px;
     margin: 5px;
     width: 100%;
+  }
+  .container1 {
+    width: 90%;
   }
   .tsuvaa {
     margin-bottom: 10px;

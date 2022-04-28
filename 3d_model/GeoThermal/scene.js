@@ -18,19 +18,20 @@ for(let i =0;i<6;i++){
     pointLightHelper[i] = new THREE.PointLightHelper( pointLight[i], sphereSize );
     scene.add( pointLightHelper[i] );
 }
-pointLight[0].position.set(185, 130, 0);
-pointLight[0].intensity = 1
-pointLight[1].position.set(-185, 130, 0);
-pointLight[1].intensity = 1
-pointLight[2].position.set(0, 30, -185);
-pointLight[2].intensity = 1   
-pointLight[3].position.set(0, 35, 185);
-pointLight[3].intensity = 1
+pointLight[0].position.set(335, 50, 0);
+pointLight[0].intensity = 1.5
+pointLight[1].position.set(-335, 50, 0);
+pointLight[1].intensity = 1.5
+pointLight[2].position.set(0, 30, -335);
+pointLight[2].intensity = 1.5   
+pointLight[3].position.set(0, 35, 335);
+pointLight[3].intensity = 1.5
 pointLight[4].position.set(0, -120, 0);
-pointLight[4].intensity = 1
+pointLight[4].intensity = 1.5
 // pointLight[5].position.set(10, 150, 0);
 // pointLight[5].intensity = 0.1
 //objects
+
 
 all.position.set(50,0,0)
 scene.add(all)
@@ -47,8 +48,8 @@ renderer.render(scene,camera)
 const controls = new OrbitControls(camera, renderer.domElement);
 function animate() {
   requestAnimationFrame(animate);
-  controls.enableZoom = false;
-  controls.enablePan = false;
+  // controls.enableZoom = false;
+  // controls.enablePan = false;
   controls.update();
   renderer.render(scene, camera);
   renderer.render(scene, camera);
