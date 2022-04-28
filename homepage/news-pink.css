@@ -75,7 +75,47 @@ h4 {
   width: 100%;
   object-fit: contain;
 }
+@media screen and (max-width: 1400px) {
+  .information p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .information p {
+    font-size: 18px;
+  }
+  .header {
+    height:80vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .information p {
+    font-size: 16px;
+  }
+  .header {
+    height:60vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .information p {
+    font-size: 15px;
+  }
+  .header {
+    height:50vh;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header {
+    height:40vh;
+  }
+  .header .img-txt {
+    top: 20%;
+  }
+}
 @media screen and (max-width: 416px) {
+  .header {
+    height:35vh;
+  }
   .row {
     margin-bottom: 10px;
     margin: 5px;
