@@ -194,11 +194,6 @@
     align-items: center;
   }
 }
-@media (max-width: 576px) {
-  .container {
-    width: 95vw;
-  }
-}
 @media (min-width: 576px) {
   .container {
     width: 540px;
