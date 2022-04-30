@@ -19,6 +19,7 @@ body{
 }
 
 .infoCont {
+  left: 18%;
   font-size: 30px;
   color: white;
   display: flex;
@@ -52,7 +53,7 @@ body{
 
 @keyframes hideToLeft {
   from {
-    left: 0;
+    left: 18%;
   }
   to {
     left: -30%;
@@ -63,7 +64,7 @@ body{
     left: 100%;
   }
   to {
-    left: calc(100% - 30%);
+    left: calc(100% - 48%);
   }
 }
 
@@ -80,7 +81,7 @@ body{
 
 @keyframes hideToRight {
   from {
-    left: calc(100% - 30%);
+    left: calc(100% - 48%);
   }
   to {
     left: 100%;
@@ -91,7 +92,7 @@ body{
     left: -30%;
   }
   to {
-    left: 0px;
+    left: 18%;
   }
 }
 
@@ -102,7 +103,7 @@ body{
 }
 @keyframes GoToBottom {
   from {
-    margin-bottom: 70%;
+    margin-bottom: 50%;
     opacity: 100%;
   }
   to{
@@ -131,7 +132,7 @@ body{
 }
 @keyframes GoToTop {
   from {
-    margin-top: 70%;
+    margin-top: 50%;
     opacity: 100%;
   }
   to{

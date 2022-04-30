@@ -334,16 +334,6 @@ flower.add(stem2);
 stem.position.set(0,20,50);
 stem2.position.set(30,20,-70);
 
-//Grass
-
-texture = new THREE.TextureLoader().load("../textures/Grass-Blades.png");
-geometry = new THREE.PlaneGeometry(10, 5);
-material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide,});
-const grass = new THREE.Mesh(geometry, material);
-
-all.add(grass);
-
-grass.position.set(-30,20,-70)
 
 // Axes Helper
 
@@ -493,12 +483,12 @@ all.add(flower);
 
 scene.add(all);
 
-all.position.set(100,1,1)
-// const updateWindow = () => {
-//   renderer.setSize(window.innerWidth, window.innerHeight);
-//   renderer.render(scene, camera);
-// }
-// window.onresize = updateWindow
+all.position.set(100,0,0)
+const updateWindow = () => {
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.render(scene, camera);
+}
+window.onresize = updateWindow
 
 
 

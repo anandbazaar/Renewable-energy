@@ -443,7 +443,7 @@ windTurbines[1].rotation.y = -Math.PI * 0.5;
 windTurbines[2].position.set(-40, 0, 15);
 windTurbines[2].rotation.y = -Math.PI * 0.5;
 scene.add(all);
-all.position.set(50, 0, 0);
+all.position.set(100, 0, 0);
 // all.rotation.y = Math.PI * 0.250
 
 //camera
@@ -484,7 +484,7 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 let wind = "left";
 function animate() {
-  all.rotation.y += 0.005
+  // all.rotation.y += 0.005
   requestAnimationFrame(animate);
   controls.enableZoom = false;
   controls.enablePan = false;
