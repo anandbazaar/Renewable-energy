@@ -140,6 +140,9 @@ section {
   .information p {
     font-size: 20px;
   }
+  .header {
+    height:100vh;
+  }
 }
 @media screen and (max-width: 1200px) {
   .information p {
@@ -168,7 +171,7 @@ section {
     font-size: 15px;
   }
   .header {
-    height:50vh;
+    height:55vh;
   }
   .header .img-txt {
     top: 27%;
@@ -176,10 +179,13 @@ section {
 }
 @media screen and (max-width: 575px) {
   .header {
-    height:40vh;
+    height:45vh;
   }
   .header .img-txt {
     top: 20%;
+  }
+  h4 {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 416px) {
@@ -188,8 +194,11 @@ section {
     margin: 5px;
     width: 100%;
   }
+  h4 {
+    font-size: 16px;
+  }
   .header {
-    height:35vh;
+    height:38vh;
   }
   .tsuvaa {
     margin-bottom: 10px;

@@ -87,7 +87,7 @@
 .header .img-txt {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -199,7 +199,7 @@
     width: 540px;
   }
   .header .img-txt {
-    top: 30%;
+    top: 25%;
   }
 }
 @media (min-width: 768px) {
@@ -227,10 +227,13 @@
   .container {
     width: 1320px;
   }
+  .header .img-txt {
+    top: 50%;
+  }
 }
 @media screen and (max-width: 416px) {
   .header .img-txt {
-    top: 20%;
+    top: 15%;
   }
   .logo {
     height: 30px;
