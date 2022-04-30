@@ -6,7 +6,7 @@ const icon = document.createElement("img")
 icon.src = "../textures/image_52.png"
 icon.classList.add("icon")
 infoBox.classList.add("infoBox")
-infoBox.style.marginTop = "70%";
+infoBox.style.marginTop = "50%";
 const info = [
   infos[0].one,
   infos[0].two,
@@ -75,14 +75,14 @@ infoCont.addEventListener("animationend", () => {
     infoCont.classList.remove("h2l");
     infoCont.classList.add("afr");
     infoCont.style.justifyContent = "flex-end"
-    infoCont.style.left = "calc(100% - 30%)";
+    infoCont.style.left = "calc(100% - 48%)";
   } else if (direction === "left") {
     infoCont.classList.remove("h2r");
     infoCont.classList.remove("afr");
     infoCont.classList.remove("h2l");
     infoCont.classList.add("afl");
     infoCont.style.justifyContent = "flex-start"
-    infoCont.style.left = "0px";
+    infoCont.style.left = "18%";
   }
 });
 

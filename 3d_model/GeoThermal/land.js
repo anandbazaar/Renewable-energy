@@ -1,17 +1,63 @@
 let land = new THREE.Group();
 //grass
-  let texture = new THREE.TextureLoader().load("../textures/grass-texture.jpeg");
-  let material = new THREE.MeshStandardMaterial({map : texture} ) ;
+
+let texture = new THREE.TextureLoader().load("../textures/grass-texture.jpeg");
+
+var materials = [
+  new THREE.MeshBasicMaterial({
+    color: "green",
+  }),
+  new THREE.MeshLambertMaterial({
+    color: "green",
+  }),
+  new THREE.MeshLambertMaterial({
+    map: texture
+  }),
+  new THREE.MeshLambertMaterial({
+    color: "green",
+  }),
+  new THREE.MeshStandardMaterial({
+    color: "green",
+    roughness: 0.1,
+  }),
+  new THREE.MeshLambertMaterial({
+    color: "green",
+  }),
+];
+
   let geometry = new THREE.BoxGeometry(400,10,400)
-  let grass = new THREE.Mesh(geometry, material)
+  let grass = new THREE.Mesh(geometry, materials)
 
   land.add(grass);
 
 //dirt
-  texture = new THREE.TextureLoader().load("../textures/soil-texture.jpeg");
-  material = new THREE.MeshStandardMaterial({ map: texture } ) ;
+
+texture = new THREE.TextureLoader().load("../textures/soil-texture.jpeg");
+
+var materials = [
+  new THREE.MeshBasicMaterial({
+    color: 0x734217,
+  }),
+  new THREE.MeshLambertMaterial({
+    color: 0x734217,
+  }),
+  new THREE.MeshLambertMaterial({
+    map: texture
+  }),
+  new THREE.MeshLambertMaterial({
+    color: 0x734217,
+  }),
+  new THREE.MeshStandardMaterial({
+    color: 0x734217,
+    roughness: 0.1,
+  }),
+  new THREE.MeshLambertMaterial({
+    color: 0x734217,
+  }),
+];
+
   geometry = new THREE.BoxGeometry(400,10,400)
-  let dirt = new THREE.Mesh(geometry, material)
+  let dirt = new THREE.Mesh(geometry, materials)
 
   dirt.position.set(0,-10,0);
 
@@ -47,31 +93,6 @@ land.add(crust)
 
 crust.position.set(0,-30,0);
 
-// things with no thing inside
-material = new THREE.MeshStandardMaterial({color: "silver" } ) ;
-geometry = new THREE.BoxGeometry(25,25,25)
-let box = new THREE.Mesh(geometry, material);
-
-land.add(box);
-
-box.position.set(0,20,150)
-
-// tube that connects box from box
-material = new THREE.MeshStandardMaterial({color: "orange" } ) ;
-geometry = new THREE.CylinderGeometry(3,3,60,32)
-let tube = new THREE.Mesh(geometry, material)
-
-tube.rotation.x = Math.PI / 2
-land.add(tube)
-tube.position.set(0,10,110)
-
-//things with things insisdes
-material = new THREE.MeshStandardMaterial({color: "silver" } ) ;
-geometry = new THREE.BoxGeometry(25,15,25)
-let box2 = new THREE.Mesh(geometry, material);
-land.add(box2);
-
-box2.position.set(0,15,80)
 
 
 
