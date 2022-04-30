@@ -44,7 +44,7 @@
   font-weight: 400;
   line-height: 2vw;
 }
-.navbar ul li .active{
+.navbar ul li .active {
   border-bottom: 4px solid #4eb073;
 }
 .navbar {
@@ -265,6 +265,7 @@
   .nav-links ul li {
     padding-left: 0;
     margin-bottom: 5%;
+    margin-left: 35%;
   }
   .navbar-menu.active {
     background: white;
@@ -286,7 +287,7 @@
   }
 
   ul li {
-    width: 100%;
+    width: 30%;
     display: inline-block;
   }
 
@@ -296,55 +297,54 @@
     width: 100%;
     display: table;
   }
-  .aboutus-logo{
+  .aboutus-logo {
     margin-bottom: 5%;
   }
-  .aboutus-logo div{
+  .aboutus-logo div {
     margin-bottom: 2%;
   }
-  .contact-us-con{
+  .contact-us-con {
     height: 70vh;
-    
   }
-  .contact-us{
+  .contact-us {
     padding: 5%;
     height: 65vh;
     display: flex;
     flex-direction: column;
   }
-  .rnw-logo{
+  .rnw-logo {
     margin: 0;
   }
-  .rnw-p{
+  .rnw-p {
     text-align: left;
     font-size: 3vw;
   }
-  .rnw-logo img{
+  .rnw-logo img {
     width: 15vw;
   }
-  .nest-p{
+  .nest-p {
     text-align: left;
     font-size: 3vw;
   }
-  .social2{
+  .social2 {
     margin: 0;
   }
-  .social2 img{
+  .social2 img {
     width: 5vw;
     margin-right: 2%;
   }
-  .contact-us div h2{
+  .contact-us div h2 {
     font-size: 5vw;
     border-bottom: 3px solid #4eb073;
   }
   .holboo-barih .contact-info img {
     width: 4vw;
   }
-  .holboo-barih .contact-info p{
+  .holboo-barih .contact-info p {
     font-size: 3vw;
     width: 50vw;
   }
-  .handltn-too p{
+  .handltn-too p {
     font-size: 3vw;
   }
   .navbar__btn {
