@@ -34,8 +34,6 @@ pointLight[4].intensity = 1.5;
 
 all.position.set(50, 0, 0);
 all.add(land);
-all.add(tower);
-all.add(machines);
 scene.add(all);
 
 //render

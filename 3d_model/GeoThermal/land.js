@@ -70,7 +70,7 @@ var materials = [
     flowX: 10,
     flowY: 10,
   };
-  const waterGeometry = new THREE.BoxGeometry(400,10,400);
+  const waterGeometry = new THREE.PlaneGeometry(400,40,400);
   
   water = new Water(waterGeometry, {
   
@@ -80,10 +80,18 @@ var materials = [
     textureWidth: 1024,
     textureHeight: 1024,
   });
+  water.rotation.y = Math.PI * 1.5
 
   land.add(water);
 
-  water.position.set(0,-20,0)
+  water.position.set(-200,-35,0)
+  //water insides
+  // const waterInsides = new THREE.Mesh(
+  //   new THREE.BoxGeometry(390,40,390),
+  //   new THREE.MeshBasicMaterial({color:"blue"})
+  // )
+  // land.add(waterInsides)
+  // waterInsides.position.set(0,-35,0)
 // red thing
 material = new THREE.MeshStandardMaterial({color: "brown" } ) ;
 geometry = new THREE.BoxGeometry(400,10,400)
@@ -91,7 +99,7 @@ let crust = new THREE.Mesh(geometry, material)
 
 land.add(crust)
 
-crust.position.set(0,-30,0);
+crust.position.set(0,-60,0);
 
 
 
