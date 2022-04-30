@@ -407,6 +407,17 @@ h3 {
   height: 4vw;
   margin-bottom: 2vw;
 }
+@media screen and (max-width: 416px) {
+  .aboutus .right {
+    justify-content: flex-start;
+  }
+  .aboutus .right img {
+    width: 70%;
+  }
+  .in-p {
+    padding-left: 3%;
+  }
+}
 @keyframes text_reveal_box {
   50% {
     width: 100%;
