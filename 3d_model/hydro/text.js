@@ -3,28 +3,18 @@ const infoBox = document.createElement("div");
 infoText.style.fontFamily = "'Lato', sans-serif";
 const infoCont = document.querySelector(".infoCont");
 const icon = document.createElement("img") 
-icon.src = "../textures/image_53.png"
+icon.src = "../textures/image_54.png"
 icon.classList.add("icon")
 infoBox.classList.add("infoBox")
 infoBox.style.marginTop = "50%";
 const info = [
-  infos[1].one,
-  infos[1].two,
-  infos[1].three,
-  infos[1].four,
-  infos[1].five,
-  infos[1].six,
-  infos[1].seven,
-  infos[1].eight,
-  infos[1].nine,
-  infos[1].ten,
-  infos[1].eleven,
-  infos[1].twelve,
-  infos[1].thirteen,
-  infos[1].fourteen,
-  infos[1].fifteen,
-  infos[1].sixteen,
-  infos[1].seventeen,
+  infos[2].one,
+  infos[2].two,
+  infos[2].three,
+  infos[2].four,
+  infos[2].five,
+  infos[2].six,
+  infos[2].seven,
   
 ];
 let i = 0;
@@ -61,7 +51,7 @@ infoCont.addEventListener("animationend", () => {
   if(overHundred){
     infoBox.classList.remove("gtb");
     infoBox.classList.add("aft");
-    if(i>=17) i=0
+    if(i>=7) i=0
 
     infoBox.innerHTML = ""
     infoBox.appendChild(icon)
@@ -71,7 +61,7 @@ infoCont.addEventListener("animationend", () => {
   if(belowHundred){
     infoBox.classList.remove("gtt");
     infoBox.classList.add("aft");
-    if(i<0) i=16
+    if(i<0) i=6
   
     infoBox.innerHTML = ""
     infoBox.appendChild(icon)
