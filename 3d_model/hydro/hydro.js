@@ -5,7 +5,8 @@ scene.background = new THREE.Color(0x152744);
 const hydro = new THREE.Group();
 const walls = new THREE.Group();
 const waals =  new THREE.Group();
-
+// all
+const all = new THREE.Group();
 // Walls
 
 let texture = new THREE.TextureLoader().load("../textures/stone-texture.webp");
@@ -64,7 +65,7 @@ water = new Water(waterGeometry, {
     textureWidth: 1024,
     textureHeight: 1024,
   });
-  scene.add(water)
+ all.add(water)
 
 
 
@@ -242,7 +243,7 @@ hydro.add(hole13);
 hydro.add(hole14);
 hydro.add(hole15);
 
-scene.add(hydro)
+all.add(hydro)
 //cloud
 const cloud1 = new THREE.Mesh(
   new THREE.CylinderGeometry(10, 10, 10, 128),
@@ -267,18 +268,18 @@ for (let i = 0; i < 4; i++) {
   clouds[i] = CSG.toMesh(cloudCSG, new THREE.Matrix4());
   clouds[i].material = new THREE.MeshBasicMaterial({ color: "white" });
 }
-scene.add(clouds[0]);
+all.add(clouds[0]);
 clouds[0].position.set(600, 298, 0);
 clouds[0].scale.set(8, 8, 10);
-scene.add(clouds[1]);
+all.add(clouds[1]);
 clouds[1].position.set(600,300,0)
 clouds[1].scale.set(10, 10, 10);
-scene.add(clouds[2]);
+all.add(clouds[2]);
 clouds[2].scale.set(8, 8, 10);
 clouds[2].position.set(-500, 298, 0);
 clouds[2].rotation.y = Math.PI * 0.5;
 
-scene.add(clouds[3]);
+all.add(clouds[3]);
 clouds[3].rotation.y = Math.PI * 0.5;
 clouds[3].position.set(-500, 300, 0);
 clouds[3].scale.set(10,10,10)
@@ -295,13 +296,13 @@ const trunk2 = new THREE.Mesh(
   new THREE.CylinderGeometry(15, 35, 100, 128),
   new THREE.MeshLambertMaterial({ color: 0xFDC6B4})
 );
-scene.add(trunk)
+// scene.add(trunk)
 const branch1 = new THREE.Mesh(
   new THREE.ConeGeometry(100, 170, 128),
   new THREE.MeshLambertMaterial({ color: 0x78C77F})
 );
 branch1.position.set(-30,100,-25)
-scene.add(branch1)
+// scene.add(branch1)
 const branch2 = new THREE.Mesh(
   new THREE.ConeGeometry(70, 170, 128),
   new THREE.MeshLambertMaterial({ color: 0x78C77F})
@@ -324,8 +325,8 @@ tree2.add(trunk2,branch3,branch4)
 tree.position.set(700,-130,100);
 tree2.position.set(-600,-180,500);
 
-scene.add(tree);
-scene.add(tree2);
+all.add(tree);
+all.add(tree2);
 
 
 
@@ -379,7 +380,7 @@ planes.rotation.x = Math.PI * 1.5
 
 planes.position.set(50,-229,250);
 
-scene.add(planes);
+all.add(planes);
 
 var materials = [
     new THREE.MeshBasicMaterial({
@@ -412,7 +413,7 @@ var materials = [
   land1.rotation.x = Math.PI * 0.5;
 
   land1.position.set(20,-258,300);
-  scene.add(land1);
+ all.add(land1);
 
 
 //frame size
@@ -431,12 +432,13 @@ const MinusCube = new THREE.Mesh(
 
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight,1,10000);
-camera.position.set(1000, 2000 ,3000);
+camera.position.set(0, 1500 ,2000);
 camera.lookAt(wall.position);
 const pointLight = new THREE.PointLight("#fff", 1);
-scene.add(pointLight)
+all.add(pointLight)
 pointLight.position.set(0,500,0)
-
+scene.add(all)
+all.position.set(1000,0,0)
 
 //controller
 
@@ -454,31 +456,24 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
 renderer.render(scene, camera);
 
-const bubbles = []
-for(let i =0;i<1;i++){
-bubbles[i] = new THREE.Mesh(
-  new THREE.SphereGeometry(30,30,64),
-  new THREE.MeshBasicMaterial({color:"white"})
-)
-bubbles[i].position.set(290,-230,290)
 
-scene.add(bubbles[i])
-}
 
 let wind = "left"
 function controlAnimation() {
-  let num=Math.random() * 1
-  if(bubbles[0].scale.x < num){
-  bubbles[0].scale.x += 0.01
-  bubbles[0].scale.y += 0.01
-  bubbles[0].scale.z += 0.01}
-  if(bubbles[0].scale.x > num){
-    num = Math.random() * 2
-    bubbles[0].scale.x = 0
-    bubbles[0].scale.y = 0
-    bubbles[0].scale.z = 0
+  if (
+    (camera.position.x < 0 && camera.position.z < 0) ||
+    (camera.position.x > 0 && camera.position.z < 0)
+  ) {
+    if (direction === "left") {
+      direction = "right";
+      move();
+    }
+  } else {
+    if (direction === "right") {
+      direction = "left";
+      move();
+    }
   }
-
 
   if (wind === "left") {
     clouds[0].position.x -= 10;
@@ -499,6 +494,8 @@ function controlAnimation() {
   pointLight.position.x = camera.position.x
   pointLight.position.y = camera.position.y
   pointLight.position.z = camera.position.z
+  controls.enableZoom = false;
+  controls.enablePan = false;
   // controls.enableZoom = false;
   // controls.enablePan = false;
 
