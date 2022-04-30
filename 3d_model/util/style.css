@@ -2,19 +2,24 @@
   margin: 0px;
   overflow: hidden;
 }
-.infoText{
-  font-family: 'Lato', sans-serif;
-  
+.infoBox{
+  height:fit-content
+
+}
+.icon{
+  display: block;
+  z-index: 12;
+  width: 100px;
+  height:100px
 }
 
 body{
   width: fit-content;
   height: fit-content;
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
 }
 
 .infoCont {
+  font-size: 30px;
   color: white;
   display: flex;
   padding: 20px;
@@ -22,7 +27,8 @@ body{
   height: 100%;
   position: absolute;
   z-index: 10;
-  gap: 100px
+  gap: 100px;
+
 
 }
 .dropBox {
@@ -57,7 +63,7 @@ body{
     left: 100%;
   }
   to {
-    left: calc(100% - 33%);
+    left: calc(100% - 30%);
   }
 }
 
@@ -74,7 +80,7 @@ body{
 
 @keyframes hideToRight {
   from {
-    left: calc(100% - 33%);
+    left: calc(100% - 30%);
   }
   to {
     left: 100%;
@@ -96,7 +102,7 @@ body{
 }
 @keyframes GoToBottom {
   from {
-    margin-top: 50%;
+    margin-bottom: 70%;
     opacity: 100%;
   }
   to{
@@ -125,7 +131,7 @@ body{
 }
 @keyframes GoToTop {
   from {
-    margin-top: 50%;
+    margin-top: 70%;
     opacity: 100%;
   }
   to{
