@@ -7,7 +7,7 @@ scene.background = new THREE.Color(0x152744);
 //camera
 const camera = new THREE.PerspectiveCamera(90, 1700 / 900);
 scene.add(camera);
-camera.position.set(0, 100, 200);
+camera.position.set(0, 100, 300);
 //lighting
 const pointLight = [];
 const sphereSize = 1;
@@ -28,12 +28,14 @@ pointLight[3].position.set(0, 35, 335);
 pointLight[3].intensity = 1.5;
 pointLight[4].position.set(0, -120, 0);
 pointLight[4].intensity = 1.5;
+pointLight[5].position.set(0, 120, 0);
+pointLight[5].intensity = 0.5;
 // pointLight[5].position.set(10, 150, 0);
 // pointLight[5].intensity = 0.1
 //objects
-
-all.position.set(50, 0, 0);
+all.position.set(100, 0, 0);
 all.add(land);
+all.add(machine)
 scene.add(all);
 
 //render
@@ -50,6 +52,13 @@ function animate() {
   // controls.enableZoom = false;
   // controls.enablePan = false;
   controls.update();
+  for(let i=0;i<count;i++){
+    const x = geometry1.attributes.position.getX(i)
+    const xsin = Math.sin(x)-3
+    geometry1.attributes.position.setY(i, xsin)
+
+  }
+  geometry1.attributes.position.needsUpdate = true
   renderer.render(scene, camera);
   renderer.render(scene, camera);
 
