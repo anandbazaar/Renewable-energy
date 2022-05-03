@@ -246,9 +246,6 @@
     width: 100%;
     padding: 0;
   }
-  .navbar .container {
-    height: 40px;
-  }
   .nav-links ul li a {
     color: black;
     font-size: 15px;
@@ -280,7 +277,7 @@
   }
 
   .navbar__toggle .bar {
-    width: 15px;
+    width: 20px;
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
@@ -355,7 +352,7 @@
   }
   #mobile-menu {
     position: absolute;
-    top: 1%;
+    top: 18%;
     right: 10%;
     transform: translate(5%, 20%);
   }
