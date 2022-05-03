@@ -43,7 +43,7 @@
   font-weight: 400;
   line-height: 2vw;
 }
-.navbar ul li .active {
+.navbar ul li .activePage {
   border-bottom: 4px solid #4eb073;
 }
 .navbar {
@@ -193,7 +193,7 @@
     align-items: center;
   }
 }
-@media (min-width:417px) {
+@media (min-width: 417px) {
   .holboo-barih .contact-info p {
     font-size: 10px;
     width: 33vw;
@@ -203,7 +203,7 @@
   }
   .handltn-too p {
     font-size: 10px;
-  } 
+  }
   .contact-us {
     height: 20vh;
   }
@@ -234,7 +234,6 @@
   .contact-us div h2 {
     font-size: 15px;
   }
-  
 }
 @media (min-width: 768px) {
   .container {
@@ -339,7 +338,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 20vh;
+    height: 35vh;
   }
 
   .navbar__toggle .bar {
@@ -435,17 +434,17 @@
   }
   @media screen and (max-height: 897px) {
     .contact-us-con {
-        height: 74vh;
+      height: 74vh;
     }
   }
   @media screen and (max-height: 745px) {
     .contact-us-con {
-        height: 76vh;
+      height: 76vh;
     }
   }
   @media screen and (max-height: 700px) {
     .contact-us-con {
-        height: 90vh;
+      height: 90vh;
     }
   }
 }
