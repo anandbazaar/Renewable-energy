@@ -7,7 +7,6 @@
   font-family: "Lato", sans-serif;
 }
 /* Navbar */
-
 .navbar {
   position: fixed;
   top: 0;
@@ -44,7 +43,7 @@
   font-weight: 400;
   line-height: 2vw;
 }
-.navbar ul li .active {
+.navbar ul li .activePage {
   border-bottom: 4px solid #4eb073;
 }
 .navbar {
@@ -135,7 +134,7 @@
   margin-bottom: 15%;
 }
 .rnw-logo {
-  margin-left: 40%;
+  margin-left: 30%;
   margin-right: 5%;
 }
 .aboutus-logo div {
@@ -155,17 +154,20 @@
   font-weight: 350;
 }
 .social2 {
-  margin-left: 25%;
+  margin-left: 10%;
 }
 .social2 img {
   width: 2vw;
   margin-right: 4%;
 }
+.holboo-barih {
+  padding-left: 10%;
+}
 .holboo-barih .contact-info {
   width: 100%;
   display: flex;
   flex-direction: row;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .holboo-barih .contact-info p {
@@ -179,7 +181,7 @@
   width: 1.5vw;
 }
 .handltn-too {
-  margin-bottom: 7%;
+  margin-bottom: 10%;
 }
 .handltn-too p {
   font-size: 0.9vw;
@@ -194,12 +196,47 @@
     align-items: center;
   }
 }
+@media (min-width: 417px) {
+  .holboo-barih .contact-info p {
+    font-size: 10px;
+    width: 33vw;
+  }
+
+  .nest-p {
+    font-size: 10px;
+  }
+  .handltn-too p {
+    font-size: 10px;
+  }
+  .contact-us {
+    height: 20vh;
+  }
+  .contact-us div h2 {
+    font-size: 13px;
+  }
+}
 @media (min-width: 576px) {
   .container {
     width: 540px;
   }
   .header .img-txt {
     top: 25%;
+  }
+  .holboo-barih .contact-info p {
+    font-size: 12px;
+    width: 33vw;
+  }
+  .nest-p {
+    font-size: 12px;
+  }
+  .handltn-too p {
+    font-size: 12px;
+  }
+  .contact-us {
+    height: 20vh;
+  }
+  .contact-us div h2 {
+    font-size: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -209,6 +246,22 @@
   .header .img-txt {
     top: 30%;
   }
+  .holboo-barih .contact-info p {
+    font-size: 13px;
+    width: 33vw;
+  }
+  .handltn-too p {
+    font-size: 13px;
+  }
+  .nest-p {
+    font-size: 13px;
+  }
+  .contact-us {
+    height: 25vh;
+  }
+  .contact-us div h2 {
+    font-size: 16px;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -216,6 +269,22 @@
   }
   .header .img-txt {
     top: 45%;
+  }
+  .holboo-barih .contact-info p {
+    font-size: 15px;
+    width: 33vw;
+  }
+  .handltn-too p {
+    font-size: 15px;
+  }
+  .nest-p {
+    font-size: 15px;
+  }
+  .contact-us {
+    height: 23vh;
+  }
+  .contact-us div h2 {
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
@@ -246,9 +315,6 @@
     width: 100%;
     padding: 0;
   }
-  .navbar .container {
-    height: 40px;
-  }
   .nav-links ul li a {
     color: black;
     font-size: 15px;
@@ -276,11 +342,11 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 20vh;
+    height: 35vh;
   }
 
   .navbar__toggle .bar {
-    width: 15px;
+    width: 20px;
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
@@ -340,6 +406,9 @@
     font-size: 5vw;
     border-bottom: 3px solid #4eb073;
   }
+  .holboo-barih {
+    padding: 0;
+  }
   .holboo-barih .contact-info img {
     width: 4vw;
   }
@@ -355,7 +424,7 @@
   }
   #mobile-menu {
     position: absolute;
-    top: 1%;
+    top: 18%;
     right: 10%;
     transform: translate(5%, 20%);
   }
@@ -369,5 +438,20 @@
 
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  @media screen and (max-height: 897px) {
+    .contact-us-con {
+      height: 74vh;
+    }
+  }
+  @media screen and (max-height: 745px) {
+    .contact-us-con {
+      height: 76vh;
+    }
+  }
+  @media screen and (max-height: 700px) {
+    .contact-us-con {
+      height: 90vh;
+    }
   }
 }
