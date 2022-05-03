@@ -33,10 +33,14 @@ pointLight[5].intensity = 0.5;
 // pointLight[5].position.set(10, 150, 0);
 // pointLight[5].intensity = 0.1
 //objects
-all.position.set(100, 0, 0);
+
+all.position.set(0, 0, 0);
 all.add(land);
 all.add(machine)
 scene.add(all);
+
+const axesHelper = new THREE.AxesHelper( 100 );
+scene.add( axesHelper );
 
 //render
 renderer = new THREE.WebGLRenderer({
