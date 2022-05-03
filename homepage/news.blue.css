@@ -86,7 +86,7 @@ h4 {
     font-size: 18px;
   }
   .header {
-    height:80vh;
+    height: 80vh;
   }
 }
 @media screen and (max-width: 992px) {
@@ -94,7 +94,7 @@ h4 {
     font-size: 16px;
   }
   .header {
-    height:60vh;
+    height: 60vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -102,26 +102,32 @@ h4 {
     font-size: 15px;
   }
   .header {
-    height:50vh;
+    height: 50vh;
   }
 }
 @media screen and (max-width: 575px) {
   .header {
-    height:45vh;
+    height: 40vh;
   }
   .header .img-txt {
-    top: 25%;
+    top: 22%;
   }
   .information p {
     font-size: 14px;
+  }
+  h4 {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 416px) {
   .navbar-menu.active {
     background-color: #354b7b;
   }
+  h4 {
+    font-size: 16px;
+  }
   .header {
-    height:35vh;
+    height: 35vh;
   }
   .navbar__toggle .bar {
     background: white;

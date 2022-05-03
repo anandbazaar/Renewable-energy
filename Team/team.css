@@ -35,7 +35,7 @@ a {
     color: #000000;
     display: flex;
     justify-content: center;
-    font-family: 'Lato';
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 30px;
 }
@@ -62,6 +62,12 @@ h4 {
     display: flex;
     justify-content: space-evenly;
 }
+
+
+/* 
+.images img {
+    width: 13vw;
+} */
 
 @media screen and (max-width: 1200px) {
     /* 416px */
@@ -132,4 +138,21 @@ h4 {
     display: flex;
     margin-top: 8%;
     flex-direction: row;
+}
+
+.team-backround {
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.pose {
+    position: absolute;
+}
+
+.member1 {
+    top: 10%;
+    left: 30%;
 }
