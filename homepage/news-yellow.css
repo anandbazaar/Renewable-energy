@@ -77,9 +77,9 @@ section {
   flex-direction: row;
 }
 
-.container div {
+/* .container div {
   flex-grow: 1;
-}
+} */
 /* tugsgul medeelel */
 .dooshoo {
   display: flex;
