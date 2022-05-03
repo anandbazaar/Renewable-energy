@@ -1,4 +1,3 @@
-let tower = new THREE.Group();
 let machines = new THREE.Group();
 // things with no thing inside
 material = new THREE.MeshStandardMaterial({ color: "silver" });
