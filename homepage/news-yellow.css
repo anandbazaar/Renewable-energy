@@ -12,6 +12,7 @@ body {
 .nav-links ul li a {
   color: white;
 }
+
 /* nuur zurag */
 .img-txt {
   color: white;
@@ -141,7 +142,7 @@ section {
     font-size: 20px;
   }
   .header {
-    height:100vh;
+    height: 100vh;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -149,7 +150,7 @@ section {
     font-size: 18px;
   }
   .header {
-    height:80vh;
+    height: 80vh;
   }
   .header .img-txt {
     top: 40%;
@@ -160,7 +161,7 @@ section {
     font-size: 16px;
   }
   .header {
-    height:60vh;
+    height: 60vh;
   }
   .header .img-txt {
     top: 30%;
@@ -171,7 +172,7 @@ section {
     font-size: 15px;
   }
   .header {
-    height:55vh;
+    height: 55vh;
   }
   .header .img-txt {
     top: 27%;
@@ -179,7 +180,7 @@ section {
 }
 @media screen and (max-width: 575px) {
   .header {
-    height:45vh;
+    height: 45vh;
   }
   .header .img-txt {
     top: 20%;
@@ -198,7 +199,7 @@ section {
     font-size: 16px;
   }
   .header {
-    height:38vh;
+    height: 38vh;
   }
   .tsuvaa {
     margin-bottom: 10px;
