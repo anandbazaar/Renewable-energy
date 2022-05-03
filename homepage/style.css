@@ -97,13 +97,27 @@
     margin: 5px;
   }
   .aboutus h3 {
-    font-size: 10px;
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 80vw;
+  }
+  .aboutus .left {
+    width: 100%;
+  }
+  .aboutus .left {
+    height: 50%;
   }
   .lrn-m {
     margin-left: 10%;
+    font-size: 12px;
   }
   .in-p {
-    font-size: 8px;
+    width: 80%;
+    margin: auto;
+    line-height: 20px;
+    font-size: 18px;
+    height: 50vw;
   }
   .news-col {
     height: 100px;
@@ -125,8 +139,23 @@
     justify-content: center;
     align-items: center;
   }
+  .right .back {
+    margin-left: 10%;
+    top: 15%;
+    width: 90%;
+  }
+  .right .back img {
+    width: 90%;
+  }
+  .right .front img {
+    top: 20%;
+    width: 90%;
+  }
   .inp2 {
-    height: 120px;
+    width: 80%;
+    line-height: 20px;
+    font-size: 18px;
+    height: 60vw;
   }
   .aboutus .right .image {
     padding: 2px;
@@ -138,8 +167,27 @@
     height: 80%;
   }
   .img1 {
-    height: 18vw;
+    height: 80%;
     margin-left: 0;
+  }
+  .aboutus {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .latest-news .news {
+    width: 90%;
+    height: 40vw;
+    margin: auto;
+    margin-bottom: 10%;
+  }
+  .news .garchig p {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .news .medeelel p {
+    font-size: 12px;
+    height: 80%;
+    line-height: 100%;
   }
 }
 
@@ -254,9 +302,9 @@ h1 {
   display: inline-block;
   text-decoration: none;
   color: #4eb073;
-  border: 0.15vw solid #4eb073;
+  border: 2px solid #4eb073;
   padding: 1vw 2.8vw;
-  font-size: 1vw;
+  font-size: 15px;
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -338,6 +386,7 @@ h4 {
 }
 .img1 {
   width: 90%;
+  margin-left: 5%;
 }
 .medeelel {
   width: 60%;
@@ -411,9 +460,7 @@ h3 {
   .aboutus .right {
     justify-content: flex-start;
   }
-  .aboutus .right img {
-    width: 70%;
-  }
+
   .in-p {
     padding-left: 3%;
   }
