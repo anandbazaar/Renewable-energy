@@ -20,9 +20,11 @@
 
 /* Images */
 
+
+/* 
 .team {
     position: relative;
-}
+} */
 
 a {
     text-decoration: none;
@@ -35,7 +37,7 @@ a {
     color: #000000;
     display: flex;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 30px;
 }
@@ -44,16 +46,16 @@ h4 {
     color: #000000;
     display: flex;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-size: 20px;
 }
 
 .yellow-box {
-    position: absolute;
+    position: absolute !important;
     background-color: #e8b80c;
     height: 150px;
-    width: 100%;
+    width: 100% !important;
 }
 
 .images {
@@ -61,6 +63,7 @@ h4 {
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    flex-grow: 1;
 }
 
 
@@ -91,11 +94,7 @@ h4 {
         width: 45%;
         gap: 10%;
         display: flex;
-        flex-wrap: wrap;
         object-fit: contain;
-    }
-    .yellow-box {
-        background-color: white;
     }
     .images img {
         width: 30vw;
@@ -116,43 +115,60 @@ h4 {
     padding-bottom: 0;
 }
 
+
+/*
 .images {
     width: 45%;
     gap: 10%;
 }
 
 
-/* 
-.images img {
-    width: 14vw;
-} */
-
 .team-con {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-}
+} 
 
 .end {
     background-color: white;
     display: flex;
     margin-top: 8%;
     flex-direction: row;
+} */
+
+.team-con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-image: url("./Assets/Group\ 202.png");
 }
 
-.team-backround {
+.group {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.group div {
+    width: 40%;
+    position: relative;
+}
+
+.group div img {
     width: 100%;
+    object-fit: contain;
+}
+
+
+/* 
+.flex {
     object-fit: contain;
     position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.pose {
-    position: absolute;
-}
-
-.member1 {
-    top: 10%;
-    left: 30%;
-}
+flexgrow: 1 */
