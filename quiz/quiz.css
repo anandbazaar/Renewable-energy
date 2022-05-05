@@ -4,9 +4,6 @@ section {
 .header {
   width: 100%;
 }
-body {
-  background-color: white;
-}
 
 .hp-img {
   position: absolute;
@@ -121,6 +118,10 @@ body {
 }
 .btn:hover {
   transform: scale(1.05);
+}
+.quiz-section,
+.img-section {
+  background-color: #e2e2e2;
 }
 .quiz-box .option-container,
 .quiz-box .question-text,

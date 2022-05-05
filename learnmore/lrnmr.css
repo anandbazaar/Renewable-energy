@@ -2,13 +2,13 @@ section {
   padding-top: 80px;
 }
 body {
-  background-color: #e5e5e5;
+  background-color: white;
 }
 .main-container {
   margin-left: auto;
   margin-right: auto;
   width: 1440px;
-  background-color: #e5e5e5;
+  background-color: white;
   margin-top: 100px;
 }
 .header {
@@ -34,7 +34,7 @@ h2 {
 h3 {
   margin: 30px;
   font-size: 40px;
-  color: #0E7755;
+  color: #0e7755;
 }
 .row h2 {
   margin: 30px;
@@ -149,15 +149,12 @@ a {
 .huvi {
   font-size: 50px;
   letter-spacing: normal;
-  font-weight:bolder;
+  font-weight: bolder;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  text-shadow:
-   -1px -1px 0 #949398FF,  
-    1px -1px 0 #949398FF,
-    -1px 1px 0 #F4DF4EFF,
-     1px 1px 0 #F4DF4EFF;
+  text-shadow: -1px -1px 0 #949398ff, 1px -1px 0 #949398ff, -1px 1px 0 #f4df4eff,
+    1px 1px 0 #f4df4eff;
 }
 .tomzrg {
   width: 1360px;
@@ -250,7 +247,7 @@ ul {
 .zai {
   font-size: 30px;
   margin: 5px;
-  font-weight:lighter;
+  font-weight: lighter;
 }
 .map {
   height: 100%;
@@ -270,7 +267,7 @@ ul {
 }
 .circle_overlay {
   position: absolute;
-  background-color: rgba(0,0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -553,7 +550,7 @@ ul {
     height: 250px;
   }
   h1 {
-    font-size: 14px
+    font-size: 14px;
   }
   .line {
     width: 19%;
@@ -748,7 +745,7 @@ ul {
     margin: 0px;
   }
   .goldoo {
-    margin: 0 0 10px
+    margin: 0 0 10px;
   }
   .cntnr .text {
     font-size: 12px;
