@@ -42,6 +42,7 @@
   padding: 0.3vw;
   font-weight: 400;
   line-height: 2vw;
+  font-family: "Lato", sans-serif;
 }
 .navbar ul li .activePage {
   border-bottom: 4px solid #4eb073;
@@ -182,6 +183,7 @@
   margin-left: 5%;
   display: flex;
   align-items: center;
+  margin-right: 10px; 
 }
 .holboo-barih .contact-info img {
   width: 1.5vw;
@@ -207,7 +209,6 @@
     font-size: 10px;
     width: 33vw;
   }
-
   .nest-p {
     font-size: 10px;
   }
@@ -268,6 +269,9 @@
   .contact-us div h2 {
     font-size: 16px;
   }
+  .holboo-barih .contact-info img {
+    width: 20px;
+  }
 }
 @media (min-width: 992px) {
   .container {
@@ -296,10 +300,22 @@
   .contact-us div h2 {
     font-size: 18px;
   }
+  .holboo-barih .contact-info img {
+    width: 25px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
+  }
+  .contact-us {
+    height: 30vh;
+  }
+  .contact-us div h2 {
+    font-size: 22px;
+  }
+  .holboo-barih .contact-info img {
+    width: 25px;
   }
 }
 @media (min-width: 1400px) {
