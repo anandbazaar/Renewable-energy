@@ -56,8 +56,7 @@ var materials = [
     color: 0x734217,
   }),
 ];
-
-  let geometry = new THREE.BoxGeometry(200,10,350)
+   geometry = new THREE.BoxGeometry(200,10,350)
   let dirt = new THREE.Mesh(geometry, materials)
 
   dirt.position.set(0,-10,0);
