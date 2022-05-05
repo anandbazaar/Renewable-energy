@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
     <script
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
@@ -12,17 +13,14 @@
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
     ></script>
-    <title>Document</title>
   </head>
   <body>
-    <div>
-      <span> User: </span>
-      <span id="user_name"></span>
-      <button id="log_out">Log out</button>
-    </div>
+    <span> User :</span>
+    <span id="user_name"></span>
+    <button id="logout_button">Logout</button>
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
-        const firebaseConfig = {
+        var firebaseConfig = {
           apiKey: "AIzaSyAslRu1uMy5JfTZW0LutouT6u4DDhFh96k",
           authDomain: "auth-95e28.firebaseapp.com",
           projectId: "auth-95e28",
@@ -31,20 +29,20 @@
           appId: "1:199003874234:web:2b44f4b8e15db922477383",
           measurementId: "G-QQV56443VH",
         };
-
         firebase.initializeApp(firebaseConfig);
         firebase.auth().onAuthStateChanged((user) => {
           if (user) {
             document.getElementById("user_name").innerText = user.displayName;
           } else {
-            window.location =
-              "login7.html";
+             window.location = "http://localhost:5500/Sign-in/login.html";
           }
         });
       });
-      document.getElementById("log_out").addEventListener("click", function () {
-        firebase.auth().signOut();
-      });
+      document
+        .getElementById("logout_button")
+        .addEventListener("click", function () {
+          firebase.auth().signOut();
+        });
     </script>
   </body>
 </html>
