@@ -1,3 +1,19 @@
+.next {
+  text-decoration: none;
+  color: white;
+  border: 2px solid #d7766e;
+  padding: 1vw 2.8vw;
+  font-size: 15px;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 200px;
+}
+.next:hover {
+  border: 1px solid #d7766e;
+  background: #d7766e;
+  color: white;
+  transition: 1s;
+}
 body {
   background-color: #0d273c;
 }
@@ -80,6 +96,9 @@ h4 {
   .information p {
     font-size: 20px;
   }
+  .next {
+    margin-bottom: 120px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .information p {
@@ -87,6 +106,9 @@ h4 {
   }
   .header {
     height:80vh;
+  }
+  .next {
+    margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -96,6 +118,9 @@ h4 {
   .header {
     height:60vh;
   }
+  .next {
+    margin-bottom: 80px;
+  }
 }
 @media screen and (max-width: 768px) {
   .information p {
@@ -103,6 +128,12 @@ h4 {
   }
   .header {
     height:50vh;
+  }
+  .next {
+    margin-bottom: 70px;
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -118,10 +149,22 @@ h4 {
   h4 {
     font-size: 20px;
   }
+  .next {
+    margin-bottom: 70px;
+    width: 110px;
+    height: 45px;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 416px) {
   .navbar-menu.active {
     background-color: #354b7b;
+  }
+  .next {
+    margin-bottom: 40px;
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
   }
   h4 {
     font-size: 16px;
