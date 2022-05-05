@@ -1,7 +1,0 @@
-section{
-  opacity: 0;
-  transition: opacity 250ms ease-in;
-}
-section.appear{
-  opacity: 1;
-}
