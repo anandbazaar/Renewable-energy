@@ -133,7 +133,7 @@
   flex: 1;
   margin-bottom: 15%;
 }
-.logo-cn{
+.logo-cn {
   width: 250px;
   display: flex;
   justify-content: center;
@@ -141,7 +141,7 @@
 .aboutus-logo div {
   margin-bottom: 5%;
 }
-.rnw-logo{
+.rnw-logo {
   width: 6vw;
   margin: auto;
 }
@@ -276,7 +276,7 @@
   .header .img-txt {
     top: 45%;
   }
-  .holboo-barih{
+  .holboo-barih {
     padding: 0;
   }
   .holboo-barih .contact-info p {
@@ -296,7 +296,6 @@
   .contact-us div h2 {
     font-size: 18px;
   }
- 
 }
 @media (min-width: 1200px) {
   .container {
@@ -310,13 +309,12 @@
   .header .img-txt {
     top: 50%;
   }
-  .handltn-too
-  {
+  .handltn-too {
     margin-bottom: 10%;
   }
-  .holboo-con{
+  .holboo-con {
     padding-left: 15%;
-   }
+  }
 }
 @media screen and (max-width: 416px) {
   .header .img-txt {
