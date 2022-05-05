@@ -1,144 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Google Authentication</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
   </head>
-
   <body>
-    <div id="login-box">
-      <div class="left">
-        <h1>Sign up</h1>
-
-        <input type="text" id="email" name="email" placeholder="E-mail" />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Password"
-        />
-
-        <input
-          type="submit"
-          id="saveData"
-          name="signup_submit"
-          value="Sign in"
-        />
-      </div>
-
-      <div class="right">
-        <span class="loginwith">Sign in with<br />social network</span>
-
-        <button class="social-signin google" id="login">
-          Log in with Google+
-        </button>
-      </div>
-      <div class="or">OR</div>
-    </div>
+    <span> User :</span>
+    <span id="user_name"></span>
+    <button id="logout_button">Logout</button>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var firebaseConfig = {
+          apiKey: "AIzaSyAslRu1uMy5JfTZW0LutouT6u4DDhFh96k",
+          authDomain: "auth-95e28.firebaseapp.com",
+          projectId: "auth-95e28",
+          storageBucket: "auth-95e28.appspot.com",
+          messagingSenderId: "199003874234",
+          appId: "1:199003874234:web:2b44f4b8e15db922477383",
+          measurementId: "G-QQV56443VH",
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth().onAuthStateChanged((user) => {
+          if (user) {
+            document.getElementById("user_name").innerText = user.displayName;
+          } else {
+             window.location = "http://localhost:5500/Sign-in/login.html";
+          }
+        });
+      });
+      document
+        .getElementById("logout_button")
+        .addEventListener("click", function () {
+          firebase.auth().signOut();
+        });
+    </script>
   </body>
-
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-analytics.js";
-    import {
-      getFirestore,
-      collection,
-      getDocs,
-    } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
-    import {
-      getAuth,
-      GoogleAuthProvider,
-      signInWithRedirect,
-      getRedirectResult,
-      signInWithPopup,
-      signOut,
-    } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyAslRu1uMy5JfTZW0LutouT6u4DDhFh96k",
-      authDomain: "auth-95e28.firebaseapp.com",
-      projectId: "auth-95e28",
-      storageBucket: "auth-95e28.appspot.com",
-      messagingSenderId: "199003874234",
-      appId: "1:199003874234:web:2b44f4b8e15db922477383",
-      measurementId: "G-QQV56443VH",
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider(app);
-    const db = firebase.firestore();
-    // const db = getFirestore(); //hi firebase
-
-    // const colRef = collection(db, "users");
-
-    // getDocs(colRef).then((snapshot) => {
-    //   console.log(snapshot.docs);
-    // });
-
-    login.addEventListener("click", (e) => {
-      // signInWithRedirect(auth, provider);
-
-      // // redirect the result
-      // getRedirectResult(auth)
-      //   .then((result) => {
-      //     // This gives you a Google Access Token. You can use it to access Google APIs.
-      //     const credential = GoogleAuthProvider.credentialFromResult(result);
-      //     const token = credential.accessToken;
-
-      //     // The signed-in user info.
-      //     const user = result.user;
-      //   })
-      //   .catch((error) => {
-      //     // Handle Errors here.
-      //     const errorCode = error.code;
-      //     const errorMessage = error.message;
-      //     // The email of the user's account used.
-      //     const email = error.email;
-      //     // The AuthCredential type that was used.
-      //     const credential = GoogleAuthProvider.credentialFromError(error);
-      //   });
-
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          const credential = GoogleAuthProvider.credentialFromResult(result);
-          const token = credential.accessToken;
-          // The signed-in user info.
-          const user = result.user;
-          console.log(user);
-          alert(user.displayName);
-          // ...
-        })
-        .catch((error) => {
-          // Handle Errors here.
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          // The email of the user's account used.
-          const email = error.email;
-          // The AuthCredential type that was used.
-          const credential = GoogleAuthProvider.credentialFromError(error);
-          // ...
-
-          alert(errorMessage);
-        });
-    });
-
-    signOut.addEventListener("click", (e) => {
-      signOut(auth)
-        .then(() => {
-          // Sign-out successful.
-        })
-        .catch((error) => {
-          // An error happened.
-        });
-    });
-    // "users/bXhOcwLwZNcAKr5ASirJD3y6dXg2 geed nemeed ..."
-  </script>
 </html>

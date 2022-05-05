@@ -105,7 +105,7 @@ h4 {
     font-size: 18px;
   }
   .header {
-    height:80vh;
+    height: 80vh;
   }
   .next {
     margin-bottom: 100px;
@@ -116,7 +116,7 @@ h4 {
     font-size: 16px;
   }
   .header {
-    height:60vh;
+    height: 60vh;
   }
   .next {
     margin-bottom: 80px;
@@ -127,7 +127,7 @@ h4 {
     font-size: 15px;
   }
   .header {
-    height:50vh;
+    height: 50vh;
   }
   .next {
     margin-bottom: 70px;
@@ -138,7 +138,7 @@ h4 {
 }
 @media screen and (max-width: 575px) {
   .header {
-    height:40vh;
+    height: 40vh;
   }
   .header .img-txt {
     top: 22%;
@@ -170,7 +170,7 @@ h4 {
     font-size: 16px;
   }
   .header {
-    height:38vh;
+    height: 35vh;
   }
   .navbar__toggle .bar {
     background: white;

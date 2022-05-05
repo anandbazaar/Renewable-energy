@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geo Thermal</title>
-    <link rel="stylesheet" href="../util/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="../util/style.css" />
+    <link rel="stylesheet" href="../../common/global.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <!-- Logo -->
+
+        <a href="../../index.html">
+          <img class="logo" src="../../Assets/Group 168.png" id="" alt="" />
+        </a>
+
+        <!-- Links -->
+
+        <div class="nav-links navbar__container" id="navLinks">
+          <!-- Phone -->
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
+          <!-- Desktop -->
+
+          <ul class="navbar-menu">
+            <li>
+              <a href="../../index.html" id="home-page">HOME</a>
+            </li>
+            <li>
+              <a href="../../learnmore/index.html" id="about-page">
+                INFORMATION
+              </a>
+            </li>
+            <li>
+              <a href="../../quiz/quiz.html" id="services-page"> EDUCATION </a>
+            </li>
+            <li>
+              <a href="../../Team/team.html" id="services-page"> TEAM </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="infoCont"></div>
     <canvas class="webgl"></canvas>
     <script src="../util/three.min.js"></script>
@@ -19,13 +56,12 @@
     <script src="../util/reflector.js"></script>
     <script src="../util/refractor.js"></script>
     <script src="../util/water.js"></script>
-    <script src="../util/text.js"></script>
+    <script src="./transmission.js"></script>
+    <script src="../util/infos.js"></script>
+    <script src="text.js"></script>
     <script src="./land.js"></script>
     <script src="./house.js"></script>
     <script src="./machine.js"></script>
     <script src="./scene.js"></script>
-    
-    
-  
-</body>
+  </body>
 </html>
