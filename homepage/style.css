@@ -44,6 +44,7 @@
   font-size: 2.5vw;
   color: #409ada;
   margin-bottom: 5%;
+  font-family: "Brygada 1918", serif;
 }
 .slick-prev,
 .slick-next {
@@ -99,7 +100,7 @@
   }
   .aboutus h3 {
     margin: auto;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
     width: 80vw;
   }
@@ -202,7 +203,6 @@
 
 h1 {
   font-size: 36px;
-  font-weight: 600;
 }
 .row {
   width: 55%;
@@ -403,10 +403,10 @@ h4 {
 }
 
 .medeelel p {
-  font-size: 1.8vw;
+  font-size: 37px;
   text-align: left;
   font-weight: 300;
-  line-height: 90%;
+  line-height: 100%;
   text-decoration: none;
   color: black;
 }

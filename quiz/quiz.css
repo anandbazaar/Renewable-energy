@@ -16,11 +16,11 @@ body {
 }
 .img-section {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
 .quiz-section {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
 .garchig {
   width: 100%;
@@ -41,8 +41,7 @@ body {
   color: white;
 }
 .bird-img {
-  width: 297.31px;
-  height: 376.35px;
+  width: 200px;
 }
 .bird-w {
   margin-top: 5%;
@@ -325,7 +324,9 @@ body {
   .container {
     width: 100%;
   }
-
+  .quiz-section {
+    height: 120vh;
+  }
   .nav-links ul li a {
     color: black;
   }
@@ -365,6 +366,27 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
   .bird-img {
-    height: 40%;
+    height: 20%;
+  }
+  .result-box {
+    height: 100vh;
+  }
+  .custom-box {
+    margin: 0;
+  }
+  .bird-w-img {
+    left: 5%;
+  }
+  .bird-w-p {
+    left: 0;
+    margin-left: 5%;
+  }
+  .bird-img {
+    right: 5%;
+  }
+  .bird-img-con {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }

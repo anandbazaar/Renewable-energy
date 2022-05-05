@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Brygada+1918:ital@1&family=Lato:wght@300;400;700&display=swap");
 section {
   padding-top: 80px;
 }
@@ -20,11 +21,15 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: 2%;
 }
 h1 {
+  margin-left: 2%;
+  margin-right: 2%;
   color: #409ada;
-  font-size: 38px;
+  font-size: 36px;
   font-weight: lighter;
+  font-family: "Brygada 1918", serif;
 }
 h2 {
   color: #134a77;
@@ -43,7 +48,7 @@ h3 {
 .line {
   border: 4px solid #409ada;
   border-radius: 4px;
-  width: 28%;
+  width: 24%;
 }
 .rnbl {
   width: 1440px;
@@ -579,9 +584,7 @@ ul {
 @media screen and (max-width: 416px) {
   .main-container {
     width: 84%;
-    background-color: #e5e5e5;
     min-width: 378px;
-    margin-top: 45px;
   }
   .logo {
     height: 30px;
@@ -597,7 +600,7 @@ ul {
     min-width: 357px;
   }
   h1 {
-    font-size: 15px;
+    font-size: 12px;
   }
   h2 {
     font-size: 20px;

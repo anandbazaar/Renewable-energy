@@ -20,12 +20,6 @@
 
 /* Images */
 
-
-/* 
-.team {
-    position: relative;
-} */
-
 a {
     text-decoration: none;
 }
@@ -34,12 +28,13 @@ a {
 /* Text */
 
 .role {
-    color: #000000;
     display: flex;
+    color: #000000;
     justify-content: center;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 30px;
+    margin-bottom: 3%;
 }
 
 h4 {
@@ -63,13 +58,13 @@ h4 {
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    flex-grow: 1;
+    flex-grow: 1 !important;
 }
 
 
-/* 
-.images img {
-    width: 13vw;
+/* .container1 {
+    width: 100%;
+    margin: auto;
 } */
 
 @media screen and (max-width: 1200px) {
@@ -88,7 +83,7 @@ h4 {
     }
     .yellow-box {
         width: 100%;
-        height: 30%;
+        height: 40%;
     }
     .images {
         width: 45%;
@@ -110,34 +105,19 @@ h4 {
 
 .team {
     display: flex;
+    padding-bottom: 0;
+}
+
+.team {
+    display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 0;
 }
 
-
-/*
-.images {
-    width: 45%;
-    gap: 10%;
-}
-
-
 .team-con {
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-} 
-
-.end {
-    background-color: white;
-    display: flex;
-    margin-top: 8%;
-    flex-direction: row;
-} */
-
-.team-con {
-    display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -145,6 +125,7 @@ h4 {
 }
 
 .group {
+    margin-bottom: 5%;
     display: flex;
     position: relative;
     align-items: center;
@@ -160,15 +141,3 @@ h4 {
     width: 100%;
     object-fit: contain;
 }
-
-
-/* 
-.flex {
-    object-fit: contain;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-flexgrow: 1 */
