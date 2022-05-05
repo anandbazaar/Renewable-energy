@@ -28,12 +28,13 @@ a {
 /* Text */
 
 .role {
-    color: #000000;
     display: flex;
+    color: #000000;
     justify-content: center;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 30px;
+    margin-bottom: 3%;
 }
 
 h4 {
@@ -107,17 +108,24 @@ h4 {
     padding-bottom: 0;
 }
 
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+}
+
 .team-con {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    object-fit: contain;
+    width: 100%;
     background-image: url("./Assets/Group\ 202.png");
-    justify-content: center;
-    flex-shrink: 1;
 }
 
 .group {
+    margin-bottom: 5%;
     display: flex;
     position: relative;
     align-items: center;
