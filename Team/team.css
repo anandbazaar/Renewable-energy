@@ -32,6 +32,7 @@ a {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-style: normal;
   font-size: 30px;
+  margin-bottom: 3%;
 }
 
 h4 {
@@ -112,6 +113,7 @@ h4 {
 }
 
 .group {
+  margin-bottom: 5%;
   display: flex;
   position: relative;
   align-items: center;
