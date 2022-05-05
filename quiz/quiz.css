@@ -4,7 +4,9 @@ section {
 .header {
   width: 100%;
 }
-
+body {
+  background-color: white;
+}
 .hp-img {
   position: absolute;
 }
@@ -73,7 +75,7 @@ section {
   padding: 30px;
   border-radius: 10px;
 }
-.custom-box:hover {
+.custom-box {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 .custom-box::before,
@@ -119,10 +121,7 @@ section {
 .btn:hover {
   transform: scale(1.05);
 }
-.quiz-section,
-.img-section {
-  background-color: #e2e2e2;
-}
+
 .quiz-box .option-container,
 .quiz-box .question-text,
 .quiz-box .question-number,
