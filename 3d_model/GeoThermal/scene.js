@@ -36,7 +36,10 @@ pointLight[5].intensity = 0.5;
 
 all.position.set(0, 0, 0);
 all.add(land);
-all.add(machine)
+all.add(tower);
+all.add(machine);
+all.add(standdecor)
+all.add(holders)
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );

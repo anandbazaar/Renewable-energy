@@ -1,13 +1,15 @@
 let tower = new THREE.Group();
 let stand = new THREE.Group();
+let holders = new THREE.Group();
+let standdecor = new THREE.Group();
 
 var material = new THREE.MeshBasicMaterial({ color: "grey" });
 var geometry = new THREE.BoxGeometry(10, 1, 10);
 const head = new THREE.Mesh(geometry, material);
 tower.add(head);
-head.position.set(0,92,0); 
+head.position.set(0, 92, 0);
 
-head.rotation.y = Math.PI / 4
+head.rotation.y = Math.PI / 4;
 /////////////
 geometry = new THREE.BoxGeometry(2, 20, 2);
 const leg1 = new THREE.Mesh(geometry, material);
@@ -29,6 +31,7 @@ leg3.rotation.x = -Math.PI / 6;
 stand.add(leg3);
 
 tower.add(stand);
+
 //////////////
 const stand2 = stand.clone();
 const stand3 = stand.clone();
@@ -41,105 +44,142 @@ stand4.rotation.y = (3 * Math.PI) / 2;
 tower.add(stand2);
 tower.add(stand3);
 tower.add(stand4);
-// const legs = [];
 
-//Base
-// for (let i = 0; i < 4; i++) {
-//   const material = new THREE.MeshBasicMaterial({ color: "grey" });
-//   const geometry = new THREE.BoxGeometry(7, 80, 7);
-//   legs.push(new THREE.Mesh(geometry, material));
-//   tower.add(legs[i]);
-// }
+tower.rotation.y = Math.PI / 4;
+//////////////
 
-// legs.forEach((leg, index) => {
-//   leg.position.set(index * 20, 40, 0);
-//   tower.add(leg);
-// });
+geometry = new THREE.BoxGeometry(1.5, 20, 1.5);
+let holder = new THREE.Mesh(geometry, material);
 
-//Middle
-// const holders = [];
+holder.rotation.x = Math.PI / 2;
+holder.rotation.z = Math.PI / 2;
 
-// for (let i = 0; i < 4; i++) {
-//     const material = new THREE.MeshBasicMaterial({ color: "grey" });
-//     const geometry = new THREE.BoxGeometry(6, 50, 6);
-//     holders.push(new THREE.Mesh(geometry, material));
-//   }
+holder.position.set(0, 35, 10.5);
 
-//   holders.forEach((holder, index) => {
-//     holder.position.set(index * 20, 40, 0);
-//     tower.add(holder);
-//   });
+const holder2 = holder.clone();
+holder2.position.set(0, 35, -10.5);
 
-//Top
-// const Roofs = [];
-// const Connectors = [];
+const holder3 = holder.clone();
 
-// for (let i = 0; i < 4; i++) {
-//     const material = new THREE.MeshBasicMaterial({ color: "grey" });
-//     const geometry = new THREE.BoxGeometry(5.5, 30, 5.5);
-//     Roofs.push(new THREE.Mesh(geometry, material));
-//   }
+holder3.rotation.z = Math.PI * 2;
+holder3.position.set(10.5, 35, 0);
 
-//   for (let i = 0; i < 1; i++) {
-//     const material = new THREE.MeshBasicMaterial({ color: "grey" });
-//     const geometry = new THREE.BoxGeometry(10, 25, 25);
-//     Connectors.push(new THREE.Mesh(geometry, material));
-//   }
+const holder4 = holder.clone();
 
-//   Roofs.forEach((Roof, index) => {
-//     Roof.position.set(index * 20, 40, 0);
-//     tower.add(Roof);
-//   });
+holder4.rotation.z = Math.PI * 2;
+holder4.position.set(-10.5, 35, 0);
 
-//   Connectors.forEach((Con, index) => {
-//     Con.position.set(index * 20, 40, 0);
-//     tower.add(Con);
-//   });
+const holder5 = holder.clone();
+holder5.position.set(0, 75, 10.5);
 
-// Base
+const holder6 = holder.clone();
+holder6.position.set(0, 75, -10.5);
 
-// legs[0].position.set(40, 40, 0);
-// legs[0].rotation.x = Math.PI / 1.2
-// legs[0].rotation.z = Math.PI / 1.2
-// legs[1].position.set(40,40,-80);
-// legs[1].rotation.x = Math.PI / -1.2
-// legs[1].rotation.z = Math.PI / 1.2
-// legs[2].position.set(-40, 40, 0);
-// legs[2].rotation.x = Math.PI / 1.2
-// legs[2].rotation.z = Math.PI / -1.2
-// legs[3].position.set(-40, 40, -80);
-// legs[3].rotation.x = Math.PI / -1.2
-// legs[3].rotation.z = Math.PI / -1.2
+const holder7 = holder.clone();
 
-//Middle
+holder7.rotation.z = Math.PI * 2;
+holder7.position.set(10.5, 75, 0);
 
-// holders[0].position.set(22,91,-16)
-// holders[1].position.set(-22,91,-16)
-// holders[2].position.set(22,91,-64)
-// holders[3].position.set(-22,91,-64)
+const holder8 = holder.clone();
 
-// Top
+holder8.rotation.z = Math.PI * 2;
+holder8.position.set(-10.5, 75, 0);
 
-// Roofs[0].position.set(15.5,125,-22)
-// Roofs[0].rotation.x = Math.PI / 1.2
-// Roofs[0].rotation.z = Math.PI / 1.2
-// Roofs[1].position.set(-15.5,125,-22)
-// Roofs[1].rotation.x = Math.PI / 1.2
-// Roofs[1].rotation.z = Math.PI / -1.2
-// Roofs[2].position.set(15.5,125,-58)
-// Roofs[2].rotation.x = Math.PI / -1.2
-// Roofs[2].rotation.z = Math.PI / 1.2
-// Roofs[3].position.set(-15.5,125,-58)
-// Roofs[3].rotation.x = Math.PI / -1.2
-// Roofs[3].rotation.z = Math.PI / -1.2
+//////////////
 
-// Connectors[0].position.set(0,0,0)
-// Connectors[0].rotation.z = Math.PI / 2
-// Connectors[1].rotation.z = Math.PI / 2
-// Connectors[1].position.set(0,0,0)
-// Connectors[2].rotation.z = Math.PI / 2
-// Connectors[2].rotation.y = Math.PI / 2
-// Connectors[2].position.set(0,0,0)
-// Connectors[3].rotation.z = Math.PI / 2
-// Connectors[3].rotation.y = Math.PI / 2
-// Connectors[3].position.set(0,0,0)
+geometry = new THREE.BoxGeometry(1.5, 22, 1.5);
+
+// cross.position.set(0,40,10.5)
+let crosses = [];
+let height = 40;
+for (let i = 0; i < 12; i++) {
+  crosses[i] = new THREE.Mesh(geometry, material);
+  crosses[i].position.set(0, height, 10.5);
+  if (i == 0 || i % 2 == 0) crosses[i].rotation.z = Math.PI / 1.7;
+  else {
+    crosses[i].rotation.z = Math.PI / -1.7;
+    height += 6;
+  }
+  standdecor.add(crosses[i]);
+}
+
+const crosses2 = standdecor.clone();
+crosses2.rotation.y = Math.PI / 2
+
+const crosses3 = standdecor.clone();
+crosses3.rotation.y = Math.PI
+
+const crosses4 = standdecor.clone();
+crosses4.rotation.y = 3 * Math.PI / 2
+
+standdecor.add(crosses2,crosses3,crosses4)
+
+let crisses = [];
+
+    height = 0;
+for (let i = 0; i < 6; i++) {
+  crisses[i] = new THREE.Mesh(geometry, material);
+  crisses[i].position.set(0, height, 0);
+  if (i == 0 || i % 2 == 0) crisses[i].rotation.z = Math.PI / 1.7;
+  else {
+    crisses[i].rotation.z = Math.PI / -1.7;
+    width += 6;
+    height += 5;
+  }
+  standdecor.add(crisses[i]);
+}
+
+  // let crosses = []
+  //     height = 40
+  // for(let i =0;i<7;i++){
+  //     crosses[i]= new THREE.Mesh(geometry,material);
+  //     if(i==0 || i%2==0) crosses[i].rotation.z = Math.PI / 1.7
+  //     else crosses[i].rotation.z = Math.PI / -1.7
+  //     crosses[i].position.set(0,height,10.5)
+  //     height+=5
+  //     standdecor.add(crosses[i])
+  // }
+
+  // const criss = cross.clone();
+  // criss.rotation.z = Math.PI / -1.7
+  // criss.position.set(0,40,10.5)
+
+  // const cross2 = cross.clone();
+  // cross2.position.set(0,45,10.5)
+
+  // const criss2 = cross.clone();
+  // criss2.rotation.z = Math.PI / -1.7
+  // criss2.position.set(0,45,10.5)
+
+  // const cross3 = cross.clone();
+  // cross3.position.set(0,50,10.5)
+
+  // const criss3 = cross.clone();
+  // criss3.rotation.z = Math.PI / -1.7
+  // criss3.position.set(0,50,10.5)
+
+  // const cross4 = cross.clone();
+  // cross4.position.set(0,55,10.5)
+
+  // const criss4 = cross.clone();
+  // criss4.rotation.z = Math.PI / -1.7
+  // criss4.position.set(0,55,10.5)
+
+  // const cross5 = cross.clone();
+  // cross5.position.set(0,60,10.5)
+
+  // const criss5 = cross.clone();
+  // criss5.rotation.z = Math.PI / -1.7
+  // criss5.position.set(0,60,10.5)
+
+  holders.add(
+    holder,
+    holder2,
+    holder3,
+    holder4,
+    holder5,
+    holder6,
+    holder7,
+    holder8
+  );
+// standdecor.add(cross,criss,cross2,criss2,cross3,criss3,cross4,criss4,cross5,criss5)
