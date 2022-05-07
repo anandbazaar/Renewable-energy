@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAslRu1uMy5JfTZW0LutouT6u4DDhFh96k",
+        authDomain: "auth-95e28.firebaseapp.com",
+        projectId: "auth-95e28",
+        storageBucket: "auth-95e28.appspot.com",
+        messagingSenderId: "199003874234",
+        appId: "1:199003874234:web:2b44f4b8e15db922477383",
+        measurementId: "G-QQV56443VH",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Initialize Cloud Firestore and get a reference to the service
+      const db = firebase.firestore();
+
+      let docRef = db.collection("users").doc("bXhOcwLwZNcAKr5ASirJD3y6dXg2");
+
+      docRef
+        .get()
+        .then(function (doc) {
+          console.log("Document data:", doc.data());
+        })
+        .catch(function (error) {
+          console.log("Error getting document:", error);
+        });
+
+      let allDocRef = db.collection("users");
+
+      allDocRef
+        .get()
+        .then(function (docs) {
+          docs.forEach(function (doc) {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+          });
+        })
+        .catch(function (error) {
+          console.log("Error getting document:", error);
+        });
+
+    //    allDocRef.add({
+    //        name: "Tokyo",
+    //        country: "Japan"
+    //    });
+      //         db.collection("users").doc("").delete().then(() => {
+      //     console.log("Document successfully deleted!");
+      // }).catch((error) => {
+      //     console.error("Error removing document: ", error); //delete function
+      // });
+      const user = result.user;
+      console.log(user.uid);
+      colRef.doc(user.uid).set({
+        name: user.displayName,
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

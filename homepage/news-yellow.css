@@ -1,10 +1,29 @@
 body {
   background-color: #e9c85c;
 }
-
+.previous {
+  text-decoration: none;
+  color: black;
+  border: 2px solid #d7766e;
+  height:50px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 150px;
+}
+.previous:hover {
+  border: 1px solid #d7766e;
+  background: #d7766e;
+  color: white;
+  transition: 1s;
+}
 /* header section */
 .header {
-  height: 100vh;
+  height: 105vh;
 }
 .navbar {
   background-color: #e9c85c;
@@ -144,6 +163,9 @@ section {
   .header {
     height: 100vh;
   }
+  .previous {
+    margin-bottom: 120px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .information p {
@@ -154,6 +176,9 @@ section {
   }
   .header .img-txt {
     top: 40%;
+  }
+  .previous {
+    margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -166,6 +191,9 @@ section {
   .header .img-txt {
     top: 30%;
   }
+  .previous {
+    margin-bottom: 80px;
+  }
 }
 @media screen and (max-width: 768px) {
   .information p {
@@ -177,6 +205,12 @@ section {
   .header .img-txt {
     top: 27%;
   }
+  .previous {
+    margin-bottom: 70px;
+    width: 120px;
+    height: 50px;
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 575px) {
   .header {
@@ -187,9 +221,22 @@ section {
   }
   h4 {
     font-size: 20px;
+    
+  }
+  .previous {
+    margin-bottom: 70px;
+    width: 110px;
+    height: 45px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 416px) {
+  .previous {
+    margin-bottom: 40px;
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+  }
   .row {
     margin-bottom: 10px;
     margin: 5px;
@@ -199,7 +246,7 @@ section {
     font-size: 16px;
   }
   .header {
-    height: 38vh;
+    height:45vh;
   }
   .tsuvaa {
     margin-bottom: 10px;

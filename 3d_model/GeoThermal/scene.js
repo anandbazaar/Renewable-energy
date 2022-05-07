@@ -36,7 +36,10 @@ pointLight[5].intensity = 0.2;
 
 all.position.set(0, 0, 0);
 all.add(land);
-all.add(machine)
+all.add(tower);
+all.add(machine);
+all.add(standdecor)
+all.add(holders)
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );
@@ -65,7 +68,9 @@ function animate() {
   geometry1.attributes.position.needsUpdate = true
   renderer.render(scene, camera);
   renderer.render(scene, camera);
-
+  drill.rotation.y += 0.1
+  drill2.rotation.y -= 0.1
+  drillStand.rotation.y -= 0.1
   if (
     (camera.position.x < 0 && camera.position.z < 0) ||
     (camera.position.x > 0 && camera.position.z < 0)
