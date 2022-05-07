@@ -27,43 +27,9 @@ pipes[0].rotation.x = Math.PI * 0.5
 pipes[0].position.set(0,0,125)
 
 //spinmachine
-<<<<<<< HEAD
-material = [
-    new THREE.MeshStandardMaterial({
-        color: "black",
-        roughness: 0.1,
-        opacity:0
-      }),
-      new THREE.MeshStandardMaterial({
-        color: "white",
-        roughness: 0.1
-      }),
-      new THREE.MeshStandardMaterial({
-        color: "white",
-        roughness: 0.1
-      }),
-      new THREE.MeshStandardMaterial({
-        color: "white",
-        roughness: 0.1
-      }),
-      new THREE.MeshStandardMaterial({
-        color: "white",
-        roughness: 0.1,
-      }),
-      new THREE.MeshStandardMaterial({
-        color: "white",
-      }),
-]
-const spin = new THREE.Mesh(
-    new THREE.BoxGeometry(30,20,60),
-    material.opacity
-)
-spin.opacity = 0
-spin.position.set(0,8,50)
-=======
 const sides = []
 const spin = new THREE.Group()
-for(let i =0;i<5;i++){
+for(let i =0;i<9;i++){
 
 sides[i] = new THREE.Mesh(new THREE.PlaneGeometry(10,10),new THREE.MeshStandardMaterial({color:0xffffff, roughness:0.1,side:THREE.DoubleSide}))
 spin.add(sides[i])
@@ -81,6 +47,19 @@ sides[3].scale.set(3,2)
 sides[3].position.set(0,8,110)
 sides[4].scale.set(3,2)
 sides[4].position.set(0,8,50)
+sides[4].material.color.setHex(0x808080)
+sides[5].scale.set(3,3)
+sides[5].position.set(0,-2,35)
+sides[5].rotation.x = Math.PI * 0.5
+sides[6].scale.set(3,3)
+sides[6].position.set(0,18,35)
+sides[6].rotation.x = Math.PI * 0.5
+sides[7].scale.set(3,2)
+sides[7].position.set(-15,8,35)
+sides[7].rotation.y = Math.PI * 0.5
+sides[8].scale.set(3,2)
+sides[8].position.set(0,8,20)
+
 
 texture = new THREE.TextureLoader().load( '../textures/drill.jpg');
 const drill = new THREE.Mesh(
@@ -101,10 +80,34 @@ machine.add(drill)
 machine.add(drillStand)
 drillStand.rotation.x = Math.PI * 0.5
 drillStand.position.set(0,7,80)
+const generator = new THREE.Mesh(
+ new THREE.BoxGeometry(10,10,20),
+ new THREE.MeshStandardMaterial({color:0x808080,roughness:0.1})
+)
+const generator1 = new THREE.Mesh(
+  new THREE.BoxGeometry(10,6,4),
+  new THREE.MeshStandardMaterial({color:0x000000,roughness:0.1})
+)
+const generator2 = new THREE.Mesh(
+  new THREE.BoxGeometry(10,1,20),
+  new THREE.MeshStandardMaterial({color:0x000000,roughness:0.1})
+)
+const generator3 = new THREE.Mesh(
+  new THREE.BoxGeometry(5,1,3),
+  new THREE.MeshStandardMaterial({color:0x000000,roughness:0.1})
+)
+generator.position.set(0,8,35)
+machine.add(generator)
+generator1.position.set(0,8,47)
+machine.add(generator1)
+generator2.position.set(0,2.5,35)
+machine.add(generator2)
+generator3.position.set(0,13.5,30)
+machine.add(generator3)
 
 
 
 
->>>>>>> c7d12a1160eb1eebae3cfc4bd14e05ff35b6cf05
+
 machine.add(spin)
  

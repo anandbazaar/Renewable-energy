@@ -36,6 +36,7 @@ pointLight[5].intensity = 0.2;
 
 all.position.set(0, 0, 0);
 all.add(land);
+all.add(smoke[0])
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
@@ -54,7 +55,14 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 //controls
 const controls = new OrbitControls(camera, renderer.domElement);
+let ran = Math.random()
 function animate() {
+  smoke[0].position.y += 1
+  smoke[0].position.x += ran * -1
+  smoke[0].position.z += ran * -1
+  smoke[0].scale.x += ran
+  smoke[0].scale.z += ran
+  smoke[0].scale.y += ran
   requestAnimationFrame(animate);
   // controls.enableZoom = false;
   // controls.enablePan = false;
