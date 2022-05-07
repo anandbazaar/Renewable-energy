@@ -29,7 +29,7 @@ pointLight[3].intensity = 1.5;
 pointLight[4].position.set(0, -120, 0);
 pointLight[4].intensity = 1.5;
 pointLight[5].position.set(0, 120, 0);
-pointLight[5].intensity = 0.5;
+pointLight[5].intensity = 0.2;
 // pointLight[5].position.set(10, 150, 0);
 // pointLight[5].intensity = 0.1
 //objects

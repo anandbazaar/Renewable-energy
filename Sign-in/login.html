@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Index</title>
     <script
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
@@ -13,19 +13,9 @@
       defer
       src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
     ></script>
-    <script
-      defer
-      src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"
-    ></script>
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css"
-    />
     <link rel="stylesheet" href="../common/global.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <!-- Navigation bar -->
 
@@ -74,42 +64,38 @@
         </div>
       </div>
     </nav>
-    <script defer src="login.js"></script>
+    <div class="board">
+    <span> User :</span>
+    <span id="user_name"></span>
+    <span> Score :</span>
+    <span id="takenscore"></span>
+    <button id="logout_button">Logout</button>
+  </div>
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         var firebaseConfig = {
           apiKey: "AIzaSyAslRu1uMy5JfTZW0LutouT6u4DDhFh96k",
-  authDomain: "auth-95e28.firebaseapp.com",
-  projectId: "auth-95e28",
-  storageBucket: "auth-95e28.appspot.com",
-  messagingSenderId: "199003874234",
-  appId: "1:199003874234:web:2b44f4b8e15db922477383",
-  measurementId: "G-QQV56443VH"
+          authDomain: "auth-95e28.firebaseapp.com",
+          projectId: "auth-95e28",
+          storageBucket: "auth-95e28.appspot.com",
+          messagingSenderId: "199003874234",
+          appId: "1:199003874234:web:2b44f4b8e15db922477383",
+          measurementId: "G-QQV56443VH",
         };
-
         firebase.initializeApp(firebaseConfig);
-
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        ui.start("#firebaseui-auth-container", {
-          callbacks: {
-            signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-              return true;
-            },
-            uiShown: function () {
-              document.getElementById("loader").style.display = "none";
-            }
-          },
-          signInSuccessUrl: "http://localhost:5500/Sign-in/login.html",
-          signInOptions: [
-            firebase.auth.EmailAuthProvider.PROVIDER_ID,
-            firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          ],
+        firebase.auth().onAuthStateChanged((user) => {
+          if (user) {
+            document.getElementById("user_name").innerText = user.displayName;
+          } else {
+             window.location = "http://localhost:5500/Sign-in/index1.html";
+          }
         });
       });
-      
+      document
+        .getElementById("logout_button")
+        .addEventListener("click", function () {
+          firebase.auth().signOut();
+        });
     </script>
-    <p><h1>Sign in</p></h1>
-    <div id="firebaseui-auth-container"></div>
   </body>
 </html>
