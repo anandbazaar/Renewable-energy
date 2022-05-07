@@ -21,7 +21,7 @@
   text-decoration: none;
   color: white;
   border: 2px solid #0d273c;
-  height:50px;
+  height: 50px;
   width: 150px;
   display: flex;
   justify-content: center;
@@ -63,6 +63,7 @@ section {
 h4 {
   color: #381d72;
   font-size: 2.8vw;
+  font-family: "Brygada 1918", serif;
 }
 .information {
   margin-bottom: 10%;
@@ -111,7 +112,6 @@ h4 {
   position: relative;
 }
 .imgg40 {
-  margin-top: 10%;
   width: 100%;
   object-fit: contain;
 }
