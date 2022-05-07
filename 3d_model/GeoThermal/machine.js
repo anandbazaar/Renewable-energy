@@ -27,6 +27,40 @@ pipes[0].rotation.x = Math.PI * 0.5
 pipes[0].position.set(0,0,125)
 
 //spinmachine
+<<<<<<< HEAD
+material = [
+    new THREE.MeshStandardMaterial({
+        color: "black",
+        roughness: 0.1,
+        opacity:0
+      }),
+      new THREE.MeshStandardMaterial({
+        color: "white",
+        roughness: 0.1
+      }),
+      new THREE.MeshStandardMaterial({
+        color: "white",
+        roughness: 0.1
+      }),
+      new THREE.MeshStandardMaterial({
+        color: "white",
+        roughness: 0.1
+      }),
+      new THREE.MeshStandardMaterial({
+        color: "white",
+        roughness: 0.1,
+      }),
+      new THREE.MeshStandardMaterial({
+        color: "white",
+      }),
+]
+const spin = new THREE.Mesh(
+    new THREE.BoxGeometry(30,20,60),
+    material.opacity
+)
+spin.opacity = 0
+spin.position.set(0,8,50)
+=======
 const sides = []
 const spin = new THREE.Group()
 for(let i =0;i<5;i++){
@@ -71,5 +105,6 @@ drillStand.position.set(0,7,80)
 
 
 
+>>>>>>> c7d12a1160eb1eebae3cfc4bd14e05ff35b6cf05
 machine.add(spin)
  
