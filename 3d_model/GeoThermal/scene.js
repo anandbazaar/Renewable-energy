@@ -28,19 +28,20 @@ pointLight[3].position.set(0, 35, 335);
 pointLight[3].intensity = 1.5;
 pointLight[4].position.set(0, -120, 0);
 pointLight[4].intensity = 1.5;
-pointLight[5].position.set(0, 120, 0);
-pointLight[5].intensity = 0.2;
+pointLight[5].position.set(0, 150, -70);
+pointLight[5].intensity = 0.3;
 // pointLight[5].position.set(10, 150, 0);
 // pointLight[5].intensity = 0.1
 //objects
 
 all.position.set(0, 0, 0);
 all.add(land);
-all.add(smoke[0])
+
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
 all.add(holders)
+all.add(factory);
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );
@@ -57,12 +58,7 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 let ran = Math.random()
 function animate() {
-  smoke[0].position.y += 1
-  smoke[0].position.x += ran * -1
-  smoke[0].position.z += ran * -1
-  smoke[0].scale.x += ran
-  smoke[0].scale.z += ran
-  smoke[0].scale.y += ran
+
   requestAnimationFrame(animate);
   // controls.enableZoom = false;
   // controls.enablePan = false;
