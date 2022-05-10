@@ -40,10 +40,7 @@ all.add(land);
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
-<<<<<<< HEAD
 all.add(crisseses,crisseses2,crisseses3);
-=======
->>>>>>> 3e2a20e14a32cd491a2795b0d6dd31586609ed67
 all.add(holders)
 all.add(factory);
 all.add(smoke)
