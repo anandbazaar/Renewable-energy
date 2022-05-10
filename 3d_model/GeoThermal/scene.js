@@ -39,7 +39,7 @@ all.add(land);
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
-all.add(holders)
+all.add(crisseses,crisseses2,crisseses3);
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );
