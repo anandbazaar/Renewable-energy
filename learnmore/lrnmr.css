@@ -258,11 +258,14 @@ a {
 }
 ul {
   margin-left: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .zai {
   font-size: 30px;
   margin: 5px;
   font-weight: lighter;
+  width: 100%;
 }
 .map {
   height: 100%;

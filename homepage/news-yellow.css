@@ -247,6 +247,9 @@ section {
   .header {
     height: 45vh;
   }
+  .header .img-txt {
+    top: 24%;
+  }
   .tsuvaa {
     margin-bottom: 10px;
   }
@@ -322,7 +325,14 @@ section {
     background-color: #e4cd06;
   }
 }
-
+@media screen and (max-width: 390px) {
+  .header {
+    height: 45vh;
+  }
+  .header .img-txt {
+    top: 25%;
+  }
+}
 .information h4:nth-child(1) span {
   animation-delay: 0.5s;
 }
