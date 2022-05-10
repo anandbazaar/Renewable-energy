@@ -57,6 +57,7 @@
               <a href="../Sign-in/login.html" id="services-page">ME</a>
             </li>
           </ul>
+          <img src="../Assets/moon.png" alt="" id="icon" />
         </div>
       </div>
     </nav>
@@ -231,10 +232,33 @@
                 <p class="nest-p">2022-NEST ACADEMY</p>
               </div>
               <div class="social2">
-                <img src="../Assets/image 45.png" alt="" />
-                <img src="../Assets/image 46.png" alt="" />
-                <img src="../Assets/image 47.png" alt="" />
-                <img src="../Assets/image 48.png" alt="" />
+                <a href="https://www.facebook.com/nestacademy.mn/">
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2045.png?alt=media&token=7fa6ea74-be71-4dd6-81ec-b2ef6b5717ae"
+                    alt=""
+                /></a>
+                <a
+                  href="https://www.instagram.com/accounts/login/?next=/nestacademymn/"
+                >
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2046.png?alt=media&token=69088267-455d-449c-b470-1c7d27ea553a"
+                    alt=""
+                /></a>
+                <a
+                  href="https://www.google.com/search?q=nest+academy&rlz=1C5CHFA_enMN971MN971&sxsrf=ALiCzsbrjmFTZFSaGLijdL9U9LLwaR2DUQ%3A1652176537753&ei=mTZ6YqbKLeCOr7wP7-SLkAk&ved=0ahUKEwjm-o2d1dT3AhVgx4sBHW_yApIQ4dUDCA4&uact=5&oq=nest+academy&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyCgguEMcBEK8BEEMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6CgguEMcBENEDEEM6BAgAEEM6CAguEIAEENQCOgsILhCABBDHARDRAzoECC4QQzoLCC4QgAQQxwEQrwE6BQguEIAEOgcIABCABBAKOgoIABCABBCHAhAUOg0ILhCABBDHARDRAxAKOgcIIxCxAhAnOgQIABAKOgcIIxCwAhAnOgoILhDHARCvARANOgQIABANSgQIQRgASgQIRhgAUABYyzZgiDloBnAAeACAAZkBiAGxDpIBBDAuMTWYAQCgAQGwAQnAAQE&sclient=gws-wiz"
+                >
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2047.png?alt=media&token=b90b7a5e-fbad-43ec-84b6-81e754f553df"
+                    alt=""
+                /></a>
+
+                <a
+                  href="https://www.youtube.com/c/NestAcademy/playlists?app=desktop"
+                >
+                  <img
+                    src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2048.png?alt=media&token=36a90a33-e0dd-4b57-8ccf-0a2769e80688"
+                    alt=""
+                /></a>
               </div>
             </div>
           </div>
@@ -295,5 +319,16 @@
     <script src="../common/activePage.js"></script>
     <script src="../common/navbar.js"></script>
     <script src="../homepage/main.js"></script>
+    <script>
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "../Assets/sun.png";
+        } else {
+          icon.src = "../Assets/moon.png";
+        }
+      };
+    </script>
   </body>
 </html>

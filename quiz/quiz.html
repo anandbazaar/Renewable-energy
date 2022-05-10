@@ -13,7 +13,6 @@
     <title>Quiz</title>
   </head>
   <body>
-  
     <!-- Navigation bar -->
 
     <nav id="navbar" class="navbar">
@@ -55,89 +54,119 @@
               <a href="../Sign-in/login.html" id="services-page">ME</a>
             </li>
           </ul>
+          <img src="../Assets/moon.png" alt="" id="icon" />
         </div>
       </div>
     </nav>
-    <section class="img-section container">
-      <div class="img-con">
-        <img
-          class="hp-img container"
-          src="../Assets/jason-blackeye-nyL-rzwP-Mk-unsplash.jpg"
-          alt=""
-        />
-        <div class="garchig">
-          <h3>Cэргээгдэх боловсролын тест</h3>
+    <section class="img-section">
+      <div class="container">
+        <div class="img-con">
+          <img
+            class="hp-img container"
+            src="../Assets/jason-blackeye-nyL-rzwP-Mk-unsplash.jpg"
+            alt=""
+          />
+          <div class="garchig">
+            <h3 style="background-color: #4eb073">
+              Cэргээгдэх боловсролын тест
+            </h3>
+          </div>
         </div>
       </div>
     </section>
-    <section class="quiz-section container">
-      <div class="home-box custom-box">
-        <h3>Сэргээгдэх эрчим хүч: Асуулт</h3>
-        <p>Нийт aсуулт: <span class="total-question"></span></p>
-        <button type="button" class="btn" onclick="startQuiz()">
-          Эхлүүлэх
-        </button>
-      </div>
-      <div class="quiz-box custom-box hide">
-        <div class="question-number"></div>
-        <div class="question-text"></div>
-        <div class="option-container"></div>
-        <div class="next-question-btn">
-          <button type="button" class="btn" onclick="next()">Next</button>
-        </div>
-        <div class="answer-indicator"></div>
-      </div>
-      <div class="result-box custom-box hide">
-        <h1>Quiz Result</h1>
-        <table>
-          <tr>
-            <td>Нийт aсуулт</td>
-            <td><span class="total-question"></span></td>
-          </tr>
-          <tr>
-            <td>Оролдлого</td>
-            <td><span class="total-attempt"></span></td>
-          </tr>
-          <tr>
-            <td>Зөв</td>
-            <td><span class="total-correct"></span></td>
-          </tr>
-          <tr>
-            <td>Буруу</td>
-            <td><span class="total-wrong"></span></td>
-          </tr>
-          <tr>
-            <td>Хувиар</td>
-            <td><span class="percentage"></span></td>
-          </tr>
-          <tr>
-            <td>Нийт оноо</td>
-            <td><span class="total-score"></span></td>
-          </tr>
-        </table>
-        <button type="button" class="btn" onclick="tryAgainQuiz()">
-          Дахин оролдох
-        </button>
-        <button type="button" class="btn" onclick="goToHome()">
-          Home луу буцах
-        </button>
-        <div>
+    <section class="quiz-section">
+      <div class="container">
+        <div class="home-box custom-box">
+          <h3>Сэргээгдэх эрчим хүч: Асуулт</h3>
+          <p>
+            Нийт aсуулт:
+            <span class="total-question"></span>
+          </p>
           <div class="bird-w">
-            <img
-              class="bird-w-img"
-              src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FUnion.png?alt=media&token=c9cb69bc-6b41-460d-9e96-a774dc8f941c"
-              alt=""
-            />
-            <div class="bird-w-p">
-              <p>Зүгээрдээ дахиад уншаад бөглөөд үз</p>
+            <div class="bird-w-p-home">
+              <p class="home-bird">
+                Сэргээгдэх эрчим хүчтэй холбоотой сонирхолтой асуултууданд
+                хариулж өөрийгөө сориорой
+              </p>
             </div>
           </div>
-          <div class="bird-img-con">
-            <img
-              class="bird-img"
-              src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FGroup%20196.png?alt=media&token=0a7593b7-2268-4648-a6be-c139aa2699da"
-              alt=""
-            />
+          <div
+            style="display: flex; justify-content: center"
+            class="bird-img-con"
+          >
+            <div class="bird-img-con">
+              <img
+                class="bird-img"
+                src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FGroup%20196.png?alt=media&token=0a7593b7-2268-4648-a6be-c139aa2699da"
+                alt=""
+              />
+            </div>
+          </div>
+          <button type="button" class="btn" onclick="startQuiz()">
+            Эхлүүлэх
+          </button>
+        </div>
+        <div class="quiz-box custom-box hide">
+          <div class="question-number"></div>
+          <div class="question-text"></div>
+          <div class="option-container"></div>
+          <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+          </div>
+          <div class="answer-indicator"></div>
+        </div>
+        <div class="result-box custom-box hide">
+          <h1>Quiz Result</h1>
+          <table>
+            <tr>
+              <td>Нийт aсуулт</td>
+              <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+              <td>Оролдлого</td>
+              <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+              <td>Зөв</td>
+              <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+              <td>Буруу</td>
+              <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+              <td>Хувиар</td>
+              <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+              <td>Нийт оноо</td>
+              <td><span class="total-score"></span></td>
+            </tr>
+          </table>
+          <button type="button" class="btn" onclick="tryAgainQuiz()">
+            Дахин оролдох
+          </button>
+          <button type="button" class="btn" onclick="goToHome()">
+            Home луу буцах
+          </button>
+          <div>
+            <div class="bird-w">
+              <img
+                class="bird-w-img"
+                src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FUnion.png?alt=media&token=c9cb69bc-6b41-460d-9e96-a774dc8f941c"
+                alt=""
+              />
+              <div class="bird-w-p">
+                <p>Зүгээрдээ дахиад уншаад бөглөөд үз</p>
+              </div>
+            </div>
+            <div class="bird-img-con">
+              <img
+                class="bird-img"
+                src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FGroup%20196.png?alt=media&token=0a7593b7-2268-4648-a6be-c139aa2699da"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -160,10 +189,33 @@
               <p class="nest-p">2022-NEST ACADEMY</p>
             </div>
             <div class="social2">
-              <img src="../Assets/image 45.png" alt="" />
-              <img src="../Assets/image 46.png" alt="" />
-              <img src="../Assets/image 47.png" alt="" />
-              <img src="../Assets/image 48.png" alt="" />
+              <a href="https://www.facebook.com/nestacademy.mn/">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2045.png?alt=media&token=7fa6ea74-be71-4dd6-81ec-b2ef6b5717ae"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.instagram.com/accounts/login/?next=/nestacademymn/"
+              >
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2046.png?alt=media&token=69088267-455d-449c-b470-1c7d27ea553a"
+                  alt=""
+              /></a>
+              <a
+                href="https://www.google.com/search?q=nest+academy&rlz=1C5CHFA_enMN971MN971&sxsrf=ALiCzsbrjmFTZFSaGLijdL9U9LLwaR2DUQ%3A1652176537753&ei=mTZ6YqbKLeCOr7wP7-SLkAk&ved=0ahUKEwjm-o2d1dT3AhVgx4sBHW_yApIQ4dUDCA4&uact=5&oq=nest+academy&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyBAgjECcyBAgjECcyCgguEMcBEK8BEEMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQ6BwgjEOoCECc6CgguEMcBENEDEEM6BAgAEEM6CAguEIAEENQCOgsILhCABBDHARDRAzoECC4QQzoLCC4QgAQQxwEQrwE6BQguEIAEOgcIABCABBAKOgoIABCABBCHAhAUOg0ILhCABBDHARDRAxAKOgcIIxCxAhAnOgQIABAKOgcIIxCwAhAnOgoILhDHARCvARANOgQIABANSgQIQRgASgQIRhgAUABYyzZgiDloBnAAeACAAZkBiAGxDpIBBDAuMTWYAQCgAQGwAQnAAQE&sclient=gws-wiz"
+              >
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2047.png?alt=media&token=b90b7a5e-fbad-43ec-84b6-81e754f553df"
+                  alt=""
+              /></a>
+
+              <a
+                href="https://www.youtube.com/c/NestAcademy/playlists?app=desktop"
+              >
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2048.png?alt=media&token=36a90a33-e0dd-4b57-8ccf-0a2769e80688"
+                  alt=""
+              /></a>
             </div>
           </div>
         </div>
@@ -223,9 +275,20 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    
+
     <script src="quiz.js"></script>
     <script src="app.js"></script>
     <script src="../homepage/main.js"></script>
+    <script>
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "../Assets/sun.png";
+        } else {
+          icon.src = "../Assets/moon.png";
+        }
+      };
+    </script>
   </body>
 </html>

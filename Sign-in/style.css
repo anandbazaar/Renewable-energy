@@ -7,3 +7,9 @@
 .activePage {
   border-bottom: 4px solid #4eb073;
 }
+.board{
+    margin-top: 100px;
+    display: block;
+    margin-left: 50%;
+    font-size: large;
+}
