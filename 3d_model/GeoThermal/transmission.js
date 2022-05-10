@@ -3,8 +3,8 @@ let stand = new THREE.Group();
 let holders = new THREE.Group();
 let standdecor = new THREE.Group();
 let crisses = new THREE.Group();
-
-var material = new THREE.MeshStandardMaterial({ color: "grey" });
+let transgender = new THREE.Group
+let material = new THREE.MeshBasicMaterial({color: "white"})
 var geometry = new THREE.BoxGeometry(10, 1, 10);
 const head = new THREE.Mesh(geometry, material);
 tower.add(head);
@@ -12,6 +12,7 @@ head.position.set(0, 92, 0);
 
 head.rotation.y = Math.PI / 4;
 /////////////
+material = new THREE.MeshStandardMaterial({ color: "grey" });
 geometry = new THREE.BoxGeometry(2, 20, 2);
 const leg1 = new THREE.Mesh(geometry, material);
 leg1.position.set(0, 40 + 25 * Math.sqrt(3), 10);
@@ -185,6 +186,8 @@ crisses.add(
   crisseses2.rotation.y = Math.PI / -2
   crisseses3.rotation.y = Math.PI / 2
 
+
+
 // let crosses = []
 //     height = 40 
 // for(let i =0;i<7;i++){
@@ -239,3 +242,11 @@ holders.add(
   holder8
 );
 // standdecor.add(cross,criss,cross2,criss2,cross3,criss3,cross4,criss4,cross5,criss5)
+transgender.add(holders)
+transgender.add(tower)
+transgender.add(standdecor)
+transgender.add(crisseses,crisseses2,crisseses3)
+
+transgender.position.set(50,-5,20)
+const tower2 = transgender.clone();
+tower2.position.set(50,-5,-190)

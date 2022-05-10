@@ -7,7 +7,7 @@ scene.background = new THREE.Color(0x152744);
 //camera
 const camera = new THREE.PerspectiveCamera(90, 1700 / 900);
 scene.add(camera);
-camera.position.set(0, 100, 300);
+camera.position.set(0, 250, 450);
 //lighting
 const pointLight = [];
 const sphereSize = 1;
@@ -15,8 +15,7 @@ const pointLightHelper = [];
 for (let i = 0; i < 6; i++) {
   pointLight.push(new THREE.PointLight("#ffffff", 0));
   all.add(pointLight[i]);
-  pointLightHelper[i] = new THREE.PointLightHelper(pointLight[i], sphereSize);
-  scene.add(pointLightHelper[i]);
+
 }
 pointLight[0].position.set(335, 50, 0);
 pointLight[0].intensity = 1.5;
@@ -34,20 +33,24 @@ pointLight[5].intensity = 0.3;
 // pointLight[5].intensity = 0.1
 //objects
 
-all.position.set(0, 0, 0);
-all.add(land);
 
-all.add(tower);
-all.add(machine);
-all.add(standdecor)
-all.add(crisseses,crisseses2,crisseses3);
-all.add(holders)
+land.position.set(200,0,0)
+scene.add(land);
+
+all.add(transgender)
+all.add(machine)
 all.add(factory);
 all.add(smoke)
+all.add(tower2)
+all.position.set(190,0,-50)
+all.add(smoke2)
+all.add(smoke3)
 scene.add(all);
+transgender.scale.y = 1.5
+tower2.scale.y = 1.5
 
-const axesHelper = new THREE.AxesHelper( 100 );
-scene.add( axesHelper );
+all.rotation.y = Math.PI * -0.45
+land.rotation.y = Math.PI * -0.45
 //smoke
 
 //render
@@ -65,19 +68,35 @@ function animate() {
     smoke.scale.y -= 0.003
   smoke.scale.z -= 0.003
   smoke.scale.x -= 0.003
+  smoke2.scale.y -= 0.003
+  smoke2.scale.z -= 0.003
+  smoke2.scale.x -= 0.003
+  smoke3.scale.y -= 0.003
+  smoke3.scale.z -= 0.003
+  smoke3.scale.x -= 0.003
   }
   if(smoke.position.y>160){
     smoke.position.y = 100
+    smoke2.position.y = 100
+    smoke3.position.y = 50
   }
   else{
   smoke.scale.y += 0.001
   smoke.scale.z += 0.001
   smoke.scale.x += 0.001
+  smoke2.scale.y += 0.001
+  smoke2.scale.z += 0.001
+  smoke2.scale.x += 0.001
+  smoke3.scale.y += 0.001
+  smoke3.scale.z += 0.001
+  smoke3.scale.x += 0.001
   }
+  smoke2.position.y += 0.2
+  smoke3.position.y += 0.2
   smoke.position.y += 0.2
   requestAnimationFrame(animate);
-  // controls.enableZoom = false;
-  // controls.enablePan = false;
+  controls.enableZoom = false;
+  controls.enablePan = false;
   controls.update();
   for(let i=0;i<count;i++){
     const x = geometry1.attributes.position.getX(i)
