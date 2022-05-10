@@ -42,10 +42,12 @@ all.add(machine);
 all.add(standdecor)
 all.add(holders)
 all.add(factory);
+all.add(smoke)
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );
 scene.add( axesHelper );
+//smoke
 
 //render
 renderer = new THREE.WebGLRenderer({
@@ -58,7 +60,20 @@ renderer.render(scene, camera);
 const controls = new OrbitControls(camera, renderer.domElement);
 let ran = Math.random()
 function animate() {
-
+  if(smoke.position.y>140) {
+    smoke.scale.y -= 0.003
+  smoke.scale.z -= 0.003
+  smoke.scale.x -= 0.003
+  }
+  if(smoke.position.y>160){
+    smoke.position.y = 100
+  }
+  else{
+  smoke.scale.y += 0.001
+  smoke.scale.z += 0.001
+  smoke.scale.x += 0.001
+  }
+  smoke.position.y += 0.2
   requestAnimationFrame(animate);
   // controls.enableZoom = false;
   // controls.enablePan = false;
