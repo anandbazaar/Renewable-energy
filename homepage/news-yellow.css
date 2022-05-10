@@ -3,9 +3,9 @@ body {
 }
 .previous {
   text-decoration: none;
-  color: black;
+  color: white;
   border: 2px solid #d7766e;
-  height:50px;
+  height: 50px;
   width: 150px;
   display: flex;
   justify-content: center;
@@ -58,8 +58,7 @@ body {
 }
 
 .imgg40 {
-  width: 100%;
-  margin-top: 10%;
+  height: 60%;
 }
 
 /* information section */
@@ -77,6 +76,7 @@ body {
 h4 {
   color: #b98c05;
   font-size: 3vw;
+  font-family: "Brygada 1918", serif;
 }
 .list li {
   font-size: 2vw;
@@ -221,7 +221,6 @@ section {
   }
   h4 {
     font-size: 20px;
-    
   }
   .previous {
     margin-bottom: 70px;
@@ -246,7 +245,7 @@ section {
     font-size: 16px;
   }
   .header {
-    height:45vh;
+    height: 45vh;
   }
   .tsuvaa {
     margin-bottom: 10px;

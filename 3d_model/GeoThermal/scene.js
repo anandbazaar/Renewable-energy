@@ -28,22 +28,30 @@ pointLight[3].position.set(0, 35, 335);
 pointLight[3].intensity = 1.5;
 pointLight[4].position.set(0, -120, 0);
 pointLight[4].intensity = 1.5;
-pointLight[5].position.set(0, 120, 0);
-pointLight[5].intensity = 0.5;
+pointLight[5].position.set(0, 150, -70);
+pointLight[5].intensity = 0.3;
 // pointLight[5].position.set(10, 150, 0);
 // pointLight[5].intensity = 0.1
 //objects
 
 all.position.set(0, 0, 0);
 all.add(land);
+
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
+<<<<<<< HEAD
 all.add(crisseses,crisseses2,crisseses3);
+=======
+all.add(holders)
+all.add(factory);
+all.add(smoke)
+>>>>>>> 1242a4b1b80f5008e922cbd9df5903fce426927f
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );
 scene.add( axesHelper );
+//smoke
 
 //render
 renderer = new THREE.WebGLRenderer({
@@ -54,7 +62,22 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.render(scene, camera);
 //controls
 const controls = new OrbitControls(camera, renderer.domElement);
+let ran = Math.random()
 function animate() {
+  if(smoke.position.y>140) {
+    smoke.scale.y -= 0.003
+  smoke.scale.z -= 0.003
+  smoke.scale.x -= 0.003
+  }
+  if(smoke.position.y>160){
+    smoke.position.y = 100
+  }
+  else{
+  smoke.scale.y += 0.001
+  smoke.scale.z += 0.001
+  smoke.scale.x += 0.001
+  }
+  smoke.position.y += 0.2
   requestAnimationFrame(animate);
   // controls.enableZoom = false;
   // controls.enablePan = false;
@@ -68,7 +91,9 @@ function animate() {
   geometry1.attributes.position.needsUpdate = true
   renderer.render(scene, camera);
   renderer.render(scene, camera);
-
+  drill.rotation.y += 0.1
+  drill2.rotation.y -= 0.1
+  drillStand.rotation.y -= 0.1
   if (
     (camera.position.x < 0 && camera.position.z < 0) ||
     (camera.position.x > 0 && camera.position.z < 0)
