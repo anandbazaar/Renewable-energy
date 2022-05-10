@@ -41,7 +41,7 @@ all.add(tower);
 all.add(machine);
 all.add(standdecor)
 all.add(crisseses,crisseses2,crisseses3);
-// all.add(holders)
+all.add(holders)
 all.add(factory);
 all.add(smoke)
 scene.add(all);

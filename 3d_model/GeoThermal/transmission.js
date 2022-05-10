@@ -1,6 +1,6 @@
 let tower = new THREE.Group();
 let stand = new THREE.Group();
-// let holders = new THREE.Group();
+let holders = new THREE.Group();
 let standdecor = new THREE.Group();
 let crisses = new THREE.Group();
 
@@ -49,42 +49,42 @@ tower.add(stand4);
 tower.rotation.y = Math.PI / 4;
 //////////////
 
-// geometry = new THREE.BoxGeometry(1.5, 20, 1.5);
-// let holder = new THREE.Mesh(geometry, material);
+geometry = new THREE.BoxGeometry(1.5, 20, 1.5);
+let holder = new THREE.Mesh(geometry, material);
 
-// holder.rotation.x = Math.PI / 2;
-// holder.rotation.z = Math.PI / 2;
+holder.rotation.x = Math.PI / 2;
+holder.rotation.z = Math.PI / 2;
 
-// holder.position.set(0, 35, 10.5);
+holder.position.set(0, 35, 10.5);
 
-// const holder2 = holder.clone();
-// holder2.position.set(0, 35, -10.5);
+const holder2 = holder.clone();
+holder2.position.set(0, 35, -10.5);
 
-// const holder3 = holder.clone();
+const holder3 = holder.clone();
 
-// holder3.rotation.z = Math.PI * 2;
-// holder3.position.set(10.5, 35, 0);
+holder3.rotation.z = Math.PI * 2;
+holder3.position.set(10.5, 35, 0);
 
-// const holder4 = holder.clone();
+const holder4 = holder.clone();
 
-// holder4.rotation.z = Math.PI * 2;
-// holder4.position.set(-10.5, 35, 0);
+holder4.rotation.z = Math.PI * 2;
+holder4.position.set(-10.5, 35, 0);
 
-// const holder5 = holder.clone();
-// holder5.position.set(0, 75, 10.5);
+const holder5 = holder.clone();
+holder5.position.set(0, 75, 10.5);
 
-// const holder6 = holder.clone();
-// holder6.position.set(0, 75, -10.5);
+const holder6 = holder.clone();
+holder6.position.set(0, 75, -10.5);
 
-// const holder7 = holder.clone();
+const holder7 = holder.clone();
 
-// holder7.rotation.z = Math.PI * 2;
-// holder7.position.set(10.5, 75, 0);
+holder7.rotation.z = Math.PI * 2;
+holder7.position.set(10.5, 75, 0);
 
-// const holder8 = holder.clone();
+const holder8 = holder.clone();
 
-// holder8.rotation.z = Math.PI * 2;
-// holder8.position.set(-10.5, 75, 0);
+holder8.rotation.z = Math.PI * 2;
+holder8.position.set(-10.5, 75, 0);
 
 //////////////
 
@@ -228,14 +228,14 @@ crisses.add(
 // criss5.rotation.z = Math.PI / -1.7
 // criss5.position.set(0,60,10.5)
 
-// holders.add(
-//   holder,
-//   holder2,
-//   holder3,
-//   holder4,
-//   holder5,
-//   holder6,
-//   holder7,
-//   holder8
-// );
+holders.add(
+  holder,
+  holder2,
+  holder3,
+  holder4,
+  holder5,
+  holder6,
+  holder7,
+  holder8
+);
 // standdecor.add(cross,criss,cross2,criss2,cross3,criss3,cross4,criss4,cross5,criss5)
