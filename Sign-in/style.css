@@ -3,4 +3,7 @@
 }
 .board{
     margin-top: 100px;
+    display: block;
+    margin-left: 50%;
+    font-size: large;
 }
