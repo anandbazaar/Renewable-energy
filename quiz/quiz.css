@@ -60,6 +60,7 @@ body {
 }
 .bird-img {
   width: 200px;
+  z-index: 1;
 }
 .bird-w {
   margin-top: 5%;
@@ -77,6 +78,13 @@ body {
   line-height: 18px;
   color: var(--secondary-color);
   left: 28%;
+}
+.bird-w-p-home {
+  position: absolute;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--secondary-color);
 }
 
 .bird-w-img {
@@ -407,6 +415,7 @@ body {
   }
   .bird-img {
     right: 5%;
+    z-index: 1;
   }
   .bird-img-con {
     width: 100%;
