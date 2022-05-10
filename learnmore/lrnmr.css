@@ -260,6 +260,8 @@ a {
 }
 ul {
   margin-left: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .zai {
   font-size: 30px;
