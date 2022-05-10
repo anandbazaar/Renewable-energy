@@ -144,7 +144,6 @@
   margin-bottom: 5%;
 }
 .rnw-logo {
-  width: 6vw;
   margin: auto;
 }
 .rnw-logo img {
@@ -198,6 +197,7 @@
 #icon {
   width: 30px;
   cursor: pointer;
+  margin-left: 5%;
 }
 :root {
   --primary-color: #fff;
@@ -346,6 +346,10 @@
   }
 }
 @media screen and (max-width: 416px) {
+  #icon {
+    margin-bottom: 3%;
+    margin-right: 5%;
+  }
   .header .img-txt {
     top: 15%;
   }
@@ -470,7 +474,7 @@
   #mobile-menu {
     position: absolute;
     top: 18%;
-    right: 10%;
+    right: 15%;
     transform: translate(5%, 20%);
   }
   #mobile-menu.is-active .bar:nth-child(2) {

@@ -196,6 +196,7 @@
   .news .garchig p {
     font-size: 12px;
     line-height: 100%;
+    color: white;
   }
   .news .medeelel p {
     font-size: 11px;
@@ -388,7 +389,6 @@ h4 {
   width: 30%;
   height: 88%;
   border-radius: 5px;
-  color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,6 +408,7 @@ h4 {
   font-weight: 400;
   line-height: 90%;
   position: relative;
+  color: white;
 }
 .garchig p #text {
   margin-bottom: 10px;
