@@ -62,9 +62,6 @@
             <li>
               <a href="./Team/team.html" id="services-page">TEAM</a>
             </li>
-            <li>
-              <a href="./Sign-in/login.html" id="services-page">ME</a>
-            </li>
           </ul>
           <img src="./Assets/moon.png" alt="" id="icon">
         </div>
@@ -381,13 +378,25 @@
       });
     </script>
     <script>
+       if(sessionStorage.getItem('dark')=='true'){
+         document.body.classList.toggle("dark-theme")
+      }else {
+        document.body.classList.remove("dark-theme");
+        icon.src = "./Assets/moon.png";
+        sessionStorage.setItem("dark",'false')
+      }
+ 
       var icon = document.getElementById("icon")
-icon.onclick=function(){
-  document.body.classList.toggle("dark-theme")
-  if(document.body.classList.contains("dark-theme")){
-    icon.src = "./Assets/sun.png"
-  }else{
-    icon.src = "./Assets/moon.png"
+      icon.onclick=function(){
+      sessionStorage.setItem("dark",'true')
+      console.log(sessionStorage.getItem('dark'))
+     
+      if(document.body.classList.contains("dark-theme")){
+       icon.src = "./Assets/sun.png"
+       sessionStorage.setItem("dark",'true')
+      }else{
+      icon.src = "./Assets/moon.png"
+      sessionStorage.setItem("dark", "false");
   }
 }
     </script>
