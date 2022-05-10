@@ -7,17 +7,30 @@
 
 
 /* Landing */
-
+.landing{
+    width: 100%;
+    background-color: var(--primary-color);
+}
 .landing img {
     width: 100%;
     object-fit: contain;
 }
-
+.team-cn{
+    width: 100%;
+    background-color: var(--primary-color);
+}
 .start {
     margin-top: 80px;
 }
 
-
+:root{
+    --primary-color:#fff;
+    --secondary-color:#212121;
+  }
+  .dark-theme{
+    --primary-color:#212121;
+    --secondary-color:#fff;
+  }
 /* Images */
 
 a {

@@ -13,7 +13,6 @@
     <title>Quiz</title>
   </head>
   <body>
-  
     <!-- Navigation bar -->
 
     <nav id="navbar" class="navbar">
@@ -55,89 +54,101 @@
               <a href="../Sign-in/login.html" id="services-page">ME</a>
             </li>
           </ul>
+          <img src="../Assets/moon.png" alt="" id="icon" />
         </div>
       </div>
     </nav>
-    <section class="img-section container">
-      <div class="img-con">
-        <img
-          class="hp-img container"
-          src="../Assets/jason-blackeye-nyL-rzwP-Mk-unsplash.jpg"
-          alt=""
-        />
-        <div class="garchig">
-          <h3>Cэргээгдэх боловсролын тест</h3>
+    <section class="img-section">
+      <div class="container">
+        <div class="img-con">
+          <img
+            class="hp-img container"
+            src="../Assets/jason-blackeye-nyL-rzwP-Mk-unsplash.jpg"
+            alt=""
+          />
+          <div class="garchig">
+            <h3 style="background-color: #4eb073">
+              Cэргээгдэх боловсролын тест
+            </h3>
+          </div>
         </div>
       </div>
     </section>
-    <section class="quiz-section container">
-      <div class="home-box custom-box">
-        <h3>Сэргээгдэх эрчим хүч: Асуулт</h3>
-        <p>Нийт aсуулт: <span class="total-question"></span></p>
-        <button type="button" class="btn" onclick="startQuiz()">
-          Эхлүүлэх
-        </button>
-      </div>
-      <div class="quiz-box custom-box hide">
-        <div class="question-number"></div>
-        <div class="question-text"></div>
-        <div class="option-container"></div>
-        <div class="next-question-btn">
-          <button type="button" class="btn" onclick="next()">Next</button>
+    <section class="quiz-section">
+      <div class="container">
+        <div class="home-box custom-box">
+          <h3 style="background-color: white">Сэргээгдэх эрчим хүч: Асуулт</h3>
+          <p style="background-color: white">
+            Нийт aсуулт:
+            <span style="background-color: white" class="total-question"></span>
+          </p>
+          <button type="button" class="btn" onclick="startQuiz()">
+            Эхлүүлэх
+          </button>
         </div>
-        <div class="answer-indicator"></div>
-      </div>
-      <div class="result-box custom-box hide">
-        <h1>Quiz Result</h1>
-        <table>
-          <tr>
-            <td>Нийт aсуулт</td>
-            <td><span class="total-question"></span></td>
-          </tr>
-          <tr>
-            <td>Оролдлого</td>
-            <td><span class="total-attempt"></span></td>
-          </tr>
-          <tr>
-            <td>Зөв</td>
-            <td><span class="total-correct"></span></td>
-          </tr>
-          <tr>
-            <td>Буруу</td>
-            <td><span class="total-wrong"></span></td>
-          </tr>
-          <tr>
-            <td>Хувиар</td>
-            <td><span class="percentage"></span></td>
-          </tr>
-          <tr>
-            <td>Нийт оноо</td>
-            <td><span class="total-score"></span></td>
-          </tr>
-        </table>
-        <button type="button" class="btn" onclick="tryAgainQuiz()">
-          Дахин оролдох
-        </button>
-        <button type="button" class="btn" onclick="goToHome()">
-          Home луу буцах
-        </button>
-        <div>
-          <div class="bird-w">
-            <img
-              class="bird-w-img"
-              src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FUnion.png?alt=media&token=c9cb69bc-6b41-460d-9e96-a774dc8f941c"
-              alt=""
-            />
-            <div class="bird-w-p">
-              <p>Зүгээрдээ дахиад уншаад бөглөөд үз</p>
-            </div>
+        <div class="quiz-box custom-box hide">
+          <div class="question-number"></div>
+          <div class="question-text"></div>
+          <div class="option-container"></div>
+          <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
           </div>
-          <div class="bird-img-con">
-            <img
-              class="bird-img"
-              src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FGroup%20196.png?alt=media&token=0a7593b7-2268-4648-a6be-c139aa2699da"
-              alt=""
-            />
+          <div class="answer-indicator"></div>
+        </div>
+        <div class="result-box custom-box hide">
+          <h1 style="background-color: white">Quiz Result</h1>
+          <table style="background-color: white">
+            <tr>
+              <td>Нийт aсуулт</td>
+              <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+              <td>Оролдлого</td>
+              <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+              <td>Зөв</td>
+              <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+              <td>Буруу</td>
+              <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+              <td>Хувиар</td>
+              <td><span class="percentage"></span></td>
+            </tr>
+            <tr>
+              <td>Нийт оноо</td>
+              <td><span class="total-score"></span></td>
+            </tr>
+          </table>
+          <button type="button" class="btn" onclick="tryAgainQuiz()">
+            Дахин оролдох
+          </button>
+          <button type="button" class="btn" onclick="goToHome()">
+            Home луу буцах
+          </button>
+          <div>
+            <div class="bird-w">
+              <img
+                class="bird-w-img"
+                src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FUnion.png?alt=media&token=c9cb69bc-6b41-460d-9e96-a774dc8f941c"
+                alt=""
+              />
+              <div class="bird-w-p">
+                <p style="background-color: transparent; color: black">
+                  Зүгээрдээ дахиад уншаад бөглөөд үз
+                </p>
+              </div>
+            </div>
+            <div class="bird-img-con">
+              <img
+                class="bird-img"
+                src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2FGroup%20196.png?alt=media&token=0a7593b7-2268-4648-a6be-c139aa2699da"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -223,9 +234,20 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    
+
     <script src="quiz.js"></script>
     <script src="app.js"></script>
     <script src="../homepage/main.js"></script>
+    <script>
+      var icon = document.getElementById("icon");
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "../Assets/sun.png";
+        } else {
+          icon.src = "../Assets/moon.png";
+        }
+      };
+    </script>
   </body>
 </html>

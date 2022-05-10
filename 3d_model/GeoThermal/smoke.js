@@ -1,9 +1,7 @@
-//smoke
-const smoke = []
-for(let i =0;i<1;i++){
- smoke[i]= new THREE.Mesh(
-     new THREE.SphereGeometry(100, 100,100),
-     new THREE.MeshStandardMaterial({color:0xffffff})
- )   
-}
-smoke[0].position.set(-10,50,160)
+const mat = new THREE.MeshBasicMaterial({color:0xffffff})
+const smoke = new THREE.Mesh(
+   new THREE.SphereGeometry(30,30,128),
+   mat
+)
+smoke.position.set(0,100,-50)
+smoke.scale.set(0.1,0.1,0.1)
