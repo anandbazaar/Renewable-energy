@@ -40,7 +40,6 @@ all.add(land);
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
-all.add(holders)
 all.add(factory);
 all.add(smoke)
 scene.add(all);
