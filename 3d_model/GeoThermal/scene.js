@@ -40,13 +40,10 @@ all.add(land);
 all.add(tower);
 all.add(machine);
 all.add(standdecor)
-<<<<<<< HEAD
 all.add(crisseses,crisseses2,crisseses3);
-=======
-all.add(holders)
+// all.add(holders)
 all.add(factory);
 all.add(smoke)
->>>>>>> 1242a4b1b80f5008e922cbd9df5903fce426927f
 scene.add(all);
 
 const axesHelper = new THREE.AxesHelper( 100 );
