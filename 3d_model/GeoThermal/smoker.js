@@ -109,12 +109,15 @@ piipe4.position.set(-24,30,-60)
 const piipe5 = piipe.clone()
 piipe5.rotation.y = Math.PI * 0.5
 piipe5.position.set(-24,-10,-85)
+piipe5.material.color.setHex(0x01579b);
 const piipe6 = piipe.clone()
 piipe6.rotation.z = Math.PI * 0.5
 piipe6.position.set(-24,-20,-94)
+piipe6.material.color.setHex(0x01579b);
 factory.add(piipe)
 factory.add(piipe2)
 factory.add(piipe3)
 factory.add(piipe4)
 factory.add(piipe5)
 factory.add(piipe6)
+factory.position.x = 70

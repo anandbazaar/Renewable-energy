@@ -4,17 +4,20 @@ const infoBox = document.createElement("div");
 infoText.style.fontFamily = "'Lato', sans-serif";
 const infoCont = document.querySelector(".infoCont");
 const icon = document.createElement("img") 
-icon.src = "../textures/image_52.png"
+icon.src = "../textures/geo.png"
 icon.classList.add("icon")
 infoBox.classList.add("infoBox")
 infoBox.style.marginTop = "50%";
 const info = [
-  infos[0].one,
-  infos[0].two,
-  infos[0].three,
-  infos[0].four,
-  infos[0].five,
-  infos[0].six,
+  infos[3].one,
+  infos[3].two,
+  infos[3].three,
+  infos[3].four,
+  infos[3].five,
+  infos[3].six,
+  infos[3].seven,
+  infos[3].eight,
+  infos[3].nine,
   
 ];
 let i = 0;
@@ -52,7 +55,7 @@ infoCont.addEventListener("animationend", () => {
   if(overHundred){
     infoBox.classList.remove("gtb");
     infoBox.classList.add("aft");
-    if(i>=6) i=0
+    if(i>=8) i=0
 
     infoBox.innerHTML = ""
     infoBox.appendChild(icon)
@@ -62,7 +65,7 @@ infoCont.addEventListener("animationend", () => {
   if(belowHundred){
     infoBox.classList.remove("gtt");
     infoBox.classList.add("aft");
-    if(i<0) i=5
+    if(i<0) i=8
   
     infoBox.innerHTML = ""
     infoBox.appendChild(icon)

@@ -16,7 +16,7 @@ chimney.position.set(-10,20,160)
 machine.add(chimney)
 //pipes
 const pipes = []
-for (let i=0;i<1;i++){
+for (let i=0;i<2;i++){
     pipes[i] = new THREE.Mesh(
         new THREE.CylinderGeometry(3,3,30,30,30,false),
         new THREE.MeshStandardMaterial({color:"orange"})
@@ -25,6 +25,9 @@ for (let i=0;i<1;i++){
 }
 pipes[0].rotation.x = Math.PI * 0.5
 pipes[0].position.set(0,0,125)
+pipes[1].rotation.x = Math.PI * 0.5
+pipes[1].position.set(0,0,-32.5)
+pipes[1].scale.y = 3.5
 
 //spinmachine
 const sides = []
@@ -110,4 +113,5 @@ machine.add(generator3)
 
 
 machine.add(spin)
- 
+machine.position.z = 50
+ machine.position.x = 50

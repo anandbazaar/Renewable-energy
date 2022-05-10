@@ -394,7 +394,7 @@ h4 {
   align-items: center;
   margin-left: 30px;
   flex-wrap: wrap;
-  transition: 1s;
+  transition: 0.8s;
 }
 .garchig:hover {
   transform: scale(1.05);
@@ -408,7 +408,7 @@ h4 {
   font-weight: 400;
   line-height: 90%;
   position: relative;
-  color: white;
+  color: white;  
 }
 .garchig p #text {
   margin-bottom: 10px;
@@ -419,7 +419,6 @@ h4 {
 }
 .medeelel {
   width: 60%;
-  height: 80%;
   margin-left: 20px;
 }
 .m-a {
