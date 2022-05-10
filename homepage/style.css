@@ -394,6 +394,11 @@ h4 {
   align-items: center;
   margin-left: 30px;
   flex-wrap: wrap;
+  transition: 1s;
+}
+.garchig:hover {
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .garchig p {
@@ -437,8 +442,8 @@ h4 {
 }
 .tsenher {
   background-color: #0d273c;
+  transition: 1s;
 }
-
 .ygaan {
   background-color: #d7766e;
 }
