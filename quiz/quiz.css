@@ -17,11 +17,13 @@ body {
 }
 .hp-img {
   position: absolute;
-  height: 60%;
+  width: 960px;
+  height: 631px;
 }
 .img-con {
   width: 100%;
-  height: 628px;
+  display: flex;
+  justify-content: center;
 }
 .img-section {
   width: 100%;
@@ -30,7 +32,9 @@ body {
 }
 .quiz-section {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
   background-color: var(--primary-color);
 }
 .home-bird {
@@ -46,8 +50,8 @@ body {
   height: 7vw;
   position: relative;
   left: 0px;
-  top: 10vw;
-  background-color: #4eb073;
+  top: 17vw;
+  background-color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +60,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 2vw;
-  color: white;
+  color:var(--primary-color);
 }
 .bird-img {
   width: 200px;

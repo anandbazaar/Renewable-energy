@@ -331,8 +331,10 @@
   .holboo-barih .contact-info img {
     width: 25px;
   }
+  
 }
 @media (min-width: 1400px) {
+
   .container {
     width: 1320px;
   }
