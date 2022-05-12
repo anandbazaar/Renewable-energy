@@ -1,5 +1,5 @@
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x152744);
+scene.background = new THREE.Color(0x2d71b5);
 // Panel
 const all = new THREE.Group()
 const panel = new THREE.Group();
@@ -461,6 +461,13 @@ function main() {
 panelRotation();
 
 function controlAnimation() {
+  if(sessionStorage.getItem("dark") == "true") {
+    scene.background = new THREE.Color(0x152744);
+  }
+  if(sessionStorage.getItem("dark") == "false") {
+    scene.background = new THREE.Color(0x2d71b5);
+  }
+
   requestAnimationFrame(controlAnimation);
 
   // required if controls.enableDamping or controls.autoRotate are set to true
@@ -483,12 +490,13 @@ all.add(flower);
 
 scene.add(all);
 
+
 all.position.set(100,0,0)
-const updateWindow = () => {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.render(scene, camera);
-}
-window.onresize = updateWindow
+// const updateWindow = () => {
+//   renderer.setSize(window.innerWidth, window.innerHeight);
+//   renderer.render(scene, camera);
+// }
+// window.onresize = updateWindow
 
 
 
