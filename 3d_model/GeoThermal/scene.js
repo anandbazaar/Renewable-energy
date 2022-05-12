@@ -1,11 +1,12 @@
 //canvas
+const body = document.querySelector(".body")
 const canvas = document.querySelector(".webgl");
 const all = new THREE.Group();
 //scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x152744);
 //camera
-const camera = new THREE.PerspectiveCamera(90, 1700 / 900);
+const camera = new THREE.PerspectiveCamera(90, (window.innerWidth-500) / 900);
 scene.add(camera);
 camera.position.set(0, 250, 450);
 //lighting
@@ -34,23 +35,24 @@ pointLight[5].intensity = 0.3;
 //objects
 
 
-land.position.set(200,0,0)
-scene.add(land);
+land.position.set(0,0,0)
+
+
 
 all.add(transgender)
 all.add(machine)
 all.add(factory);
 all.add(smoke)
 all.add(tower2)
-all.position.set(190,0,-50)
+all.position.set(0,0,0)
+all.add(land)
 all.add(smoke2)
 all.add(smoke3)
-scene.add(all);
+
 transgender.scale.y = 1.5
 tower2.scale.y = 1.5
 
-all.rotation.y = Math.PI * -0.45
-land.rotation.y = Math.PI * -0.45
+
 //smoke
 
 //render
@@ -58,12 +60,15 @@ renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
 });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth-500, window.innerHeight);
 renderer.render(scene, camera);
 //controls
 const controls = new OrbitControls(camera, renderer.domElement);
 let ran = Math.random()
+
+scene.add(all)
 function animate() {
+  all.rotation.y += 0.005
   if(smoke.position.y>140) {
     smoke.scale.y -= 0.003
   smoke.scale.z -= 0.003
@@ -75,7 +80,7 @@ function animate() {
   smoke3.scale.z -= 0.003
   smoke3.scale.x -= 0.003
   }
-  if(smoke.position.y>160){
+  if(smoke.position.y>165){
     smoke.position.y = 100
     smoke2.position.y = 100
     smoke3.position.y = 50
@@ -110,28 +115,34 @@ function animate() {
   drill.rotation.y += 0.1
   drill2.rotation.y -= 0.1
   drillStand.rotation.y -= 0.1
-  if (
-    (camera.position.x < 0 && camera.position.z < 0) ||
-    (camera.position.x > 0 && camera.position.z < 0)
-  ) {
-    if (direction === "left") {
-      direction = "right";
-      move();
-    }
-  } else {
-    if (direction === "right") {
-      direction = "left";
-      move();
-    }
-  }
-   if(sessionStorage.getItem("dark") == "true") {
- scene.background = new THREE.Color(0x152744);
-}
-if(sessionStorage.getItem("dark") == "false") {
-   scene.background = new THREE.Color(0x2d71b5);
-}
-}
 
+  // if (
+  //   (camera.position.x < 0 && camera.position.z < 0) ||
+  //   (camera.position.x > 0 && camera.position.z < 0)
+  // ) {
+  //   if (direction === "left") {
+  //     direction = "right";
+  //     move();
+  //   }
+  // } else {
+  //   if (direction === "right") {
+  //     direction = "left";
+  //     move();
+  //   }
+  // }
+  if (sessionStorage.getItem("dark") == "true") {
+    scene.background = new THREE.Color(0x152744);
+    body.style.backgroundColor = "rgb(21,39,68)";
+    infoCont.style.backgroundColor = "rgb(21,39,68)";
+    infoBox.style.backgroundColor = "rgb(21,39,68)";
+  }
+  if (sessionStorage.getItem("dark") == "false") {
+    scene.background = new THREE.Color(0x2d71b5);
+    body.style.backgroundColor = "rgb(45,113,181)";
+    infoCont.style.backgroundColor = "rgb(45,113,181)";
+    infoBox.style.backgroundColor = "rgb(45,113,181)";
+  }
+}
 animate();
 
 //windowsize

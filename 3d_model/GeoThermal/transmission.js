@@ -247,6 +247,6 @@ transgender.add(tower)
 transgender.add(standdecor)
 transgender.add(crisseses,crisseses2,crisseses3)
 
-transgender.position.set(50,-5,20)
+transgender.position.set(0,-5,20)
 const tower2 = transgender.clone();
-tower2.position.set(50,-5,-190)
+tower2.position.set(0,-5,-190)

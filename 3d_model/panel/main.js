@@ -1,4 +1,5 @@
 const scene = new THREE.Scene();
+const body = document.querySelector(".body");
 scene.background = new THREE.Color(0x2d71b5);
 // Panel
 const all = new THREE.Group()
@@ -345,7 +346,7 @@ const sizes = {
   height: window.innerHeight,
 };
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight,1,10000);
+const camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
 camera.position.set(20, 200, 350);
 camera.lookAt(cube.position);
 const pointLight = new THREE.PointLight("#fff", 2);
@@ -397,13 +398,13 @@ controls.enableZoom = false;
   controls.enablePan = false;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.setSize(sizes.width, sizes.height);
+renderer.setSize(window.innerWidth-500, window.innerHeight);
 renderer.render(scene, camera);
 // animate();
 let rotationIndex = 1100;
 let rotationDirection = true;
 const panelRotation = () => {
-  // all.rotation.y += 0.005
+  all.rotation.y += 0.005
   requestAnimationFrame(panelRotation);
   panel2.rotation.z = Math.PI / (rotationIndex2 / 1000);
   if (rotationIndex2 === 1400) {
@@ -429,20 +430,20 @@ const panelRotation = () => {
   } else {
     rotationIndex -= 2.5;
   }
-  if (
-    (camera.position.x < 0 && camera.position.z < 0) ||
-    (camera.position.x > 0 && camera.position.z < 0)
-  ) {
-    if (direction === "left") {
-      direction = "right";
-      move();
-    }
-  } else {
-    if (direction === "right") {
-      direction = "left";
-      move();
-    }
-  }
+  // if (
+  //   (camera.position.x < 0 && camera.position.z < 0) ||
+  //   (camera.position.x > 0 && camera.position.z < 0)
+  // ) {
+  //   if (direction === "left") {
+  //     direction = "right";
+  //     move();
+  //   }
+  // } else {
+  //   if (direction === "right") {
+  //     direction = "left";
+  //     move();
+  //   }
+  // }
 };
 
 let rotationIndex2 = 1100;
@@ -461,11 +462,17 @@ function main() {
 panelRotation();
 
 function controlAnimation() {
-  if(sessionStorage.getItem("dark") == "true") {
+  if (sessionStorage.getItem("dark") == "true") {
     scene.background = new THREE.Color(0x152744);
+    body.style.backgroundColor = "rgb(21,39,68)";
+    infoCont.style.backgroundColor = "rgb(21,39,68)";
+    infoBox.style.backgroundColor = "rgb(21,39,68)";
   }
-  if(sessionStorage.getItem("dark") == "false") {
+  if (sessionStorage.getItem("dark") == "false") {
     scene.background = new THREE.Color(0x2d71b5);
+    body.style.backgroundColor = "rgb(45,113,181)";
+    infoCont.style.backgroundColor = "rgb(45,113,181)";
+    infoBox.style.backgroundColor = "rgb(45,113,181)";
   }
 
   requestAnimationFrame(controlAnimation);
@@ -483,7 +490,7 @@ controlAnimation();
 all.add(panel,panel2)
 all.add(paths)
 all.add(pointLight);
-all.add(tree,tree2);
+all.add(tree,tree2,tree3);
 all.add(land1,land2);
 all.add(stands,support,support2);
 all.add(flower);
@@ -491,7 +498,7 @@ all.add(flower);
 scene.add(all);
 
 
-all.position.set(100,0,0)
+all.position.set(0,0,0)
 // const updateWindow = () => {
 //   renderer.setSize(window.innerWidth, window.innerHeight);
 //   renderer.render(scene, camera);

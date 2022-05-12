@@ -120,4 +120,4 @@ factory.add(piipe3)
 factory.add(piipe4)
 factory.add(piipe5)
 factory.add(piipe6)
-factory.position.x = 70
+factory.position.x = 20

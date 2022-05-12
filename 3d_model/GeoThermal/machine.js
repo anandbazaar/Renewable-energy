@@ -114,4 +114,3 @@ machine.add(generator3)
 
 machine.add(spin)
 machine.position.z = 50
- machine.position.x = 50

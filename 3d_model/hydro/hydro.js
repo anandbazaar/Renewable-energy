@@ -1,4 +1,5 @@
 const scene = new THREE.Scene();
+const body = document.querySelector(".body")
 scene.background = new THREE.Color(0x152744);
 
 // Panel
@@ -431,14 +432,14 @@ const MinusCube = new THREE.Mesh(
 )
 
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight,1,10000);
+const camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
 camera.position.set(0, 1500 ,2000);
 camera.lookAt(wall.position);
 const pointLight = new THREE.PointLight("#fff", 1);
 all.add(pointLight)
 pointLight.position.set(0,500,0)
 scene.add(all)
-all.position.set(1000,0,0)
+all.position.set(0,0,0)
 
 //controller
 
@@ -453,27 +454,28 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.setSize(sizes.width, sizes.height);
+renderer.setSize(innerWidth-500, innerHeight);
 renderer.render(scene, camera);
 
 
 
 let wind = "left"
 function controlAnimation() {
-  if (
-    (camera.position.x < 0 && camera.position.z < 0) ||
-    (camera.position.x > 0 && camera.position.z < 0)
-  ) {
-    if (direction === "left") {
-      direction = "right";
-      move();
-    }
-  } else {
-    if (direction === "right") {
-      direction = "left";
-      move();
-    }
-  }
+  all.rotation.y += 0.005
+  // if (
+  //   (camera.position.x < 0 && camera.position.z < 0) ||
+  //   (camera.position.x > 0 && camera.position.z < 0)
+  // ) {
+  //   if (direction === "left") {
+  //     direction = "right";
+  //     move();
+  //   }
+  // } else {
+  //   if (direction === "right") {
+  //     direction = "left";
+  //     move();
+  //   }
+  // }
 
   if (wind === "left") {
     clouds[0].position.x -= 10;
@@ -504,17 +506,24 @@ function controlAnimation() {
 
   renderer.render(scene, camera);
 
-  if(sessionStorage.getItem("dark") == "true") {
+  if (sessionStorage.getItem("dark") == "true") {
     scene.background = new THREE.Color(0x152744);
-   }
-   if(sessionStorage.getItem("dark") == "false") {
-      scene.background = new THREE.Color(0x2d71b5);
-   }
+    body.style.backgroundColor = "rgb(21,39,68)";
+    infoCont.style.backgroundColor = "rgb(21,39,68)";
+    infoBox.style.backgroundColor = "rgb(21,39,68)";
+  }
+  if (sessionStorage.getItem("dark") == "false") {
+    scene.background = new THREE.Color(0x2d71b5);
+    body.style.backgroundColor = "rgb(45,113,181)";
+    infoCont.style.backgroundColor = "rgb(45,113,181)";
+    infoBox.style.backgroundColor = "rgb(45,113,181)";
+  }
+
 }
 
 controlAnimation();
-const updateWindow = () => {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.render(scene, camera);
-}
-window.onresize = updateWindow
+// const updateWindow = () => {
+//   renderer.setSize(window.innerWidth, window.innerHeight);
+//   renderer.render(scene, camera);
+// }
+// window.onresize = updateWindow

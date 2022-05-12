@@ -24,7 +24,7 @@ infoBox.appendChild(infoText);
 
 infoCont.appendChild(infoBox);
 
-let direction = "left";
+// let direction = "left";
 //listener
 
 let overHundred = false;
@@ -69,35 +69,35 @@ infoCont.addEventListener("animationend", () => {
     belowHundred = false;
   }
 })
-infoCont.addEventListener("animationend", () => {
-  if (direction === "right") {
-    infoCont.classList.remove("h2r");
-    infoCont.classList.remove("afl");
-    infoCont.classList.remove("h2l");
-    infoCont.classList.add("afr");
-    infoCont.style.justifyContent = "flex-end"
-    infoCont.style.left = "calc(100% - 48%)";
-  } else if (direction === "left") {
-    infoCont.classList.remove("h2r");
-    infoCont.classList.remove("afr");
-    infoCont.classList.remove("h2l");
-    infoCont.classList.add("afl");
-    infoCont.style.justifyContent = "flex-start"
-    infoCont.style.left = "18%";
-  }
-});
+// infoCont.addEventListener("animationend", () => {
+//   if (direction === "right") {
+//     infoCont.classList.remove("h2r");
+//     infoCont.classList.remove("afl");
+//     infoCont.classList.remove("h2l");
+//     infoCont.classList.add("afr");
+//     infoCont.style.justifyContent = "flex-end"
+//     infoCont.style.left = "calc(100% - 48%)";
+//   } else if (direction === "left") {
+//     infoCont.classList.remove("h2r");
+//     infoCont.classList.remove("afr");
+//     infoCont.classList.remove("h2l");
+//     infoCont.classList.add("afl");
+//     infoCont.style.justifyContent = "flex-start"
+//     infoCont.style.left = "18%";
+//   }
+// });
 
-function move() {
-  if (direction === "right") {
-    infoCont.classList.remove("h2r");
-    infoCont.classList.remove("afr");
-    infoCont.classList.remove("afl");
-    infoCont.classList.add("h2l");
-  }
-  if (direction === "left") {
-    infoCont.classList.remove("h2l");
-    infoCont.classList.remove("afr");
-    infoCont.classList.remove("afl");
-    infoCont.classList.add("h2r");
-  }
-}
+// function move() {
+//   if (direction === "right") {
+//     infoCont.classList.remove("h2r");
+//     infoCont.classList.remove("afr");
+//     infoCont.classList.remove("afl");
+//     infoCont.classList.add("h2l");
+//   }
+//   if (direction === "left") {
+//     infoCont.classList.remove("h2l");
+//     infoCont.classList.remove("afr");
+//     infoCont.classList.remove("afl");
+//     infoCont.classList.add("h2r");
+//   }
+// }
