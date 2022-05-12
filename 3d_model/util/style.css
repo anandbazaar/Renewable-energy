@@ -141,3 +141,13 @@ body{
     opacity: 0%;
   }
 }
+@media only screen and (max-width:416px){
+  .infoCont{
+    height: fit-content;
+    width: fit-content;
+    bottom:0px
+  }
+  p{
+    font-size: 10px;
+  }
+}

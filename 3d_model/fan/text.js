@@ -1,3 +1,4 @@
+let phone = false
 const infoText = document.createElement("p");
 const infoBox = document.createElement("div");
 infoText.style.fontFamily = "'Lato', sans-serif";
@@ -51,7 +52,7 @@ infoCont.addEventListener("animationend", () => {
     infoBox.classList.remove("gtb");
     infoBox.classList.add("aft");
     if(i>=6) i=0
-
+    if(phone) infoBox.style.fontSize = "10px"
     infoBox.innerHTML = ""
     infoBox.appendChild(icon)
     infoBox.innerHTML += info[i];
@@ -61,7 +62,7 @@ infoCont.addEventListener("animationend", () => {
     infoBox.classList.remove("gtt");
     infoBox.classList.add("aft");
     if(i<0) i=5
-  
+    if(phone) infoBox.style.fontSize = "10px"
     infoBox.innerHTML = ""
     infoBox.appendChild(icon)
     infoBox.innerHTML += info[i];
@@ -99,4 +100,7 @@ function move() {
     infoCont.classList.remove("afl");
     infoCont.classList.add("h2r");
   }
+}
+if(window.innerWidth <= 400 ){
+  phone = true
 }

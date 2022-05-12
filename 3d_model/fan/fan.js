@@ -546,9 +546,4 @@ function spin() {
 }
 spin();
 animate();
-const updateWindow = () => {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.render(scene, camera);
-}
-window.onresize = updateWindow
 
