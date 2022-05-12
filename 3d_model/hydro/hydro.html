@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="hydro.css" />
     <link rel="stylesheet" href="../util/style.css" />
     <link rel="stylesheet" href="../../common/global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav id="navbar" class="navbar">
@@ -51,9 +55,31 @@
               <a href="../../Team/team.html" id="services-page"> TEAM </a>
             </li>
           </ul>
+          <img src="../../Assets/moon.png" alt="" id="icon" />
         </div>
       </div>
     </nav>
+    <script>
+      var icon1 = document.getElementById("icon");
+      if (sessionStorage.getItem("dark") == "true") {
+        document.body.classList.toggle("dark-theme");
+        icon1.src = "../../Assets/sun.png";
+      } else {
+        document.body.classList.remove("dark-theme");
+        icon1.src = "../../Assets/moon.png";
+        sessionStorage.setItem("dark", "false");
+      }
+      icon1.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon1.src = "../../Assets/sun.png";
+          sessionStorage.setItem("dark", "true");
+        } else {
+          icon1.src = "../../Assets/moon.png";
+          sessionStorage.setItem("dark", "false");
+        }
+      };
+    </script>
     <div class="infoCont"></div>
     <canvas class="webgl"></canvas>
     <script src="../util/infos.js"></script>
