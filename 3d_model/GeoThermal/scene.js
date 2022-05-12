@@ -124,7 +124,14 @@ function animate() {
       move();
     }
   }
+   if(sessionStorage.getItem("dark") == "true") {
+ scene.background = new THREE.Color(0x152744);
 }
+if(sessionStorage.getItem("dark") == "false") {
+   scene.background = new THREE.Color(0x2d71b5);
+}
+}
+
 animate();
 
 //windowsize
@@ -133,3 +140,5 @@ const updateWindow = () => {
   renderer.render(scene, camera);
 };
 window.onresize = updateWindow;
+
+
