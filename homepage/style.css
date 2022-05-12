@@ -487,6 +487,10 @@ h3 {
   height: 4vw;
   margin-bottom: 2vw;
 }
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: var(--secondary-color);
+}
 @media screen and (max-width: 416px) {
   .aboutus .right {
     justify-content: flex-start;
