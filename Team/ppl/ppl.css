@@ -12,6 +12,7 @@ section {
 }
 .profile-container {
   display: flex;
+  height: 100vh;
   flex-wrap: wrap;
   align-items: center;
   background-color: var(--primary-color);
