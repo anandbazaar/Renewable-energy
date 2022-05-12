@@ -574,24 +574,27 @@ ul {
     width: 19%;
   }
   h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   h3 {
     margin: 15px;
-    font-size: 18px;
+    font-size: 20px;
   }
   .text1 {
-    font-size: 15px;
+    font-size: 17px;
   }
   .zai {
-    font-size: 15px;
+    font-size: 17px;
   }
   .text {
-    font-size: 15px;
+    font-size: 17px;
   }
   .zai30px .text2 {
     font-size: 15px;
     margin: 10px;
+  }
+  .huvi {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 416px) {
@@ -620,7 +623,7 @@ ul {
     font-size: 18px;
   }
   .TEXT {
-    font-size: 15px;
+    font-size: 13px;
     margin: 10px;
     margin-left: 20px;
   }
@@ -667,6 +670,7 @@ ul {
   }
   .zai {
     font-size: 15px;
+    width: 100%;
   }
   .text {
     font-size: 15px;
@@ -706,7 +710,7 @@ ul {
     width: 85px;
   }
   .huvi {
-    font-size: 20px;
+    font-size: 17px;
     margin: 8px;
   }
   .tomzrg {
@@ -723,7 +727,7 @@ ul {
     margin-right: 5px;
   }
   .text2 {
-    font-size: 13px;
+    font-size: 15px;
     margin: 20px;
   }
   .tugsgul {
@@ -746,7 +750,7 @@ ul {
   }
   .text3 {
     margin: 10px;
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
   }
   .tsuvaa p {
