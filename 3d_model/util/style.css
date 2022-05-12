@@ -15,6 +15,7 @@
 }
 
 body{
+  position: relative;
   width: fit-content;
   height: fit-content;
 }
@@ -141,13 +142,27 @@ body{
     opacity: 0%;
   }
 }
+.pgtl{
+  animation-name: PhoneGoToLeft;
+  animation-duration: 500ms;
+  animation-play-state: running;
+}
+@keyframes PhoneGoToLeft {
+  from{
+    left:0px
+  }
+  
+}
 @media only screen and (max-width:416px){
   .infoCont{
     height: fit-content;
     width: fit-content;
-    bottom:0px
+    bottom:30px;
+    left:0px;
+    right:0px;
+    margin: auto;
   }
   p{
-    font-size: 10px;
+    font-size: 20px;
   }
 }

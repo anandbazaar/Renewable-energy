@@ -442,18 +442,23 @@ windTurbines[1].position.set(-40, 0, -20);
 windTurbines[1].rotation.y = -Math.PI * 0.5;
 windTurbines[2].position.set(-40, 0, 15);
 windTurbines[2].rotation.y = -Math.PI * 0.5;
-scene.add(all);
+
 all.position.set(100, 0, 0);
+scene.add(all);
+if(window.innerWidth<=416)
+all.position.set(0, 50, 0);
 // all.rotation.y = Math.PI * 0.250
 
 //camera
-const camera = new THREE.PerspectiveCamera(90, 1600 / 900);
+const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight);
 scene.add(camera);
 camera.position.set(0, 100, 150);
+if(window.innerWidth<=416)
+camera.position.set(0, 150, 250);
 pointLight = []
 for(let i =0;i<6;i++){
   pointLight.push(new THREE.PointLight("#fff", 0))
-  scene.add(pointLight[i])
+  all.add(pointLight[i])
 }
 pointLight[0].position.set(100, 50, 100);
 pointLight[0].intensity = 0.6
