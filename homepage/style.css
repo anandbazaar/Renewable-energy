@@ -59,7 +59,7 @@
 }
 .slick-prev,
 .slick-next {
-  top: 30%;
+  top: 40%;
   width: 20px;
   height: 20px;
 }
@@ -408,7 +408,7 @@ h4 {
   font-weight: 400;
   line-height: 90%;
   position: relative;
-  color: white;  
+  color: white;
 }
 .garchig p #text {
   margin-bottom: 10px;

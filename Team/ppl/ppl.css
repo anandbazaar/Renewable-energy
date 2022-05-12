@@ -1,3 +1,6 @@
+* {
+  background-color: var(--primary-color);
+}
 section {
   padding-top: 80px;
   color: var(--secondary-color);
@@ -268,9 +271,7 @@ section {
     margin: auto;
     justify-content: center;
   }
-  .inner-container {
-    width: 360px;
-  }
+
   .blue-box {
     font-size: 4vw;
   }
