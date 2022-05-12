@@ -1,5 +1,5 @@
 // Canvas
-
+const body = document.querySelector(".body");
 const canvas = document.querySelector(".webgl");
 
 // Scene
@@ -135,7 +135,6 @@ mountain.add(peak1);
 mountain.add(peak2);
 mountain.position.set(30, -20, -20);
 all.add(mountain);
-
 
 const peak3 = new THREE.Mesh(
   new THREE.BoxGeometry(10, 10, 15),
@@ -286,45 +285,65 @@ for (let i = 0; i < 10; i++) {
     graphs[i].position.set(7.5, -28, 50);
   }
   if (i == 5) {
-    graphs[i].scale.y = 0.2
+    graphs[i].scale.y = 0.2;
     graphs[i].material.color.setHex(0xffffff);
-    graphs[i].position.set(7.5 + 1.5 * Math.sin(Math.PI * 0.16) , -28 + 1.5 * Math.cos(Math.PI * 0.16), 50);
+    graphs[i].position.set(
+      7.5 + 1.5 * Math.sin(Math.PI * 0.16),
+      -28 + 1.5 * Math.cos(Math.PI * 0.16),
+      50
+    );
   }
   if (i == 1) {
     graphs[i].material.color.setHex(0xc1e7f5);
     graphs[i].position.set(7.5, -28, 51.5);
   }
   if (i == 6) {
-    graphs[i].scale.y = 0.1
+    graphs[i].scale.y = 0.1;
     graphs[i].material.color.setHex(0xc1e7f5);
-    graphs[i].position.set(7.5 + 1.5 * Math.sin(Math.PI * 0.16) , -28 + 1.5 * Math.cos(Math.PI * 0.16), 51.5);
+    graphs[i].position.set(
+      7.5 + 1.5 * Math.sin(Math.PI * 0.16),
+      -28 + 1.5 * Math.cos(Math.PI * 0.16),
+      51.5
+    );
   }
   if (i == 2) {
     graphs[i].material.color.setHex(0x65b86a);
     graphs[i].position.set(7.5, -28, 53);
   }
   if (i == 7) {
-    graphs[i].scale.y = 0.4
+    graphs[i].scale.y = 0.4;
     graphs[i].material.color.setHex(0x65b86a);
-    graphs[i].position.set(7.5 + 1.5 * Math.sin(Math.PI * 0.16) , -28 + 1.5 * Math.cos(Math.PI * 0.16), 53);
+    graphs[i].position.set(
+      7.5 + 1.5 * Math.sin(Math.PI * 0.16),
+      -28 + 1.5 * Math.cos(Math.PI * 0.16),
+      53
+    );
   }
   if (i == 3) {
     graphs[i].material.color.setHex(0xfdc662);
     graphs[i].position.set(7.5, -28, 54.5);
   }
   if (i == 8) {
-    graphs[i].scale.y = 0.2
+    graphs[i].scale.y = 0.2;
     graphs[i].material.color.setHex(0xfdc662);
-    graphs[i].position.set(7.5 + 1.5 * Math.sin(Math.PI * 0.16) , -28 + 1.5 * Math.cos(Math.PI * 0.16), 54.5);
+    graphs[i].position.set(
+      7.5 + 1.5 * Math.sin(Math.PI * 0.16),
+      -28 + 1.5 * Math.cos(Math.PI * 0.16),
+      54.5
+    );
   }
   if (i == 4) {
     graphs[i].material.color.setHex(0xfd6e2e);
     graphs[i].position.set(7.5, -28, 56);
   }
   if (i == 9) {
-    graphs[i].scale.y = 0
+    graphs[i].scale.y = 0;
     graphs[i].material.color.setHex(0xfd6e2e);
-    graphs[i].position.set(7.5 + 1.5 * Math.sin(Math.PI * 0.16) , -28 + 1.5 * Math.cos(Math.PI * 0.16), 56);
+    graphs[i].position.set(
+      7.5 + 1.5 * Math.sin(Math.PI * 0.16),
+      -28 + 1.5 * Math.cos(Math.PI * 0.16),
+      56
+    );
   }
 
   controlBoxBox.add(graphs[i]);
@@ -443,53 +462,63 @@ windTurbines[1].rotation.y = -Math.PI * 0.5;
 windTurbines[2].position.set(-40, 0, 15);
 windTurbines[2].rotation.y = -Math.PI * 0.5;
 
-all.position.set(100, 0, 0);
+all.position.set(0, 0, 0);
 scene.add(all);
-if(window.innerWidth<=416)
-all.position.set(0, 50, 0);
 // all.rotation.y = Math.PI * 0.250
-
+let camera = 0;
 //camera
-const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight);
+if (window.innerWidth<=416) {
+  camera = new THREE.PerspectiveCamera(
+    90,
+    window.innerWidth / (window.innerHeight / 1.5)
+  );
+} else {
+  camera = new THREE.PerspectiveCamera(
+    90,
+    (window.innerWidth - 500) / window.innerHeight
+  );
+}
 scene.add(camera);
 camera.position.set(0, 100, 150);
-if(window.innerWidth<=416)
-camera.position.set(0, 150, 250);
-pointLight = []
-for(let i =0;i<6;i++){
-  pointLight.push(new THREE.PointLight("#fff", 0))
-  all.add(pointLight[i])
+if (window.innerWidth <= 416) camera.position.set(0, 150, 250);
+pointLight = [];
+for (let i = 0; i < 6; i++) {
+  pointLight.push(new THREE.PointLight("#fff", 0));
+  all.add(pointLight[i]);
 }
 pointLight[0].position.set(100, 50, 100);
-pointLight[0].intensity = 0.6
+pointLight[0].intensity = 0.6;
 pointLight[1].position.set(-100, 50, -100);
-pointLight[1].intensity = 0.4
+pointLight[1].intensity = 0.4;
 pointLight[2].position.set(-100, 50, 70);
-pointLight[2].intensity = 0.4
+pointLight[2].intensity = 0.4;
 pointLight[3].position.set(100, 0, -60);
-pointLight[3].intensity = 0.6
+pointLight[3].intensity = 0.6;
 pointLight[4].position.set(50, -120, 20);
-pointLight[4].intensity = 1
+pointLight[4].intensity = 1;
 pointLight[5].position.set(200, -50, 0);
-pointLight[5].intensity = 0.6
+pointLight[5].intensity = 0.6;
 
 //test
-
 
 //render
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
 });
-
-renderer.setSize(window.innerWidth, window.innerHeight);
+if (window.innerWidth <= 416) {
+  renderer.setSize(window.innerWidth, window.innerHeight/1.5);
+}
+else{
+renderer.setSize(window.innerWidth - 500, window.innerHeight);
+}
 renderer.render(scene, camera);
 
 // controls
 const controls = new OrbitControls(camera, renderer.domElement);
 let wind = "left";
 function animate() {
-  // all.rotation.y += 0.005
+  all.rotation.y += 0.005;
   requestAnimationFrame(animate);
   controls.enableZoom = false;
   controls.enablePan = false;
@@ -498,16 +527,27 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-let goal = (Math.random()*2)
-let higher = false
+let goal = Math.random() * 2;
+let higher = false;
 const clock = new THREE.Clock();
-function spin() {
 
+function spin() {
+  if (sessionStorage.getItem("dark") == "true") {
+    scene.background = new THREE.Color(0x152744);
+    body.style.backgroundColor = "rgb(21,39,68)";
+    infoCont.style.backgroundColor = "rgb(21,39,68)";
+    infoBox.style.backgroundColor = "rgb(21,39,68)";
+  }
+  if (sessionStorage.getItem("dark") == "false") {
+    scene.background = new THREE.Color(0x2d71b5);
+    body.style.backgroundColor = "rgb(45,113,181)";
+    infoCont.style.backgroundColor = "rgb(45,113,181)";
+    infoBox.style.backgroundColor = "rgb(45,113,181)";
+  }
 
   requestAnimationFrame(spin);
 
   //graphs
-
 
   blades[0].rotation.z += 0.05;
   blades[0].updateMatrix();
@@ -534,21 +574,20 @@ function spin() {
 
   renderer.render(scene, camera);
 
-  if (
-    (camera.position.x < 0 && camera.position.z < 0) ||
-    (camera.position.x > 0 && camera.position.z < 0)
-  ) {
-    if (direction === "left") {
-      direction = "right";
-      move();
-    }
-  } else {
-    if (direction === "right") {
-      direction = "left";
-      move();
-    }
-  }
+  // if (
+  //   (camera.position.x < 0 && camera.position.z < 0) ||
+  //   (camera.position.x > 0 && camera.position.z < 0)
+  // ) {
+  //   if (direction === "left") {
+  //     direction = "right";
+  //     move();
+  //   }
+  // } else {
+  //   if (direction === "right") {
+  //     direction = "left";
+  //     move();
+  //   }
+  // }
 }
 spin();
 animate();
-
