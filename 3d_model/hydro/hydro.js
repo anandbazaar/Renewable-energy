@@ -503,6 +503,13 @@ function controlAnimation() {
   controls.update();
 
   renderer.render(scene, camera);
+
+  if(sessionStorage.getItem("dark") == "true") {
+    scene.background = new THREE.Color(0x152744);
+   }
+   if(sessionStorage.getItem("dark") == "false") {
+      scene.background = new THREE.Color(0x2d71b5);
+   }
 }
 
 controlAnimation();

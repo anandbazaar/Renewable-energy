@@ -50,6 +50,7 @@
               <a href="../Team/team.html">TEAM</a>
             </li>
           </ul>
+          <img src="../Assets/moon.png" alt="" id="icon" />
         </div>
       </div>
     </nav>
@@ -258,5 +259,26 @@
     <script src="../common/navbar.js"></script>
     <script src="main.js"></script>
     <script src="../common/scroll-animation.js"></script>
+    <script>
+      var icon = document.getElementById("icon");
+      if (sessionStorage.getItem("dark") == "true") {
+        document.body.classList.toggle("dark-theme");
+        icon.src = "../Assets/sun.png";
+      } else {
+        document.body.classList.remove("dark-theme");
+        icon.src = "../Assets/moon.png";
+        sessionStorage.setItem("dark", "false");
+      }
+      icon.onclick = function () {
+        document.body.classList.toggle("dark-theme");
+        if (document.body.classList.contains("dark-theme")) {
+          icon.src = "../Assets/sun.png";
+          sessionStorage.setItem("dark", "true");
+        } else {
+          icon.src = "../Assets/moon.png";
+          sessionStorage.setItem("dark", "false");
+        }
+      };
+    </script>
   </body>
 </html>

@@ -38,8 +38,9 @@ body {
   background-color: var(--primary-color);
 }
 .home-bird {
+  padding: 5%;
   background-color: #63b1e0;
-  padding: 5px;
+
   width: 164px;
   border-radius: 20px 20px 0 20px;
   left: 5%;
@@ -60,7 +61,7 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 2vw;
-  color:var(--primary-color);
+  color: var(--primary-color);
 }
 .bird-img {
   width: 200px;
@@ -132,7 +133,7 @@ body {
   font-size: 16px;
   margin-bottom: 10px;
   line-height: 22px;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: 400;
 }
 .home-box p span {
