@@ -480,7 +480,7 @@ if (window.innerWidth<=416) {
 }
 scene.add(camera);
 camera.position.set(0, 100, 150);
-if (window.innerWidth <= 416) camera.position.set(0, 150, 250);
+if (window.innerWidth <= 416) camera.position.set(0, 50, 150);
 pointLight = [];
 for (let i = 0; i < 6; i++) {
   pointLight.push(new THREE.PointLight("#fff", 0));

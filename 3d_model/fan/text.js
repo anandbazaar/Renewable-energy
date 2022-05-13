@@ -7,7 +7,7 @@ const icon = document.createElement("img");
 icon.src = "../textures/image_52.png";
 icon.classList.add("icon");
 infoBox.classList.add("infoBox");
-infoBox.style.marginTop = "50%";
+
 const info = [
   infos[0].one,
   infos[0].two,
@@ -28,40 +28,62 @@ infoCont.appendChild(infoBox);
 
 let overHundred = false;
 let belowHundred = false;
+infoCont.addEventListener("click",(e)=>{
+  if(phone){
+    
+    infoBox.classList.add("fo");
+    infoBox.classList.remove("fi")
+  infoBox.style.fontSize = "20px";
+  i++;
+  if(i>=6) i=0
+  infoBox.innerHTML = "";
+  infoBox.appendChild(icon);
+  infoBox.innerHTML += info[i];
+  infoBox.classList.add("fi")
+  infoBox.classList.remove("fo");
+
+
+  }
+})
+
 document.addEventListener("wheel", (e) => {
   if (e.deltaY > 100 && !overHundred) {
     overHundred = true;
 
     i++;
+    if(phone == false){
     infoBox.classList.remove("aft");
-    infoBox.classList.add("gtb");
+    infoBox.classList.add("gtb");}
     console.log(i, e.deltaY, overHundred);
   }
   if (e.deltaY < -100 && !belowHundred) {
     belowHundred = true;
     i--;
+    if(phone == false){
     infoBox.classList.remove("aft");
     infoBox.classList.add("gtt");
+    }
     console.log(i, e.deltaY, overHundred);
   }
 });
 //move
 infoCont.addEventListener("animationend", () => {
   if (overHundred) {
+    if(phone == false){
     infoBox.classList.remove("gtb");
-    infoBox.classList.add("aft");
+    infoBox.classList.add("aft");}
     if (i >= 6) i = 0;
-    if (phone) infoBox.style.fontSize = "20px";
     infoBox.innerHTML = "";
     infoBox.appendChild(icon);
     infoBox.innerHTML += info[i];
     overHundred = false;
-  }
+    }
+  
   if (belowHundred) {
+    if(phone == false){
     infoBox.classList.remove("gtt");
-    infoBox.classList.add("aft");
+    infoBox.classList.add("aft");}
     if (i < 0) i = 5;
-    if (phone) infoBox.style.fontSize = "20px";
     infoBox.innerHTML = "";
     infoBox.appendChild(icon);
     infoBox.innerHTML += info[i];
