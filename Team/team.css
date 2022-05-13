@@ -21,7 +21,9 @@
 .start {
   margin-top: 80px;
 }
-
+.team-container{
+  background-color: var(--primary-color);
+}
 :root {
   --primary-color: #fff;
   --secondary-color: #212121;
