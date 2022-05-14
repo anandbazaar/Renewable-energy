@@ -187,11 +187,7 @@ section {
   width: 90%;
   height: 15%;
   font-size: 0.9vw;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  position: relative;
 }
 .bo3te img {
   margin-right: 10%;
@@ -201,6 +197,9 @@ section {
 .smolte {
   font: 0.5vw sans-serif;
   opacity: 50%;
+  position: absolute;
+  top: 20%;
+  left: 28%;
 }
 .haju {
   margin-top: 7%;
@@ -258,7 +257,7 @@ section {
 .perc {
   position: absolute;
   top: 45%;
-  left: 34%;
+  left: 40%;
   font-size: 15px;
 }
 .a-team {
