@@ -431,9 +431,15 @@ const MinusCube = new THREE.Mesh(
   new THREE.MeshBasicMaterial({color:"red"})
 )
 
-
-const camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
+let camera = 0
+if(window.innerWidth<=416){
+  camera = new THREE.PerspectiveCamera(60, (window.innerWidth) / window.innerHeight/1.5,1,10000);
+  camera.position.set(0, 1500 ,3000);
+}
+else{
+camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
 camera.position.set(0, 1500 ,2000);
+}
 camera.lookAt(wall.position);
 const pointLight = new THREE.PointLight("#fff", 1);
 all.add(pointLight)
@@ -454,7 +460,12 @@ const controls = new OrbitControls(camera, renderer.domElement);
 
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.setSize(innerWidth-500, innerHeight);
+if(window.innerWidth<=416){
+  renderer.setSize(window.innerWidth, window.innerHeight/1.5);
+}
+else{
+renderer.setSize(window.innerWidth-500, window.innerHeight);
+}
 renderer.render(scene, camera);
 
 

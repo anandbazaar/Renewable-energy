@@ -31,21 +31,16 @@ let belowHundred = false;
 infoCont.addEventListener("click",(e)=>{
   if(phone){
     
-    infoBox.classList.add("fo");
     infoBox.classList.remove("fi")
+    infoBox.classList.add("fo");
   infoBox.style.fontSize = "20px";
   i++;
   if(i>=6) i=0
   infoBox.innerHTML = "";
   infoBox.appendChild(icon);
   infoBox.innerHTML += info[i];
-  infoBox.classList.add("fi")
-  infoBox.classList.remove("fo");
-
-
   }
 })
-
 document.addEventListener("wheel", (e) => {
   if (e.deltaY > 100 && !overHundred) {
     overHundred = true;
@@ -88,6 +83,10 @@ infoCont.addEventListener("animationend", () => {
     infoBox.appendChild(icon);
     infoBox.innerHTML += info[i];
     belowHundred = false;
+  }
+  if(phone){
+    infoBox.classList.remove("fo");
+    infoBox.classList.add("fi")
   }
 });
 // infoCont.addEventListener("animationend", () => {

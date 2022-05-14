@@ -345,9 +345,15 @@ const sizes = {
   width: window.innerWidth,
   height: window.innerHeight,
 };
-
-const camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
-camera.position.set(20, 200, 350);
+let camera = 0
+if(window.innerWidth<=416){ camera = new THREE.PerspectiveCamera(
+  90,
+  window.innerWidth / (window.innerHeight / 1.5));
+  camera.position.set(0, 150, 250);}
+else{
+ camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
+ camera.position.set(20, 200, 350);}
+ 
 camera.lookAt(cube.position);
 const pointLight = new THREE.PointLight("#fff", 2);
 
@@ -398,7 +404,10 @@ controls.enableZoom = false;
   controls.enablePan = false;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-renderer.setSize(window.innerWidth-500, window.innerHeight);
+if(window.innerWidth <= 416){renderer.setSize(window.innerWidth, window.innerHeight/1.5);
+}
+else{
+renderer.setSize(window.innerWidth-500, window.innerHeight);}
 renderer.render(scene, camera);
 // animate();
 let rotationIndex = 1100;
@@ -496,9 +505,10 @@ all.add(stands,support,support2);
 all.add(flower);
 
 scene.add(all);
-
-
 all.position.set(0,0,0)
+if(window.innerWidth<=416){
+all.position.set(0,-100,0)
+}
 // const updateWindow = () => {
 //   renderer.setSize(window.innerWidth, window.innerHeight);
 //   renderer.render(scene, camera);
