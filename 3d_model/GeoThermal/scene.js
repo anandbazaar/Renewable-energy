@@ -6,9 +6,15 @@ const all = new THREE.Group();
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x152744);
 //camera
-const camera = new THREE.PerspectiveCamera(90, (window.innerWidth-500) / 900);
+let camera = 0
+if(window.innerWidth<=416){
+  camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight/1.5);
+  camera.position.set(0, 250, 650);
+}
+else{
+camera = new THREE.PerspectiveCamera(90, (window.innerWidth-500) / window.innerHeight);
+camera.position.set(0, 250, 450);}
 scene.add(camera);
-camera.position.set(0, 250, 450);
 //lighting
 const pointLight = [];
 const sphereSize = 1;
@@ -60,7 +66,11 @@ renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
 });
-renderer.setSize(window.innerWidth-500, window.innerHeight);
+if(window.innerWidth<=416){
+  renderer.setSize(window.innerWidth, window.innerHeight/1.5);
+}
+else{
+renderer.setSize(window.innerWidth-500, window.innerHeight);}
 renderer.render(scene, camera);
 //controls
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -68,7 +78,7 @@ let ran = Math.random()
 
 scene.add(all)
 function animate() {
-  // all.rotation.y += 0.005
+  all.rotation.y += 0.005
   // if(smoke.position.y>140) {
   //   smoke.scale.y -= 0.003
   // smoke.scale.z -= 0.003
@@ -121,6 +131,9 @@ function animate() {
   //   smoke3.scale.z += 0.001
   //   smoke3.scale.x += 0.001
   // }
+  if(window.innerWidth<=416){
+    all.scale.z = 0.7
+  }
   requestAnimationFrame(animate);
   controls.enableZoom = false;
   controls.enablePan = false;
@@ -166,7 +179,6 @@ function animate() {
   }
 }
 animate();
-
 //windowsize
 const updateWindow = () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
