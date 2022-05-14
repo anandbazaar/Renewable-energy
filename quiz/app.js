@@ -1,4 +1,3 @@
-
 // Initialize Cloud Firestore and get a reference to the service
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
@@ -111,25 +110,13 @@ function next() {
     getNewQuestion();
   }
 }
-// var user = firebase.auth().currentUser;
-
-// if (user) {
-//    allDocRef.add({
-//    score:"total-correct";
-//    });
-// } else {
-//    No user is signed in.
-
-// }
 const uuid = window.localStorage.getItem("uuid");
-
-
 
 function quizOver() {
   quizBox.classList.add("hide");
   resultBox.classList.remove("hide");
-  const ref = db.collection('users').doc(`${uuid}`)
-ref.set({correctAnswers})
+  const ref = db.collection("users").doc(`${uuid}`);
+  ref.set({ correctAnswers });
   quizResult();
 }
 
