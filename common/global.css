@@ -85,7 +85,7 @@
 
 /* latest-news */
 .header .img-txt {
-  color: var(--primary-color);
+  color: white;
   position: absolute;
   top: 70%;
   left: 50%;
@@ -331,10 +331,8 @@
   .holboo-barih .contact-info img {
     width: 25px;
   }
-  
 }
 @media (min-width: 1400px) {
-
   .container {
     width: 1320px;
   }

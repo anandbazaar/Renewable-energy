@@ -68,37 +68,59 @@ let ran = Math.random()
 
 scene.add(all)
 function animate() {
-  all.rotation.y += 0.005
-  if(smoke.position.y>140) {
-    smoke.scale.y -= 0.003
-  smoke.scale.z -= 0.003
-  smoke.scale.x -= 0.003
-  smoke2.scale.y -= 0.003
-  smoke2.scale.z -= 0.003
-  smoke2.scale.x -= 0.003
-  smoke3.scale.y -= 0.003
-  smoke3.scale.z -= 0.003
-  smoke3.scale.x -= 0.003
-  }
-  if(smoke.position.y>165){
-    smoke.position.y = 100
-    smoke2.position.y = 100
-    smoke3.position.y = 50
-  }
-  else{
-  smoke.scale.y += 0.001
-  smoke.scale.z += 0.001
-  smoke.scale.x += 0.001
-  smoke2.scale.y += 0.001
-  smoke2.scale.z += 0.001
-  smoke2.scale.x += 0.001
-  smoke3.scale.y += 0.001
-  smoke3.scale.z += 0.001
-  smoke3.scale.x += 0.001
-  }
-  smoke2.position.y += 0.2
-  smoke3.position.y += 0.2
-  smoke.position.y += 0.2
+  // all.rotation.y += 0.005
+  // if(smoke.position.y>140) {
+  //   smoke.scale.y -= 0.003
+  // smoke.scale.z -= 0.003
+  // smoke.scale.x -= 0.003
+  // smoke2.scale.y -= 0.003
+  // smoke2.scale.z -= 0.003
+  // smoke2.scale.x -= 0.003
+  // smoke3.scale.y -= 0.003
+  // smoke3.scale.z -= 0.003
+  // smoke3.scale.x -= 0.003
+  // }
+  // if(smoke.position.y>165){
+  //   smoke.position.y = 100
+  //   smoke2.position.y = 100
+  //   smoke3.position.y = 50
+  // }
+  // else{
+  // smoke.scale.y += 0.001
+  // smoke.scale.z += 0.001
+  // smoke.scale.x += 0.001
+  // smoke2.scale.y += 0.001
+  // smoke2.scale.z += 0.001
+  // smoke2.scale.x += 0.001
+  // smoke3.scale.y += 0.001
+  // smoke3.scale.z += 0.001
+  // smoke3.scale.x += 0.001
+  // }
+  // smoke2.position.y += 0.2
+  // smoke3.position.y += 0.2
+  // smoke.position.y += 0.2
+  // if(smoke.scale.y > 10 && smoke.scale.x > 10 && smoke.scale.z > 10) {
+  //   smoke.scale.y = 0.001
+  //   smoke.scale.z = 0.001
+  //   smoke.scale.x = 0.001
+  //   smoke2.scale.y = 0.001
+  //   smoke2.scale.z = 0.001
+  //   smoke2.scale.x = 0.001
+  //   smoke3.scale.y = 0.001
+  //   smoke3.scale.z = 0.001
+  //   smoke3.scale.x = 0.001
+  // } 
+  // else {
+  //   smoke.scale.y += 0.001
+  //   smoke.scale.z += 0.001
+  //   smoke.scale.x += 0.001
+  //   smoke2.scale.y += 0.001
+  //   smoke2.scale.z += 0.001
+  //   smoke2.scale.x += 0.001
+  //   smoke3.scale.y += 0.001
+  //   smoke3.scale.z += 0.001
+  //   smoke3.scale.x += 0.001
+  // }
   requestAnimationFrame(animate);
   controls.enableZoom = false;
   controls.enablePan = false;

@@ -197,7 +197,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.quiz-box .option-container .option .already-answered {
+.quiz-box .already-answered {
   pointer-events: none;
 }
 @keyframes optionAn {

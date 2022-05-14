@@ -1,5 +1,13 @@
 body {
-  background-color: #e9c85c;
+  background-color: var(--primary-color);
+}
+:root {
+  --primary-color: #e9c85c;
+  --secondary-color: #d6b962;
+}
+.yellow-theme {
+  --primary-color: #d6b962;
+  --secondary-color: #e9c85c;
 }
 .header .img-txt {
   top: 55%;
@@ -30,7 +38,7 @@ body {
   height: 105vh;
 }
 .navbar {
-  background-color: #e9c85c;
+  background-color: var(--primary-color);
 }
 .nav-links ul li a {
   color: white;
@@ -92,7 +100,7 @@ h4 {
   margin-left: 2%;
 }
 section {
-  background-color: #e9c85c;
+  background-color: var(--primary-color);
   color: white;
 }
 .container2 {
