@@ -24,6 +24,7 @@
   background: #e9c85c;
   color: white;
   transition: 1s;
+  letter-spacing:5px;
 }
 .previous {
   text-decoration: none;
@@ -44,6 +45,7 @@
   background: #0d273c;
   color: white;
   transition: 1s;
+  letter-spacing:5px;
 }
 body {
   background-color: #d7766e;
@@ -72,6 +74,7 @@ h4 {
   color: #381d72;
   font-size: 2.8vw;
   font-family: "Brygada 1918", serif;
+  margin: 30px;
 }
 .information {
   margin-bottom: 10%;
@@ -136,7 +139,7 @@ h4 {
 }
 @media screen and (max-width: 1200px) {
   .information p {
-    font-size: 18px;
+    font-size: 20px;
   }
   .header {
     height: 80vh;
@@ -147,6 +150,12 @@ h4 {
   .next {
     margin-bottom: 100px;
   }
+  h4 {
+    margin: 28px;
+  }
+  .header .img-txt {
+    top: 50%;
+  }
 }
 @media screen and (max-width: 992px) {
   .information p {
@@ -155,11 +164,18 @@ h4 {
   .header {
     height: 60vh;
   }
+  .header .img-txt {
+    top: 35%;
+  }
   .previous {
     margin-bottom: 80px;
   }
   .next {
     margin-bottom: 80px;
+  }
+  h4 {
+    margin: 25px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -181,16 +197,24 @@ h4 {
     height: 50px;
     font-size: 16px;
   }
+  h4 {
+    margin: 19px;
+    font-size: 25px;
+  }
+  .header .img-txt {
+    top: 30%;
+  }
 }
 @media screen and (max-width: 575px) {
   .header {
-    height: 40vh;
+    height: 35vh;
   }
   .header .img-txt {
     top: 20%;
   }
   h4 {
     font-size: 20px;
+    margin: 16px;
   }
   .previous {
     margin-bottom: 70px;
@@ -225,10 +249,10 @@ h4 {
     height: 35vh;
   }
   .header .img-txt {
-    top: 20%;
+    top: 21%;
   }
   h4 {
-    font-size: 16px;
+    font-size: 20px;
   }
   .row {
     margin-bottom: 10px;
