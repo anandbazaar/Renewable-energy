@@ -1,6 +1,9 @@
 body {
   background-color: #e9c85c;
 }
+.header .img-txt {
+  top: 55%;
+}
 .previous {
   text-decoration: none;
   color: white;
@@ -20,6 +23,7 @@ body {
   background: #d7766e;
   color: white;
   transition: 1s;
+  letter-spacing:5px;
 }
 /* header section */
 .header {
@@ -66,9 +70,9 @@ body {
   margin-bottom: 10%;
 }
 .information div {
-  margin-left: 5%;
+  margin-left: 0%;
   margin-bottom: 5%;
-  width: 80%;
+  width: 100%;
 }
 .information p {
   font-size: 2vw;
@@ -77,6 +81,7 @@ h4 {
   color: #b98c05;
   font-size: 3vw;
   font-family: "Brygada 1918", serif;
+  margin: 30px;
 }
 .list li {
   font-size: 2vw;
@@ -175,10 +180,13 @@ section {
     height: 80vh;
   }
   .header .img-txt {
-    top: 40%;
+    top: 45%;
   }
   .previous {
     margin-bottom: 100px;
+  }
+  h4 {
+    margin: 28px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -189,10 +197,14 @@ section {
     height: 60vh;
   }
   .header .img-txt {
-    top: 30%;
+    top: 35%;
   }
   .previous {
     margin-bottom: 80px;
+  }
+  h4 {
+    margin: 25px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -200,16 +212,20 @@ section {
     font-size: 15px;
   }
   .header {
-    height: 55vh;
+    height: 50vh;
   }
   .header .img-txt {
-    top: 27%;
+    top: 30%;
   }
   .previous {
     margin-bottom: 70px;
     width: 120px;
     height: 50px;
     font-size: 16px;
+  }
+  .h4 {
+    font-size: 25px;
+    margin: 19px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -227,6 +243,10 @@ section {
     width: 110px;
     height: 45px;
     font-size: 15px;
+  }
+  h4 {
+    font-size: 20px;
+    margin: 16px;
   }
 }
 @media screen and (max-width: 416px) {
