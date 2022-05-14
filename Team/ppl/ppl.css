@@ -322,6 +322,7 @@ section {
   }
   .containert .box {
     width: 20vw;
+    display: flex;
   }
   .containert .box p {
     font-size: 3vw;
