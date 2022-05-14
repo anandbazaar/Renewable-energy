@@ -1,3 +1,6 @@
+* {
+  background-color: var(--primary-color);
+}
 section {
   padding-top: 80px;
 }

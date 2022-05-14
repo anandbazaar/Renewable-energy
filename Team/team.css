@@ -4,7 +4,9 @@
   align-items: center;
   padding-bottom: 80px;
 }
-
+* {
+  background-color: var(--primary-color);
+}
 /* Landing */
 .landing {
   width: 100%;
@@ -21,7 +23,7 @@
 .start {
   margin-top: 80px;
 }
-.team-container{
+.team-container {
   background-color: var(--primary-color);
 }
 :root {
