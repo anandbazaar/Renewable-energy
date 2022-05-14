@@ -82,7 +82,43 @@
 .navbar ul li:hover::after {
   width: 100%;
 }
+.page-header .trigger-menu svg {
+  transition: transform 0.3s;
+}
 
+.menu-open {
+  overflow: hidden;
+}
+
+.menu-open .page-header .menu {
+  display: block;
+}
+
+.menu-open .page-header svg {
+  transform: rotate(45deg);
+}
+.menu-open-with-lottie .page-header .menu {
+  padding: 5vh 0;
+}
+.trigger-menu-wrapper {
+  transition: transform 0.4s;
+}
+
+.scroll-down .trigger-menu-wrapper {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-down .lottie-wrapper {
+  background: var(--darkgray);
+}
+
+.scroll-up .trigger-menu-wrapper {
+  transform: none;
+}
+
+.scroll-up:not(.menu-open) .trigger-menu-wrapper {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
 /* latest-news */
 .header .img-txt {
   color: white;
