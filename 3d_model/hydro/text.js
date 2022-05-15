@@ -22,7 +22,7 @@ let i = 0;
 infoText.innerText = info[i];
 infoBox.appendChild(icon)
 infoBox.innerHTML += info[0]
-infoBox.style.fontSize = "20px";
+infoBox.style.fontSize = "15px";
 
 infoCont.appendChild(infoBox);
 
@@ -96,7 +96,7 @@ infoBox.addEventListener("transitionstart", () => {});
 
 infoBox.addEventListener("transitionend", () => {
   if (infoBox.style.opacity == "0") {
-    infoBox.style.fontSize = "20px";
+    infoBox.style.fontSize = "15px";
     i++;
     if (i >= 6) i = 0;
     infoBox.innerHTML = "";

@@ -506,10 +506,21 @@ h3 {
     justify-content: flex-start;
     margin: 10%;
   }
+  .hp-img{
+    height: fit-content;
+    margin-top: 13%;
+  }
+  .swiper.news2{
+    height: fit-content;
+  }
+  .latest-news{
+    height:fit-content
+  }
 
   .in-p {
     padding-left: 3%;
   }
+
 }
 @keyframes text_reveal_box {
   50% {

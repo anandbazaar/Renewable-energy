@@ -194,15 +194,12 @@ body{
     padding:0px
   }
   .infoBox{
-    
+    font-size: 10px;
     margin:0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
 
-  }
-  p{
-    font-size: 20px;
   }
 }
