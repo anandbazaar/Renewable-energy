@@ -1,6 +1,6 @@
 const body = document.body;
 const nav = document.querySelector(".page-header nav");
-const menu = document.querySelector(".page-header .menu");
+const menu1 = document.querySelector(".page-header .menu");
 const lottiePlayer = document.querySelector("lottie-player");
 const scrollUp = "scroll-up";
 const scrollDown = "scroll-down";

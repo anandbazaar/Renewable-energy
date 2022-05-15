@@ -516,9 +516,13 @@ h3 {
   .latest-news{
     height:fit-content
   }
-
   .in-p {
+    background-color: #0d273c;
+    color: #3a94d4;
     padding-left: 3%;
+  }
+  .container{
+    z-index: 10;
   }
 
 }
