@@ -1,7 +1,5 @@
 /* Header section */
-* {
-  background-color: var(--primary-color);
-}
+
 .header {
   width: 100%;
   background-color: var(--primary-color);
