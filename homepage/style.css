@@ -1,5 +1,5 @@
 /* Header section */
-*{
+body {
   background-color: var(--primary-color);
 }
 .header {
@@ -26,6 +26,9 @@
 .aboutus {
   display: flex;
   padding-top: 10%;
+  background-color: var(--primary-color);
+}
+.info-us {
   background-color: var(--primary-color);
 }
 .aboutus .left {
@@ -506,25 +509,24 @@ h3 {
     justify-content: flex-start;
     margin: 10%;
   }
-  .hp-img{
+  .hp-img {
     height: fit-content;
     margin-top: 13%;
   }
-  .swiper.news2{
+  .swiper.news2 {
     height: fit-content;
   }
-  .latest-news{
-    height:fit-content
+  .latest-news {
+    height: fit-content;
   }
   .in-p {
     background-color: #0d273c;
     color: #3a94d4;
     padding-left: 3%;
   }
-  .container{
+  .container {
     z-index: 10;
   }
-
 }
 @keyframes text_reveal_box {
   50% {
