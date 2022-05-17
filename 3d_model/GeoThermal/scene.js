@@ -42,12 +42,11 @@ land.position.set(0,0,0)
 all.add(transgender)
 all.add(machine)
 all.add(factory);
-all.add(smoke)
+
 all.add(tower2)
 all.position.set(0,0,0)
 all.add(land)
-all.add(smoke2)
-all.add(smoke3)
+
 
 transgender.scale.y = 1.5
 tower2.scale.y = 1.5
@@ -68,7 +67,7 @@ let ran = Math.random()
 
 scene.add(all)
 function animate() {
-  // all.rotation.y += 0.005
+  all.rotation.y += 0.005
   // if(smoke.position.y>140) {
   //   smoke.scale.y -= 0.003
   // smoke.scale.z -= 0.003
