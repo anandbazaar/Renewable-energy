@@ -1,5 +1,5 @@
 /* Header section */
-* {
+body {
   background-color: var(--primary-color);
 }
 .header {
@@ -26,6 +26,9 @@
 .aboutus {
   display: flex;
   padding-top: 10%;
+  background-color: var(--primary-color);
+}
+.info-us {
   background-color: var(--primary-color);
 }
 .aboutus .left {
