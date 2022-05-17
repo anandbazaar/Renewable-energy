@@ -82,11 +82,14 @@ h4 {
     width: 100%;
     margin: auto;
 } */
-.team-img{
+.team-img {
   height: 316px;
 }
 @media screen and (max-width: 1200px) {
   /* 416px */
+  .team-img {
+    height: fit-content;
+  }
   .logo {
     height: 30px;
     width: 40px;
