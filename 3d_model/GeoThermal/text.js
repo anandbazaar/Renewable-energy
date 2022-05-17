@@ -26,7 +26,6 @@ infoText.innerText = info[i];
 infoBox.appendChild(icon)
 infoBox.innerHTML += info[0]
 infoBox.style.fontSize = "15px";
-
 infoCont.appendChild(infoBox);
 
 // let direction = "left";

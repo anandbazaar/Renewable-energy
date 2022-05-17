@@ -331,6 +331,7 @@ h1 {
   position: relative;
   cursor: pointer;
   margin-top: 2%;
+  margin-left: 2.4%;
 }
 .lrn-con {
   width: 100%;
@@ -523,6 +524,13 @@ h3 {
   }
   .container {
     z-index: 10;
+  }
+  .jaa {
+    display: flex;
+    justify-content: center ;
+  }
+  .lrn-m{
+    margin: 0px;
   }
 }
 @keyframes text_reveal_box {
