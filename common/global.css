@@ -146,7 +146,6 @@
 /* contact us */
 .contact-us-con {
   width: 100%;
-  padding-top: 5%;
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
@@ -226,8 +225,7 @@
   width: 1.5vw;
 }
 .handltn-too {
-  margin-bottom: 2%;
-  height: 2%;
+  margin-bottom: 3%;
 }
 .handltn-too p {
   font-size: 0.9vw;
@@ -246,6 +244,9 @@
   --secondary-color: #fff;
 }
 @media screen and (max-width: 416px) {
+  .contact-us-con {
+    height: 80vh;
+  }
   .contact-us {
     height: 35vw;
   }
@@ -453,9 +454,7 @@
     width: 100%;
     display: table;
   }
-  .aboutus-logo {
-    margin-bottom: 5%;
-  }
+
   .aboutus-logo div {
     margin-bottom: 2%;
   }
@@ -463,7 +462,9 @@
     height: 70vh;
   }
   .contact-us {
-    padding: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     height: 65vh;
     display: flex;
     flex-direction: column;
@@ -525,20 +526,5 @@
 
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-  @media screen and (max-height: 897px) {
-    .contact-us-con {
-      height: 74vh;
-    }
-  }
-  @media screen and (max-height: 745px) {
-    .contact-us-con {
-      height: 76vh;
-    }
-  }
-  @media screen and (max-height: 700px) {
-    .contact-us-con {
-      height: 90vh;
-    }
   }
 }

@@ -25,7 +25,13 @@ let i = 0;
 infoText.innerText = info[i];
 infoBox.appendChild(icon)
 infoBox.innerHTML += info[0]
+<<<<<<< HEAD
 infoBox.style.fontSize = "15px";
+=======
+if(phone){
+infoBox.style.fontSize = "15px";}
+
+>>>>>>> 3459d014a615524c258150fa41498c2d0f5fb9b2
 infoCont.appendChild(infoBox);
 
 // let direction = "left";
@@ -99,7 +105,8 @@ infoBox.addEventListener("transitionstart", () => {});
 
 infoBox.addEventListener("transitionend", () => {
   if (infoBox.style.opacity == "0") {
-    infoBox.style.fontSize = "15px";
+    if(phone)infoBox.style.fontSize = "15px";
+    else infoBox.style.fontSize = "30px";
     i++;
     if (i >= 6) i = 0;
     infoBox.innerHTML = "";
