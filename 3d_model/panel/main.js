@@ -412,6 +412,7 @@ renderer.render(scene, camera);
 // animate();
 let rotationIndex = 1100;
 let rotationDirection = true;
+
 const panelRotation = () => {
   all.rotation.y += 0.005
   requestAnimationFrame(panelRotation);
@@ -476,6 +477,7 @@ function controlAnimation() {
     body.style.backgroundColor = "rgb(21,39,68)";
     infoCont.style.backgroundColor = "rgb(21,39,68)";
     infoBox.style.backgroundColor = "rgb(21,39,68)";
+  
   }
   if (sessionStorage.getItem("dark") == "false") {
     scene.background = new THREE.Color(0x2d71b5);

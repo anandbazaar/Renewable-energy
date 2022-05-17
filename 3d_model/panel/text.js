@@ -33,7 +33,8 @@ let i = 0;
 infoText.innerText = info[i];
 infoBox.appendChild(icon)
 infoBox.innerHTML += info[i]
-infoBox.style.fontSize = "13px";
+
+if(phone)infoBox.style.fontSize = "13px";
 infoCont.appendChild(infoBox);
 
 
@@ -104,6 +105,7 @@ infoBox.addEventListener("transitionstart", () => {});
 
 infoBox.addEventListener("transitionend", () => {
   if (infoBox.style.opacity == "0") {
+    if(phone)
     infoBox.style.fontSize = "13px";
     i++;
     if (i >= 17) i = 0;
