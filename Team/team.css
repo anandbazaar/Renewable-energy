@@ -4,7 +4,9 @@
   align-items: center;
   padding-bottom: 80px;
 }
-
+* {
+  background-color: var(--primary-color);
+}
 /* Landing */
 .landing {
   width: 100%;
@@ -21,7 +23,7 @@
 .start {
   margin-top: 80px;
 }
-.team-container{
+.team-container {
   background-color: var(--primary-color);
 }
 :root {
@@ -80,7 +82,9 @@ h4 {
     width: 100%;
     margin: auto;
 } */
-
+.team-img{
+  height: 316px;
+}
 @media screen and (max-width: 1200px) {
   /* 416px */
   .logo {

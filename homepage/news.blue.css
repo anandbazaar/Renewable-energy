@@ -16,6 +16,7 @@
   background: #d7766e;
   color: white;
   transition: 1s;
+  letter-spacing:5px;
 }
 body {
   background-color: #0d273c;
@@ -49,6 +50,7 @@ h4 {
   font-family: "Brygada 1918", serif;
   color: #a5ddf2;
   font-size: 2.8vw;
+  margin: 30px;
 }
 /* information section */
 .information div {
@@ -81,6 +83,7 @@ h4 {
   margin-left: 10px;
   color: black;
   font-size: 3vw;
+  margin: 0px;
 }
 
 .statistics p {
@@ -114,6 +117,12 @@ h4 {
   .next {
     margin-bottom: 100px;
   }
+  .header .img-txt {
+    top: 43%;
+  }
+  h4 {
+    margin: 28px;
+  }
 }
 @media screen and (max-width: 992px) {
   .information p {
@@ -122,8 +131,15 @@ h4 {
   .header {
     height: 60vh;
   }
+  .header .img-txt {
+    top: 35%;
+  }
   .next {
     margin-bottom: 80px;
+  }
+  h4 {
+    margin: 25px;
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -131,7 +147,10 @@ h4 {
     font-size: 15px;
   }
   .header {
-    height: 50vh;
+    height:45vh;
+  }
+  .header .img-txt {
+    top: 29%;
   }
   .next {
     margin-bottom: 70px;
@@ -141,6 +160,11 @@ h4 {
   }
   .statistics h4 {
     font-size: 15px;
+    margin: 0px;
+  }
+  .h4 {
+    font-size: 25px;
+    margin: 19px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -155,9 +179,11 @@ h4 {
   }
   h4 {
     font-size: 20px;
+    margin: 16px;
   }
   .statistics h4 {
     font-size: 12px;
+    margin: 0px;
   }
   .next {
     margin-bottom: 70px;
@@ -175,6 +201,10 @@ h4 {
 @media screen and (max-width: 416px) {
   .statistics h4 {
     font-size: 11px;
+    margin: 0px;
+  }
+  .header .img-txt {
+    top: 25%;
   }
   .navbar-menu.active {
     background-color: #354b7b;
@@ -285,6 +315,7 @@ h4 {
   }
   .statistics h4 {
     margin-left: 0;
+    margin: 0px;
   }
   .statistics .st1 {
     margin-left: 0;
@@ -296,6 +327,7 @@ h4 {
   }
   .statistics h4 {
     font-size: 9px;
+    margin: 0px;
   }
   .statistics div {
     height: 90%;

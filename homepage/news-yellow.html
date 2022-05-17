@@ -19,11 +19,11 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar page-header trigger-menu-wrapper">
       <div class="container">
         <!-- Logo -->
         <a href="../index.html">
-          <img class="logo" src="../Assets/Group 168.png" alt="" />
+          <img class="logo" src="../Assets/whitelogo.png" id="logo" alt="" />
         </a>
         <!-- Links -->
         <div class="nav-links navbar__container" id="navLinks">
@@ -34,7 +34,7 @@
             <span class="bar"></span>
           </div>
           <!-- Desktop -->
-          <ul class="navbar-menu">
+          <ul class="navbar-menu trigger-menu">
             <li>
               <a style="border-bottom: 4px solid #4eb073" href="../index.html"
                 >HOME</a
@@ -252,21 +252,26 @@
     <script src="../common/scroll-animation.js"></script>
     <script>
       var icon = document.getElementById("icon");
+      var logo = document.getElementById("logo");
       if (sessionStorage.getItem("dark") == "true") {
-        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("yellow-theme");
         icon.src = "../Assets/sun.png";
+        logo.src = "../Assets/Group 168.png";
       } else {
-        document.body.classList.remove("dark-theme");
+        document.body.classList.remove("yellow-theme");
         icon.src = "../Assets/moon.png";
+        logo.src = "../Assets/whitelogo.png";
         sessionStorage.setItem("dark", "false");
       }
       icon.onclick = function () {
-        document.body.classList.toggle("dark-theme");
-        if (document.body.classList.contains("dark-theme")) {
+        document.body.classList.toggle("yellow-theme");
+        if (document.body.classList.contains("yellow-theme")) {
           icon.src = "../Assets/sun.png";
+          logo.src = "../Assets/Group 168.png";
           sessionStorage.setItem("dark", "true");
         } else {
           icon.src = "../Assets/moon.png";
+          logo.src = "../Assets/whitelogo.png";
           sessionStorage.setItem("dark", "false");
         }
       };

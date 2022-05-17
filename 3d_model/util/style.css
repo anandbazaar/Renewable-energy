@@ -13,6 +13,7 @@
   background-color: rgb(21,39,68);
   margin-top: 60%;
   flex-wrap: wrap;
+  transition: 250ms;
 
 }
 .icon{
@@ -153,7 +154,7 @@ body{
     opacity: 0%;
   }
 }
-.fo{
+/* .fo{
   animation-name: FadeOut;
   animation-duration: 1000ms;
   animation-play-state: running;
@@ -178,8 +179,8 @@ body{
   to{
     opacity: 100%;
   }
-}
-@media only screen and (max-width:416px){
+} */
+@media only screen and (max-width:417px){
   body{
     flex-direction: column-reverse;
     align-items: flex-start;
@@ -193,17 +194,12 @@ body{
     padding:0px
   }
   .infoBox{
-    
+    font-size: 10px;
     margin:0px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-wrap: wrap;
 
 
-  }
-  p{
-    font-size: 20px;
   }
 }

@@ -1,3 +1,4 @@
+let intrans = false
 let phone = false;
 const infoText = document.createElement("p");
 const infoBox = document.createElement("div");
@@ -31,42 +32,43 @@ const info = [
 let i = 0;
 infoText.innerText = info[i];
 infoBox.appendChild(icon)
-infoBox.appendChild(infoText);
-
+infoBox.innerHTML += info[i]
+infoBox.style.fontSize = "13px";
 infoCont.appendChild(infoBox);
 
 
+let clik = function () {
+  if (phone && !inTrans) {
+    if (infoBox.style.opacity === "0") {
+      infoBox.style.opacity = "1";
+    } else {
+      infoBox.style.opacity = "0";
+    }
+  }
+};
+
 let overHundred = false;
 let belowHundred = false;
-infoCont.addEventListener("click",(e)=>{
-  if(phone){
-    
-    infoBox.classList.remove("fi")
-    infoBox.classList.add("fo");
-  infoBox.style.fontSize = "20px";
-  i++;
-  if(i>=17) i=0
-  infoBox.innerHTML = "";
-  infoBox.appendChild(icon);
-  infoBox.innerHTML += info[i];
-  }
-})
+
+infoCont.addEventListener("click", clik);
+
 document.addEventListener("wheel", (e) => {
   if (e.deltaY > 100 && !overHundred) {
     overHundred = true;
 
     i++;
-    if(phone == false){
-    infoBox.classList.remove("aft");
-    infoBox.classList.add("gtb");}
+    if (phone == false) {
+      infoBox.classList.remove("aft");
+      infoBox.classList.add("gtb");
+    }
     console.log(i, e.deltaY, overHundred);
   }
   if (e.deltaY < -100 && !belowHundred) {
     belowHundred = true;
     i--;
-    if(phone == false){
-    infoBox.classList.remove("aft");
-    infoBox.classList.add("gtt");
+    if (phone == false) {
+      infoBox.classList.remove("aft");
+      infoBox.classList.add("gtt");
     }
     console.log(i, e.deltaY, overHundred);
   }
@@ -74,30 +76,43 @@ document.addEventListener("wheel", (e) => {
 //move
 infoCont.addEventListener("animationend", () => {
   if (overHundred) {
-    if(phone == false){
-    infoBox.classList.remove("gtb");
-    infoBox.classList.add("aft");}
-    if (i >= 17) i = 0;
+    if (phone == false) {
+      infoBox.classList.remove("gtb");
+      infoBox.classList.add("aft");
+    }
+    if (i >= 6) i = 0;
     infoBox.innerHTML = "";
     infoBox.appendChild(icon);
     infoBox.innerHTML += info[i];
     overHundred = false;
-    }
-  
+  }
+
   if (belowHundred) {
-    if(phone == false){
-    infoBox.classList.remove("gtt");
-    infoBox.classList.add("aft");}
+    if (phone == false) {
+      infoBox.classList.remove("gtt");
+      infoBox.classList.add("aft");
+    }
     if (i < 0) i = 16;
     infoBox.innerHTML = "";
     infoBox.appendChild(icon);
     infoBox.innerHTML += info[i];
     belowHundred = false;
   }
-  if(phone){
-    infoBox.classList.remove("fo");
-    infoBox.classList.add("fi")
+});
+
+infoBox.addEventListener("transitionstart", () => {});
+
+infoBox.addEventListener("transitionend", () => {
+  if (infoBox.style.opacity == "0") {
+    infoBox.style.fontSize = "13px";
+    i++;
+    if (i >= 17) i = 0;
+    infoBox.innerHTML = "";
+    infoBox.appendChild(icon);
+    infoBox.innerHTML += info[i];
+    infoBox.style.opacity = "1";
   }
+  inTrans = false;
 });
 // infoCont.addEventListener("animationend", () => {
 //   if (direction === "right") {

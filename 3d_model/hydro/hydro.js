@@ -433,8 +433,9 @@ const MinusCube = new THREE.Mesh(
 
 let camera = 0
 if(window.innerWidth<=416){
-  camera = new THREE.PerspectiveCamera(60, (window.innerWidth) / window.innerHeight/1.5,1,10000);
-  camera.position.set(0, 1500 ,3000);
+  camera = new THREE.PerspectiveCamera(120, (window.innerWidth) / window.innerHeight/1.5,1,10000);
+  camera.position.set(0, 1500 ,1000);
+  
 }
 else{
 camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
@@ -446,7 +447,10 @@ all.add(pointLight)
 pointLight.position.set(0,500,0)
 scene.add(all)
 all.position.set(0,0,0)
-
+if(window.innerWidth<=416){
+all.scale.y = 2
+  all.scale.x = 0.8
+}
 //controller
 
 const canvas = document.querySelector(".webgl");
