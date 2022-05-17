@@ -1,11 +1,4 @@
 /* Header section */
-body {
-  background-color: var(--primary-color);
-}
-.header {
-  width: 100%;
-  background-color: var(--primary-color);
-}
 
 .hp-img {
   width: 100%;
@@ -22,6 +15,13 @@ body {
 .dark-theme {
   --primary-color: #212121;
   --secondary-color: #fff;
+}
+body {
+  background-color: var(--primary-color);
+}
+.header {
+  width: 100%;
+  background-color: var(--primary-color);
 }
 .aboutus {
   display: flex;
@@ -361,7 +361,7 @@ h1 {
 
 .latest-news {
   width: 100%;
-  height: 100vh;
+  height: 140vh;
 
   display: flex;
   justify-content: center;
@@ -511,7 +511,7 @@ h3 {
   }
   .hp-img {
     height: fit-content;
-    margin-top: 13%;
+    margin-top: 80px;
   }
   .swiper.news2 {
     height: fit-content;
