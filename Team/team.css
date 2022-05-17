@@ -82,7 +82,9 @@ h4 {
     width: 100%;
     margin: auto;
 } */
-
+.team-img{
+  height: 316px;
+}
 @media screen and (max-width: 1200px) {
   /* 416px */
   .logo {
