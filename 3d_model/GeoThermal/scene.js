@@ -48,12 +48,11 @@ land.position.set(0,0,0)
 all.add(transgender)
 all.add(machine)
 all.add(factory);
-all.add(smoke)
+
 all.add(tower2)
 all.position.set(0,0,0)
 all.add(land)
-all.add(smoke2)
-all.add(smoke3)
+
 
 transgender.scale.y = 1.5
 tower2.scale.y = 1.5
