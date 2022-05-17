@@ -25,13 +25,9 @@ let i = 0;
 infoText.innerText = info[i];
 infoBox.appendChild(icon)
 infoBox.innerHTML += info[0]
-<<<<<<< HEAD
-infoBox.style.fontSize = "15px";
-=======
 if(phone){
 infoBox.style.fontSize = "13px";}
 
->>>>>>> 3459d014a615524c258150fa41498c2d0f5fb9b2
 infoCont.appendChild(infoBox);
 
 // let direction = "left";
