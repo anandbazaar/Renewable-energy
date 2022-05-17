@@ -14,6 +14,7 @@
   margin-top: 60%;
   flex-wrap: wrap;
   transition: 250ms;
+  font-size: 30px;
 
 }
 .icon{
@@ -34,7 +35,7 @@ body{
 .infoCont {
   background-color: rgb(21,39,68);
   width:500px;
-  font-size: 30px;
+
   color: white;
   display: flex;
   flex-direction: row;
@@ -194,11 +195,11 @@ body{
     padding:0px
   }
   .infoBox{
-    font-size: 10px;
     margin:0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 15px;
 
 
   }
