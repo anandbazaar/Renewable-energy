@@ -13,7 +13,10 @@ section {
   width: 100%;
 }
 body {
-  background-color: white;
+  background-color: var(--primary-color);
+}
+.info-us {
+  background-color: var(--primary-color);
 }
 .hp-img {
   position: absolute;

@@ -9,6 +9,7 @@ body {
   --primary-color: #d6b962;
   --secondary-color: #e9c85c;
 }
+
 .header .img-txt {
   top: 55%;
 }
@@ -31,7 +32,7 @@ body {
   background: #d7766e;
   color: white;
   transition: 1s;
-  letter-spacing:5px;
+  letter-spacing: 5px;
 }
 /* header section */
 .header {

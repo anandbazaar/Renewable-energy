@@ -100,12 +100,13 @@ body {
   font-weight: 400;
   font-size: 1.8vw;
   line-height: 2vw;
+  box-shadow: #2a6aae -5px 5px, #3580ce -10px 10px, #5896d6 -15px 15px,
+    #7bacdf -20px 20px, #9ec2e7 -25px 25px;
 }
 .inp2 {
   margin-top: 24%;
-}
-.in-p:hover {
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: #2a6aae 5px 5px, #3580ce 10px 10px, #5896d6 15px 15px,
+    #7bacdf 20px 20px, #9ec2e7 25px 25px;
 }
 
 @media screen and (max-width: 416px) {
