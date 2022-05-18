@@ -68,6 +68,8 @@ body {
 }
 .bird-img {
   width: 200px;
+}
+.bird-img-con{
   z-index: 1;
 }
 .bird-w{

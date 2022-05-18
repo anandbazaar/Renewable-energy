@@ -130,7 +130,7 @@ section {
 .box-2 {
   border: #91c95a 2px solid;
   width: 50%;
-  height: 20vw;
+  height: 16vw;
   margin-left: 4%;
   display: flex;
   justify-content: center;
@@ -139,7 +139,7 @@ section {
 .box-3 {
   border: #e8b80c 2px solid;
   width: 50%;
-  height: 20vw;
+  height: 16vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,7 +174,7 @@ section {
 }
 .grey {
   color: #a7aaab;
-  font-size: 0.9vw;
+  font-size: 0.7vw;
 }
 .line {
   width: 100%;
@@ -184,12 +184,11 @@ section {
   padding-left: 10px;
 }
 .bo3te {
-  padding-left: 10px;
-  padding-right: 10px;
+
   margin-top: 5%;
   margin-bottom: 10%;
   width: 90%;
-  height: 15%;
+  height: 25%;
   font-size: 0.9vw;
   position: relative;
 }
@@ -328,6 +327,13 @@ section {
   }
   .containert .box p {
     font-size: 3vw;
+  }
+  .frame{
+    width: 50%;
+    top: -10%;
+  }
+  .boxq{
+    height: 0vh;
   }
 }
 .outer-container {
