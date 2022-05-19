@@ -280,7 +280,7 @@
             </div>
             <div class="contact-info">
               <div>
-                <img
+                <img id="location"
                   src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2049.png?alt=media&token=68267d37-2c93-430f-b741-4c657bed9c51"
                   alt=""
                 />
@@ -295,7 +295,7 @@
             <div class="contact-info">
               <div></div>
               <div>
-                <img
+                <img id="call"
                   src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2050.png?alt=media&token=7d177363-847a-486a-8dca-98aad1f29c74"
                   alt=""
                 />
@@ -305,7 +305,7 @@
             </div>
             <div class="contact-info">
               <div>
-                <img
+                <img id="mail"
                   src="https://firebasestorage.googleapis.com/v0/b/renewable-energy-nest.appspot.com/o/assets%2Fimage%2051.png?alt=media&token=4cfc79bf-56b5-4ff7-a8df-8adfeb1c5beb"
                   alt=""
                 />
@@ -387,14 +387,20 @@
     <script>
       var logo = document.getElementById("logo");
       var icon = document.getElementById("icon");
+      var location = document.getElementById("location");
+      var call = document.getElementById("call");
+      var mail = document.getElementById("mail");
       if (sessionStorage.getItem("dark") == "true") {
         document.body.classList.toggle("dark-theme");
         icon.src = "./Assets/sun.png";
         logo.src="./Assets/whitelogo.png";
+        location.src="./Assets/location-white.png"
+        
       } else {
         document.body.classList.remove("dark-theme");
         icon.src = "./Assets/moon.png";
         logo.src="./Assets/Group 168.png";
+        location.src="./Assets/image 49.png"
         sessionStorage.setItem("dark", "false");
       }
       icon.onclick = function () {
@@ -402,10 +408,12 @@
         if (document.body.classList.contains("dark-theme")) {
           icon.src = "./Assets/sun.png";
           logo.src="./Assets/whitelogo.png";
+          location.src="./Assets/location-white.png"
           sessionStorage.setItem("dark", "true");
         } else {
           icon.src = "./Assets/moon.png";
           logo.src="./Assets/Group 168.png";
+          location.src="./Assets/image 49.png"
           sessionStorage.setItem("dark", "false");
         }
       };

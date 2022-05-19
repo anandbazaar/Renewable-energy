@@ -11,10 +11,12 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #212121;
+  --m-a-color: #fff;
 }
 .dark-theme {
   --primary-color: #212121;
   --secondary-color: #fff;
+  --m-a-color: #262626;
 }
 body {
   background-color: var(--primary-color);
@@ -438,6 +440,7 @@ h4 {
 }
 .m-a {
   text-decoration: none;
+  background-color: var(--m-a-color);
 }
 
 .news:hover {
