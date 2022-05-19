@@ -1,10 +1,9 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,100&family=Poppins:ital,wght@0,100;1,200;1,300&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,100&family=Poppins:ital,wght@0,100;1,200;1,300&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 /* Navbar */
 .navbar {
@@ -198,7 +197,7 @@
   font-weight: 350;
 }
 .social2 {
-  margin-left: 25%;
+  margin-left: 27%;
 }
 .social2 img {
   width: 1vw;
@@ -357,7 +356,6 @@
   .holboo-barih .contact-info img {
     width: 25px;
   }
-
 }
 @media (min-width: 1200px) {
   .container {
