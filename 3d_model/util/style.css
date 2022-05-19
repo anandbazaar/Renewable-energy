@@ -2,30 +2,29 @@
   margin: 0px;
   overflow: hidden;
 }
-.infoBox{
-  display: flex;
-  flex-direction: row;
-  height:fit-content;
-  width:100%;
+canvas {
+  width: 50vw;
+}
+.infoBox {
+  height: fit-content;
+  width: 100%;
+  max-width: 600px;
   resize: none;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: rgb(21,39,68);
-  margin-top: 60%;
-  flex-wrap: wrap;
+  padding: 0 40px;
+  background-color: rgb(21, 39, 68);
   transition: 250ms;
   font-size: 30px;
-
 }
-.icon{
+.icon {
   display: block;
   z-index: 12;
   width: 100px;
-  height:100px
+  height: 100px;
+  margin-bottom: 24px;
 }
 
-body{
-  background-color: rgb(21,39,68);
+body {
+  background-color: rgb(21, 39, 68);
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -33,19 +32,15 @@ body{
 }
 
 .infoCont {
-  background-color: rgb(21,39,68);
-  width:500px;
-
+  height: 100vh;
+  width: 50vw;
+  padding-top: 80px;
+  background-color: rgb(21, 39, 68);
   color: white;
   display: flex;
-  flex-direction: row;
-  height: 100%;
   z-index: 10;
+  align-items: center;
   justify-content: center;
-
-
-
-
 }
 /* .dropBox {
   width: fit-content;
@@ -111,23 +106,22 @@ body{
   }
 } */
 
-.gtb{
+.gtb {
   animation-name: GoToBottom;
   animation-duration: 500ms;
   animation-play-state: running;
 }
 @keyframes GoToBottom {
   from {
-    margin-bottom: 50%;
     opacity: 100%;
   }
-  to{
-    margin-top: 120%;
+  to {
+    transform:translateY(300px);
     opacity: 0%;
   }
 }
 
-.aft{
+.aft {
   animation-name: Appear;
   animation-duration: 500ms;
   animation-play-state: running;
@@ -136,22 +130,21 @@ body{
   from {
     opacity: 0%;
   }
-  to{
+  to {
     opacity: 100%;
   }
 }
-.gtt{
+.gtt {
   animation-name: GoToTop;
   animation-duration: 500ms;
   animation-play-state: running;
 }
 @keyframes GoToTop {
   from {
-    margin-top: 50%;
     opacity: 100%;
   }
-  to{
-    margin-top: 0%;
+  to {
+    transform:translateY(-300px);
     opacity: 0%;
   }
 }
@@ -181,26 +174,26 @@ body{
     opacity: 100%;
   }
 } */
-@media only screen and (max-width:417px){
-  body{
+@media only screen and (max-width: 417px) {
+  body {
     flex-direction: column-reverse;
     align-items: flex-start;
   }
-  .infoCont{
+  .infoCont {
+    align-items: flex-start;
+    height: 100%;
     display: flex;
     flex-direction: row;
     height: 500px;
     width: fit-content;
     margin: 0px;
-    padding:0px
+    padding: 0px;
   }
-  .infoBox{
-    margin:0px;
+  .infoBox {
+    margin: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size:13px;
-
-
+    font-size: 13px;
   }
 }

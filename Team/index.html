@@ -36,13 +36,13 @@
                         <a href="../index.html" id="home-page">HOME</a>
                     </li>
                     <li>
-                        <a href="../learnmore/lrnmr.html" id="about-page">INFORMATION</a>
+                        <a href="../learnmore/" id="about-page">INFORMATION</a>
                     </li>
                     <li>
-                        <a href="../quiz/quiz.html" id="services-page">EDUCATION</a>
+                        <a href="../quiz/" id="services-page">EDUCATION</a>
                     </li>
                     <li>
-                        <a class="activePage" href="../Team/team.html" id="services-page">TEAM</a>
+                        <a class="activePage" href="../Team/" id="services-page">TEAM</a>
                     </li>
                 </ul>
                 <img src="../Assets/moon.png" alt="" id="icon">
@@ -65,14 +65,14 @@
             <div class="group">
                 <div class="yellow-box"></div>
                 <div>
-                    <a href="./ppl/munkh.html"><img class="team-img" src="./Assets/Rectangle 468.png" />
+                    <a href="./ppl/munkh.html"><img class="team-img" src="../Assets/munkh-ppl.png" />
                         <p class="role">Designer</p>
                         <h4>У.Мөнхсаран</h4>
                     </a>
                 </div>
                 <div>
                     <a href="./ppl/sodbayr.html">
-                        <img class="team-img" src="./Assets/Photo on 4-3-22 at 17 1 (1).png" />
+                        <img class="team-img" src="../Assets/sod-ppl.png" />
                         <p class="role">Designer</p>
                         <h4>Б.Содбаяр</h4>
                     </a>
@@ -163,7 +163,7 @@
                     </div>
                     <div class="contact-info">
                         <div>
-                            <img src="../Assets/image 49.png" alt="" />
+                            <img src="../Assets/image 49.png" alt="" id="iconLocation" />
                         </div>
 
                         <p>
@@ -212,14 +212,17 @@
       <script>
       var logo = document.getElementById("logo");
       var icon = document.getElementById("icon");
+      var iconLocation = document.getElementById("iconLocation")
       if (sessionStorage.getItem("dark") == "true") {
         document.body.classList.toggle("dark-theme");
         icon.src = "../Assets/sun.png";
         logo.src = "../Assets/whitelogo.png";
+        iconLocation = "../Assets/location-white.png"
       } else {
         document.body.classList.remove("dark-theme");
         icon.src = "../Assets/moon.png";
         logo.src = "../Assets/Group 168.png";
+        iconLocation = "../Assets/image 49.png"
         sessionStorage.setItem("dark", "false");
       }
       icon.onclick = function () {
@@ -227,10 +230,12 @@
         if (document.body.classList.contains("dark-theme")) {
           icon.src = "../Assets/sun.png";
           logo.src = "../Assets/whitelogo.png";
+          iconLocation = "../Assets/location-white.png"
           sessionStorage.setItem("dark", "true");
         } else {
           icon.src = "../Assets/moon.png";
           logo.src = "../Assets/Group 168.png";
+          iconLocation = "../Assets/image 49.png"
           sessionStorage.setItem("dark", "false");
         }
       };
