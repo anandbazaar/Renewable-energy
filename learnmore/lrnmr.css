@@ -797,3 +797,6 @@ ul {
     font-size: 12px;
   }
 }
+.hl-h2 {
+  color: var(--secondary-color);
+}
