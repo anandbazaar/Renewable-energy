@@ -1,14 +1,17 @@
 body {
-  background-color: var(--primary-color);
+  background-color: var(--thirdary-color);
 }
 :root {
-  --primary-color: #e9c85c;
-  --secondary-color: #d6b962;
+  --primary-color: black;
+  --secondary-color: white;
+  --thirdary-color:#e9c85c;
 }
 .yellow-theme {
-  --primary-color: #d6b962;
-  --secondary-color: #e9c85c;
+  --primary-color: white;
+  --secondary-color: black;
+  --thirdary-color:#d6b962;
 }
+
 .header .img-txt {
   top: 55%;
 }
@@ -31,17 +34,17 @@ body {
   background: #d7766e;
   color: white;
   transition: 1s;
-  letter-spacing:5px;
+  letter-spacing: 5px;
 }
 /* header section */
 .header {
   height: 105vh;
 }
 .navbar {
-  background-color: var(--primary-color);
+  background-color: var(--thirdary-color);
 }
 .nav-links ul li a {
-  color: white;
+  color: var(--secondary-color);
 }
 
 /* nuur zurag */
@@ -76,6 +79,7 @@ body {
 /* information section */
 .information {
   margin-bottom: 10%;
+  
 }
 .information div {
   margin-left: 0%;
@@ -100,7 +104,8 @@ h4 {
   margin-left: 2%;
 }
 section {
-  background-color: var(--primary-color);
+  background-color: var(--thirdary-color);
+  color:white;
 }
 .container2 {
   width: 100%;
@@ -108,7 +113,9 @@ section {
   display: flex;
   flex-direction: row;
 }
-
+.contact-us-con{
+  color: black;
+}
 /* .container div {
   flex-grow: 1;
 } */
@@ -156,7 +163,7 @@ section {
   flex-direction: row;
 }
 .about-page {
-  background-color: white;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: row;
 }
@@ -184,7 +191,7 @@ section {
     font-size: 18px;
   }
   .header {
-    height: 80vh;
+    height: 100vh;
   }
   .header .img-txt {
     top: 45%;
@@ -350,6 +357,9 @@ section {
   }
   .navbar-menu.active {
     background-color: #e4cd06;
+  }
+  .information{
+    padding: 5%;
   }
 }
 @media screen and (max-width: 390px) {
