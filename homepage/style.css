@@ -1,11 +1,13 @@
 /* Header section */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,100&family=Poppins:ital,wght@0,100;1,200;1,300&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap");
+img {
+  display: block;
+}
 .hp-img {
   margin-top: 80px;
   height: calc(100vh - 80px);
-  width: 100vw ;
+  width: 100vw;
   object-fit: cover;
-  display: block;
 }
 .container {
   background-color: var(--primary-color);
@@ -15,17 +17,20 @@
   --primary-color: #fff;
   --secondary-color: #212121;
   --m-a-color: #fff;
-  --boxShadow: #0000002c
+  --boxShadow: #0000002c;
 }
 .dark-theme {
   --primary-color: #212121;
   --secondary-color: #fff;
   --m-a-color: #262626;
-  --boxShadow: #363636
+  --boxShadow: #363636;
 }
+
 body {
   background-color: var(--primary-color);
 }
+
+/* Header */
 .header {
   display: flex;
 
@@ -33,43 +38,49 @@ body {
   height: 100vh;
   background-color: var(--primary-color);
 }
-.aboutus {
+
+/* Block */
+.block {
   display: flex;
-  padding-top: 10%;
+  gap: 100px;
+  padding: 80px 0;
   background-color: var(--primary-color);
 }
 .info-us {
   background-color: var(--primary-color);
 }
-.aboutus .left {
+.left {
   flex: 1;
   display: flex;
 }
-.aboutus .right {
+.left img {
+  width: 100%;
+}
+.right {
   position: relative;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.aboutus .right img {
+.right img {
   width: 100%;
   object-fit: contain;
 }
-.aboutus .right .image {
+.right .image {
   position: absolute;
   width: 80%;
   padding: 12px;
-  background-color: white;
+
 }
-.aboutus .right .image:nth-last-of-type(1) {
+.right .image:nth-last-of-type(1) {
   top: 30%;
   left: 20%;
 }
-.aboutus h3 {
+.aboutus-con h3 {
   font-size: 2.5vw;
   color: #409ada;
-  margin-bottom: 5%;
+  padding-top: 80px;
   font-family: "Brygada 1918", serif;
 }
 .slick-prev,
@@ -97,27 +108,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: 31%;
   background-color: #2a6aae;
   border-radius: 10px;
-  margin-bottom: 2vw;
   box-sizing: border-box;
   color: white;
   transition: 0.5s;
   height: fit-content;
-  width: 30vw;
+  width: 100%;
   font-style: normal;
   font-weight: 400;
   font-size: 1.3vw;
   line-height: 2vw;
-  box-shadow: #3f78b6 -5px 5px, #5487be -10px 10px, #6996c6 -15px 15px,
-    #7fa5ce -20px 20px, #94b4d6 -25px 25px;
+  box-shadow: 0px 0px 18px 0 var(--boxShadow);
 }
 .inp2 {
   padding: 50px;
-  margin-top: 24%;
-  box-shadow: #2a6aae 5px 5px, #3580ce 10px 10px, #5896d6 15px 15px,
-    #7bacdf 20px 20px, #9ec2e7 25px 25px;
+  box-shadow: 0px 0px 18px 0 var(--boxShadow);
 }
 
 @media screen and (max-width: 416px) {
@@ -146,7 +152,6 @@ body {
     flex: 0;
   }
   .lrn-m {
-    margin-left: 10%;
     font-size: 12px;
   }
   .in-p {
@@ -156,8 +161,7 @@ body {
     line-height: 20px;
     font-size: 18px;
     height: fit-content;
-    box-shadow: #3f78b6 0px 5px, #5487be 0px 10px, #6996c6 0px 15px,
-      #7fa5ce 0px 20px, #94b4d6 0px 25px;
+    
   }
   .news-col {
     height: 100px;
@@ -170,13 +174,15 @@ body {
     width: 60%;
   }
   .left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1;
+    height: fit-content;
   }
   .right .back {
     top: 15%;
     width: 90%;
+
+  }
+  .right img{
     display: none;
   }
   .right .back img {
@@ -185,12 +191,11 @@ body {
   .right .front img {
     top: 25%;
     width: 100%;
-    display: none;
   }
   .inp2 {
     width: 80%;
     line-height: 20px;
-    font-size: 18px;
+    font-size: 15px;
     height: 60vw;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -200,10 +205,6 @@ body {
   }
   .image2 {
     height: 80%;
-  }
-  .img1 {
-    height: 80%;
-    margin-left: 0;
   }
   .aboutus {
     height: 100vh;
@@ -219,11 +220,21 @@ body {
     font-size: 12px;
     line-height: 100%;
     color: white;
+    line-height: 22px;
   }
   .news .medeelel p {
     font-size: 11px;
     height: 80%;
     line-height: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+  }
+  .header{
+    height: fit-content;
   }
 }
 
@@ -346,8 +357,6 @@ h1 {
   background: transparent;
   position: relative;
   cursor: pointer;
-  margin-top: 2%;
-  margin-left: 2.6%;
 }
 .lrn-con {
   width: 100%;
@@ -438,10 +447,6 @@ h4 {
 .garchig p #text {
   margin-bottom: 10px;
 }
-.img1 {
-  width: 90%;
-  margin-left: 5%;
-}
 .medeelel {
   width: 60%;
   margin-left: 40px;
@@ -520,6 +525,23 @@ h3 {
   opacity: 0.75;
   color: var(--secondary-color);
 }
+@media screen and (max-width: 992px) {
+  .block {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+  .left {
+    max-width: 600px;
+  }
+  .right {
+    max-width: 600px;
+  }
+  .aboutus-con h3 {
+    width: 100%;
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 416px) {
   .news2 {
     padding-top: 50px;
@@ -528,10 +550,6 @@ h3 {
   .lrn-con {
     height: fit-content;
   }
-  .img1 {
-    margin-top: 50%;
-  }
-
   .aboutus .right {
     margin-top: 15%;
     flex: 0;
