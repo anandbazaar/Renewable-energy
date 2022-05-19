@@ -12,7 +12,7 @@ if(window.innerWidth<=416){
   camera.position.set(0, 250, 650);
 }
 else{
-camera = new THREE.PerspectiveCamera(90, (window.innerWidth-500) / window.innerHeight);
+camera = new THREE.PerspectiveCamera(90, (window.innerWidth*0.5) / window.innerHeight);
 camera.position.set(0, 250, 450);}
 scene.add(camera);
 //lighting
@@ -69,7 +69,7 @@ if(window.innerWidth<=416){
   renderer.setSize(window.innerWidth, window.innerHeight/1.5);
 }
 else{
-renderer.setSize(window.innerWidth-500, window.innerHeight);}
+renderer.setSize(window.innerWidth*0.5, window.innerHeight);}
 renderer.render(scene, camera);
 //controls
 const controls = new OrbitControls(camera, renderer.domElement);

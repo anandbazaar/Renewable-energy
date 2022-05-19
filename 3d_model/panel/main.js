@@ -351,7 +351,7 @@ if(window.innerWidth<=416){ camera = new THREE.PerspectiveCamera(
   window.innerWidth / (window.innerHeight / 1.5));
   camera.position.set(0, 150, 250);}
 else{
- camera = new THREE.PerspectiveCamera(75, (window.innerWidth-500) / window.innerHeight,1,10000);
+ camera = new THREE.PerspectiveCamera(75, (window.innerWidth*0.5) / window.innerHeight,1,10000);
  camera.position.set(20, 200, 350);}
  
 camera.lookAt(cube.position);
@@ -407,7 +407,7 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 if(window.innerWidth <= 416){renderer.setSize(window.innerWidth, window.innerHeight/1.5);
 }
 else{
-renderer.setSize(window.innerWidth-500, window.innerHeight);}
+renderer.setSize(window.innerWidth*0.5, window.innerHeight);}
 renderer.render(scene, camera);
 // animate();
 let rotationIndex = 1100;
