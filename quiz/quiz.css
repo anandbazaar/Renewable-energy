@@ -13,7 +13,10 @@ section {
   width: 100%;
 }
 body {
-  background-color: white;
+  background-color: var(--primary-color);
+}
+.info-us {
+  background-color: var(--primary-color);
 }
 .hp-img {
   position: absolute;
@@ -65,10 +68,15 @@ body {
 }
 .bird-img {
   width: 200px;
+}
+.bird-img-con{
   z-index: 1;
 }
-.bird-w {
-  margin-top: 5%;
+.bird-w{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 .bird-w-p {
   padding: 5px;
@@ -128,6 +136,7 @@ body {
   font-weight: 500;
   margin-bottom: 15px;
   line-height: 25px;
+  z-index: 0;
 }
 .home-box p {
   font-size: 16px;
