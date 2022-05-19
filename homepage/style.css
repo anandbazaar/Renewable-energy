@@ -3,7 +3,8 @@
 .hp-img {
   margin-top: 80px;
   height: calc(100vh - 80px);
-  width: 100vw;
+  width: 100vw ;
+  object-fit: cover;
   display: block;
 }
 .container {
@@ -14,11 +15,13 @@
   --primary-color: #fff;
   --secondary-color: #212121;
   --m-a-color: #fff;
+  --boxShadow: #0000002c
 }
 .dark-theme {
   --primary-color: #212121;
   --secondary-color: #fff;
   --m-a-color: #262626;
+  --boxShadow: #363636
 }
 body {
   background-color: var(--primary-color);
@@ -291,7 +294,7 @@ h1 {
 .layer h3 {
   width: 100%;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 26px;
   bottom: 0;
   left: 50%;
@@ -401,7 +404,7 @@ h4 {
   margin-bottom: 5vw;
   display: flex;
   align-items: center;
-  box-shadow: 0px 0px 18px 0 #0000002c;
+  box-shadow: 0px 0px 18px 0 var(--boxShadow);
   transition: 0.3s ease box-shadow;
 }
 
