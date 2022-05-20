@@ -21,6 +21,7 @@
 }
 .team-cn {
   width: 100%;
+  height: fit-content;
   background-color: var(--primary-color);
 }
 .start {
@@ -94,6 +95,9 @@ h4 {
   .team-img {
     height: fit-content;
   }
+  .group div img{
+    height: fit-content;
+  }
   .logo {
     height: 30px;
     width: 40px;
@@ -165,4 +169,5 @@ h4 {
 .group div img {
   width: 100%;
   object-fit: contain;
+  
 }

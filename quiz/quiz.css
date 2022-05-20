@@ -308,7 +308,7 @@ body {
 
 @media screen and (max-width: 416px) {
   .img-section {
-    height: fit-content;
+    height:fit-content;
   }
   .garchig {
     height: 7vw;
@@ -360,7 +360,7 @@ body {
     padding: 2px;
   }
   .img-con {
-    height: fit-content;
+    height: 30vh;
   }
   .image2 {
     height: 80%;
@@ -373,7 +373,7 @@ body {
     width: 100%;
   }
   .quiz-section {
-    height: 120vh;
+    height: fit-content;
   }
   .nav-links ul li a {
     color: black;
