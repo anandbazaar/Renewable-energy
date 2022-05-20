@@ -306,7 +306,7 @@ body {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 416px) {
+@media screen and (max-width: 992px) {
   .img-section {
     height:fit-content;
   }

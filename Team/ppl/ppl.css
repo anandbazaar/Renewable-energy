@@ -262,7 +262,7 @@ section {
 .a-team {
   border-bottom: 4px solid #4eb073;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width:992px) {
   .container .outer-container {
     flex-wrap: wrap;
     display: grid;

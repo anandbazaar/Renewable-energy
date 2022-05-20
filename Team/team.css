@@ -90,7 +90,7 @@ h4 {
   width: 264px;
   height: 308px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
   /* 416px */
   .team-img {
     height: fit-content;
