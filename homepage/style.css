@@ -564,6 +564,7 @@ h3 {
   .hp-img {
     height: fit-content;
     margin-top: 80px;
+    width: 100%;
   }
   .swiper.news2 {
     height: fit-content;

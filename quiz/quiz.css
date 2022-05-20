@@ -308,7 +308,7 @@ body {
 
 @media screen and (max-width: 416px) {
   .img-section {
-    height: 300px;
+    height: fit-content;
   }
   .garchig {
     height: 7vw;
@@ -360,7 +360,7 @@ body {
     padding: 2px;
   }
   .img-con {
-    height: 50%;
+    height: fit-content;
   }
   .image2 {
     height: 80%;
@@ -437,6 +437,7 @@ body {
     justify-content: flex-end;
   }
   .hp-img {
-    height: 20%;
+    height:30%;
+    object-fit: contain;
   }
 }

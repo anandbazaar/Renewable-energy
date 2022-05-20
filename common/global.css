@@ -473,12 +473,11 @@
     margin-bottom: 2%;
   }
   .contact-us-con {
-    height: 70vh;
+    height: fit-content;
+    padding-bottom: 5%;
   }
   .contact-us {
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 5%;
     height: 65vh;
     display: flex;
     flex-direction: column;
