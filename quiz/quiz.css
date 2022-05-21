@@ -67,11 +67,12 @@ body {
   color: var(--primary-color);
 }
 .bird-img {
+  top:20%;
+  position:absolute;
   width: 200px;
+  right:10%
 }
-.bird-img-con {
-  z-index: 1;
-}
+
 .bird-w {
   width: 100%;
   display: flex;
@@ -85,7 +86,7 @@ body {
   height: 40px;
 }
 .bird-w-p {
-  position: absolute;
+
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
@@ -93,7 +94,7 @@ body {
   left: 28%;
 }
 .bird-w-p-home {
-  position: absolute;
+
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
@@ -101,12 +102,14 @@ body {
 }
 
 .bird-w-img {
+
+
   left: 38%;
-  position: absolute;
   width: 179px;
   height: 64px;
 }
 .custom-box {
+  position: relative;
   max-width: 700px;
   background-color: var(--primary-color);
   margin: 40px auto;
@@ -418,23 +421,24 @@ body {
     height: 100vh;
   }
   .custom-box {
+    padding: 0px;
     margin: 0;
   }
-  .bird-w-img {
-    left: 5%;
+  .bird-w{
+    margin:20px;
+    justify-content: flex-start;
   }
   .bird-w-p {
-    left: 0;
+    
+    margin:0px;
+    left: 0px;
     margin-left: 5%;
   }
   .bird-img {
-    right: 5%;
+    margin:0px;
+    top:17%;
+    right: 0%;
     z-index: 1;
-  }
-  .bird-img-con {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
   }
   .hp-img {
     height:30%;
