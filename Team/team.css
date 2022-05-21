@@ -95,7 +95,7 @@ h4 {
   .team-img {
     height: fit-content;
   }
-  .group div img{
+  .group div img {
     height: fit-content;
   }
   .logo {
@@ -169,5 +169,4 @@ h4 {
 .group div img {
   width: 100%;
   object-fit: contain;
-  
 }
