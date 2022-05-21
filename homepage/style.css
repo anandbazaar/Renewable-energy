@@ -71,7 +71,6 @@ body {
   position: absolute;
   width: 80%;
   padding: 12px;
-
 }
 .right .image:nth-last-of-type(1) {
   top: 30%;
@@ -161,7 +160,6 @@ body {
     line-height: 20px;
     font-size: 18px;
     height: fit-content;
-    
   }
   .news-col {
     height: 100px;
@@ -180,9 +178,8 @@ body {
   .right .back {
     top: 15%;
     width: 90%;
-
   }
-  .right img{
+  .right img {
     display: none;
   }
   .right .back img {
@@ -233,11 +230,11 @@ body {
     text-overflow: ellipsis;
     line-height: 20px;
   }
-  .header{
+  .header {
     height: fit-content;
     width: 100%;
   }
-  .aboutus-con{
+  .aboutus-con {
     height: fit-content;
   }
 }
@@ -564,7 +561,7 @@ h3 {
     justify-content: flex-start;
   }
   .hp-img {
-    height: fit-content;
+    height: 168px;
     margin-top: 80px;
     width: 100%;
   }
