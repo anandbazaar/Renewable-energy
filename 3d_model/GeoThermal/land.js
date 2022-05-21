@@ -72,16 +72,9 @@ var materials = [
     flowY: 1,
   };
   const waterGeometry = new THREE.PlaneGeometry(450,40);
+  const waterMaterial = new THREE.MeshBasicMaterial({color:0x1ca3ec})
   for(let i=0;i<4;i++){
-  water[i] = new Water(waterGeometry, {
-  
-    color: params.color,
-    scale: params.scale,
-    flowDirection: new THREE.Vector2(params.flowX, params.flowY),
-    textureWidth: 1024,
-    textureHeight: 1024,
-  });
-
+  water[i] = new THREE.Mesh(waterGeometry,waterMaterial)
   land.add(water[i]);
   }
   water[0].position.set(-100,-35,0)
